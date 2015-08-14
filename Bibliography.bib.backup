@@ -1,0 +1,915 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1252
+
+}@BOOK{bentley:1999,
+  title = {{P}rogramming {P}earls},
+  publisher = {Addison--Wesley},
+  year = {1999},
+  author = {Jon Bentley},
+  address = {Boston, MA, USA},
+  edition = {2nd}
+}
+
+@BOOK{bringhurst:2002,
+  title = {{T}he {E}lements of {T}ypographic {S}tyle},
+  publisher = {Hartley \& Marks Publishers},
+  year = {2008},
+  author = {Robert Bringhurst},
+  series = {Version 3.2},
+  address = {Point Roberts, WA, USA}
+}
+
+@BOOK{cormen:2001,
+  title = {{I}ntroduction to {A}lgorithms},
+  publisher = {The MIT Press},
+  year = {2001},
+  author = {Cormen, Thomas H. and Leiserson, Charles E. and Rivest, Ronald L.
+	and Clifford Stein},
+  address = {Cambridge, MA, USA},
+  edition = {2nd}
+}
+
+@BOOK{dueck:trio,
+  title = {{D}ueck's {T}rilogie: {O}mnisophie -- {S}upramanie -- {T}opothesie},
+  publisher = {Springer, Berlin},
+  year = {2005},
+  author = {Gunter Dueck},
+  note = {\url{http://www.omnisophie.com}}
+}
+
+@BOOK{Scrapy2014,
+  title = {{S}crapy -- {A} fast high-level screen scraping and web crawling framework},
+  publisher = {Scrapinghub},
+  year = {2014},
+  author = {Scrapy developers},
+  note = {\url{http://scrapy.org/}}
+}
+
+
+@ARTICLE{knuth:1976,
+  author = {Knuth, Donald E.},
+  title = {{B}ig {O}micron and {B}ig {O}mega and {B}ig {T}heta},
+  journal = {SIGACT News},
+  year = {1976},
+  volume = {8},
+  pages = {18--24},
+  number = {2},
+  month = {April/June},
+  address = {New York, NY, USA},
+  publisher = {ACM Press}
+}
+
+@ARTICLE{knuth:1974,
+  author = {Knuth, Donald E.},
+  title = {{C}omputer {P}rogramming as an {A}rt},
+  journal = {Communications of the ACM},
+  year = {1974},
+  volume = {17},
+  pages = {667--673},
+  number = {12},
+  month = {December },
+  address = {New York, NY, USA},
+  publisher = {ACM Press}
+}
+
+@BOOK{sommerville:1992,
+  title = {{S}oftware {E}ngineering},
+  publisher = {Addison-Wesley},
+  year = {1992},
+  author = {Ian Sommerville},
+  address = {Boston, MA, USA},
+  edition = {4th}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% GUSTAVO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{Kuperman2008,
+    author = {Kuperman, Victor and Ernestus, Mirjam and Baayen, Harald},
+    journal = {The Journal of the Acoustical Society of America},
+    number = {6},
+    pages = {3897--3908},
+    publisher = {ASA},
+    title = {Frequency distributions of uniphones, diphones, and triphones in spontaneous speech},
+    volume = {124},
+    year = {2008}
+}
+
+@article{CMU2008,
+    author = {Weide, Robert},
+    journal = {Carnegie Mellon University},
+    title = {The {CMU Pronouncing Dictionary 0.7a}},
+    year = {2008},
+    note = {\url{http://www.speech.cs.cmu.edu/cgi-bin/cmudict}}
+}
+
+@book{Hayes2011,
+  title={Introductory Phonology},
+  author={Hayes, Bruce},
+  isbn={9781118315958},
+  series={Blackwell Textbooks in Linguistics},
+  year={2011},
+  publisher={Wiley}
+}
+
+
+@article{Young1994,
+    author = {Young, S. and Odell, J. and Woodland, P.},
+    title = {Tree-Based State Tying for High Accuracy Acoustic Modelling},
+    journal = {Cambridge University Engineering Department},
+    year = {1994}
+}
+
+
+
+@book{Jensen2004,
+  title={Principles of Generative Phonology: An introduction},
+  author={Jensen, John},
+  isbn={9789027275172},
+  series={Current Issues in Linguistic Theory},
+  year={2004},
+  publisher={John Benjamins Publishing Company}
+}
+
+
+@article{Creutz2007,
+ author = {Creutz, Mathias and Hirsim\"{a}ki, Teemu and Kurimo, Mikko and Puurula, Antti and Pylkk\"{o}nen, Janne and Siivola, Vesa and Varjokallio, Matti and Arisoy, Ebru and Sara\c{c}lar, Murat and Stolcke, Andreas},
+ title = {Morph-based Speech Recognition and Modeling of Out-of-vocabulary Words Across Languages},
+ journal = {ACM Trans. Speech Lang. Process.},
+ issue_date = {December 2007},
+ volume = {5},
+ number = {1},
+ year = {2007},
+ pages = {3:1--3:29},
+ numpages = {29},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+@article{Mendonca2014,
+ author = {Mendon\c{c}a, Gustavo and Alu\'isio, Sandra},
+ title = {Using a hybrid approach to build a pronunciation dictionary for Brazilian Portuguese},
+ journal = {Proceedings of INTERSPEECH 2014 -- 15th Annual Conference of the International Speech Communication Association},
+ issue_date = {August 2014},
+ year = {2014},
+ publisher = {ISCA},
+ address = {Singapure},
+} 
+
+@INPROCEEDINGS{Povey2011,
+ author = {Povey, Daniel and Ghoshal, Arnab and Boulianne, Gilles and Burget, Lukas and Glembek, Ondrej and Goel, Nagendra and Hannemann, Mirko and Motlicek, Petr and Qian, Yanmin and Schwarz, Petr and Silovsky, Jan and Stemmer, Georg and Vesely, Karel},
+ keywords = {ASR, Automatic Speech Recognition, GMM, HTK, SGMM},
+ month = {Dec},
+ title = {The Kaldi Speech Recognition Toolkit},
+ booktitle = {IEEE 2011 Workshop on Automatic Speech Recognition and Understanding},
+ year = {2011},
+ publisher = {IEEE Signal Processing Society},
+ location = {Hilton Waikoloa Village, Big Island, Hawaii, US},
+}
+
+@book{Huang2001,
+ author = {Huang, Xuedong and Acero, Alex and Hon, Hsiao-Wuen},
+ title = {Spoken Language Processing: A Guide to Theory, Algorithm, and System Development},
+ year = {2001},
+ isbn = {0130226165},
+ edition = {1st},
+ publisher = {Prentice Hall PTR},
+ address = {Upper Saddle River, NJ, USA},
+} 
+
+@book{Klein1999,
+  title={Estudo do VOT no Portugu{\^e}s Brasileiro},
+  author={Klein, Simone},
+  year={1999},
+  publisher={Universidade Federal de Santa Catarina (Unpublished Master's Thesis)},
+  address = {Florian{\'o}polis, SC}
+}
+
+@book{Reis2006,
+  title={The perception and production of English interdental fricatives by brazilian EFL learners},
+  author={Reis, Mara},
+  year={2006},
+  publisher={Universidade Federal de Santa Catarina (Unpublished Master's Thesis)},
+  address = {Florian{\'o}polis, SC}
+}
+
+@article{Scwartzhaupt2014,
+  title={A influ\^encia do contexto fon\'etico-fonol\'ogico nos valores de voice onset time: verifica\c{c}\~ao de dados de tr\^es sistemas lingu\'isticos},
+  author={Schwartzhaupt, Bruno and Alves, Ubirat\~a},
+  journal={F\'orum Lingu\'istico},
+  address = {Florian{\'o}polis, SC},
+  number={1},
+  volume={11},
+  issue_date = {Jan-Mar 2014},
+  year = {2014},
+}
+
+
+@article{Zimmer2006,
+ author = {Zimmer, M\'arcia},
+ title = {A desaspira\c{c}\~ao de plosivas surdas iniciais na transfer\^encia do conhecimento fon\'etico do portugu\^es brasileiro (L1) para o ingl\^es (L2)},
+ journal = {Anais do 6o Encontro do Celsul},
+ issue_date = {2004},
+ year = {2006},
+ publisher = {ISCA},
+ pages = {10},
+ address = {Florian\'opolis, SC},
+} 
+
+
+@INPROCEEDINGS{Prestes2012,
+ author = {Prestes, Susana},
+ title = {An\'alise ac\'ustica da produ\c{c}\~ao de consoantes oclusivas iniciais por falantes nativos de PB},
+ booktitle = {Anais do X Encontro do CELSUL -- C\'irculo de Estudos Lingu\'isticos do Sul},
+ year = {2012},
+ publisher = {UNIOESTE - Universidade Estadual do Oeste do Paran\'a},
+ location = {Cascavel, PR},
+}
+
+@article{Lisker1985,
+ author = {Lisker, Leigh},
+ title = {How is the aspiration of English /p,t,k/ ``predictable''?},
+ journal = {Haskins Laboratories, Status report on speech research SR-84},
+ year = {1985},
+ pages = {141-144},
+} 
+
+@inproceedings{Kluge2007,
+  author = {Kluge, Denise and Rauber, Andr\'eia and Reis, Mara and Bion, Ricardo},
+  booktitle = {Proceedings of the INTERSPEECH 2007},
+  pages = {2297-2300},
+  publisher = {ISCA},
+  title = {The relationship between the perception and production of English nasal codas by brazilian learners of English.},
+  year = 2007
+}
+
+
+@article{Kluge2008,
+ author = {Kluge, Denise and Baptista, Barbara},
+ title = {Production and identification of English word-final nasal consonants by Brazilian EFL learners},
+ journal = {Ilha do Desterro -- UFSC},
+ year = {2008},
+ number = {55},
+ volume = {1},
+ pages = {15-40},
+ address= {Florian\'opolis, SC}
+} 
+
+@article{Kluge2012,
+ author = {Kluge, Denise},
+ title = {Effects o preceding vowel in the perception of English nasal consoants /m, n/ in word-final position by brazilian EFL learners},
+ journal = {Revista Diadorim / Revista de Estudos Lingu\'isticos e Liter\'arios do Programa de P\'os-Gradua\c{c}\~ao em Letras Vern\'aculas da Universidade Federal do Rio de Janeiro},
+ year = {2012},
+ number = {12},
+ pages = {163-173},
+} 
+
+
+@article{Silveira2007,
+ author = {Silveira, Rosane},
+ title = {The role of task-type and orthography in the production of word-final consonants},
+ journal = {Rev. Est. Ling., Belo Horizonte},
+ year = {2007},
+ issue_date = {Jan./Jun. 2007},
+ number = {1},
+ volume = {15},
+ pages = {147-180},
+} 
+
+@article{Silveira2012,
+ author = {Silveira, Rosane},
+ title = {PL2 Production of English Word-Final Consonants: The Role of Orthography and Learner Profile Variables},
+ journal = {Trab. Ling. Aplic., Campinas},
+ year = {2012},
+ issue_date = {Jan./Jun. 2012},
+ volume = {51},
+ number = {1},
+ pages = {13-34},
+} 
+
+
+@article{Cardoso2011,
+ author = {Cardoso, Walcir},
+ title = {The development of coda perception in second language phonology: A variationist perspective},
+ journal = {Second Language Research},
+ year = {2011},
+ number = {Online edition},
+ pages = {1-33},
+} 
+
+@article{Rauber2004,
+ author = {Rauber, Andr\'eia and Baptista, Barbara},
+ title = {The production of English initial /s/ clusters by Portuguese and Spanish EFL speakers},
+ journal = {Rev. Est. Ling., Belo Horizonte},
+ year = {2004},
+ volume = {12},
+ number = {2},
+ pages = {459-473},
+} 
+
+@incollection{Rebello2006,
+ author = {Rebello, Jeanne and Baptista, Barbara},
+ editor = {Baptista, Barbara and Watkins, Michael},
+ title = {The production of English initial /s/ clusters by Portuguese and Spanish EFL speakers},
+ booktitle = {English with a Latin Beat: Studies in Portuguese/Spanish--English Interphonology},
+ publisher = {John Benjamins},
+ year = {2006},
+ pages = {139-154},
+}
+
+@INPROCEEDINGS{Alves2008,
+ author = {Alves, Mariane and Seara, Izabel},
+ title = {Produ\c{c}\~ao de plosivas surdas em Ingl\^es e Portugu\^es por falantes brasileiros de Ingl\^es como l\'ingua estrangeira},
+ booktitle = {Anais do CELSUL 2008},
+ year = {2008},
+ publisher = {EDUCAT},
+ location = {Porto Alegre, RS},
+}
+
+@INPROCEEDINGS{Trevisol2010,
+ author = {Trevisol, Juliana},
+ title = {A produ\c{c}\~ao da fricativa interdental vozeada por professores brasileiros de Ingl\^es},
+ booktitle = {Anais do CELSUL 2010},
+ year = {2010},
+ publisher = {Editora da Unisul},
+ location = {Palho\c{c}a, SC},
+}
+
+@book{Castilho2004,
+  title={Quest\~oes de pron\'uncia em L\'ingua Inglesa: Fatores desencadeantes da percep\c{c}\~ao do sotaque do falante brasileiro de l\'ingua inglesa em rela\c{c}\~ao \`a produ\c{c}\~ao dos sons fricativos alveolares},
+  author={Castilho, Fab\'iola},
+  year={2004},
+  publisher={Pontif\'icia Universidade Cat\'olica de S\~ao Paulo (Unpublished Master's Thesis)},
+  address = {S\~ao Paulo, SP}
+}
+
+@article{Albuquerque2011,
+ author = {Albuquerque, Jeniffer and Silva, Adelaide},
+ title = {Um olhar din\^amico para quest\~oes de produ\c{c}\~ao de fala em L2: Estudo preliminar sobre a dessonoriza\c{c}\~ao terminal (DT)},
+ journal = {Revista Interc\^ambio},
+ year = {2011},
+ volume = {XXIII},
+ pages = {106-127},
+ address = {S\~ao Paulo, SP},
+ publisher = {LAEL/PUCSP}
+} 
+
+@article{Zimmer2012,
+ author = {Zimmer, M\'arcia and Alves, Ubirat\~a},
+ title = {Uma vis\~ao din\^amica da produ\c{c}\~ao da fala em L2},
+ journal = {Revista da ABRALIN},
+ issue_date = {Jul. 2012},
+ year = {2012},
+ volume = {XI},
+ number = {1},
+ pages = {221-272},
+}
+
+@book{Baratieri2006,
+  title={Production of /l/ in the English coda by brazilian EFL learners: An acoustic-articulatory analysis},
+  author={Baratieri, Jacir},
+  year={2006},
+  publisher={Universidade Federal de Santa Catarina (Unpublished Master's Thesis)},
+  address = {Florian{\'o}polis, SC}
+}
+
+@book{Moore2008,
+  title={The perception of English word-final /l/ by brazilian learners},
+  author={Moore, Daniel},
+  year={2008},
+  publisher={Universidade Federal de Santa Catarina (Unpublished Master's Thesis)},
+  address = {Florian{\'o}polis, SC}
+}
+
+@article{Grijzenhout2000,
+  title={Voicing and devoicing in English, German, and Dutch; evidence for domain-specific identity constraints},
+  author={Grijzenhout, Janet},
+  journal={Theory des Lexikons; Arbeiten des Sonderforschungsbereichs},
+  volume={282},
+  pages={1--22},
+  year={2000}
+}
+
+@book{Battistela2010,
+  title={A rela\c{c}\~ao entre a percep\c{c}\~ao, a produ\c{c}\~ao e a consci\^encia fonol\'ogica na aprendizagem do Ingl\^es como l\'ingua estrangeira},
+  author={Battistela, Tarsila},
+  year={2010},
+  publisher={Pontif\'icia Universidade Cat\'olica do Rio Grande do Sul (Unpublished Master's Thesis)},
+  address = {Porto Alegre, RS}
+}
+
+
+@book{Rauber2006,
+  title={Perception and production of English vowels by brazilian EFL speakers},
+  author={Rauber, Andr\'eia},
+  year={2006},
+  publisher={Universidade Federal de Santa Catarina (Unpublished Doctoral Thesis)},
+  address = {Florian\'opolis, SC}
+}
+
+@INPROCEEDINGS{Rauber2005,
+    author = {Rauber, Andr\'eia and Escudero, Paola and Bion, Ricardo and Baptista, Barbara},
+    title = {The interrelation between the perception and production of English vowels by native speakers of Brazilian Portuguese},
+    booktitle = {In Proceedings of the Interspeech 2005},
+    year = {2005},
+    pages = {2913-2916}
+}
+
+@article{Badin2010,
+  title={Visual articulatory feedback for phonetic correction in second language learning},
+  author={Badin, Pierre and Ben Youssef, A and Bailly, G{\'e}rard and Elisei, Fr{\'e}d{\'e}ric and Hueber, Thomas},
+  journal={Actes de SLATE},
+  pages={1--10},
+  year={2010}
+}
+
+@inproceedings{Wang2014,
+    title = {{On the use of an articulatory talking head for second language pronunciation training: the case of Chinese learners of French}},
+    author = {Wang, Xiaoou and Hueber, Thomas and Badin, Pierre},
+    booktitle = {{Proceedings of the 10th International Seminar on Speech Production, ISSP10}},
+    pages = {4},
+    address = {Koeln, Allemagne},
+    year = {2014},
+}
+
+@article{Benzeghiba2007,
+  title = {Automatic speech recognition and speech variability: A review },
+  author = {M. Benzeghiba and R. De Mori and O. Deroo and S. Dupont and T. Erbes and D. Jouvet and L. Fissore and P. Laface and A. Mertins and C. Ris and R. Rose and V. Tyagi and C. Wellekens},
+  journal = {Speech Communication },
+  year = {2007},
+  note = {Intrinsic Speech Variations },
+  number = {10-11},
+  pages = {763-786},
+  volume = {49},
+  ISSN = {0167-6393},
+}
+
+@article{Lakoff1973,
+  title = {{Language and Woman's Place}},
+  author = {Lakoff, Robin},
+  journal = {Language in Society},
+  year = {1973},
+  number = {1},
+  volume = {2},
+  ISSN = {00474045},
+  publisher  = {Cambridge University Press},
+}
+
+@article{Fitch1999,
+  title={Morphology and development of the human vocal tract: A study using magnetic resonance imaging},
+  author={Fitch, W Tecumseh and Giedd, Jay},
+  journal={The Journal of the Acoustical Society of America},
+  volume={106},
+  number={3},
+  pages={1511--1522},
+  year={1999},
+  publisher={Acoustical Society of America}
+}
+
+@article{Brown1991,
+  title={Speaking fundamental frequency characteristics as a function of age and professional singing},
+  author={Brown Jr, WS and Morris, Richard J and Hollien, Harry and Howell, Elizabeth},
+  journal={Journal of Voice},
+  volume={5},
+  number={4},
+  pages={310--315},
+  year={1991},
+  publisher={Elsevier}
+}
+
+@book{Demasi2010,
+  title={A ditongação nasal no {P}ortugu\^es {B}rasileiro: uma an\'alise ac\'ustico-aerodin\^amica da fala},
+  author={Demasi, Rita},
+  year={2010},
+  publisher={University of S\~ao Paulo (Unpublished Master's Thesis)},
+  address = {S\~ao Paulo, SP}
+}
+
+@article{Fails1992,
+  title={A spectrographic analysis of Portuguese stressed and unstressed vowels},
+  author={Fails, Willis C and Clegg, J Halvor},
+  journal={Romance Linguistics: The Portuguese Context. Bergin and Garvey, Westport},
+  pages={31--42},
+  year={1992}
+}
+
+@article{Nobre1987,
+  title={Oral vowel reduction in Brazilian Portuguese},
+  author={Nobre, Maria Alzira and Ingemann, Frances},
+  journal={In Honor of Ilse Lehiste. Foris, Dordrecht},
+  pages={195--206},
+  year={1987}
+}
+
+@book{Garofolo1993,
+  title={CSR-I (WSJ0) Complete LDC93S6A. Web Download},
+  author={John Garofolo and David Graff and Doug Paul and David Pallett},
+  year={1993},
+  publisher={Linguistic Data Consortium},
+  address = {Philadelphia}
+}
+
+
+### ARTIGO INTERSPEECH
+@book{Bussmann96,
+  added-at = {2011-03-07T15:49:54.000+0100},
+  author = {Bussmann, Hadumod. and Trauth, Gregory. and Kazzazi, Kerstin. and Bussmann, Hadumod.},
+  biburl = {http://www.bibsonomy.org/bibtex/2d7288608bf4f5c43f2e9474564704abf/jorges},
+  catalogue-url = {http://nla.gov.au/nla.cat-vn1026756},
+  interhash = {9e27b73785f6047c636972d30db667ed},
+  intrahash = {d7288608bf4f5c43f2e9474564704abf},
+  isbn = {0415022258 0415203198 0415203198 0415022258},
+  keywords = {imported},
+  language = {English},
+  life-dates = {1996 -},
+  pages = { xxiv, 530 p. : },
+  publisher = { Routledge, London ; New York : },
+  subjects = {Linguistics - Dictionaries.; Linguistics.},
+  timestamp = {2011-03-07T15:49:54.000+0100},
+  title = { Routledge dictionary of language and linguistics / Hadumod Bussmann ; translated and edited by Gregory Trauth and Kerstin Kazzazi },
+  type = { Book },
+  year = { 1996 }
+}
+
+@article{Bisol1989,
+ title={Vowel Harmony: a Variable Rule in Brazilian Portuguese},
+ author={Bisol, L.},
+ journal={Language Variation and change},
+ publisher={Cambridge University Press},
+ volume={1},
+ pages={185--198},
+ year={1989}
+}
+
+
+@article {Veiga2013, 
+author={Veiga, A. and Candeias, S. and Perdig\~ao, F. },
+booktitle={Conf. on Telecommunications - ConfTele}, 
+title={Developing a Hybrid Grapheme to Phoneme Converter for European Portuguese}, 
+year={2013}, 
+month={May}, 
+volume={1}, 
+pages={297-300 },
+}
+
+
+
+@article{Scikit2011,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
+
+@book{Alves2001,
+  title={Neologismo: Cria{\c{c}}{\~a}o lexical},
+  author={Alves, I.M.},
+  series={Princ{\'\i}pios (S{\~a}o Paulo)},
+  url={http://books.google.com.br/books?id=7fIuAAAAYAAJ},
+  year={2001},
+  publisher={Editora Atica}
+}
+
+@inproceedings{Hosn2006,
+  title={New resources for brazilian portuguese: Results for grapheme-to-phoneme and phone classification},
+  author={Hosn, Chadia and Baptista, Luiz Alberto and Imbiriba, Tales and Klautau, Aldebaro},
+  booktitle={Telecommunications Symposium, 2006 International},
+  pages={477--482},
+  year={2006},
+  organization={IEEE}
+}
+
+@book{Girelli1990,
+  title={Brazilian Portuguese Syllable Structure},
+  author={Girelli, C.A.},
+  url={http://books.google.com.br/books?id=KRGMnQEACAAJ},
+  year={1990},
+  publisher={UMI}
+}
+
+
+@inproceedings{Nhenhem2012,
+  author    = {Vasil\'{e}vski, Vera},
+  title     = {Phonologic Patterns of Brazilian Portuguese: a grapheme to phoneme converter based study},
+  booktitle = {Proceedings of the Workshop on Computational Models of Language Acquisition and Loss},
+  month     = {April},
+  year      = {2012},
+  address   = {Avignon, France},
+  publisher = {Association for Computational Linguistics},
+  pages     = {51--60},
+  url       = {http://www.aclweb.org/anthology/W12-0912}
+}
+
+@inproceedings{Oliveira2005,
+  author = {Oliveira, Catarina and Moutinho, Lurdes Castro and Teixeira, Ant\'onio J. S.},
+  booktitle = {Proceedings of the Interspeech 2005},
+  url = {http://www.isca-speech.org/archive/interspeech\_2005/i05\_2933.html},
+  keywords = {dblp},
+  pages = {2933-2936},
+  publisher = {ISCA},
+  title = {On european Portuguese automatic syllabification.},
+  year = 2005
+}
+
+
+@inproceedings{Bilcu2006,
+  title={A hybrid neural network for language identification from text},
+  author={Bilcu, Eniko Beatrice and Astola, Jaakko},
+  booktitle={Machine Learning for Signal Processing, 2006. Proceedings of the 2006 16th IEEE Signal Processing Society Workshop on},
+  pages={253--258},
+  year={2006},
+  organization={IEEE}
+}
+
+@inproceedings{Bergsma2012,
+ author = {Bergsma, Shane and McNamee, Paul and Bagdouri, Mossaab and Fink, Clayton and Wilson, Theresa},
+ title = {Language Identification for Creating Language-specific Twitter Collections},
+ booktitle = {Proceedings of the Second Workshop on Language in Social Media},
+ series = {LSM '12},
+ year = {2012},
+ location = {Montreal, Canada},
+ pages = {65--74},
+ numpages = {10},
+ url = {http://dl.acm.org/citation.cfm?id=2390374.2390382},
+ acmid = {2390382},
+ publisher = {Association for Computational Linguistics},
+ address = {Stroudsburg, PA, USA},
+} 
+
+@inproceedings{Dolf2012,
+           month = {May},
+          author = {Dolf {Trieschnigg} and Djoerd {Hiemstra} and Mari\"et {Theune} and Franciska de {Jong} and Theo {Meder}},
+       booktitle = {Workshop on Adaptation of Language Resources and Tools for Processing Cultural Heritage, LREC 2012},
+          editor = {P. {Osenova} and S. {Piperidis} and M. {Slavcheva} and C. {Vertan}},
+         address = {Istanbul, Turkey},
+           title = {An exploration of language identification techniques for the Dutch folktale database},
+       publisher = {LREC organization},
+            year = {2012},
+           pages = {47--51},
+        keywords = {Language detection, text classification},
+             url = {http://doc.utwente.nl/82013/},
+}
+
+@inproceedings{Zampieri2012,
+  title={Automatic identification of language varieties: The case of Portuguese},
+  author={Zampieri, Marcos and Gebre, Binyam Gebrekidan and Nijmegen, Holland},
+  booktitle={Proceedings of KONVENS},
+  pages={233--237},
+  year={2012}
+}
+
+@book{Cristofaro2005,
+  title={Fon{\'e}tica e fonologia do portugu{\^e}s: roteiro de estudos e guia de exerc{\'\i}cios},
+  author={Silva, Tha{\"\i}s Crist{\'o}faro},
+  year={2005},
+  publisher={Contexto}
+}
+
+@article{Quicoli1990,
+ title={Harmony, lowering and nasalization in Brazilian Portuguese},
+ author={Quicoli, A.},
+ journal={Língua},
+ volume={80},
+ pages={295--331},
+ year={1990}
+}
+
+
+@inproceedings{Braga2008,
+ title={Automatic Word Stress Marker for Portuguese TTS},
+ author={Braga, D. and Coelho, L.},
+ journal={V Jornadas en Tecnologia del Habla},
+ year={2008},
+ location={Bilbao,Spain}
+}
+
+
+
+@inproceedings{Rocha2013,
+ author = {Rocha, W. and Neto, N.},
+ title = {Implementa\c{c}\~ao de um Separador Sil\'abico Gratuito Baseado em Regras Lingu\'isticas para o Portugu\^es Brasileiro},
+ booktitle = {Proceedings of the 9th Brazilian Symposium in Information and Human Language Technology},
+ year = {2013},
+ pages = {108--115},
+ location = {Fortaleza, Brazil}
+} 
+
+
+@book{Ethnologue2013,
+  title={Ethnologue: Languages of the World, Seventeenth edition},
+  author={Lewis, M. Gary, F. and Charles, D.},
+  series={Seventeenth edition},
+  url={http://www.ethnologue.com},
+  year={2013},
+  publisher={SIL International},
+  address={Dallas, Texas}
+}
+
+@book{Acordo2009,
+  title={Acordo ortográfico da língua portuguesa, de 14, 15 e 16 de dezembro de 1990},
+  author={Brasil},
+  year={2009},
+  publisher={Diário do Congresso Nacional da República Federativa do Brasil, Poder Executivo},
+  address={Brasília, Brazil}
+}
+
+
+
+@misc{Wikiextractor2013,
+author =   {Medialab},
+title =    {Wikipedia Extractor},
+howpublished = {http://medialab.di.unipi.it/wiki/Wikipedia\_Extractor},
+year = {2013}
+}
+
+
+@book{Steinwart2008,
+  title={Support vector machines},
+  author={Steinwart, Ingo and Christmann, Andreas},
+  year={2008},
+  publisher={Springer}
+}
+
+@article{Godwin2009,
+ title={Emerging technologies: Speech tools and technologies},
+ author={Godwin-Jones, R.},
+ journal={Language Learning and Technology},
+ volume={13-3},
+ pages={4--11},
+ year={2009}
+}
+
+@article{Delatorre2005,
+ title={Production of epenthesis in ed-endings by Brazilian EFL learners},
+ author={Delatorre, F. and Koerich, R.},
+ journal={Proceedings of the II Academic Forum},
+ pages={8},
+ year={2005}
+}
+
+@misc{CMUdict1998,
+author =   {Weide, H.},
+title =    {The CMU Pronouncing Dictionary},
+url = {http://www.speech.cs.cmu.edu/cgi-bin/cmudict},
+year = {1998}
+}
+
+@article{Neto2011,
+  title={Free tools and resources for Brazilian Portuguese speech recognition},
+  author={Neto, N. and Patrick, C. and Klautau, A. and Trancoso, I.},
+  journal={Journal of the Brazilian Computer Society},
+  volume={17},
+  number={1},
+  pages={53--68},
+  year={2011},
+  publisher={Springer}
+}
+
+@incollection{Teixeira2006,
+  title={On the use of machine learning and syllable information in European Portuguese grapheme-phone conversion},
+  author={Teixeira, Ant{\'o}nio and Oliveira, Catarina and Moutinho, Lurdes},
+  booktitle={Computational Processing of the Portuguese Language},
+  pages={212--215},
+  year={2006},
+  publisher={Springer}
+}
+
+@inproceedings{Polyakova2006,
+  title={Learning from errors in grapheme-to-phoneme conversion.},
+  author={Polyakova, Tatyana and Bonafonte, Antonio},
+  booktitle={INTERSPEECH},
+  year={2006},
+}
+
+@inproceedings{Damper1998,
+  title={Comparative evaluation of letter-to-sound conversion techniques for English text-to-speech synthesis},
+  author={Damper, Robert I and Marchand, Y and Adamson, MJ and Gustafson, Kjell},
+  booktitle={The Third ESCA/COCOSDA Workshop (ETRW) on Speech Synthesis},
+  year={1998}
+}
+
+@inproceedings{Shulby2013,
+    author = {Christopher Shulby and Gustavo Mendon\c{c}a and Vanessa Marquiafável},
+    title = {Automatic Disambiguation of Homographic Heterophone Pairs Containing Open and Closed Mid Vowels},
+    year = {2013},
+    booktitle = {9th Brazilian Symposium in Information and Human Language Technology},
+    address = {Fortalez, CE, Brazil},
+    pages = {126-137}
+}
+
+@misc{GPL2007,
+ title = {GNU General Public License, version 3},
+ howpublished = {\url{http://www.gnu.org/licenses/gpl.html}},
+ note = {Last retrieved 2012-05-10},
+ year = {2007},
+ month = {June}
+}
+
+@misc{Robjohns2010,
+ title = {A brief history of microphones},
+ author = {Hugh Robjohns},
+ howpublished = {\url{http://microphone-data.com//media/filestore/articles/History-10.pdf}},
+ note = {Last retrieved 11-21-2014},
+ year = {2010},
+ month = {June}
+}
+
+@article{Umesh1999,
+  author    = {Umesh, S. and Cohen, L. and Nelson, D.},
+  title     = {Fitting the Mel Scale},
+  journal   = {Proc. ICASSP 1999},
+  year      = {1999},
+  pages     = {217--220},
+  issn      = {0-7803-5041}
+}
+
+@article{Stevens1937,
+   author = {Stevens, S. S. and Volkmann, J. and Newman, E. B.},
+   title = {A Scale for the Measurement of the Psychological Magnitude Pitch},
+   journal = {The Journal of the Acoustical Society of America},
+   year = {1937},
+   volume = {8},
+   number = {3}, 
+   pages = {185-190},
+   url = {http://scitation.aip.org/content/asa/journal/jasa/8/3/10.1121/1.1915893},
+   doi = {http://dx.doi.org/10.1121/1.1915893} 
+}
+
+
+
+
+
+
+@article{Shrawankar2010,
+  author    = {Urmila Shrawankar and Vilas M. Thakare},
+  title     = {Techniques for Feature Extraction In Speech Recognition System : A Comparative Study},
+  journal   = {International Journal Of Computer Applications In Engineering, Technology and Sciences (IJCAETS)},
+  year      = {2010},
+  pages     = {412--418},
+  issn      = {0974-3596}
+}
+
+@book{Ladefoged1996,
+  title={Elements of acoustic phonetics},
+  author={Peter Ladefoged},
+  year={1995},
+  publisher={University of Chicago Press},
+  address={Chicago},
+  pages={216}
+}
+
+@article{Hermansky1990,
+  title={Perceptual linear predictive (PLP) analysis of speech},
+  author={Hermansky, Hynek},
+  journal={the Journal of the Acoustical Society of America},
+  volume={87},
+  number={4},
+  pages={1738--1752},
+  year={1990},
+  publisher={Acoustical Society of America}
+}
+
+@article{Davis1980,
+  title={Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences},
+  author={Davis, Steven and Mermelstein, Paul},
+  journal={Acoustics, Speech and Signal Processing, IEEE Transactions on},
+  volume={28},
+  number={4},
+  pages={357--366},
+  year={1980},
+  publisher={IEEE}
+}
+
+
+@book{McLoughlin2009,
+  title={Applied Speech and Audio Processing -- With Matlab Examples},
+  author={Ian McLoughlin},
+  year={2009},
+  publisher={Cambridge University Press},
+  address={Cambridge},
+  pages={218}
+}
+
+@book{BEI2013,
+  author = {GlobalEnglish},
+  title = {The 2013 Business English Index \& Globalization of English Report},
+  year={2013},
+  publisher={Pearson Always Learning},
+  address={Pearson},
+  pages={15}
+}
+
+@book{EF2014,
+  author = {EducationFirst},
+  title = {EF English Proficiency Index 2014},
+  year={2014},
+  publisher={Education First},
+  pages={47},
+}
+

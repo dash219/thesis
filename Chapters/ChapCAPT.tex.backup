@@ -1,0 +1,42 @@
+%************************************************
+\chapter{Computer Assisted Pronunciation Training}\label{ch:capt}
+%************************************************
+
+Lorem ipsum quod dolor sit amet.
+
+\section{Feedback} 
+Many papers have confirmed the importance of feedback for adequate learning in second language
+acquisition. Negative feedback has been investigated by (XXXXX) and positive feedback by (XXXXX).
+For \ac{CAPT} systems the feedback to the user may be provided by many media: text, voice or video.
+
+Definitely, the more complex and informative form of feedback is through video. \citeauthor{Badin2010} \citep{Badin2010}
+developed a 3D talking head, that is able to display the articulation in an augmented mode,
+by showing all major speech articulators, including those usually hidden such as the tongue or the velum. The talking
+was called OroFacial Clone, and an example of its display can be found in \autoref{fig:badin-orofacial-clone}.
+
+\begin{figure}[!htb]
+        \myfloatalign
+        {\includegraphics[width=.66\linewidth]{gfx/badin-orofacial-clone.png}}
+        \caption{Example of the OroFacial Clone display, from \citeauthor{Badin2010} \citep{Badin2010}.}
+        \label{fig:badin-orofacial-clone}
+\end{figure}
+
+The model is based on acustic-to-articulatory inversion and was built upon estimating speech articulators' 
+movement from \ac{MRI}, \ac{CT} and video data. As one can imagine, building such a model is a very expensive task, which 
+requires not only \ac{CG} and speech processing expertise, but also access to high-priced medical devices, such as 
+\ac{MRI} scanners and tomographs. 
+
+Part of this system was evaluated by \citeauthor{Wang2014} \citep{Wang2014} in a \ac{CAPT} context, by testing the
+performance of Chinese learners of French. The aim of the test was to analyse performance of the learners in the production 
+of French vowels that do not exist in the Chinese phoneset. The authors found that the students that were exposed to 
+audiovisual stimuli improved their pronunciation more than the ones that were exposed only to auditory stimuli.
+
+
+
+
+
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************

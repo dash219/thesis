@@ -1,0 +1,78 @@
+%%% Definitions
+word -- string with the ortographic form of the word
+pron -- string with the phonetic transcription of the word
+new_pron -- string with the modified pronunciation
+dict -- dictionary with all CMU words as keys and pron as values
+
+for word, pron in dict:
+
+ %%% Rules after Cardoso (2011)
+ %%% Stop consonants in word final position
+ if pron has [p$]: % e.g.  pop 
+   replace [p$] by [p ih$] and append new_pron to dict
+ elif pron has [b$]: % e.g.  tab 
+   replace [b$] by [b ih$] and append new_pron to dict
+ elif pron has [t$]: % e.g.  tit 
+   replace [t$] by [t ih$] and append new_pron to dict
+ elif pron has [d$]: % e.g.  and 
+   replace [d$] by [d ih$] and append new_pron to dict
+ elif pron has [k$]: % e.g.  book
+   replace [k$] by [k ih$] and append new_pron to dict
+ elif pron has [g$]: % e.g.  dog 
+   replace [g$] by [g ih$] and append new_pron to dict
+
+ %%% Rules after  Silveira (2012)   
+ %%% Written language influencing pronunciation
+ elif word has <me$> and pron has [m$]: % e.g.  time
+   replace [m$] by [m ih$] and append new_pron to dict
+ elif word has <ne$> and pron has [n$]: % e.g.  dine
+   replace [n$] by [m ih$] and append new_pron to dict
+ elif word has <[AEIOU]le$> and pron has [l$]: % e.g.  whale
+   replace [l$] by [l ih$] and append new_pron to dict
+ elif word has <re$> and pron has [r$]: % e.g.  care 
+   replace [r$] by [r ih$] and append new_pron to dict
+ elif word has <se$> and pron has [s$]: % e.g.  house 
+   replace [s$] by [s ih$] and append new_pron to dict
+ elif word has <ce$> and pron has [s$]: % e.g.  nice
+   replace [s$] by [s ih$] and append new_pron to dict
+ elif word has <ze$> and pron has [z$]: % e.g.  americanize 
+   replace [z$] by [z ih$] and append new_pron to dict
+ elif word has <te$> and pron has [t$]: % e.g.  animate
+   replace [t$] by [t ih$] and append new_pron to dict
+ elif word has <de$> and pron has [d$]: % e.g.  amplitude 
+   replace [d$] by [d ih$] and append new_pron to dict
+ elif word has <ke$> and pron has [k$]: % e.g.  make 
+   replace [k$] by [k ih$] and append new_pron to dict
+ elif word has <gue$> and pron has [g$]: % e.g.  league 
+   replace [g$] by [g ih$] and append new_pron to dict
+ elif word has <fe$> and pron has [f$]: % e.g.  life 
+   replace [f$] by [f ih$] and append new_pron to dict
+ elif word has <ve$> and pron has [v$]: % e.g.  love 
+   replace [v$] by [v ih$] and append new_pron to dict
+ elif word has <pe$> and pron has [p$]: % e.g.  microscope
+   replace [p$] by [p ih$] and append new_pron to dict
+ elif word has <be$> and pron has [b$]: % e.g.  subscribe 
+   replace [b$] by [b ih$] and append new_pron to dict
+ elif word has <xe$> and pron has [k s$]: % e.g.  axe 
+   replace [k s$] by [k s ih$] and append new_pron to dict
+
+ %%% Rules after Rauber & Baptista (2004) and Rebello & Baptista (2006)
+ %%% Initial /sC/ clusters 
+ elif pron has [^s p]: % e.g.  sport 
+   replace [^s p] by [^i s p] and append new_pron to dict
+ elif pron has [^s t]: % e.g.  stop 
+   replace [^s t] by [^i s t] and append new_pron to dict
+ elif pron has [^s k]: % e.g.  school 
+   replace [^s k] by [^i s k] and append new_pron to dict
+ elif pron has [^s l]: % e.g.  slide 
+   replace [^s l] by [^i s l] and append new_pron to dict
+ elif pron has [^s m]: % e.g.  small 
+   replace [^s m] by [^i s m] and append new_pron to dict
+ elif pron has [^s n]: % e.g.  snail 
+   replace [^s n] by [^i s n] and append new_pron to dict
+ elif word has <^sw> and pron has [^s w]: % e.g.  swim 
+   replace [^s w] by [^i s w] and append new_pron to dict
+ elif word has <^sw> and pron has [^s ao]: % e.g.  sword
+   replace [^s ao] by [^i s w ao] and append new_pron to dict
+   
+end for

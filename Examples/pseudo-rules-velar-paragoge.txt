@@ -1,0 +1,13 @@
+%%% Definitions
+word -- string with the ortographic form of the word
+pron -- string with the phonetic transcription of the word
+new_pron -- string with the modified pronunciation
+dict -- dictionary with all CMU words as keys and pron as values
+
+for word, pron in dict:
+
+ %%% Rule after xxxx
+ if pron has [ng$]: % e.g. working 
+   replace [ng$] by [ng g$] and append new_pron to dict 
+
+end for

@@ -1,0 +1,97 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC 
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents 
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+
+\begingroup 
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************    
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace*{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[1]{\listtablename}{lot}
+    \listoftables
+        
+    \vspace*{8ex}
+%   \newpage
+    
+    %*******************************************************
+    % List of Listings
+    %*******************************************************      
+	  %\phantomsection 
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    \lstlistoflistings 
+
+    \vspace*{8ex}
+       
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection 
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[UML]
+	\acro{AmE}{American English}
+        \acro{DRY}{Don't Repeat Yourself}
+        \acro{API}{Application Programming Interface}
+        \acro{UML}{Unified Modeling Language}
+        \acro{ASR}{Automatic Speech Recognition}
+        \acro{HMM}{Hidden Markov Model}
+        \acro{CMUdict}{Carnegie Mellon University Pronouncing Dictionary}
+        \acro{HTK}{Hidden Markov Model Toolkit}
+        \acro{ARPA}{Advanced Research Projects Agency}
+        \acro{ASCII}{American Standard Code for Information Interchange}
+        \acro{IPA}{International Phonetic Alphabet}
+        \acro{BP}{Brazilian Portuguese}
+        \acro{DNN}{Deep Neural Network}
+        \acro{HSP}{Heightened Subglottal Pressure}
+        \acro{ATR}{Advanced Tongue Root}
+        \acro{SLA}{Second Language Acquisition}
+        \acro{ESL}{English as a Second Language}
+        \acro{regex}{Regular Expression}
+        \acro{SNR}{Signal-to-Noise Ratio}
+        \acro{POS}{Part of Speech}
+        \acro{MRI}{Magnetic Resonance Imaging}
+        \acro{CT}{Computer Tomography}
+        \acro{CG}{Computer Graphics}
+        \acro{CAPT}{Computer Assisted Pronunciation Training}
+        \acro{F0}{Fundamental Frequency}
+        \acro{VBR}{Variable Bit Rate}
+        \acro{CSR}{Continuous Speech Recognition}
+    \end{acronym}                     
+\endgroup
+
+\cleardoublepage

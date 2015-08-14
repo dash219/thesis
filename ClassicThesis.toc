@@ -1,0 +1,86 @@
+\select@language {american}
+\vspace {-\cftbeforepartskip }
+\select@language {american}
+\contentsline {chapter}{\numberline {1}\spacedlowsmallcaps {Introduction}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Research hypotheses}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Contributions of the Thesis}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Thesis Structure}{9}{section.1.3}
+\contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Some Fundamental Concepts}}{11}{part.1}
+\contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Phonetics and Phonology}}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Phonetic Inventory of Brazilian Portuguese}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}The Phonetic Inventory of American English}{13}{section.2.2}
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Second Language Acquisition}}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}PB}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Why Consider L1 in L2 Teaching?}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}Common Mispronunciation}{30}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Syllable Simplification}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Consonant Change}{30}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Deaspiration of Voiceless Plosives in Initial or Stressed Positions}{30}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Terminal Devoicing in Word-Final Obstruents}{31}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Delateralization and rounding of lateral liquids in final position}{31}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Vocalization of final nasals}{31}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Velar consonantal paragoge}{31}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}Vowel assimilation}{31}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}Interconsonantal epenthesis (-ed and -s morphemes)}{31}{subsection.3.3.9}
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Automatic Speech Recognition}}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}The big picture}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}HMM}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}PB}{35}{section.4.3}
+\contentsline {section}{\numberline {4.4}A Brief History}{39}{section.4.4}
+\contentsline {section}{\numberline {4.5}HMM-based Speech Recognition}{43}{section.4.5}
+\contentsline {section}{\numberline {4.6}Feature Extraction}{43}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Preambulus}{43}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}MFCC Features}{47}{section.4.7}
+\contentsline {section}{\numberline {4.8}Dealing with Noisy Data}{48}{section.4.8}
+\contentsline {section}{\numberline {4.9}Types of Speech Recognition Systems}{48}{section.4.9}
+\contentsline {section}{\numberline {4.10}The Architecture of a Large Vocabulary Continuous Speech Recognition System}{49}{section.4.10}
+\contentsline {part}{ii\hspace {1em}\spacedlowsmallcaps {Related Work}}{51}{part.2}
+\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Computer Assisted Pronunciation Training}}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}PB}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}English}{54}{section.5.2}
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {How to Adapt a Speech Recognition to Non-Native Data}}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}PB}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Adaptation Methods for the Acoustic Model}{62}{section.6.2}
+\contentsline {section}{\numberline {6.3}Adaptation Methods for the Pronunciation Model}{62}{section.6.3}
+\contentsline {section}{\numberline {6.4}Adaptation Methods for the Languaeg Model}{62}{section.6.4}
+\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {The Design of Listener}}{63}{part.3}
+\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Methods}}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}PB}{65}{section.7.1}
+\contentsline {section}{\numberline {7.2}Evaluation}{76}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Evaluation Metrics}{76}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Tools and Libraries}{77}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}HTK}{78}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Julius}{78}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Aieouad\^o's dictionary and G2P converter}{78}{subsection.7.3.3}
+\contentsline {paragraph}{Further developments}{85}{table.caption.59}
+\contentsline {section}{\numberline {7.4}Speech Corpora}{86}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}TIMIT}{86}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}WSJ0}{86}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}SpeechDat}{87}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Listener's Corpus}{87}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Oxford Dictionary AmE Corpus}{87}{subsection.7.4.5}
+\contentsline {subsection}{\numberline {7.4.6}Cambridge Dictionary}{89}{subsection.7.4.6}
+\contentsline {subsection}{\numberline {7.4.7}OGI-22}{89}{subsection.7.4.7}
+\contentsline {subsection}{\numberline {7.4.8}Westpoint}{89}{subsection.7.4.8}
+\contentsline {subsection}{\numberline {7.4.9}LapsBM}{89}{subsection.7.4.9}
+\contentsline {subsection}{\numberline {7.4.10}Youtube}{89}{subsection.7.4.10}
+\contentsline {section}{\numberline {7.5}Building the Acoustic Model}{89}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}The Phoneset}{89}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Speech Data}{92}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}HMM topology}{92}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {7.5.4}Tree-Based State Tying}{92}{subsection.7.5.4}
+\contentsline {section}{\numberline {7.6}Building the Pronunciation Model}{97}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Syllable Simplification}{99}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Consonant Change}{101}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {7.6.3}Deaspiration of Voiceless Plosives in Initial or Stressed Positions}{101}{subsection.7.6.3}
+\contentsline {subsection}{\numberline {7.6.4}Devoicing in Word-Final Obstruents}{102}{subsection.7.6.4}
+\contentsline {subsection}{\numberline {7.6.5}Delateralization and rounding of lateral liquids in final position}{104}{subsection.7.6.5}
+\contentsline {subsection}{\numberline {7.6.6}Vocalization of final nasals}{105}{subsection.7.6.6}
+\contentsline {subsection}{\numberline {7.6.7}Velar consonantal paragoge}{105}{subsection.7.6.7}
+\contentsline {subsection}{\numberline {7.6.8}Vowel assimilation}{105}{subsection.7.6.8}
+\contentsline {subsection}{\numberline {7.6.9}Interconsonantal epenthesis (-ed and -s morphemes)}{105}{subsection.7.6.9}
+\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Results and Discussion}}{119}{chapter.8}
+\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Final Remarks}}{121}{chapter.9}
+\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {Appendix}}{125}{part.4}
+\vspace {\beforebibskip }
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{128}{dummy.7}

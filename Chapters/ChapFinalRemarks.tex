@@ -1,0 +1,102 @@
+%*****************************************
+\chapter{Final Remarks}\label{ch:final-remarks}
+%*****************************************
+
+
+Resultados em reconhecimento de fala, em muitas vezes, s\~ao
+explorat\'orios. As l\'inguas s\~ao sistemas din\^amicos, variando dado o
+espa\c{c}o, o tempo, os grupos sociais, as situa\c{c}\~oes comunicativas e o
+pr\'oprio falante. Tendo em vista que cada l\'ingua possui aspectos
+particulares, n\~ao se pode assegurar, no PLN, que m\'etodos j\'a testados
+para outros idiomas, sejam diretamente transplantados para o PB e tenham
+funcionamento e desempenho similar. Esta disserta\c{c}\~ao busca propor um
+m\'etodo de elabora\c{c}\~ao de um sistema de reconhecimento de pron\'uncia para
+aprendizes de ingl\^es, falantes nativos do PB. Um sistema desse tipo
+ainda n\~ao foi elaborado para o PB e os resultados, portanto, s\~ao
+tentativos. Como se discutiu, tal sistema \'e de utilidade, tendo em vista
+a baixa profici\^encia em ingl\^es dos brasileiros, demonstrada recentemente
+nos \'indices da GlobalEnglish (2012) e da Education First (2013).
+
+A literatura pertinente da \'area foi revisada e m\'etodos que se mostraram
+promissores foram selecionados para integrar o projeto. Pretende-se
+elaborador um reconhecedor de pron\'uncia que seja capaz de tratar nove
+erros de pron\'uncia, provendo feedback ao usu\'ario sobre a qualidade de
+sua pron\'uncia. Os erros foram selecionados com base nos trabalhos de
+Zimmer (2004), Godoy (2005), Zimmer et al. (2009) e Crist\'ofaro-Silva
+(2012), assumindo-se, como pron\'uncia padr\~ao, o General American (GA). A
+abordagem de interl\'ingua foi selecionada para a arquitetura do
+reconhecedor. O modelo ac\'ustico \'e, assim, alimentado com dados de fala
+tanto de nativos, quanto de n\~ao-nativos, aprendizes de ingl\^es. No caso,
+para os dados de nativos, ser\'a utilizado o TIMIT; e para os de
+n\~ao-nativos, o COBAI e um corpus de leitura de senten\c{c}as foneticamente
+balanceadas, ainda a ser compilado. As senten\c{c}as ser\~ao extra\'idas de um
+corpus de aprendizes, o COMAprend. Um script em Python ser\'a utilizado
+para realizar a convers\~ao grafema-fone das senten\c{c}as, tendo por base a
+pron\'uncia can\^onica das palavras registrada no CMU Pronouncing
+Dictionary. Na abordagem interlingual, tamb\'em, o modelo de pron\'uncia
+deve ser alimentado com as variantes de pron\'uncia do aprendiz, de modo a
+compor os chamados dicion\'arios multipron\'uncia. Para isso, pretende-se
+utilizar o CMU Pronouncing Dictionary como base e adicionar as hip\'oteses
+de pron\'uncia dos aprendizes por meio de regras transformacionais. O
+modelo de l\'ingua ser\'a constitu\'ido por trigramas e gerado a partir da
+Simple English Wikipedia., de modo a apresentar um sintaxe pr\'oxima à
+produ\c{c}\~ao do aprendiz.
+
+Um prot\'otipo foi elaborado de modo a avaliar a viabilidade do m\'etodo ora
+proposto. O cronograma de execu\c{c}\~ao do projeto est\'a dentro do prazo, e as
+bibliotecas e os softwares necess\'arios para sua execu\c{c}\~ao (HTK, Julius,
+Adintool, Audacity, Praat, SoX) j\'a foram testados na elabora\c{c}\~ao do
+prot\'otipo. Uma por\c{c}\~ao do COBAI (\textasciitilde{}3h40min) foi
+segmentada, alinhada e analisada e utilizada para estimar o modelo
+ac\'ustico. Tendo em vista o grande de n\'umero de arquivos do COBAI que
+teve de ser desconsiderado (apenas \textasciitilde{}1h30min do que foi
+segmentado pode ser utilizado), optou-se por se realizar a coleta de um
+corpus de leitura de senten\c{c}as foneticamente balanceadas especificamente
+para o desenvolvimento do projeto. De modo a simular, no prot\'otipo, os
+dados que se obter\~ao com esse corpus, um corpus de erros induzidos
+(\textasciitilde{}2h20min) foi gravado, segmentado, transcrito e
+analisado. Tal corpus tamb\'em foi utilizado na estima\c{c}\~ao do modelo
+ac\'ustico do prot\'otipo, juntamente com os dados do COBAI. O m\'etodo de
+coleta e anota\c{c}\~ao do corpus real, de leitura de senten\c{c}as foneticamente
+balanceadas, ser\'a definido em visita t\'ecnica à Universidade de Coimbra,
+sob supervis\~ao da Profa. Sara Candeias, no per\'iodo de 28 de janeiro a 28
+de fevereiro de 2014. O dicion\'ario-base do modelo de pron\'uncia, o CMU
+Pronouncing Dictionary, j\'a foi testado no prot\'otipo, tendo sido
+adicionadas variantes de pron\'uncia para um dos erros selecionados: a
+simplifica\c{c}\~ao sil\'abica. Foi observado que houve um grande aumento no
+n\'umero de entradas no modelo de pron\'uncia com a adi\c{c}\~ao das variantes de
+pron\'uncia: o dicion\'ario cresceu de 1.855 palavras para 7.597. Sendo
+assim, \'e poss\'ivel, ao se coligir todas as regras para os nove tipos de
+erros, que o dicion\'ario cres\c{c}a fortemente, tornando o reconhecimento
+confuso, bem como consumindo tempo e recursos computacionais. Caso isso
+ocorra, uma solu\c{c}\~ao poss\'ivel seria criar dicion\'arios espec\'ificos para
+cada tipo de erro, ou solicitar a um especialista que cerceie o
+dicion\'ario, eliminando as variantes que ocorrem com menor frequ\^encia. Os
+resultados iniciais obtidos com o prot\'otipo no reconhecimento
+mostraram-se promissores.
+
+O conte\'udo do projeto tem sido publicado na web{[}31{]} de modo a
+dar-lhe visibilidade e angariar poss\'iveis colaboradores. Pretende-se,
+tamb\'em, ao final do projeto, disponibilizar um pequeno sistema de treino
+de pron\'uncia, como a prova de conceito para uso do reconhecedor de
+pron\'uncia. Uma interface vem sendo desenvolvida para disponibilizar o
+prot\'otipo na web, as Figura 19 e Figura 20 trazem algumas telas de
+exemplo dessa interface.
+
+                                [pic]
+
+Figura 19: Interface do prot\'otipo na web - vis\~ao geral do site e tela de
+captura do \'audio com espectro de frequ\^encia.
+
+\textbar{} {[}i{]} \textbar{} {[}ii{]} \textbar{} \textbar{}{[}pic{]}
+\textbar{}{[}pic{]} \textbar{}
+
+Figura 20: Interface do prot\'otipo na web - {[}i{]} palavra reconhecida
+com transcri\c{c}\~ao em formato IPA e em alfabeto adaptado; {[}ii{]} tela com
+texto de feedback sobre a pron\'uncia do aprendiz, ap\'os ele reiterar no
+erro.
+
+H\'a tamb\'em a possibilidade de se realizar visita t\'ecnica ao Laborat\'orio
+de Processamento de Sinais (LaPS) da Universidade Federal do Par\'a
+(UFPA), na \'epoca de avalia\c{c}\~ao dos resultados finais da disserta\c{c}\~ao, sob
+supervis\~ao do Prof.~Aldebaro Klautau, co-orientador da pesquisa.

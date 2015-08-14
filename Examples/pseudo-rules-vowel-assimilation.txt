@@ -1,0 +1,23 @@
+%%% Definitions
+word -- string with the ortographic form of the word
+pron -- string with the phonetic transcription of the word
+new_pron -- string with the modified pronunciation
+dict -- dictionary with all CMU words as keys and pron as values
+
+for word, pron in dict:
+
+ %%% Rules after Rauber et al. (2005), Rauber (2006) and Battistela (2010) 
+ if pron has [ae]: % e.g. hat 
+   replace [ae] by [eh] and append new_pron to dict
+  if pron has [ih]: % e.g. bit 
+   replace [ih] by [iy] and append new_pron to dict 
+  if pron has [uh]: % e.g. book
+   replace [uh] by [uw] and append new_pron to dict 
+ 
+ %%% Rules after Rauber et al. (2005)
+ if pron has [aa]: % e.g. pot 
+   replace [aa] by [ao] and append new_pron to dict 
+ if pron has [ow]: % e.g. know
+   replace [ow] by [o] and append new_pron to dict 
+
+end for

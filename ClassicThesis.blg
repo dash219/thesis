@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ClassicThesis.aux
+A level-1 auxiliary file: FrontBackmatter/DirtyTitlepage.aux
+A level-1 auxiliary file: FrontBackmatter/Titlepage.aux
+A level-1 auxiliary file: FrontBackmatter/Titleback.aux
+A level-1 auxiliary file: FrontBackmatter/Dedication.aux
+A level-1 auxiliary file: FrontBackmatter/Abstract.aux
+A level-1 auxiliary file: FrontBackmatter/Contents.aux
+A level-1 auxiliary file: Chapters/ChapIntro.aux
+A level-1 auxiliary file: Chapters/ChapPhonology.aux
+A level-1 auxiliary file: Chapters/ChapSLA.aux
+A level-1 auxiliary file: Chapters/ChapASR.aux
+A level-1 auxiliary file: Chapters/ChapCAPT.aux
+A level-1 auxiliary file: Chapters/ChapHowToAdapt.aux
+A level-1 auxiliary file: Chapters/ChapMethods.aux
+A level-1 auxiliary file: Chapters/ChapResults.aux
+A level-1 auxiliary file: Chapters/ChapFinalRemarks.aux
+A level-1 auxiliary file: Chapters/ChapAppendix.aux
+A level-1 auxiliary file: FrontBackmatter/Bibliography.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: FrontBackmatter/Colophon.aux
+A level-1 auxiliary file: FrontBackmatter/Declaration.aux
+Database file #1: Bibliography.bib.bib
+Warning--I didn't find a database entry for "GenevaLogic2006"
+Warning--I didn't find a database entry for "Gales2007"
+Warning--I didn't find a database entry for "Fink2008"
+Warning--I didn't find a database entry for "Muller2001"
+Warning--I didn't find a database entry for "Mporas2007"
+Warning--I didn't find a database entry for "Muniz2004"
+Warning--I didn't find a database entry for ""
+Warning--empty booktitle in Strik2009
+You've used 94 entries,
+            2773 wiz_defined-function locations,
+            1256 strings with 23645 characters,
+and the built_in function-call counts, 41641 in all, are:
+= -- 3685
+> -- 2167
+< -- 88
++ -- 751
+- -- 657
+* -- 3025
+:= -- 6393
+add.period$ -- 318
+call.type$ -- 94
+change.case$ -- 471
+chr.to.int$ -- 94
+cite$ -- 189
+duplicate$ -- 2120
+empty$ -- 3608
+format.name$ -- 793
+if$ -- 8928
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 121
+newline$ -- 499
+num.names$ -- 380
+pop$ -- 1093
+preamble$ -- 1
+purify$ -- 405
+quote$ -- 0
+skip$ -- 1577
+stack$ -- 0
+substring$ -- 1348
+swap$ -- 284
+text.length$ -- 22
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 884
+warning$ -- 1
+while$ -- 375
+width$ -- 0
+write$ -- 1268
+(There were 8 warnings)
