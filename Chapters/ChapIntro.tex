@@ -116,14 +116,17 @@ About the speech recognizer and checker:
 
 \section{Contributions of the Thesis}
 
-Within this work, we have provided a set of tools and resources for non-native speech recognition and correction, focused on Brazilian-accented English. Some of these resources and tools are exclusively for tasks related to processing Brazilian-accented English, but others are more general and can be employed for many other purposes, such as a \ac{G2P} for \ac{BP}, a method for the extraction of phonetically rich sentences from a corpus, etc. The full list of contributions is found below.
+Within this work, I have investigated and developed a set of tools and resources for non-native speech recognition and correction, focused on Brazilian-accented English. Some of these resources and tools are exclusively for tasks related to processing Brazilian-accented English, but others are more general and can be employed for many other purposes, such as a \ac{G2P} for \ac{BP}, corpus balancing, etc. The full list of contributions is provided below:
 
 \begin{enumerate}
  \item \emph{Aeiouad\^o G2P}: A grapheme-to-phoneme converter for \ac{BP} which uses a hybrid approach, based on both handcrafted rules and machine learning method, as decribed in \citeauthor{Mendonca2014} \cite{Mendonca2014};
  \item \emph{Aeiouad\^o dictionary}: A large machine readable dictionary for \ac{BP}, compiled from a word list extracted from the Portuguese Wikipedia, which was preprocessed in order to filter loanwords, acronyms, scientific names and other spurious data, and then transcribed with Aeiouad\^o G2P).
  \item A method for the extraction of phonetically rich sentences, i.e. sentences with a high variety of triphones distributed in a uniform fashion, which employs a greedy algorithm for comparing triphone distributions among sentences, as described in \citeauthor{Mendonca2014b} \cite{Mendonca2014b};
+ \item A phonetic speller for user-generated content in \ac{BP}, based on machine learning, which takes advantage of Aeiouad\^o G2P to group phonetically related words, as described in \citeauthor{Mendonca2015} \cite{Mendonca2015}; 
  \item A set of rules for generating pronunciation hypothesis for Brazilian-accented English, considering nine types of mispronunciations, respectively: (i) syllable simplification; (ii) consonant change; (iii) deaspiration of voiceless plosives in initial or stressed positions; (iv) terminal devoicing in word-final obstruents; (v) delateralization and rounding of lateral liquids in final position; (vi) vocalization of final nasals; (vii) velar consonantal paragoge; (viii) vowel assimilation; (ix) interconsonantal epenthesis;
- \item A phonetic speller for user-generated content in \ac{BP}, based on machine learning, which makes use of Aeiouad\^o G2P to group phonetically related words, as described in \citeauthor{Mendonca2015} \cite{Mendonca2015};
+ \item An alignment method for phonetic transcriptions which takes into the phones' distinctive features for finding the optimal phone sequence match;
+ \item A crowdsourced platform for speeding up the process of compiling and transcribing speech corpora;
+ \item \emph{Listener}:A prototype system for automatic speech recognition and evaluation of Brazilian-accented English, which makes use of forced alignment, \ac{HMM}/\ac{GMM} acoustic models, context free grammars and multipronunciation dictionaries;
 \end{enumerate}
 
 All files, resources and scripts developed are available at the project website\footnote{Due to copyright reasons, the corpora used for training the acoustic models cannot be made available.}: 

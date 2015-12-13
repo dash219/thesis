@@ -1,9 +1,632 @@
 
 %*****************************************
-\chapter{Methods}\label{ch:methods}
+\chapter{Materials and Methods}\label{ch:methods}
 %*****************************************
 
-\section{PB}
+\section{Aieouad\^o's dictionary and G2P converter}\label{sec:aieouado}
+\footnote{This section contains is an extended version of the paper}
+Aeiouad\^o is a product and an original contribution of this Master's research. It was developed by \citeauthor{Mendonca2014} \cite{Mendonca2014}, after noticing that no prior work applied machine learning algorithms to grapheme to phoneme conversion in \ac{BP}.
+
+To the best of our knowledge, all previous efforts to solve the G2P problem in \ac{BP} used only a rule-based approach, and as such, they require complex linguistic knowledge to code rules and are difficult to evaluate. Unfortunately, it is a common practice in rule-based G2P (and a wrong one!) to develop the transcription rules based on a corpus and to evaluate them on the same corpus. This usally leads to overfitting, so that the results which are reported (some of them which approach 100\%) are hardly those which are found when such systems are applied to other data or tested in a different context. In addition to this, most of the G2P systems for \ac{BP} are proprietary or licensed under commercial terms, therefore their use is restricted.
+
+We tried to overcome this gap by developing a hybrid G2P converter, which makes use of both rules and machine learning algorithms. The converter was evaluated with traditional machine learning metrics, such as precision, recall and F1-measure; therefore, its reported metrics are trustworthy. This converter was used to build a wide pronunciation dictionary, based on wordlist extracted from Wikipedia articles. Both the dictionary and the G2P converter are distributed under permissive licenses, respectivelly \ac{CC} and \ac{BSD}. Therefore, these resources aim at promoting the development of novel speech technologies for Brazilian Portuguese. It is interesting to notice that, despite being 6\textsuperscript{th} most spoken language in the world \cite{Ethnologue2013}, with about 200 million speakers, speech recognition and speech synthesis for Brazilian Portuguese are far from the current state of the art, specially what regard to open tools and resources \cite{Neto2011}. 
+
+Aeiouad\^o's dictionary and G2P converter are based on the dialect of the city of S\~ao Paulo. They were designed primarily for Speech Technologies, such as \ac{ASR} an \ac{TTS}; but might also be used by linguists, speech therapists, lexicographers, students of Brazilian Portuguese as a second language, and whoever is interested in the sound structure of \ac{BP}.
+
+The G2P converter makes use of a hybrid approach for grapheme to phoneme conversion, based on both manual transcription rules and machine learning algorithms. Hybrid approaches in grapheme to phoneme conversion have been applied successfully to other languages \cite{Damper1998, Polyakova2006, Teixeira2006, Veiga2013}. They have the benefit of taking advantage from both knowledge-based and data-driven methods. We proposed a method in which the phonetic transcription of a given word is obtained through a two-step procedure. Its primary word list derives from the Portuguese Wikipedia dump of 23\textsuperscript{rd} January 2014. We decided to use Wikipedia as the primary word list for the dictionary for many reasons: i) given its encyclopedia nature, it covers wide-ranging topics, providing words from both general knowledge and specialized jargon; ii) it contains around 168,8 million word tokens, being robust enough for the task; iii) it makes uses of crowdsourcing, lessening author's bias; iv) its articles are distributed through Creative Commons License. Wikipedia articles were transformed into plain text, tokenized and word types were extracted.
+
+The dictionary makes use of a hybrid approach for grapheme to phoneme conversion, based on both manual transcription rules and machine learning algorithms, and aims at promoting the development of novel speech technologies for Brazilian Portuguese. Hybrid approaches in grapheme to phoneme conversion have been applied successfully to other languages \cite{Damper1998}\cite{Polyakova2006}\cite{Teixeira2006}\cite{Veiga2013}. They have the benefit of taking advantage from both knowledge-based and data-driven methods. We propose a method in which the phonetic transcription of a given word is obtained through a two-step procedure. Its primary word list derives from the Portuguese Wikipedia dump of 23\textsuperscript{rd} January 2014. We decided to use Wikipedia as the primary word list for the dictionary for many reasons: i) given its encyclopedia nature, it covers wide-ranging topics, providing words from both general knowledge and specialized jargon; ii) it contains around 168,8 million word tokens, being robust enough for the task; iii) it makes uses of crowdsourcing, lessening author's bias; iv) its articles are distributed through Creative Commons License. Wikipedia articles were transformed into plain text, tokenized and word types were extracted.
+
+We developed a language identifier in order to detect loanwords among data. It is a known fact that when languages interact, linguistic exchanges inevitably occur. One particular type of linguistic exchange is of great concern while building a pronunciation dictionary, namely, non-assimilated loanwords \cite{Bussmann96}. Non-assimilated loanwords stand for lexical borrowings in which the borrowed word is incorporated from one language into another straightforwardly, without any translation or orthographic adaptation. These words represent a problem to grapheme-to-phoneme (G2P) conversion since they show orthographic patterns which are not predicted in advance by rules or which are too deviant to be captured by machine learning algorithms. Many algorithms have been proposed to address Language Identification (LID) from text \cite{Bergsma2012, Bilcu2006, Dolf2012, Zampieri2012}. Since our goal is to detect the language of single words, we employed n-gram character  models in the identifier, given its previous success in dealing with short sequences of characters. 
+
+Brazilian Portuguese Phonology can be regarded as syllable and stress-driven \cite{Cristofaro2005}. In fact, many phonological processes in Brazilian Portuguese are related to or conditioned by syllable structure and stress position \cite{Girelli1990}. Vowel harmony occurs in pretonic context \cite{Bisol1989}, posttonic syllables show a limited vowel inventory \cite{Cristofaro2005}, nasalization occurs when stress syllables are followed by nasal consonants \cite{Quicoli1990}, epenthesis' processes are triggered by the occurrence of non-allowed consonants in coda position \cite{Delatorre2005} and so on and so forth. Therefore, detecting syllable boundaries and stress is of crucial importance for G2P systems, in order to achieve correct transcriptions. Several algorithms have been proposed to deal with the syllabification in Brazilian Portuguese. However most of them were not extensively evaluated nor were made publicly available \cite{Oliveira2005, Nhenhem2012, Neto2011, Rocha2013}. For this reason, we implemented our own syllabification algorithm, 
+based directly on the rules of the last Portuguese Language Orthographic Agreement \cite{Acordo2009}. 
+
+Word types recognized as belonging to Brazilian Portuguese by the language identifier were transcribed in a two-step process: i) words are submitted to a set of transcription rules, in which predictable graphemes (mostly consonants) are transcribed; ii) a machine learning classifier is used to predict the transcription of the remaining graphemes (mostly vowels). All the data were subsequently revised. Figure 1 summarizes the method.
+
+\begin{figure}[t]
+\centerline{ \includegraphics[width=8cm]{./gfx/flowchart_mod.pdf}}
+\caption{{\it System architecture for building the pronunciation dictionary.}}
+\label{g2p-architecture}
+\end{figure}
+
+We used the Portuguese Wikipedia's dump of 23\textsuperscript{rd} January 2014 as the primary word list for the pronunciation dictionary. In order to obtain plain text from the articles, we employed WikiExtractor \cite{Wikiextractor2013}; it strips all the  MediaWiki markups and metadata forms. Afterwards, texts were tokenized and unique words types extracted. The Portuguese Wikipedia has about 168,8 million word tokens and 9,7 million types, distributed among  820,000 articles. With the purpose of avoiding misspellings, URLs and other spurious data, only words with frequency higher than 10, which showed neither digits nor punctuation marks were selected. 
+
+A Language Identifier module was developed in order to detect loanwords in the pronunciation dictionary. The Identifier consists of a Linear Support Vector Machine Classifier \cite{Steinwart2008} and was implemented in Python, through Scikit-learn \cite{Scikit2011}. It was trained on a corpus made of the 200,000, containing 100,000 Brazilian Portuguese words and 20,000 words of each of the following languages: English, French, German, Italian and Spanish. All of these words were collected through web crawling News' sites and were not revised. We selected these languages because they are the major donors of loanwords to Brazilian Portuguese \cite{Alves2001}. From these words we extracted features such as initial and final bi- and trigraphs;  number of accented graphs, vowel-consonant ratio; average mono-, bi- and trigraphs probability; and used them to estimate the classifier. Further details can be found in the website of the Project\footnote{http://nilc.icmc.usp.br/listener/aeiouado}. After training, we applied the classifier to the Wikipedia word list with the purpose of identifying loanwords among data. The identified loanwords were then separated from the rest of words for later revision, i.e. they were not submitted to automatic transcription.
+
+Our syllabification algorithm follows a rule-approach and is based straightforwardly on the syllabification rules described in the Portuguese Language Orthographic Agreement \cite{Acordo2009}. Given space limitations, rules were omitted from this paper as they can be found in the website of the project, along with all the resources developed for the dictionary. As for the stress marker, once the syllable structure is known in Brazilian Portuguese, one can predict where stress falls. Stress falls:
+
+\begin{enumerate}
+ \item on the antepenultimate syllable if it has an accented vowel $<$\'a,\^a,\'e,\^e,\'i,\'o,\^o,\'u$>$;
+ \item on the ultimate syllable if it contains the accented vowels $<$\'a,\'e,\'o$>$ or $<$i,u$>$; or if it ends with one of the following consonants $<$r,x,n,l,z$>$;
+ \item on the penultimate syllable otherwise.
+\end{enumerate}
+
+The transcriber is based on a hybrid approach, making use of manual transcription rules and an automatic classifier, which builds Decision Trees. Initially, transcription rules are applied to the words. The rules covers not all possible graphemes to phoneme relations, but only those which are predictable by context. The output of the rules is what we called the intermediary transcription form. After obtaining it, a machine learning classifier is applied in order to predict the transcription of the remaining graphemes. Figure 2 gives an example of the transcription process.
+
+\begin{figure}[!ht]
+\centerline{ \includegraphics[width=8cm]{./gfx/transcript_ex.pdf}}
+\caption{{\it Example of the transcription procedure -- in grey: graphemes yet to be transcribed; in black: graphemes already transcribed.}}
+\label{transcExample}
+\end{figure}
+
+The rules' phase has two main goals: guarantee the correct transcription of certain predictable graphemes (mostly consonants) and also ensure the alignment between graphemes and phones for the classifier. They were set in order to avoid overlapping and order conflicts. Long sequences of graphemes, such as triphthongs, contextual diphthongs and general diphthongs are transcribed first (e.g.  $<$x-ce$> \rightarrow $\textipa{[-se]}). Then graphemes involving phones that undergo phonological processes are transcribed (e.g. $<$ti$> \rightarrow $\textipa{[tSi]}, $<$di$> \rightarrow $\textipa{[dZi]}). After that, several contextual and general monophones are transcribed (e.g. $<$\#x$> \rightarrow $\textipa{[S]}, $<$\#e-x$> \rightarrow $\textipa{[}\#\textipa{e-z]}). 
+
+On what regards to the classifier, it was developed primarily to deal with the transcription of vowels. In Brazilian Portuguese, vowels have a very irregular behavior, specially the mid ones. Therefore the relations between the vowels' graphemes and their corresponding phonemes are hard to predict beforehand through rules. Consider, for instance, the words ``teto'' \emph{(roof)} and ``gueto'' \emph{(ghetto)}; both are nouns and share basically the same orthographic environment. However the former is pronounced with an open ``e'' \textipa{["tE.tU]} and the latter with a closed one \textipa{["ge.tU]}. The classifier employs Decision Trees, through an optimised version of the CART (Classification and Regression Trees) algorithm and was implemented in Python, by means of the Scikit-learn library \cite{Scikit2011}. 
+
+The algorithm was trained over a corpus of 3,500 words phonetically transcribed and manually revised, with a total of 39,934 instances of phones. The feature extraction happened in the following way. After reviewing the data, we obtained the intermediary transcription form for each of these words and aligned them with the manual transcription. Then, we split the intermediary transcription form into its corresponding phones and, for each phone, we extracted the following information: 
+
+\begin{enumerate}
+ \item the phone itself; 
+ \item 8 previous phones; 
+ \item 8 following phones; 
+ \item the distance between the phone and the tonic syllable; 
+ \item word class -- parts of speech; 
+ \item the manually transcribed phone. 
+\end{enumerate}
+
+We considered a window of 8 phones in order deal with vowel harmony phenomena. By establishing a window with such length, one  can assure that pretonic phones will be able to reach the transcription of the vowels in the stressed syllable. The classifier was applied to all 108,389 words categorized as BP words by the Language Identifier module, all of them were cross-checked by two linguists with experience in Phonetics and Phonology.
+
+The Portuguese Wikipedia has about 168,8 million word tokens and 9,7 million types, distributed among 820k articles. After applying the filters to the data, i.e. words with frequency higher than 10, with no digits nor punctuation marks, we ended up with circa 238k word types, representing 151,9 million tokens. Table 1 describes the data.
+
+\begin{table} [t,h]
+\caption{\label{wikipedia} {\it Portuguese Wikipedia Summary -- Dumped on 23\textsuperscript{rd} January 2014.}}
+\vspace{2mm}
+\centerline{
+\begin{tabular}{ccc}
+\hline \bf & \bf Word Tokens  & \bf Word Types\\\hline
+Wikipedia & 168,823,100 & 9,688,039 \\
+Selected  & 151,911,350 & 238,012 \\
+\textbf{\% Used} &90.0 & 2.4 \\
+\hline
+\end{tabular}}
+\end{table}
+
+The selected words covers 90,0\% of the Wikipedia content. Although the number of selected word types seems too small at first glance, one of the reasons is that 7,901,277 of the discarded words were numbers (81,5\%). The remaining discarded words contained misspellings (\emph{dirijem-se} -- it should be \emph{dirigem-se}), used a non-Roman alphabet ($\lambda$\emph{\'o}$\gamma \omega$), were proper names (\emph{Stolichno}, \emph{Z\'e-pereira}), scientific names (\emph{Aegyptophitecus}), abbreviations or acronyms (LCD, HDMI). 
+
+As for the language identifier, we trained and evaluated it with the 200,000 words multilingual corpus. The corpus consists of 100,000 Brazilian Portuguese words and 20,000 words from each of the following languages: English, French, German, Italian and Spanish. All of these words were collected through web crawling News' sites and were not revised. The results obtained for the identifier, through 5-fold cross validation are described in Table 2. 
+
+\begin{table} [t,h]
+\caption{\label{langIdentEval} {\it Results from the Language Identifier module -- Training Phase.}}
+\vspace{2mm}
+\centerline{
+\begin{tabular}{ccccc}
+\hline
+ & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{Support} \\ \hline
+BP words & 0.85 & 0.89 & 0.87 & 100,000 \\ 
+Foreign Words & 0.88 & 0.84 & 0.86 & 100,000 \\
+\bf Avg/Total & 0.86 & 0.86 & 0.86 & 200,000 \\ \hline
+\end{tabular}}
+\end{table}
+
+The language identifier showed an average F1-score of 0.86. Although such result is not as good as we expected -- some authors reported 99\% by using similar methods with trigrams probability, the relatively low F1-score can be explained given the nature of the data. In most language identifiers, the input  consists of texts or several sentences, in other words, there is much more data available for the classifier. Since we are working with single words, the confusion of the model is higher and the results are, consequently, worse. Additionally, because the word list used to train the identifier was not revised, there is noise among the data. After training and evaluating the classifier, we applied it to the selected word list derived from the Wikipedia, in order to detect loanwords. Table 3 describes the results gathered.
+
+\begin{table} [H]
+\caption{\label{langIdentWiki} {\it Results from the Language Identifier module -- Wikipedia word list.}}
+\vspace{2mm}
+\centerline{
+\begin{tabular}{cc}
+\hline
+ & \textbf{Wikipedia word list}\\ \hline
+BP words & 108,370 (46\%)\\ 
+Foreign Words & 129,642 (54\%)\\
+\bf Total & 238,012 \\ \hline
+\end{tabular}}
+\end{table}
+
+As one can observe, although we established a frequency filter to avoid spurious words, many loanwords still remain. More than half of the word list selected from Wikipedia consists of foreign words. Notwithstanding that, the list of Brazilian Portuguese words is still of considerable size. For instance, the CMUdict \cite{CMUdict1998}, a reference pronunciation dictionary for the English language, has about 125,000 word types.
+
+Concerning the syllabification algorithm and the stress marker, we did not evaluate them in isolation, but together with the transcriber since the rules for each of these modules are intertwined. That is to say the transcription rules are strictly dependent on the stress marker module and the syllable identifier. Besides, the Decision Tree Classifier is built upon the output of the transcription rules, so it is entirely dependent on it. The Decision Tree Classifier was trained over a corpus of 3,500 cross-checked transcribed words, containing 39,934 instances of phones. We analyzed its performance through 5-fold cross validation, the results for each individual phone are summarized in Table 4.
+
+\begin{table} [H]
+\caption{\label{transcriberEval} {\it Results from the Transcriber -- Performance per phone.}}
+\vspace{2mm}
+\centerline{
+\begin{tabular}{ccccc}
+\hline
+ & \bf Precision & \bf Recall & \bf F1-score & \bf Support \\ \hline
+\emph{syl. boundary} & 1.00 & 1.00 & 1.00 & 9099 \\ 
+\emph{stress} & 1.00 & 1.00 & 1.00 & 3507 \\ 
+\textipa{p} & 1.00 & 1.00 & 1.00 & 760 \\ 
+\textipa{b} & 1.00 & 1.00 & 1.00 & 357 \\ 
+\textipa{t} & 0.99 & 0.99 & 0.99 & 1135 \\ 
+\textipa{d} & 0.99 & 0.99 & 0.99 & 1148 \\ 
+\textipa{k} & 0.99 & 0.99 & 0.99 & 978 \\ 
+\textipa{g} & 1.00 & 1.00 & 1.00 & 298 \\ 
+\textipa{tS} & 0.98 & 0.98 & 0.97 & 450 \\ 
+\textipa{dZ} & 0.96 & 0.96 & 0.96 & 243 \\ 
+\textipa{m} & 1.00 & 1.00 & 1.00 & 668 \\ 
+\textipa{n} & 1.00 & 1.00 & 1.00 & 556 \\ 
+\textipa{\textltailn} & 1.00 & 1.00 & 1.00 & 69 \\ 
+\textipa{f} & 1.00 & 1.00 & 1.00 & 311 \\ 
+\textipa{v} & 1.00 & 1.00 & 1.00 & 531 \\ 
+\textipa{s} & 0.98 & 0.98 & 0.98 & 2309 \\ 
+\textipa{z} & 0.93 & 0.94 & 0.93 & 416 \\ 
+\textipa{S} & 0.84 & 0.84 & 0.84 & 138 \\ 
+\textipa{k.s} & 0.72 & 0.64 & 0.66 & 41 \\ 
+\textipa{Z} & 1.00 & 1.00 & 1.00 & 196 \\ 
+\textipa{l} & 1.00 & 1.00 & 1.00 & 682 \\ 
+\textipa{L} & 1.00 & 1.00 & 1.00 & 58 \\ 
+\textipa{R} & 1.00 & 1.00 & 1.00 & 1388 \\ 
+\textipa{h} & 0.98 & 0.99 & 0.99 & 737 \\ 
+\textipa{H} & 0.97 & 0.92 & 0.94 & 169 \\ 
+\textipa{w} & 0.97 & 0.98 & 0.97 & 441 \\ 
+\textipa{\~w} & 0.98 & 0.99 & 0.99 & 309 \\ 
+\textipa{j} & 0.97 & 0.95 & 0.96 & 223 \\ 
+\textipa{\~j} & 0.95 & 1.00 & 0.98 & 110 \\ 
+\textipa{a} & 1.00 & 1.00 & 0.99 & 2316 \\ 
+\textipa{@} & 0.99 & 0.99 & 0.99 & 1093 \\ 
+\textipa{E} & 0.65 & 0.68 & 0.66 & 275 \\ 
+\textipa{e} & 0.93 & 0.91 & 0.92 & 1779 \\ 
+\textipa{i} & 0.98 & 0.99 & 0.98 & 2073 \\ 
+\textipa{I} & 0.97 & 0.97 & 0.97 & 365 \\ 
+\textipa{O} & 0.69 & 0.75 & 0.71 & 220 \\ 
+\textipa{o} & 0.93 & 0.92 & 0.93 & 1112 \\ 
+\textipa{u} & 0.96 & 0.96 & 0.96 & 488 \\ 
+\textipa{U} & 1.00 & 1.00 & 1.00 & 1033 \\ 
+\textipa{\~a} & 1.00 & 1.00 & 1.00 & 719 \\ 
+\textipa{\~e} & 0.96 & 0.97 & 0.97 & 497 \\ 
+\textipa{\~i} & 0.99 & 0.99 & 0.99 & 274 \\ 
+\textipa{\~o} & 0.97 & 0.96 & 0.97 & 299 \\ 
+\textipa{\~u} & 0.94 & 0.92 & 0.93 & 64 \\ 
+Avg/Total & 0.98 & 0.98 & 0.98 & 39934 \\ \hline
+\end{tabular}}
+\end{table}
+
+As it can be seen, the method achieved very good results, with a F1-score of 0.98. Many segments were transcribed with 100\% accuracy, most of them were consonants. As it was expected, the worst results are related to mid vowels \textipa{[E, e, O, o]}, specially mid-low vowels, \textipa{[E]} showed a F1-score 0.66 and \textipa{[O]} of 0.71. It can be the case that since the grapheme context is the same for \textipa{[E, e]} and \textipa{[O, o]}, the DecisionTree classifier generalizes, in some cases, to the most frequent phone, that is the mid-high vowels \textipa{[e,o]}. The transcriber also had problems with the \textipa{[k.s]} (F1-score: 0.66) and \textipa{[S]} (F1-score: 0.84). This result was also expected, both these phones are related to the grapheme $<$x$>$ which, in Brazilian Portuguese, shows a very irregular behavior. In fact, $<$x$>$ can be pronounced as \textipa{[S, s, z, k.s]}, depending on the  word:  ``bruxa'' \emph{(witch)} \textipa{[S]}, ``pr\'oximo'' \emph{(near)} \textipa{[s]};  ``exame'' \emph{(test)} \textipa{[z]} and ``axila'' \emph{(armpit)} \textipa{[k.s]}.
+
+We presented the method we employed in building a pronunciation dictionary for Brazilian Portuguese. High F1-score values were achieved while transcribing most of the graphemes in Brazilian Portuguese and the dictionary can be considered robust enough for Large Vocabulary Continuous Speech Recognition (LVCSR) and Speech Synthesis. Although the rules we developed are language-specific, the architecture we used for compiling the dictionary, by using transcription rules and machine learning classifiers, can be successfully replicated in other languages. In addition, the entire dictionary, all scripts, algorithms and corpora were made publicly available.\footnote{\url{http://nilc.icmc.usp.br/aeiouado}}\footnote{\url{https://github.com/gustavoauma/aeiouado_g2p}}
+
+\clearpage
+
+\paragraph{Further developments}
+
+Since the publishing date of our paper (\citeauthor{Mendonca2014}~\cite{Mendonca2014}), Aeiouad\^o \ac{G2P} has been improved. Recently, we increased the training database to XXX words (XXX phone tokens). Moreover we are now using extra morphological information in order to determine the grapheme's transcription, mostly to solve the problems with the mid vowels \textipa{[E, e, O, o]}. 
+
+Previously we were using only the parts of speech as the source of morphological information. We assumed that by just providing the words' parts of speech, the Decision Tree Classifier would be able to learn and differ pairs of heterophonic homographs, such as ``jogo'' \textsc{noun} \emph{(game)} and ``jogo'' \textsc{verb} \emph{(I play)}, or ``governo'' \textsc{noun} \emph{(government)} and ``governo'' \textsc{verb} \emph{(I rule)}. However, given the poor performance of the conversor in discerning between \textipa{[E]} vs. \textipa{[e]}, and \textipa{[O]} vs. \textipa{[o]}; we decided to refine the morphological features. 
+
+We adapted the training database to the Unitex-PB dictionary \cite{Muniz2004}, which follows  formalismo DELA (Dictionnarie Electronique du LADL)
+
+There is a huge lexicon with,
+
+This type of alternation is very productive in \ac{BP}.  reported to have collected 1,812 pairs of heterophonic homographs in dictionaries and , although only 226 occurred in corpus).
+
+\citeauthor{}, Pandu , although in a corpus analysis, only 226 \cite{Shulby2013}.
+
+However this is not the case. Previously, only the word class information was used to determine. We thought that would be enough to 
+
+\section{A Method for the Extraction of Phonetically-Rich Sentences}
+
+
+\subsection{abstract}
+A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
+i.e., sentences with a high variety of triphones, distributed in a uniform fashion. 
+Such a corpus is of interest for a wide range of contexts, from automatic speech 
+recognition to speech therapy. We evaluated this method by building phonetically-rich corpora for Brazilian Portuguese. The data employed comes 
+from Wikipedia's dumps, which were converted into plain text, segmentized and 
+phonetically transcribed. The method consists of comparing the distance between 
+the triphone distribution of the available sentences to an ideal uniform distribution, with 
+equiprobable triphones. A greedy algorithm was implemented to recognize and evaluate 
+the distance among sentences. A heuristic metric is proposed for pre-selecting 
+sentences for the algorithm, in order to quicken its execution. The results show 
+that, by applying the proposed metric, one can build corpora with more uniform 
+triphone distributions.
+
+
+\subsection{Introduction}
+
+In what regards to speech technology, although there are some studies which employ words~\cite{Thanga2008}, syllables~\cite{Gana2001} and monophones~\cite{Kumar2014} to develop Automatic Speech Recognition (ASR) and Text to Speech (TTS) systems, most of the current research widely makes use of contextual phone units, such as triphones and diphones.
+
+The issue of developing a phonetically-rich triphone sentences corpus is of great significance for many areas 
+of knowledge. In many applications of  ASR and Speech Synthesis, for instance, rich speech databases are important for properly estimating the acoustic models \cite{Rabiner2007}. In Speech Therapy, phonetically-rich sentences are often employed in reading aloud tasks so as to assess the speech production of patients in various phonetic/phonological contexts \cite{Mendes2012}. Laboratory Phonologists
+are also interested in such corpora in order to develop prompts for analyzing speech production and variability \cite{Pierrehumbert2000}.
+
+Formally, the task discussed in this work can be described as follows: given a corpus $K$ with $s$ sentences,
+find a subset $P$ containing $s_p$ sentences, such that the triphones that compose $s_p$ holds a 
+uniform distribution as much as possible. Despite it's apparent simplicity, in what concerns computational complexity,
+the task cannot be considered a simple one. Since it has a combinatorial nature, it lacks a polynomial-time
+solution and should be regarded as an intractable problem \cite{Sedgewick2013}.
+
+We evaluate the proposed method 
+%for the extraction of sentences in order to
+in building a phonetically-rich triphone sentences corpus for Brazilian Portuguese. The sentences come from the Portuguese Wikipedia dump 
+\cite{Wikidump2014}, which was converted into plain text, segmentized and phonetically transcribed. The algorithm employs 
+a greedy approach to select sentences, in a way such that the triphone distribution in the selected sentences is as uniform as possible. In order to expedite its execution, a heuristic metric is proposed 
+to pre-select sentences for the algorithm, favoring the least frequent triphones over the most frequent ones.
+
+The remainder of this paper is organized as follows. In Section 2, we briefly describe the related work available in the literature.In Section 3, we describe the method proposed. In Section 4, we evaluate it by building phonetically-rich corpora for Brazilian Portuguese. The final remarks are outlined in Section 5.
+
+
+\subsection{Related Work}
+
+Speech can be analyzed in a myriad of forms. The Phonetic or Phonological structure of a 
+language can be described through phones, phonemes, syllables, diphones, triphones, feet, etc. 
+For languages such as Mandarim, in which tones have a phonological value, one must even posit 
+units such as tonemes in order to properly describe speech phenomena \cite{Lei2005}.
+
+Many methods have been proposed for extracting phonetically-balanced corpora, that is to say 
+corpora made of sentences which reproduce the triphone distribution of a given language 
+\cite{Abushariah2012}\cite{Shen1994}\cite{Timit1993}\cite{Uraga2004}. 
+
+It is known that many linguistic phenomena, including triphone sets, show a Zipfian distribution
+ \cite{Manning1999}.
+A phonetically-balanced corpus, for this reason, is a corpus which follows Zipf's law in 
+representing each triphone inversely proportional to its rank in the frequency table. 
+
+These kinds of corpora are important specially for Large Vocabulary Continuous Speech 
+Recognition (LVCSR), where unbalanced triphone representations can achieve better Word Error 
+Rates (WER). However, phonetically-balanced corpora are not adequate for many other tasks, 
+even regarding Speech Recognition. When building a system  to assess one's pronunciation 
+quality or to synthesize speech, for instance, more accurate results can be attained by 
+using uniform triphone representations, i.e. phonetically-rich corpora. 
+
+Phonetically-rich corpora in our work are those which show sentences with a high variety of 
+triphones, distributed in a uniform fashion regardless its representation in the language. 
+In other words, in order to build such corpora, Zipf's law must be nullified, by favoring 
+less frequent triphones and disfavoring more frequent ones. However, there are studies that 
+consider other definitions and even other basic units to build phonetically-rich corpora.
+
+In Abushariah et al. \cite{Abushariah2012}, the concept of ``rich'' is used in the sense that the set must 
+contain all the phonemes of Arabic language (the chosen language for their study) 
+but without a need for a uniform distribution. The set of sentences was handmade 
+developed by linguists/experts.They used a set of 663 words, also defined  by hand, 
+and then Arabic independent sentences have been written using the 663 phonetically 
+rich words. The final database consists of 367 sentences with 2 to 9 words per sentence.
+
+Arora et al.\cite{Arora2004} considered syllables as the basic unit to extract automatically 
+phonetically-rich sentences from a large text corpus of Indian language, 
+justifying their choice because a syllable is the smallest segment of uterance. 
+In their process to extract the sentences for a given corpus the chosen set 
+should have the same distribution of syllabic words and also the same distribution 
+of consonant, vowel and other symbols.
+
+Nicodem et al.\cite{Nicodem2007} deals specifically with Brazilian Portuguese (BP) 
+and proposed a method based on genetic algorithms to select a set of sentences 
+for a speech syntesis system. Their goal was to select a recording corpus that would 
+improve the phonetic and prosodic variability of the system. They tried to fulfill the 
+gap of phonetically-balanced corpora available for BP does not consider prosody, that is, 
+the available corpora only deals with phonetic representativeness without considering 
+prosody representativeness.
+
+They have worked with CETENFolha corpus (www.linguateca.pt/cetenfolha/) which has circa of 
+1,5 million sentences in order to gather 4,000 sentences phonetically and prosodically 
+rich, being 1,000 declatives, 1,000 partial interrogatives, 1,000 total interrogatives, 
+500 alternatives and 500 exclamatives.   
+
+Their approach is composed of 4 stages, including grapheme-to-phoneme conversion, 
+prosodic annotation, feature vector representation, and selection. 
+The authors obtain prosodic features based on the pitch (they use a TTS to obtain the pitch contour), identifying tone events (H+, H-, H, L, and L-, where H and L stands for high and low, respectively) and using N for neutral, 
+for each syllabe. Using these features to represent each sentence, the execute a genetic algorithm to select a subset. Their paper, however, is not 
+clear about how the fitness function meets both constraints (phonetic and prosodic) since 
+their method only includes prosodic features.
+
+\subsubsection{Heuristic Metric}
+
+For the expedition of the sentence extraction through the greedy algorithm, due to its high time complexity order,
+we set a heuristic metric to pre-select sentences and rank them according to the triphones they contained. The metric 
+uses the probability of the triphones in  the Corpus in order to favor the least frequent triphones over the most frequent ones. 
+It consists of a summation of the reciprocal probability for each triphone in the sentence.
+
+Formally, this can be defined in the following way. Consider a corpus $K$ consisting of a set of sentences 
+$S = \left \{ s_1, s_2, s_3, ..., s_n \right \}$. Each sentence $s$ is formed by $m$ triphones, represented as $T = \left \{ t_1, t_2, t_3, ..., t_m \right \}$. Given a corpus, the \emph{a priori} probability of the triphones can be calculated straightforwadly: let $P_K(t_i)$ be the probability of the triphone $t_i$ in the corpus $K$, then $P_K(t_i)$ is the number of times $t_i$ occur divided by the total number of triphones in $K$. For that matter, a sentence $s$ can be considered phonetically-rich if it possess many triphones with low probability of occurence. Therefore, we define the phonetic richness of a sentence $s$ as the summation of its triphones' reciprocal probabilities:
+
+\begin{equation}
+\varrho(s) = \sum_{i=1}^{m} \frac{1}{P_K(t_i)}
+\end{equation}
+
+
+\subsubsection{Algorithm}
+
+Our algorithm for extracting rich sentences was implemented in Python and follows a greedy heuristic. The distance
+metric is calculated through the SciPy library \cite{Scipy2014}.
+
+Greedy algorithms have been widely used in Computer Science, when the optimum solution of the problem can 
+not be guaranteed \cite{Coppin2010}. Greedy strategies  make locally optimal choices hoping to find the global 
+optimum. Notwithstanding, in many cases, greedy algorithms have been notorious for jams at local maxima, since the best solution 
+for a given problem may not concur with the sum of each partial best choice. However, for the extraction of
+phonetically rich sentences, this approach is suitable, owing to the fact that it is computationally intractable
+to analyze all possible sets of sentences.
+
+We initialize the algorithm by applying the heuristic metric described in Section 3.2 to all sentences in the 
+corpus. After this, all sentences are ranked in descending order and the first 50,000 sentences with 
+the best values are selected. This metric was proposed because the algorithm has an order of $O(mn^2)$ time complexity, 
+where $n$ is the number of sentences and $m$ the number of selected triphones, and its execution was slow considering
+all the sentences available in the corpus. Afterwards, the algorithm loops through 50,000 sentences and calculates 
+the euclidean distance between the triphone distribution of the set made up with the selected sentences and the current sentence to an ideal corpus, containing equiprobable triphones. The sentence with the minimum value is appended to a list 
+of selected sentences and removed from the corpus. after, the loop starts over, considering for the 
+calculation of the distance not just each sentence in isolation, but a set comprising each remaining 
+sentence in the corpus together with the sentences already selected in the last step. When the list reaches 
+$n$ selected sentences, the execution is suspended. The pseudocode for the algorithm is described below.
+
+\noindent
+\begin{verbatim}
+Corpus <- List of available sentences
+Selected <- [] // List of selected sentences
+Metrics <- [] //List made of tuples with sentences and euclidean 
+           distance values
+Ideal <- Ideal corpus, with all equiprobable triphones
+
+while length(Selected) < n do:
+  for Sentence in Corpus:
+      calculate the distance between Sentence+Selected and Ideal
+      append Sentence and its metric in the list Metrics
+  BestSentence <- select the sentence in the loop with the
+                  minimum distance
+  append BestSentece to Selected
+  clear the Metrics list
+end.
+\end{verbatim}
+%
+\noindent
+
+
+\subsection{Example Evaluation}
+\subsubsection{Corpus}
+
+As a proof-of-concept we evaluated our method by building phoneticaly-rich corpora for Brazilian Portuguese. The original 
+database of sentences consisted of the Wikipedia dump produced on 23\textsuperscript{rd} January 2014.
+Table 1 summarizes the data.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline \bf Articles & \bf Word Tokens  & \bf Word Types & \bf Triphone Tokens & \bf Triphone Types\\\hline
+820,000 & 168,823,100 & 9,688,039 & 0 & 0\\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{wikipedia-summary} Portuguese Wikipedia Summary -- Dumped on 23\textsuperscript{rd} January 2014.}
+\end{table}
+
+In order to obtain only plain text from Wikipedia articles, we used the software WikiExtractor \cite{Wikiextractor2013}, to strip 
+all of the MediaWiki markups and other metadata. 
+
+Then, we segmentized the output into sentences, by applying the Punkt sentence segmentizer \cite{Kiss2006}. Punkt is a
+language-independent tool, which can be trained to tokenize sentences. It is distributed together with NLTK \cite{NLTK2009}, where it 
+already comes with a model for Portuguese, trained on the Floresta Sinta(c)tica Treebank \cite{Floresta2008}.
+
+Following, each sentence was transcribed phonetically by using a pronunciation dictionary for each language variety. 
+For Brazilian Portuguese, we employed the UFPAdic 3.0 \cite{Neto2011}, which contains 38 triphones and 64,847 entries. Given 
+its encyclopedic nature, many sentences in Wikipedia present dates, periods, percentages and other numerical information. 
+For this reason, we decided to supplement the dictionaries, by introducing the pronunciation of numbers from 0 to 2014. The
+pronunciations were defined manually and embedded into the dictionary.
+
+The transcription task was carried out in the following way: a Python script was developed to loop over each sentence 
+and check if all it's belonging words were listed on the dictionary. If all the words were listed, the sentence was 
+accepted, otherwise rejected. Due to the fact that many words which occur in Wikipedia were not registered in the 
+pronunciation dictionary, a large number of sentences had to be discarded. Details are described in Table 2.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \bf Total Sentences & \bf Used & \bf Used/total\\ \hline
+7,809,647 & 1,229,422 & 15.7\% \\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{wikipedia-used-discarded} Sentences' summary after WikiExtractor and Punkt.}
+\end{table}
+
+Some pilot experiments showed that the metric benefited sentences which were too long, as they had more 
+triphones; or too short, as some of them had very rare triphones. The problem with long sentences is that they
+can be too complex for a recording prompt, inducing speech disfluencies such as pauses, false starts, 
+lenghtenings, repetitions and self-correction \cite{Watanabe2012}. In addition, the short sentences selected by
+the algorithm were usually only nominal, containing titles, topics or proper names; therefore, they would
+not be adequate for sentence prompts. For this reason, we filtered the sentences, selecting only those which had
+an average size (i.e. between 20 and 60 triphones, and more than four words). Further information is given in Table 3.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Total Sentences} & \textbf{Short} & \textbf{Average} & \textbf{Long} \\ \hline
+1,229,422 & 15,581 & 873,546 & 340,295 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{filtered-sent} Sentences' summary after the length filter.}
+\end{table}
+
+After that, we applied the heuristic metric described in Section 3.2, and the top 50,000 sentences were selected.
+
+\clearpage
+\subsubsection{Discussion}
+
+For this example evaluation, we discuss the extraction of 250 phonetially-rich sentences. Table 4 describes some triphone statistics for different sets of sentences extracted with the method proposed. The first column presents the number of extracted sentences; the second number of different triphones or triphone types; the third the number of triphone tokens; and the last the triphone type/token ratio which can be used to measure the method's performance. 
+Owing to the fact that no other methods for the extraction of phonetically-rich triphone sentences were found in the literature,
+we established a list of random sentences as the baseline for comparison. Table 5 contains the data regarding sentences selected randomly. The list of random sentences derives from the pool of 
+50,000 sentences described in Section 4.1. Ten different seed states were used in order to ensure
+randomness, the average of these results are presented in the Table. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Sentences & Triphone Types & Triphone Tokens & Type/Token \\ \hline
+25 & 923 & 928 & 0.99 \\
+50 & 1485 & 1541 & 0.96 \\
+75 & 1965 & 2151 & 0.91 \\
+100 & 2389 & 2774 & 0.86 \\
+125 & 2736 & 3384 & 0.81 \\
+150 & 3091 & 4075 & 0.76 \\
+175 & 3390 & 4736 & 0.72 \\
+200 & 3715 & 5477 & 0.68 \\
+225 & 3991 & 6200 & 0.64 \\
+250 & 4189 & 6908 & 0.61 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{results-tri-extracted} Triphone results from the extraction of sentences through our method.}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Sentences & Triphone Types & Triphone Tokens & Type/Token Ratio \\ \hline
+25 & 774 & 1121 & 0.69 \\
+50 & 1318 & 2037 & 0.65 \\ 
+75 & 1713 & 3093 & 0.55 \\ 
+100 & 1917 & 3968 & 0.48 \\ 
+125 & 2352 & 5166 & 0.46 \\ 
+150 & 2564 & 6110 & 0.42 \\ 
+175 & 2820 & 7375 & 0.38 \\ 
+200 & 2961 & 8000 & 0.37 \\ 
+225 & 3211 & 9578 & 0.34 \\ 
+250 & 3335 & 10482 & 0.32 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{results-tri-random} Triphone results from the sentences taken randomly.}
+\end{table}
+
+As it can be seen through the type/token triphone ratio, the method is capable of extracting sentences in a much more uniform way. 
+For 250 sentences, our method was capable of extracting 4189 distinct triphones, as opposed to 3335 in the random set; a difference of 854 
+novel distinct triphones. Furthermore, this higher number of distinct triphones was achieved with less triphone tokens (6908 \emph{vs.} 10482), in a way that the type/token 
+ratio for the method we propose was almost double the baseline: \emph{0.61} in contrast to \emph{0.32}. Considering sets with different 
+numbers of sentences, the method outperformed the random selection in all experiments. A Kolmogorov-Smirnov Test 
+(K--S Test) confirms that the sentences selected through our method are closer to a uniform distribution than the ones extracted randomly.
+
+One can observe that, as the number of selected sentences increases, the type/token ratio decreases. It may be the case that, 
+after a huge number of sentences, the method's output converges to a limit such that no statistical significance can be noticed 
+while comparing to a random selection. However, given time limitations, it was not feasible to analyze such a situation.
+As the number of selected sentences increases so does the number of triphones for comparison. After a while,
+the number of triphones for comparison becomes so large that the algorithm's execution time might not be proper for 
+practical applications.
+
+Additionally, the algorithm's output needs to be revised. Despite all our caution in the data preparation process, we noticed
+that some of the sentences selected by the algorithm were, in fact, caused by mistakes from the pronunciation dictionary.
+Foreign and loan words are known to be a problem for grapheme to 
+phoneme conversion because they do not follow the orthographic patterns of the target language \cite{Steigner2007}. Several 
+sentences selected by our algorithm contained foreign words which were registered in the dictionary with an abnormal pronunciations, such
+as \emph{Springsteen} \textipa{[spR\~igste\~e]}, \emph{hill} \textipa{[iww]}, \emph{world} \textipa{[wohwdZ]}. Since no other words are registered with the triphones \textipa{[e-e+\~e]} or \textipa{[e-\~e]} except for 
+\emph{Springsteen}, the algorithm ends up by selecting the sentence in which it occurs. Seeing that our method 
+of comparing triphone distributions is greedy, our algorithm is fooled into believing that these are rare jewels. 
+While this may be the case either way, the algorithm cannot function properly with incorrect transcriptions. 
+
+A corpus with 100 revised sentences extracted by this method can be found in the Appendix A.
+
+\clearpage
+\subsection{Final Remarks}
+
+We proposed a method for compiling a corpus of phonetically-rich triphone sentences for Brazilian Portuguese.
+All sentences considered come from the Portuguese Wikipedia dumps, which were converted into plain
+text and segmentized. Our method consisted of comparing the distance between the triphone distribution
+of the sentences to a uniform distribution, with equiprobable triphones. The algorithm followed
+a greedy strategy in evaluating the distance metric. The results showed that our method is capable 
+of extracting sentences in a much more uniform way, while comparing to a random selection. 
+For 250 sentences, we were able to extract 854 new distinct triphones, in a set of sentences
+with a much higher type/token ratio. However, the method has its limitations. As discussed,
+it depends entirely on the quality of the pronunciation dictionary. If the pronunciation dictionary
+has some incorrect words, it might be the case that the algorithm favors such words, if they possess
+triphone types not registered in other words. As a future work, we intend to define a method that recognizes foreign words and excludes them from the selected sentences. All resources developed in this paper are freely available on the web\footnote{Omitted for blind review.}.
+
+\subsection{Appendix A: Examples of the extracted sentences}
+
+\textbf{Triphone Types:} 2307 | \textbf{Tokens:} 2959 | \textbf{Type/Token Ratio:} 0.78.
+
+\begin{enumerate}
+\item A ilha fica t\~ao pr\'oxima da praia que, quando a mar\'e baixa, pode ser atingida a p\'e.
+\item Diadorim \'e Reinaldo filho do grande chefe Joca Ramiro tra\'ido por Herm\'ogenes.
+\item A Sic\'ilia tem alguns moinhos ainda em bom estado de conserva\c{c}\~ao que lhe d\~ao beleza e encanto.
+\item Em geral, chegaram ao Brasil como escravos vindos de Angola, Congo, e Mo\c{c}ambique.
+\item A sardinha \'e um peixe comum nas \'aguas do mar Mediterr\^aneo.
+\item Possuem esse nome pois costumam viver na plumagem dos pombos urbanos.
+\item \'E brilhante, doce e muito harm\^onico, sem presen\c{c}a de metal na voz.
+\item Para fechar Alessandro Del Piero fez outro aos 121'.
+\item Roman Polanski dirige Chinatown com Jack Nicholson.
+\item A atriz sabe falar fluentemente espanhol.
+\item Eles achavam Get\'ulio Vargas um problema.
+\item Oppenheimer captura cavalo com pe\~ao.
+\item Um bago tem tamanho m\'edio n\~ao uniforme.
+\item Segundo relat\'orio da for\c{c}a a\'erea belga h\'a confrontos com a Uni\~ao Sovi\'etica.
+\item \'E irm\~ao do tamb\'em antrop\'ologo Gilberto Velho.
+\item Ganhou sete Oscar e oito Emmy.
+\item Qual \'e minha perspectiva agora?
+\item Ela \'e um fantasma verde, feminino!
+\item Justin em seguida volta no tempo.
+\item N\'os fizemos um \'album do Korn.
+\item Desde ent\~ao Ed\'ilson \'e f\~a dessas bandas.
+\item H\'a um s\'o senhor uma s\'o f\'e um s\'o batismo.
+\item Ivan Lins faria um show em Mossor\'o \`a noite.
+\item Cresceram maior que um gato.
+\item H\'a loca\c{c}\~oes dispon\'iveis em T\'oquio no Jap\~ao.
+\item Preso a um tronco nenhum lugar \'e seguro!
+\item Hoje \'e professor em\'erito da UFBA.
+\item Veio at\'e aqui e n\~ao vai mergulhar?
+\item Lu\'is Jer\^onimo \'e um jovem rico.
+\item Na hora pensei: "tenho que fazer isso?"
+\item A campanha teve coordena\c{c}\~ao de Sanches.
+\item A mulher que voc\^e me deu, fugiu.
+\item Eu nunca tive um encontro com Bianca.
+\item Homer jura vingan\c{c}a a Burns.
+\item Beijo, me liga e amanh\~a sei l\'a!
+\item Um col\'egio \'e como um ser vivo.
+\item Sophie \'e filha de um amigo gay de Alan Greg.
+\item Xuxa guarda rancor e \'e ambiciosa.
+\item No mesmo ano conhece Aldir Blanc em Viena.
+\item \'E um imenso painel reunindo um elenco famoso.
+\item A S\'e integra tr\^es belos \'org\~aos.
+\item Em ambos, Shannon conquistou medalha.
+\item A terra \'e abundante em recursos como vinagre e \'oleo vegetal.
+\item Fa\c{c}a sua escolha e bom jogo!
+\item Quem \'e que poderia sonhar com algo assim?
+\item Ela \'e ruiva com olhos azuis.
+\item Deu a louca na chapeuzinho!
+\item De onde venho e para onde vou?
+\item Eu choro e sofro tormentas!
+\item Um falc\~ao pousa em um pedregulho.
+\item Ningu\'em tenha medo, nem fraqueza!
+\item \'E membro do grupo Monty Python.
+\item A sondagem de Senna pela Benetton e a chegada \`a kart.
+\item Isto \'e um neg\'ocio e a \'unica coisa que importa \'e ganhar
+\item Robert \'e um forte glut\~ao da equipe.
+\item Um b\'arbaro no ex\'ercito romano?
+\item Inf\^ancia e juventude em Linz.
+\item J\'a ir \`a argentina era muito bom!
+\item Fiquei com inveja dele.
+\item H\'a drag\~oes ao redor do mundo!
+\item Edmond \'e pai do bi\'ologo Jean.
+\item A m\~ae lhe telefonava \`as vezes.
+\item Tonho \'e t\'imido, humilde e sincero.
+\item Andr\'e Jung ocupa um lugar central no f\'orum.
+\item Lois pergunta: "voc\^e \'e um homem ou um alien\'igena?"
+\item Sua voz \'e um assobio fino e longo.
+\item Por isso \'e sempre bom conferir!
+\item Celso Lafer recuperou a j\'oia e devolveu-lhe.
+\item \'E pr\'oxima ao Rio Parna\'iba.
+\item Lendo aquilo fica bem dif\'icil.
+\item A faculdade de John Oxford at\'e hoje possui f\~as fi\'eis.
+\item Existe uma cren\c{c}a moderna no drag\~ao chin\^es.
+\item Sean Connery j\'a sugeriu que Gibson fosse James Bond.
+\item A raiz dos dentes \'e longa.
+\item Essa noite produziu um feito singular.
+\item Fim da segunda guerra mundial.
+\item --No Zorra, eu fazia humor rasgado.
+\item Charles v\^e um homem ser morto em um tiroteio.
+\item Tinham um novo senhor agora.
+\item \'E comum ocorrerem fen\^omenos \'opticos com estas nuvens.
+\item Era um c\~ao de pelo escuro e olhos negros.
+\item H\'a t\'itulos na regi\~ao tcheca da Tchecoslov\'aquia.
+\item Raquel Torres vai investigar a \'area.
+\item Clay foge e leva a jovem Jane como ref\'em.
+\item Djavan jogou futebol e h\'oquei no gelo na inf\^ancia.
+\item A origem do fagote \'e bastante remota.
+\item Um jedi nunca usa a for\c{c}a para lucro ou ganho pessoal.
+\item Chamavam Jos\'e Alencar de Zez\'e.
+\item Um c\'odigo fonte \'e um sistema complexo.
+\item A igreja tem um altar barroco.
+\item Lu\'is Eduardo pronunciou a senha: "esgoto".
+\item Quanto ao sexo: macho ou f\^emea?
+\item A r\'adio Caxias cumpriu esse papel.
+\item Roger Lion \'e um campe\~ao orgulhoso que ama boxe.
+\item Um outeiro \'e menor que um morro.
+\item Hitoshi Sakimoto nasceu em Yokohama.
+\item Nenhum is\'otopo do ur\^anio \'e est\'avel.
+\item Chicago \'e um bairro tranquilo e festivo.
+\item Hong Kong continua a utilizar a lei comum inglesa.
+\item S\'o cinco funcionam como museus.
+\end{enumerate}
+
+
+\subsection{PB}
 
 O reconhecedor de pron\'uncia ora proposto ser\'a implementado a partir do
 motor de reconhecimento de fala Julius (Lee \& Kawahara, 2009). Nove
@@ -582,7 +1205,7 @@ ocorra, uma sa\'ida vi\'avel seria a cria\c{c}\~ao de dicion\'arios separados pa
 cada tipo de erro ou, mesmo, a utiliza\c{c}\~ao de um especialista para
 cercear as variantes geradas.
 
-\section{Evaluation}
+\subsubsection{Evaluation}
 
 Since we are proposing a method to build a pronunciation training system, we could
 evaluate our method in two ways: extrinsic or intrinsically.
@@ -599,7 +1222,7 @@ of assessing the the pronunciation training system itself, regardless of its pra
 
 To put another way, our evaluation 
 
-\subsection{Evaluation Metrics}
+\subsubsection{Evaluation Metrics}
 
 The \ac{WER} measures the performance of an \ac{ASR} system in terms of how
 much its output (i.e. the words it recognized) diverges from a given reference. The metric
@@ -662,212 +1285,22 @@ se trata de um trabalho de mestrado, n\~ao haveria tempo h\'abil para
 realizar um estudo longitudinal com aprendizes de ingl\^es, de modo a
 avaliar a efici\^encia do Listener no ensino de pron\'uncia.
 
-\section{Tools and Libraries}
+\subsection{Tools and Libraries}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{HTK}
+\subsubsection{HTK}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{Julius}
+\subsubsection{Julius}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{Aieouad\^o's dictionary and G2P converter}\label{sec:aieouado}
-\footnote{This section contains is an extended version of the paper}
-Aeiouad\^o is a product and an original contribution of this Master's research. It was developed by \citeauthor{Mendonca2014} \cite{Mendonca2014}, after noticing that no prior work applied machine learning algorithms to grapheme to phoneme conversion in \ac{BP}.
-
-To the best of our knowledge, all previous efforts to solve the G2P problem in \ac{BP} used only a rule-based approach, and as such, they require complex linguistic knowledge to code rules and are difficult to evaluate. Unfortunately, it is a common practice in rule-based G2P (and a wrong one!) to develop the transcription rules based on a corpus and to evaluate them on the same corpus. This usally leads to overfitting, so that the results which are reported (some of them which approach 100\%) are hardly those which are found when such systems are applied to other data or tested in a different context. In addition to this, most of the G2P systems for \ac{BP} are proprietary or licensed under commercial terms, therefore their use is restricted.
-
-We tried to overcome this gap by developing a hybrid G2P converter, which makes use of both rules and machine learning algorithms. The converter was evaluated with traditional machine learning metrics, such as precision, recall and F1-measure; therefore, its reported metrics are trustworthy. This converter was used to build a wide pronunciation dictionary, based on wordlist extracted from Wikipedia articles. Both the dictionary and the G2P converter are distributed under permissive licenses, respectivelly \ac{CC} and \ac{BSD}. Therefore, these resources aim at promoting the development of novel speech technologies for Brazilian Portuguese. It is interesting to notice that, despite being 6\textsuperscript{th} most spoken language in the world \cite{Ethnologue2013}, with about 200 million speakers, speech recognition and speech synthesis for Brazilian Portuguese are far from the current state of the art, specially what regard to open tools and resources \cite{Neto2011}. 
-
-Aeiouad\^o's dictionary and G2P converter are based on the dialect of the city of S\~ao Paulo. They were designed primarily for Speech Technologies, such as \ac{ASR} an \ac{TTS}; but might also be used by linguists, speech therapists, lexicographers, students of Brazilian Portuguese as a second language, and whoever is interested in the sound structure of \ac{BP}.
-
-The G2P converter makes use of a hybrid approach for grapheme to phoneme conversion, based on both manual transcription rules and machine learning algorithms. Hybrid approaches in grapheme to phoneme conversion have been applied successfully to other languages \cite{Damper1998, Polyakova2006, Teixeira2006, Veiga2013}. They have the benefit of taking advantage from both knowledge-based and data-driven methods. We proposed a method in which the phonetic transcription of a given word is obtained through a two-step procedure. Its primary word list derives from the Portuguese Wikipedia dump of 23\textsuperscript{rd} January 2014. We decided to use Wikipedia as the primary word list for the dictionary for many reasons: i) given its encyclopedia nature, it covers wide-ranging topics, providing words from both general knowledge and specialized jargon; ii) it contains around 168,8 million word tokens, being robust enough for the task; iii) it makes uses of crowdsourcing, lessening author's bias; iv) its articles are distributed through Creative Commons License. Wikipedia articles were transformed into plain text, tokenized and word types were extracted.
-
-The dictionary makes use of a hybrid approach for grapheme to phoneme conversion, based on both manual transcription rules and machine learning algorithms, and aims at promoting the development of novel speech technologies for Brazilian Portuguese. Hybrid approaches in grapheme to phoneme conversion have been applied successfully to other languages \cite{Damper1998}\cite{Polyakova2006}\cite{Teixeira2006}\cite{Veiga2013}. They have the benefit of taking advantage from both knowledge-based and data-driven methods. We propose a method in which the phonetic transcription of a given word is obtained through a two-step procedure. Its primary word list derives from the Portuguese Wikipedia dump of 23\textsuperscript{rd} January 2014. We decided to use Wikipedia as the primary word list for the dictionary for many reasons: i) given its encyclopedia nature, it covers wide-ranging topics, providing words from both general knowledge and specialized jargon; ii) it contains around 168,8 million word tokens, being robust enough for the task; iii) it makes uses of crowdsourcing, lessening author's bias; iv) its articles are distributed through Creative Commons License. Wikipedia articles were transformed into plain text, tokenized and word types were extracted.
-
-We developed a language identifier in order to detect loanwords among data. It is a known fact that when languages interact, linguistic exchanges inevitably occur. One particular type of linguistic exchange is of great concern while building a pronunciation dictionary, namely, non-assimilated loanwords \cite{Bussmann96}. Non-assimilated loanwords stand for lexical borrowings in which the borrowed word is incorporated from one language into another straightforwardly, without any translation or orthographic adaptation. These words represent a problem to grapheme-to-phoneme (G2P) conversion since they show orthographic patterns which are not predicted in advance by rules or which are too deviant to be captured by machine learning algorithms. Many algorithms have been proposed to address Language Identification (LID) from text \cite{Bergsma2012, Bilcu2006, Dolf2012, Zampieri2012}. Since our goal is to detect the language of single words, we employed n-gram character  models in the identifier, given its previous success in dealing with short sequences of characters. 
-
-Brazilian Portuguese Phonology can be regarded as syllable and stress-driven \cite{Cristofaro2005}. In fact, many phonological processes in Brazilian Portuguese are related to or conditioned by syllable structure and stress position \cite{Girelli1990}. Vowel harmony occurs in pretonic context \cite{Bisol1989}, posttonic syllables show a limited vowel inventory \cite{Cristofaro2005}, nasalization occurs when stress syllables are followed by nasal consonants \cite{Quicoli1990}, epenthesis' processes are triggered by the occurrence of non-allowed consonants in coda position \cite{Delatorre2005} and so on and so forth. Therefore, detecting syllable boundaries and stress is of crucial importance for G2P systems, in order to achieve correct transcriptions. Several algorithms have been proposed to deal with the syllabification in Brazilian Portuguese. However most of them were not extensively evaluated nor were made publicly available \cite{Oliveira2005, Nhenhem2012, Neto2011, Rocha2013}. For this reason, we implemented our own syllabification algorithm, 
-based directly on the rules of the last Portuguese Language Orthographic Agreement \cite{Acordo2009}. 
-
-Word types recognized as belonging to Brazilian Portuguese by the language identifier were transcribed in a two-step process: i) words are submitted to a set of transcription rules, in which predictable graphemes (mostly consonants) are transcribed; ii) a machine learning classifier is used to predict the transcription of the remaining graphemes (mostly vowels). All the data were subsequently revised. Figure 1 summarizes the method.
-
-\begin{figure}[t]
-\centerline{ \includegraphics[width=8cm]{./gfx/flowchart_mod.pdf}}
-\caption{{\it System architecture for building the pronunciation dictionary.}}
-\label{g2p-architecture}
-\end{figure}
-
-We used the Portuguese Wikipedia's dump of 23\textsuperscript{rd} January 2014 as the primary word list for the pronunciation dictionary. In order to obtain plain text from the articles, we employed WikiExtractor \cite{Wikiextractor2013}; it strips all the  MediaWiki markups and metadata forms. Afterwards, texts were tokenized and unique words types extracted. The Portuguese Wikipedia has about 168,8 million word tokens and 9,7 million types, distributed among  820,000 articles. With the purpose of avoiding misspellings, URLs and other spurious data, only words with frequency higher than 10, which showed neither digits nor punctuation marks were selected. 
-
-A Language Identifier module was developed in order to detect loanwords in the pronunciation dictionary. The Identifier consists of a Linear Support Vector Machine Classifier \cite{Steinwart2008} and was implemented in Python, through Scikit-learn \cite{Scikit2011}. It was trained on a corpus made of the 200,000, containing 100,000 Brazilian Portuguese words and 20,000 words of each of the following languages: English, French, German, Italian and Spanish. All of these words were collected through web crawling News' sites and were not revised. We selected these languages because they are the major donors of loanwords to Brazilian Portuguese \cite{Alves2001}. From these words we extracted features such as initial and final bi- and trigraphs;  number of accented graphs, vowel-consonant ratio; average mono-, bi- and trigraphs probability; and used them to estimate the classifier. Further details can be found in the website of the Project\footnote{http://nilc.icmc.usp.br/listener/aeiouado}. After training, we applied the classifier to the Wikipedia word list with the purpose of identifying loanwords among data. The identified loanwords were then separated from the rest of words for later revision, i.e. they were not submitted to automatic transcription.
-
-Our syllabification algorithm follows a rule-approach and is based straightforwardly on the syllabification rules described in the Portuguese Language Orthographic Agreement \cite{Acordo2009}. Given space limitations, rules were omitted from this paper as they can be found in the website of the project, along with all the resources developed for the dictionary. As for the stress marker, once the syllable structure is known in Brazilian Portuguese, one can predict where stress falls. Stress falls:
-
-\begin{enumerate}
- \item on the antepenultimate syllable if it has an accented vowel $<$\'a,\^a,\'e,\^e,\'i,\'o,\^o,\'u$>$;
- \item on the ultimate syllable if it contains the accented vowels $<$\'a,\'e,\'o$>$ or $<$i,u$>$; or if it ends with one of the following consonants $<$r,x,n,l,z$>$;
- \item on the penultimate syllable otherwise.
-\end{enumerate}
-
-The transcriber is based on a hybrid approach, making use of manual transcription rules and an automatic classifier, which builds Decision Trees. Initially, transcription rules are applied to the words. The rules covers not all possible graphemes to phoneme relations, but only those which are predictable by context. The output of the rules is what we called the intermediary transcription form. After obtaining it, a machine learning classifier is applied in order to predict the transcription of the remaining graphemes. Figure 2 gives an example of the transcription process.
-
-\begin{figure}[!ht]
-\centerline{ \includegraphics[width=8cm]{./gfx/transcript_ex.pdf}}
-\caption{{\it Example of the transcription procedure -- in grey: graphemes yet to be transcribed; in black: graphemes already transcribed.}}
-\label{transcExample}
-\end{figure}
-
-The rules' phase has two main goals: guarantee the correct transcription of certain predictable graphemes (mostly consonants) and also ensure the alignment between graphemes and phones for the classifier. They were set in order to avoid overlapping and order conflicts. Long sequences of graphemes, such as triphthongs, contextual diphthongs and general diphthongs are transcribed first (e.g.  $<$x-ce$> \rightarrow $\textipa{[-se]}). Then graphemes involving phones that undergo phonological processes are transcribed (e.g. $<$ti$> \rightarrow $\textipa{[tSi]}, $<$di$> \rightarrow $\textipa{[dZi]}). After that, several contextual and general monophones are transcribed (e.g. $<$\#x$> \rightarrow $\textipa{[S]}, $<$\#e-x$> \rightarrow $\textipa{[}\#\textipa{e-z]}). 
-
-On what regards to the classifier, it was developed primarily to deal with the transcription of vowels. In Brazilian Portuguese, vowels have a very irregular behavior, specially the mid ones. Therefore the relations between the vowels' graphemes and their corresponding phonemes are hard to predict beforehand through rules. Consider, for instance, the words ``teto'' \emph{(roof)} and ``gueto'' \emph{(ghetto)}; both are nouns and share basically the same orthographic environment. However the former is pronounced with an open ``e'' \textipa{["tE.tU]} and the latter with a closed one \textipa{["ge.tU]}. The classifier employs Decision Trees, through an optimised version of the CART (Classification and Regression Trees) algorithm and was implemented in Python, by means of the Scikit-learn library \cite{Scikit2011}. 
-
-The algorithm was trained over a corpus of 3,500 words phonetically transcribed and manually revised, with a total of 39,934 instances of phones. The feature extraction happened in the following way. After reviewing the data, we obtained the intermediary transcription form for each of these words and aligned them with the manual transcription. Then, we split the intermediary transcription form into its corresponding phones and, for each phone, we extracted the following information: 
-
-\begin{enumerate}
- \item the phone itself; 
- \item 8 previous phones; 
- \item 8 following phones; 
- \item the distance between the phone and the tonic syllable; 
- \item word class -- parts of speech; 
- \item the manually transcribed phone. 
-\end{enumerate}
-
-We considered a window of 8 phones in order deal with vowel harmony phenomena. By establishing a window with such length, one  can assure that pretonic phones will be able to reach the transcription of the vowels in the stressed syllable. The classifier was applied to all 108,389 words categorized as BP words by the Language Identifier module, all of them were cross-checked by two linguists with experience in Phonetics and Phonology.
-
-The Portuguese Wikipedia has about 168,8 million word tokens and 9,7 million types, distributed among 820k articles. After applying the filters to the data, i.e. words with frequency higher than 10, with no digits nor punctuation marks, we ended up with circa 238k word types, representing 151,9 million tokens. Table 1 describes the data.
-
-\begin{table} [t,h]
-\caption{\label{wikipedia} {\it Portuguese Wikipedia Summary -- Dumped on 23\textsuperscript{rd} January 2014.}}
-\vspace{2mm}
-\centerline{
-\begin{tabular}{ccc}
-\hline \bf & \bf Word Tokens  & \bf Word Types\\\hline
-Wikipedia & 168,823,100 & 9,688,039 \\
-Selected  & 151,911,350 & 238,012 \\
-\textbf{\% Used} &90.0 & 2.4 \\
-\hline
-\end{tabular}}
-\end{table}
-
-The selected words covers 90,0\% of the Wikipedia content. Although the number of selected word types seems too small at first glance, one of the reasons is that 7,901,277 of the discarded words were numbers (81,5\%). The remaining discarded words contained misspellings (\emph{dirijem-se} -- it should be \emph{dirigem-se}), used a non-Roman alphabet ($\lambda$\emph{\'o}$\gamma \omega$), were proper names (\emph{Stolichno}, \emph{Z\'e-pereira}), scientific names (\emph{Aegyptophitecus}), abbreviations or acronyms (LCD, HDMI). 
-
-As for the language identifier, we trained and evaluated it with the 200,000 words multilingual corpus. The corpus consists of 100,000 Brazilian Portuguese words and 20,000 words from each of the following languages: English, French, German, Italian and Spanish. All of these words were collected through web crawling News' sites and were not revised. The results obtained for the identifier, through 5-fold cross validation are described in Table 2. 
-
-\begin{table} [t,h]
-\caption{\label{langIdentEval} {\it Results from the Language Identifier module -- Training Phase.}}
-\vspace{2mm}
-\centerline{
-\begin{tabular}{ccccc}
-\hline
- & \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} & \textbf{Support} \\ \hline
-BP words & 0.85 & 0.89 & 0.87 & 100,000 \\ 
-Foreign Words & 0.88 & 0.84 & 0.86 & 100,000 \\
-\bf Avg/Total & 0.86 & 0.86 & 0.86 & 200,000 \\ \hline
-\end{tabular}}
-\end{table}
-
-The language identifier showed an average F1-score of 0.86. Although such result is not as good as we expected -- some authors reported 99\% by using similar methods with trigrams probability, the relatively low F1-score can be explained given the nature of the data. In most language identifiers, the input  consists of texts or several sentences, in other words, there is much more data available for the classifier. Since we are working with single words, the confusion of the model is higher and the results are, consequently, worse. Additionally, because the word list used to train the identifier was not revised, there is noise among the data. After training and evaluating the classifier, we applied it to the selected word list derived from the Wikipedia, in order to detect loanwords. Table 3 describes the results gathered.
-
-\begin{table} [t,h]
-\caption{\label{langIdentWiki} {\it Results from the Language Identifier module -- Wikipedia word list.}}
-\vspace{2mm}
-\centerline{
-\begin{tabular}{cc}
-\hline
- & \textbf{Wikipedia word list}\\ \hline
-BP words & 108,370 (46\%)\\ 
-Foreign Words & 129,642 (54\%)\\
-\bf Total & 238,012 \\ \hline
-\end{tabular}}
-\end{table}
-
-As one can observe, although we established a frequency filter to avoid spurious words, many loanwords still remain. More than half of the word list selected from Wikipedia consists of foreign words. Notwithstanding that, the list of Brazilian Portuguese words is still of considerable size. For instance, the CMUdict \cite{CMUdict1998}, a reference pronunciation dictionary for the English language, has about 125,000 word types.
-
-Concerning the syllabification algorithm and the stress marker, we did not evaluate them in isolation, but together with the transcriber since the rules for each of these modules are intertwined. That is to say the transcription rules are strictly dependent on the stress marker module and the syllable identifier. Besides, the Decision Tree Classifier is built upon the output of the transcription rules, so it is entirely dependent on it. The Decision Tree Classifier was trained over a corpus of 3,500 cross-checked transcribed words, containing 39,934 instances of phones. We analyzed its performance through 5-fold cross validation, the results for each individual phone are summarized in Table 4.
-
-\begin{table} [t,!h]
-\caption{\label{transcriberEval} {\it Results from the Transcriber -- Performance per phone.}}
-\vspace{2mm}
-\centerline{
-\begin{tabular}{ccccc}
-\hline
- & \bf Precision & \bf Recall & \bf F1-score & \bf Support \\ \hline
-\emph{syl. boundary} & 1.00 & 1.00 & 1.00 & 9099 \\ 
-\emph{stress} & 1.00 & 1.00 & 1.00 & 3507 \\ 
-\textipa{p} & 1.00 & 1.00 & 1.00 & 760 \\ 
-\textipa{b} & 1.00 & 1.00 & 1.00 & 357 \\ 
-\textipa{t} & 0.99 & 0.99 & 0.99 & 1135 \\ 
-\textipa{d} & 0.99 & 0.99 & 0.99 & 1148 \\ 
-\textipa{k} & 0.99 & 0.99 & 0.99 & 978 \\ 
-\textipa{g} & 1.00 & 1.00 & 1.00 & 298 \\ 
-\textipa{tS} & 0.98 & 0.98 & 0.97 & 450 \\ 
-\textipa{dZ} & 0.96 & 0.96 & 0.96 & 243 \\ 
-\textipa{m} & 1.00 & 1.00 & 1.00 & 668 \\ 
-\textipa{n} & 1.00 & 1.00 & 1.00 & 556 \\ 
-\textipa{\textltailn} & 1.00 & 1.00 & 1.00 & 69 \\ 
-\textipa{f} & 1.00 & 1.00 & 1.00 & 311 \\ 
-\textipa{v} & 1.00 & 1.00 & 1.00 & 531 \\ 
-\textipa{s} & 0.98 & 0.98 & 0.98 & 2309 \\ 
-\textipa{z} & 0.93 & 0.94 & 0.93 & 416 \\ 
-\textipa{S} & 0.84 & 0.84 & 0.84 & 138 \\ 
-\textipa{k.s} & 0.72 & 0.64 & 0.66 & 41 \\ 
-\textipa{Z} & 1.00 & 1.00 & 1.00 & 196 \\ 
-\textipa{l} & 1.00 & 1.00 & 1.00 & 682 \\ 
-\textipa{L} & 1.00 & 1.00 & 1.00 & 58 \\ 
-\textipa{R} & 1.00 & 1.00 & 1.00 & 1388 \\ 
-\textipa{h} & 0.98 & 0.99 & 0.99 & 737 \\ 
-\textipa{H} & 0.97 & 0.92 & 0.94 & 169 \\ 
-\textipa{w} & 0.97 & 0.98 & 0.97 & 441 \\ 
-\textipa{\~w} & 0.98 & 0.99 & 0.99 & 309 \\ 
-\textipa{j} & 0.97 & 0.95 & 0.96 & 223 \\ 
-\textipa{\~j} & 0.95 & 1.00 & 0.98 & 110 \\ 
-\textipa{a} & 1.00 & 1.00 & 0.99 & 2316 \\ 
-\textipa{@} & 0.99 & 0.99 & 0.99 & 1093 \\ 
-\textipa{E} & 0.65 & 0.68 & 0.66 & 275 \\ 
-\textipa{e} & 0.93 & 0.91 & 0.92 & 1779 \\ 
-\textipa{i} & 0.98 & 0.99 & 0.98 & 2073 \\ 
-\textipa{I} & 0.97 & 0.97 & 0.97 & 365 \\ 
-\textipa{O} & 0.69 & 0.75 & 0.71 & 220 \\ 
-\textipa{o} & 0.93 & 0.92 & 0.93 & 1112 \\ 
-\textipa{u} & 0.96 & 0.96 & 0.96 & 488 \\ 
-\textipa{U} & 1.00 & 1.00 & 1.00 & 1033 \\ 
-\textipa{\~a} & 1.00 & 1.00 & 1.00 & 719 \\ 
-\textipa{\~e} & 0.96 & 0.97 & 0.97 & 497 \\ 
-\textipa{\~i} & 0.99 & 0.99 & 0.99 & 274 \\ 
-\textipa{\~o} & 0.97 & 0.96 & 0.97 & 299 \\ 
-\textipa{\~u} & 0.94 & 0.92 & 0.93 & 64 \\ 
-Avg/Total & 0.98 & 0.98 & 0.98 & 39934 \\ \hline
-\end{tabular}}
-\end{table}
-
-As it can be seen, the method achieved very good results, with a F1-score of 0.98. Many segments were transcribed with 100\% accuracy, most of them were consonants. As it was expected, the worst results are related to mid vowels \textipa{[E, e, O, o]}, specially mid-low vowels, \textipa{[E]} showed a F1-score 0.66 and \textipa{[O]} of 0.71. It can be the case that since the grapheme context is the same for \textipa{[E, e]} and \textipa{[O, o]}, the DecisionTree classifier generalizes, in some cases, to the most frequent phone, that is the mid-high vowels \textipa{[e,o]}. The transcriber also had problems with the \textipa{[k.s]} (F1-score: 0.66) and \textipa{[S]} (F1-score: 0.84). This result was also expected, both these phones are related to the grapheme $<$x$>$ which, in Brazilian Portuguese, shows a very irregular behavior. In fact, $<$x$>$ can be pronounced as \textipa{[S, s, z, k.s]}, depending on the  word:  ``bruxa'' \emph{(witch)} \textipa{[S]}, ``pr\'oximo'' \emph{(near)} \textipa{[s]};  ``exame'' \emph{(test)} \textipa{[z]} and ``axila'' \emph{(armpit)} \textipa{[k.s]}.
-
-We presented the method we employed in building a pronunciation dictionary for Brazilian Portuguese. High F1-score values were achieved while transcribing most of the graphemes in Brazilian Portuguese and the dictionary can be considered robust enough for Large Vocabulary Continuous Speech Recognition (LVCSR) and Speech Synthesis. Although the rules we developed are language-specific, the architecture we used for compiling the dictionary, by using transcription rules and machine learning classifiers, can be successfully replicated in other languages. In addition, the entire dictionary, all scripts, algorithms and corpora were made publicly available.\footnote{\url{http://nilc.icmc.usp.br/aeiouado}}\footnote{\url{https://github.com/gustavoauma/aeiouado_g2p}}
-
-\paragraph{Further developments}
-
-Since the publishing date of our paper (\citeauthor{Mendonca2014}~\cite{Mendonca2014}), Aeiouad\^o \ac{G2P} has been improved. Recently, we increased the training database to XXX words (XXX phone tokens). Moreover we are now using extra morphological information in order to determine the grapheme's transcription, mostly to solve the problems with the mid vowels \textipa{[E, e, O, o]}. 
-
-Previously we were using only the parts of speech as the source of morphological information. We assumed that by just providing the words' parts of speech, the Decision Tree Classifier would be able to learn and differ pairs of heterophonic homographs, such as ``jogo'' \textsc{noun} \emph{(game)} and ``jogo'' \textsc{verb} \emph{(I play)}, or ``governo'' \textsc{noun} \emph{(government)} and ``governo'' \textsc{verb} \emph{(I rule)}. However, given the poor performance of the conversor in discerning between \textipa{[E]} vs. \textipa{[e]}, and \textipa{[O]} vs. \textipa{[o]}; we decided to refine the morphological features. 
-
-We adapted the training database to the Unitex-PB dictionary \cite{Muniz2004}, which follows  formalismo DELA (Dictionnarie Electronique du LADL)
-
-There is a huge lexicon with,
-
-This type of alternation is very productive in \ac{BP}.  reported to have collected 1,812 pairs of heterophonic homographs in dictionaries and , although only 226 occurred in corpus).
-
-\citeauthor{}, Pandu , although in a corpus analysis, only 226 \cite{Shulby2013}.
-
-However this is not the case. Previously, only the word class information was used to determine. We thought that would be enough to 
-
-\section{Speech Corpora}
+\subsection{Speech Corpora}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{TIMIT}
+\subsubsection{TIMIT}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{WSJ0}
+\subsubsection{WSJ0}
 The CSR-I WSJ0 corpus was compiled by \citeauthor{Garofolo1993} \cite{Garofolo1993}, within the 
 DARPA Spoken Language Program in order to support research on large-vocabulary \ac{CSR} systems.
 
@@ -882,7 +1315,7 @@ varying types.
 
 \autoref{tab:wsj0-summary} describes a summary of the WSJ0 corpus.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Summary of the entire WSJ0 Corpus.]{Summary of the entire WSJ0 Corpus.}
 \smallskip
 \centering
@@ -922,7 +1355,7 @@ the file was pruned and not considered for training.
 
 The portion of the WSJ0 that we used is detailed in \autoref{tab:wsj0-used-summary}
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Summary of WSJ0 Part We Used.]{Summary of WSJ0 Part We Used.}
 \smallskip
 \centering
@@ -937,14 +1370,14 @@ The portion of the WSJ0 that we used is detailed in \autoref{tab:wsj0-used-summa
 \label{tab:wsj0-used-summary}
 \end{table}
 
-
-\subsection{SpeechDat}
+\clearpage
+\subsubsection{SpeechDat}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{Listener's Corpus}
+\subsubsection{Listener's Corpus}
 Lorem ipsum quod dolor sit amet.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Summary of Listener's Corpus.]{Summary of the Listener's Corpus.}
 \smallskip
 \centering
@@ -958,7 +1391,8 @@ Lorem ipsum quod dolor sit amet.
 \end{tabular}
 \end{table}
 
-\subsection{Oxford Dictionary AmE Corpus}
+\clearpage
+\subsubsection{Oxford Dictionary AmE Corpus}
 The Oxford Dictionary \ac{AmE} corpus was compiled by web crawling specially to this project. Oxford University Press
 has been making dictionaries for the English language for more than 150 years. Their dictionaries are very traditional and widely 
 known whether in lexicographers' or laymen's circles. Recently, they made the dictionaries publicly available
@@ -966,7 +1400,7 @@ on the web\footnote{\url{http://www.oxforddictionaries.com/}}. For the \ac{AmE} 
 and entries, together with over $600,000 synonyms$\footnote{\url{http://www.oxforddictionaries.com/words/content-help}}.
 A word example can be found in \autoref{fig:oxford-example}.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
         \myfloatalign
         {\includegraphics[width=.66\linewidth]{gfx/example-oxford-definition.png}}
         \caption{Entry example in the Oxford Dictionary online.}
@@ -979,7 +1413,7 @@ As one may notice in \autoref{fig:oxford-example}, the entry has many informatio
 follows Oxford's own transcription convention, which can be mapped on the \ac{IPA} as in \autoref{tab:oxford-dictionary-ipa}.
 
 \renewcommand{\arraystretch}{0.8}% Tighter
-\begin{table}[!htbp]
+\begin{table}[Hp]
 \caption[Oxford Dictionary phone convention.]{Oxford Dictionary phone convention.}
 \smallskip
 \centering
@@ -1049,20 +1483,12 @@ were excluded, so no word among the $49,263$ entries contain xenophones.
 
 Oxford Dictionary's were recorded by many speakers (both male and female), with high-quality microphones, in sound-isolation rooms.
 The audios are saved in MP3 format with \ac{VBR}, for this reason we had convert each file into WAV and downsample them to $16$ kHz.
-The quality of the audio is excelent with a very high \ac{SNR}, as can be seen in the spectrogram for the word ``happiness'' 
-in \autoref{fig:spectrogram-happiness}.
-
-\begin{figure}[!htb]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/oxford-spectrogram-happiness.png}}
-        \caption{Spectrogram of the word ``happiness'', present in the Oxford Dictionary AmE Corpus.}
-        \label{fig:spectrogram-happiness}
-\end{figure}
+The quality of the audio is excelent with a very high \ac{SNR}, as can be seen in the spectrogram for the word ``happiness''.
 
 As one may observe in the regions of silence at the beginning and at the end of the utterance, the background noise approaches to zero.
 A summary of the corpus can be seen in \autoref{fig:spectrogram-happiness}.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Summary of the Oxford Dictionary AmE Corpus.]{Summary of the Oxford Dictionary AmE Corpus.}
 \smallskip
 \centering
@@ -1077,22 +1503,23 @@ A summary of the corpus can be seen in \autoref{fig:spectrogram-happiness}.
 \label{tab:oxford-summary}
 \end{table}
 
-\subsection{Cambridge Dictionary}
+\clearpage
+\subsubsection{Cambridge Dictionary}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{OGI-22}
+\subsubsection{OGI-22}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{Westpoint}
+\subsubsection{Westpoint}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{LapsBM}
+\subsubsection{LapsBM}
 Lorem ipsum quod dolor sit amet.
 
-\subsection{Youtube}
+\subsubsection{Youtube}
 Lorem ipsum quod dolor sit amet.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Summary of Listener's Corpus.]{Summary of the Listener's Corpus.}
 \smallskip
 \centering
@@ -1107,9 +1534,10 @@ Lorem ipsum quod dolor sit amet.
 \end{table}
 
 
-\section{Building the Acoustic Model}
+\clearpage
+\subsection{Building the Acoustic Model}
 
-\subsection{The Phoneset}\label{sec:listener-phoneset}
+\subsubsection{The Phoneset}\label{sec:listener-phoneset}
 
 Since our goal is to build an \ac{ASR} system capable of recognizing non-native speech, we propose
 to use an interlingual phoneset as the basis of the pronunciation model. By doing this, we can define
@@ -1389,15 +1817,16 @@ The final phoneset, which we used as the basis for our \ac{ASR} system, can be f
 \end{table}
 \renewcommand{\arraystretch}{1.0}% Normal
 
-\subsection{Speech Data}
+\clearpage
+\subsubsection{Speech Data}
 
 Many of the 
 
 
 
-\subsection{HMM topology}
+\subsubsection{HMM topology}
 
-\subsection{Tree-Based State Tying}
+\subsubsection{Tree-Based State Tying}
 
 Data-driven approaches also show limitations. Since such approaches are generally based on 
 the positive examples which occur in a corpus, rare or non-occuring phenomena are often poorly estimated or even neglected.
@@ -1448,7 +1877,7 @@ they occur in word final position. This is the case for a large number of german
 addition of the suffix \{-\textipa{e}\}. \autoref{tab:german-devoicing} contains a few examples extracted from 
 \citeauthor{Grijzenhout2000} \citep{Grijzenhout2000}.
 
-\begin{table}[!htb]
+\begin{table}[H]
 \caption[Examples of final-obstruent devoicing in German.]{Examples of final-obstruent devoicing in German.}
 \smallskip
 \centering
@@ -1515,7 +1944,7 @@ internal node of the tree represents a question about the phonetic context a tri
 form and leaf nodes define \ac{HMM} states. Once the tree is built, its structure is used to decide how \ac{HMM} states will
 be tied among triphone models. \autoref{fig:decision-tree} presents an example of a phonetic decision tree.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
         \myfloatalign
         {\includegraphics[width=.66\linewidth]{gfx/decision-tree.png}}
         \caption{Phonetic decision tree for HMM state tying \citep{Young1994}.}
@@ -1541,7 +1970,7 @@ whether it is a liquid consonant. If negative, a leaf is reached and the HMM sta
 the 1\textsuperscript{st} emitting HMM state of the analysed triphone $A$ to [Nasal-$A$+*]''. 
 \autoref{fig:state-tying-tree} summarizes the state tying procedure.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
         \myfloatalign
         {\includegraphics[width=.66\linewidth]{gfx/state-tying-tree.png}}
         \caption{Tied-state HMM system build procedure \citep{Young1994}.}
@@ -1575,7 +2004,7 @@ with consonants. Besides, once features have a binary nature, therefore, in theo
 to dintinguish up to $2^n$ phones. In \autoref{fig:features-place}, a comparison is shown between place features and their corresponding
 regions of articulation. For a full explanation of each feature, please see \citeauthor{Jensen2004} \citep{Jensen2004}.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
         \myfloatalign
         {\includegraphics[width=.66\linewidth]{gfx/features-place.png}}
         \caption{Distinctive features for places of places of articulation \citep{Jensen2004}.}
@@ -1762,7 +2191,9 @@ Z & [\textipa{z}] & - & + & - & + & - & - & - & - & + & - & - & - & - & - & - & 
 \end{table}
 \renewcommand{\arraystretch}{1.0}% Normal
 
-\section{Building the Pronunciation Model}
+
+\clearpage
+\subsection{Building the Pronunciation Model}
 
 To the best of our knowledge, no previous research has addressed the problem of generating brazilian-accented 
 transcriptions for \ac{ASR} purposes or has described the mispronunciations phenomena from a computational perspective. 
@@ -1813,7 +2244,7 @@ The pseudocode for each mispronunciation pattern is described in the following s
  graphemes, e.g. [ah (m$\vert$n$\vert$g)] means that [ah] is imediatelly followed by [m], [n] or [ng].
 \end{enumerate}
 
-\subsection{Syllable Simplification}
+\subsubsection{Syllable Simplification}
 Rules for syllable simplification were created upon production data reported on the following works:
 \citeauthor{Cardoso2011} \citep{Cardoso2011}, \citeauthor{Silveira2012} \citep{Silveira2012}
 \citeauthor{Rauber2004} \citep{Rauber2004}, and \citeauthor{Rebello2006} \citep{Rebello2006}. The rules
@@ -1838,15 +2269,15 @@ The pseudocode containing rules for all these contexts is defined in \autoref{ls
 \lstinputlisting[label=lst:rules-syll-simplification,caption=Pronunciation rules for generating syllable simplification cases.]%
     {Examples/pseudo-rules-syll-simplif.txt}
 
-\subsection{Consonant Change}\label{sec:consonant-change}
+\subsubsection{Consonant Change}\label{sec:consonant-change}
 The rules for consonantal change were defined based on the results of
 \citeauthor{Reis2006} \citep{Reis2006} and \citeauthor{Trevisol2010} \citep{Trevisol2010}.
 \autoref{lst:rules-cons-change} describes the pseudecode for generating the mispronunciations regarding consont changes.
 
-\lstinputlisting[float=!htb,label=lst:rules-cons-change,caption=Pronunciation rules for generating consonant change cases.]%
+\lstinputlisting[float=H,label=lst:rules-cons-change,caption=Pronunciation rules for generating consonant change cases.]%
     {Examples/pseudo-rules-cons-change.txt}
     
-\subsection{Deaspiration of Voiceless Plosives in Initial or Stressed Positions}
+\subsubsection{Deaspiration of Voiceless Plosives in Initial or Stressed Positions}
 
 With regard to the deaspiration of voiceless plosives, we considered the analyses of the phenomenon as described in following papers: 
 \citeauthor{Alves2008} \citep{Alves2008}, \citeauthor{Prestes2012} \citep{Prestes2012}, 
@@ -1873,12 +2304,12 @@ into rules, then producing all voiceless aspirated in the corpus.
 where lexical stress is annotated. In spite of this, for simplicity we are going to leave this workaround out of the pseudocode 
 and assume that the dictionary has the stress information.} The pseudocode for the rules is described in \autoref{lst:rules-deaspiration}.
 
-\lstinputlisting[float=!htb,label=lst:rules-deaspiration,caption=Pronunciation rules for generating plosive deaspiration cases.]%
+\lstinputlisting[float=H,label=lst:rules-deaspiration,caption=Pronunciation rules for generating plosive deaspiration cases.]%
     {Examples/pseudo-rules-deaspiration.txt}
     
     
-
-\subsection{Devoicing in Word-Final Obstruents}
+\clearpage
+\subsubsection{Devoicing in Word-Final Obstruents}
 
 For terminal devoicing cases, we based our rules on the contexts presented by \citeauthor{Castilho2004} \citep{Castilho2004}.
 These rules explicit a phonetic process in which the final [z] becomes devoiced, being produced as [s], in words such as ``Charles'' 
@@ -1899,10 +2330,11 @@ preferred to keep the broader natural class ``obstruents'', since that is how th
 [\textipa{T}] in word-final position is also a case of terminal obstruent devoicing. in spite of this, we did not
 find any paper in the literature classifying this phenomenon in such way.}
 
-\lstinputlisting[float=!htb,label=lst:rules-terminal-devoicing,caption=Pronunciation rules for generating terminal devoicing cases.]%
+\lstinputlisting[float=H,label=lst:rules-terminal-devoicing,caption=Pronunciation rules for generating terminal devoicing cases.]%
     {Examples/pseudo-rules-obstruent-devoicing.txt}
 
-\subsection{Delateralization and rounding of lateral liquids in final position}
+\clearpage    
+\subsubsection{Delateralization and rounding of lateral liquids in final position}
 In what concerns to the delateralization and rounding of lateral liquids in final position (also known as vocalization of lateral), we based
 our rules in the findings of \citeauthor{Baratieri2006} \citep{Baratieri2006} and \citeauthor{Moore2008} \citep{Moore2008}. Both these authors
 describe the same phonetic contexts in which the phenomenon takes place. According to them the English lateral [\textipa{l}] is
@@ -1910,10 +2342,11 @@ pronounced as a vowel [\textipa{U}] by many brazilian \ac{ESL} learners, when su
 a consontar, or in word final position. For instance, learners will tend to say ``salt'' as [\textipa{"kIU}] instead of [\textipa{"kIl}].
 The pseudocode with the rules for generating lateral vocalization mispronunciations is found in \autoref{lst:rules-lateral-vocalization}.
 
-\lstinputlisting[float=!htb,label=lst:rules-lateral-vocalization,caption=Pronunciation rules for generating lateral vocalization cases.]%
+\lstinputlisting[float=H,label=lst:rules-lateral-vocalization,caption=Pronunciation rules for generating lateral vocalization cases.]%
     {Examples/pseudo-rules-lateral-vocalization.txt}
 
-\subsection{Vocalization of final nasals}
+\clearpage
+\subsubsection{Vocalization of final nasals}
 
 Rules for the vocalization of final nasals were grounded on the phonological processes described in the following works:
 \citeauthor{Kluge2007} \citep{Kluge2007}, \citeauthor{Kluge2008} \citep{Kluge2008}, \citeauthor{Kluge2012} \citep{Kluge2012}, 
@@ -1935,25 +2368,27 @@ appears in the spelling, so [\textipa{"oU.pI.\~u}].
 
 \autoref{lst:rules-nasal-vocalization} contains the pseudocode for generating both cases of final nasal vocalization.
 
-\lstinputlisting[float=!htb,label=lst:rules-nasal-vocalization,caption=Pronunciation rules for generating nasal vocalization cases.]%
+\lstinputlisting[float=H,label=lst:rules-nasal-vocalization,caption=Pronunciation rules for generating nasal vocalization cases.]%
     {Examples/pseudo-rules-nasal-vocalization.txt}
-    
-\subsection{Velar consonantal paragoge}
 
-\lstinputlisting[float=!htb,label=lst:rules-velar-paragoge,caption=Pronunciation rules for generating velar paragoge cases.]%
+\clearpage
+\subsubsection{Velar consonantal paragoge}
+
+\lstinputlisting[float=H,label=lst:rules-velar-paragoge,caption=Pronunciation rules for generating velar paragoge cases.]%
     {Examples/pseudo-rules-velar-paragoge.txt}
 
-\subsection{Vowel assimilation}
+\clearpage
+\subsubsection{Vowel assimilation}
 
 The rules for vowel assimilation were determined based on the results of
 \citeauthor{Battistela2010} \citep{Battistela2010}, \citeauthor{Rauber2005} \citep{Rauber2005} and \citeauthor{Rauber2006} \citep{Rauber2006}.
 \autoref{lst:rules-vowel-assimilation} contains the pseudecode for generating pronunciations with vowel assimilations from L1 to L2.
 
-\lstinputlisting[float=!htb,label=lst:rules-vowel-assimilation,caption=Pronunciation rules for generating vowel assimilation cases.]%
+\lstinputlisting[float=H,label=lst:rules-vowel-assimilation,caption=Pronunciation rules for generating vowel assimilation cases.]%
     {Examples/pseudo-rules-vowel-assimilation.txt}
 
-
-\subsection{Interconsonantal epenthesis (-ed and -s morphemes)}
+\clearpage
+\subsubsection{Interconsonantal epenthesis (-ed and -s morphemes)}
 
 
 

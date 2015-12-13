@@ -18,74 +18,33 @@
 \BOOKMARK [1][-]{section.3.1}{3.1 PB}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.2}{3.2 Why Consider L1 in L2 Teaching?}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.3}{3.3 Common Mispronunciation}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Syllable Simplification}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Consonant Change}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Deaspiration of Voiceless Plosives in Initial or Stressed Positions}{section.3.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Terminal Devoicing in Word-Final Obstruents}{section.3.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.5}{3.3.5 Delateralization and rounding of lateral liquids in final position}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.6}{3.3.6 Vocalization of final nasals}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.7}{3.3.7 Velar consonantal paragoge}{section.3.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.8}{3.3.8 Vowel assimilation}{section.3.3}% 28
-\BOOKMARK [2][-]{subsection.3.3.9}{3.3.9 Interconsonantal epenthesis \(-ed and -s morphemes\)}{section.3.3}% 29
-\BOOKMARK [0][]{chapter.4}{4 Automatic Speech Recognition}{part.1}% 30
-\BOOKMARK [1][-]{section.4.1}{4.1 The big picture}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.2}{4.2 HMM}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.3}{4.3 PB}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.4}{4.4 A Brief History}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.5}{4.5 HMM-based Speech Recognition}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.6}{4.6 Feature Extraction}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Preambulus}{section.4.6}% 37
-\BOOKMARK [1][-]{section.4.7}{4.7 MFCC Features}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.8}{4.8 Dealing with Noisy Data}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.9}{4.9 Types of Speech Recognition Systems}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.10}{4.10 The Architecture of a Large Vocabulary Continuous Speech Recognition System}{chapter.4}% 41
-\BOOKMARK [-1][]{part.2}{Related Work}{}% 42
-\BOOKMARK [0][]{chapter.5}{5 Computer Assisted Pronunciation Training}{part.2}% 43
-\BOOKMARK [1][-]{section.5.1}{5.1 PB}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.2}{5.2 English}{chapter.5}% 45
-\BOOKMARK [0][]{chapter.6}{6 How to Adapt a Speech Recognition to Non-Native Data}{part.2}% 46
-\BOOKMARK [1][-]{section.6.1}{6.1 PB}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.2}{6.2 Adaptation Methods for the Acoustic Model}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.3}{6.3 Adaptation Methods for the Pronunciation Model}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.4}{6.4 Adaptation Methods for the Languaeg Model}{chapter.6}% 50
-\BOOKMARK [-1][]{part.3}{The Design of Listener}{}% 51
-\BOOKMARK [0][]{chapter.7}{7 Methods}{part.3}% 52
-\BOOKMARK [1][-]{section.7.1}{7.1 PB}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.2}{7.2 Evaluation}{chapter.7}% 54
-\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 Evaluation Metrics}{section.7.2}% 55
-\BOOKMARK [1][-]{section.7.3}{7.3 Tools and Libraries}{chapter.7}% 56
-\BOOKMARK [2][-]{subsection.7.3.1}{7.3.1 HTK}{section.7.3}% 57
-\BOOKMARK [2][-]{subsection.7.3.2}{7.3.2 Julius}{section.7.3}% 58
-\BOOKMARK [2][-]{subsection.7.3.3}{7.3.3 Aieouad\364's dictionary and G2P converter}{section.7.3}% 59
-\BOOKMARK [1][-]{section.7.4}{7.4 Speech Corpora}{chapter.7}% 60
-\BOOKMARK [2][-]{subsection.7.4.1}{7.4.1 TIMIT}{section.7.4}% 61
-\BOOKMARK [2][-]{subsection.7.4.2}{7.4.2 WSJ0}{section.7.4}% 62
-\BOOKMARK [2][-]{subsection.7.4.3}{7.4.3 SpeechDat}{section.7.4}% 63
-\BOOKMARK [2][-]{subsection.7.4.4}{7.4.4 Listener's Corpus}{section.7.4}% 64
-\BOOKMARK [2][-]{subsection.7.4.5}{7.4.5 Oxford Dictionary AmE Corpus}{section.7.4}% 65
-\BOOKMARK [2][-]{subsection.7.4.6}{7.4.6 Cambridge Dictionary}{section.7.4}% 66
-\BOOKMARK [2][-]{subsection.7.4.7}{7.4.7 OGI-22}{section.7.4}% 67
-\BOOKMARK [2][-]{subsection.7.4.8}{7.4.8 Westpoint}{section.7.4}% 68
-\BOOKMARK [2][-]{subsection.7.4.9}{7.4.9 LapsBM}{section.7.4}% 69
-\BOOKMARK [2][-]{subsection.7.4.10}{7.4.10 Youtube}{section.7.4}% 70
-\BOOKMARK [1][-]{section.7.5}{7.5 Building the Acoustic Model}{chapter.7}% 71
-\BOOKMARK [2][-]{subsection.7.5.1}{7.5.1 The Phoneset}{section.7.5}% 72
-\BOOKMARK [2][-]{subsection.7.5.2}{7.5.2 Speech Data}{section.7.5}% 73
-\BOOKMARK [2][-]{subsection.7.5.3}{7.5.3 HMM topology}{section.7.5}% 74
-\BOOKMARK [2][-]{subsection.7.5.4}{7.5.4 Tree-Based State Tying}{section.7.5}% 75
-\BOOKMARK [1][-]{section.7.6}{7.6 Building the Pronunciation Model}{chapter.7}% 76
-\BOOKMARK [2][-]{subsection.7.6.1}{7.6.1 Syllable Simplification}{section.7.6}% 77
-\BOOKMARK [2][-]{subsection.7.6.2}{7.6.2 Consonant Change}{section.7.6}% 78
-\BOOKMARK [2][-]{subsection.7.6.3}{7.6.3 Deaspiration of Voiceless Plosives in Initial or Stressed Positions}{section.7.6}% 79
-\BOOKMARK [2][-]{subsection.7.6.4}{7.6.4 Devoicing in Word-Final Obstruents}{section.7.6}% 80
-\BOOKMARK [2][-]{subsection.7.6.5}{7.6.5 Delateralization and rounding of lateral liquids in final position}{section.7.6}% 81
-\BOOKMARK [2][-]{subsection.7.6.6}{7.6.6 Vocalization of final nasals}{section.7.6}% 82
-\BOOKMARK [2][-]{subsection.7.6.7}{7.6.7 Velar consonantal paragoge}{section.7.6}% 83
-\BOOKMARK [2][-]{subsection.7.6.8}{7.6.8 Vowel assimilation}{section.7.6}% 84
-\BOOKMARK [2][-]{subsection.7.6.9}{7.6.9 Interconsonantal epenthesis \(-ed and -s morphemes\)}{section.7.6}% 85
-\BOOKMARK [0][]{chapter.8}{8 Results and Discussion}{part.3}% 86
-\BOOKMARK [0][]{chapter.9}{9 Final Remarks}{part.3}% 87
-\BOOKMARK [-1][]{part.4}{Appendix}{}% 88
-\BOOKMARK [0][]{dummy.7}{Bibliography}{part.4}% 89
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.4}% 90
-\BOOKMARK [0][]{declaration.0}{Declaration}{part.4}% 91
+\BOOKMARK [0][]{chapter.4}{4 Automatic Speech Recognition}{part.1}% 21
+\BOOKMARK [1][-]{section.4.1}{4.1 The big picture}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{4.2 HMM}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{4.3 PB}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{4.4 A Brief History}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.5}{4.5 HMM-based Speech Recognition}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.6}{4.6 Feature Extraction}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.7}{4.7 MFCC Features}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.8}{4.8 Dealing with Noisy Data}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.9}{4.9 Types of Speech Recognition Systems}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.10}{4.10 The Architecture of a Large Vocabulary Continuous Speech Recognition System}{chapter.4}% 31
+\BOOKMARK [-1][]{part.2}{Related Work}{}% 32
+\BOOKMARK [0][]{chapter.5}{5 Computer Assisted Pronunciation Training}{part.2}% 33
+\BOOKMARK [1][-]{section.5.1}{5.1 PB}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{5.2 English}{chapter.5}% 35
+\BOOKMARK [0][]{chapter.6}{6 How to Adapt a Speech Recognition to Non-Native Data}{part.2}% 36
+\BOOKMARK [1][-]{section.6.1}{6.1 PB}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.2}{6.2 Adaptation Methods for the Acoustic Model}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.3}{6.3 Adaptation Methods for the Pronunciation Model}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.4}{6.4 Adaptation Methods for the Languaeg Model}{chapter.6}% 40
+\BOOKMARK [-1][]{part.3}{Tools and Resources for Non-native Speech Recognition and Evaluati}{}% 41
+\BOOKMARK [0][]{chapter.7}{7 Materials and Methods}{part.3}% 42
+\BOOKMARK [1][-]{section.7.1}{7.1 Aieouad\364's dictionary and G2P converter}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.2}{7.2 A Method for the Extraction of Phonetically-Rich Sentences}{chapter.7}% 44
+\BOOKMARK [0][]{chapter.8}{8 Results and Discussion}{part.3}% 45
+\BOOKMARK [0][]{chapter.9}{9 Final Remarks}{part.3}% 46
+\BOOKMARK [-1][]{part.4}{Appendix}{}% 47
+\BOOKMARK [0][]{dummy.7}{Bibliography}{part.4}% 48
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.4}% 49
+\BOOKMARK [0][]{declaration.0}{Declaration}{part.4}% 50

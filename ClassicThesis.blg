@@ -29,46 +29,47 @@ Warning--I didn't find a database entry for "Muller2001"
 Warning--I didn't find a database entry for "Mporas2007"
 Warning--I didn't find a database entry for "Muniz2004"
 Warning--I didn't find a database entry for ""
+Warning--empty publisher in Rabiner2007
 Warning--empty booktitle in Strik2009
-You've used 94 entries,
+You've used 115 entries,
             2773 wiz_defined-function locations,
-            1256 strings with 23645 characters,
-and the built_in function-call counts, 41641 in all, are:
-= -- 3685
-> -- 2167
-< -- 88
-+ -- 751
-- -- 657
-* -- 3025
-:= -- 6393
-add.period$ -- 318
-call.type$ -- 94
-change.case$ -- 471
-chr.to.int$ -- 94
-cite$ -- 189
-duplicate$ -- 2120
-empty$ -- 3608
-format.name$ -- 793
-if$ -- 8928
-int.to.chr$ -- 1
+            1383 strings with 27878 characters,
+and the built_in function-call counts, 51929 in all, are:
+= -- 4574
+> -- 2838
+< -- 100
++ -- 977
+- -- 861
+* -- 3864
+:= -- 7963
+add.period$ -- 386
+call.type$ -- 115
+change.case$ -- 598
+chr.to.int$ -- 114
+cite$ -- 232
+duplicate$ -- 2588
+empty$ -- 4424
+format.name$ -- 1028
+if$ -- 11105
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 121
-newline$ -- 499
-num.names$ -- 380
-pop$ -- 1093
+missing$ -- 143
+newline$ -- 605
+num.names$ -- 464
+pop$ -- 1383
 preamble$ -- 1
-purify$ -- 405
+purify$ -- 515
 quote$ -- 0
-skip$ -- 1577
+skip$ -- 1940
 stack$ -- 0
-substring$ -- 1348
-swap$ -- 284
-text.length$ -- 22
+substring$ -- 1642
+swap$ -- 347
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 884
-warning$ -- 1
-while$ -- 375
+type$ -- 1095
+warning$ -- 2
+while$ -- 459
 width$ -- 0
-write$ -- 1268
-(There were 8 warnings)
+write$ -- 1536
+(There were 9 warnings)

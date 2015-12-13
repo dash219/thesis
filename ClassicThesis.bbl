@@ -1,9 +1,18 @@
-\begin{thebibliography}{94}
+\begin{thebibliography}{115}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abushariah et~al.(2012)Abushariah, Ainon, Zainuddin, Elshafei, and
+  Khalifa]{Abushariah2012}
+Mohammad A.~M. Abushariah, Raja~Noor Ainon, Roziati Zainuddin, Moustafa
+  Elshafei, and Othman~Omran Khalifa.
+\newblock Phonetically rich and balanced text and speech corpora for {Arabic}
+  language.
+\newblock \emph{Language Resources and Evaluation}, 46\penalty0 (4):\penalty0
+  601--634, 2012.
 
 \bibitem[Albuquerque and Silva(2011)]{Albuquerque2011}
 Jeniffer Albuquerque and Adelaide Silva.
@@ -22,6 +31,12 @@ Mariane Alves and Izabel Seara.
 \newblock Produ\c{c}\~ao de plosivas surdas em ingl\^es e portugu\^es por
   falantes brasileiros de ingl\^es como l\'ingua estrangeira.
 \newblock In \emph{Anais do CELSUL 2008}. EDUCAT, 2008.
+
+\bibitem[Arora et~al.(2004)Arora, Arora, Verma, and Agrawal]{Arora2004}
+Karunesh Arora, Sunita Arora, Kapil Verma, and Shyam~Sunder Agrawal.
+\newblock Automatic extraction of phonetically rich sentences from large text
+  corpus of {Indian} languages.
+\newblock \emph{INTERSPEECH}, 2004.
 
 \bibitem[Badin et~al.(2010)Badin, Ben~Youssef, Bailly, Elisei, and
   Hueber]{Badin2010}
@@ -75,6 +90,11 @@ Eniko~Beatrice Bilcu and Jaakko Astola.
   the 2006 16th IEEE Signal Processing Society Workshop on}, pages 253--258.
   IEEE, 2006.
 
+\bibitem[Bird et~al.(2009)Bird, Klein, and Loper]{NLTK2009}
+Steven Bird, Ewan Klein, and Edward Loper.
+\newblock \emph{Natural language processing with {Python}}.
+\newblock O'Reilly Media, Inc., 2009.
+
 \bibitem[Bisol(1989)]{Bisol1989}
 L.~Bisol.
 \newblock Vowel harmony: a variable rule in brazilian portuguese.
@@ -116,6 +136,11 @@ Fab\'iola Castilho.
   alveolares}.
 \newblock Pontif\'icia Universidade Cat\'olica de S\~ao Paulo (Unpublished
   Master's Thesis), S\~ao Paulo, SP, 2004.
+
+\bibitem[Coppin(2010)]{Coppin2010}
+Ben Coppin.
+\newblock Intelig{\^e}ncia artificial.
+\newblock \emph{Rio de Janeiro: LTC}, 2010.
 
 \bibitem[Damper et~al.(1998)Damper, Marchand, Adamson, and
   Gustafson]{Damper1998}
@@ -185,15 +210,36 @@ W~Tecumseh Fitch and Jay Giedd.
 \newblock \emph{The Journal of the Acoustical Society of America}, 106\penalty0
   (3):\penalty0 1511--1522, 1999.
 
+\bibitem[Freitas et~al.(2008)Freitas, Rocha, and Bick]{Floresta2008}
+Cl{\'a}udia Freitas, Paulo Rocha, and Eckhard Bick.
+\newblock Floresta sint{\'a}(c)tica: Bigger, thicker and easier.
+\newblock In \emph{Computational Processing of the {Portuguese} Language},
+  pages 216--219. Springer, 2008.
+
 \bibitem[Furui(2001)]{Furui2001}
 S.~Furui.
 \newblock \emph{Digital Speech Processing, Synthesis, and Recognition}.
 \newblock Marcel Dekker, New York, USA, 2ª edition, 2001.
 
-\bibitem[Garofolo et~al.(1993)Garofolo, Graff, Paul, and Pallett]{Garofolo1993}
+\bibitem[Ganapathiraju et~al.(2001)Ganapathiraju, Hamaker, Picone, Ordowski,
+  and Doddington]{Gana2001}
+A.~Ganapathiraju, J.~Hamaker, J.~Picone, M.~Ordowski, and G.~Doddington.
+\newblock Syllable-based large vocabulary continuous speech recognition.
+\newblock \emph{IEEE TRANSACTIONS ON SPEECH AND AUDIO PROCESSING}, 9:\penalty0
+  358--366, 2001.
+
+\bibitem[Garofolo et~al.(1993{\natexlab{a}})Garofolo, Lamel, Fisher, Fiscus,
+  Pallett, and Dahlgren]{Timit1993}
+J.~S. Garofolo, L.~F. Lamel, W.~M. Fisher, J.~G. Fiscus, D.~S. Pallett, and
+  N.~L. Dahlgren.
+\newblock {DARPA TIMIT} acoustic phonetic continuous speech corpus cdrom,
+  1993{\natexlab{a}}.
+
+\bibitem[Garofolo et~al.(1993{\natexlab{b}})Garofolo, Graff, Paul, and
+  Pallett]{Garofolo1993}
 John Garofolo, David Graff, Doug Paul, and David Pallett.
 \newblock \emph{CSR-I (WSJ0) Complete LDC93S6A. Web Download}.
-\newblock Linguistic Data Consortium, Philadelphia, 1993.
+\newblock Linguistic Data Consortium, Philadelphia, 1993{\natexlab{b}}.
 
 \bibitem[Girelli(1990)]{Girelli1990}
 C.A. Girelli.
@@ -240,6 +286,17 @@ John Jensen.
   Company, 2004.
 \newblock ISBN 9789027275172.
 
+\bibitem[Jones et~al.(2014)Jones, Oliphant, and Peterson]{Scipy2014}
+Eric Jones, Travis Oliphant, and Pearu Peterson.
+\newblock {SciPy}: Open source scientific tools for {Python}.
+\newblock http://www.scipy.org/, 2014.
+
+\bibitem[Kiss and Strunk(2006)]{Kiss2006}
+Tibor Kiss and Jan Strunk.
+\newblock Unsupervised multilingual sentence boundary detection.
+\newblock \emph{Computational Linguistics}, 32\penalty0 (4):\penalty0 485--525,
+  2006.
+
 \bibitem[Klein(1999)]{Klein1999}
 Simone Klein.
 \newblock \emph{Estudo do VOT no Portugu{\^e}s Brasileiro}.
@@ -269,6 +326,14 @@ Denise Kluge, Andr\'eia Rauber, Mara Reis, and Ricardo Bion.
 \newblock In \emph{Proceedings of the INTERSPEECH 2007}, pages 2297--2300.
   ISCA, 2007.
 
+\bibitem[Kumar et~al.(2014)Kumar, Dua, and Choudhary]{Kumar2014}
+A.~Kumar, M.~Dua, and T.~Choudhary.
+\newblock Article: Continuous {Hindi} speech recognition using monophone based
+  acoustic modeling.
+\newblock \emph{IJCA Proceedings on International Conference on Advances in
+  Computer Engineering and Applications}, ICACEA\penalty0 (1):\penalty0 15--19,
+  March 2014.
+
 \bibitem[Kuperman et~al.(2008)Kuperman, Ernestus, and Baayen]{Kuperman2008}
 Victor Kuperman, Mirjam Ernestus, and Harald Baayen.
 \newblock Frequency distributions of uniphones, diphones, and triphones in
@@ -286,6 +351,13 @@ Robin Lakoff.
 \newblock {Language and Woman's Place}.
 \newblock \emph{Language in Society}, 2\penalty0 (1), 1973.
 \newblock ISSN 00474045.
+
+\bibitem[Lei et~al.(2005)Lei, yuh Hwang, and Ostendorf]{Lei2005}
+Xin Lei, Mei yuh Hwang, and Mari Ostendorf.
+\newblock Incorporating tone-related {MLP} posteriors in the feature
+  representation for {Mandarin ASR}.
+\newblock In \emph{In Proc. Eur. Conf. Speech Communication Technology}, pages
+  2981--2984, 2005.
 
 \bibitem[Lenneberg(1967)]{Lenneberg1967}
 E.~Lenneberg.
@@ -316,6 +388,11 @@ R.~Lyster and K.~Saito.
 \newblock \emph{Studies in Second Language Acquisition}, 32:\penalty0 265--302,
   2010.
 
+\bibitem[Manning and Sch\"utze(1999)]{Manning1999}
+Christopher~D. Manning and Hinrich Sch\"utze.
+\newblock \emph{Foundations of Statistical Natural Language Processing}.
+\newblock MIT Press, 1999.
+
 \bibitem[McLoughlin(2009)]{McLoughlin2009}
 Ian McLoughlin.
 \newblock \emph{Applied Speech and Audio Processing -- With Matlab Examples}.
@@ -325,6 +402,15 @@ Ian McLoughlin.
 Medialab.
 \newblock Wikipedia extractor.
 \newblock http://medialab.di.unipi.it/wiki/Wikipedia\_Extractor, 2013.
+
+\bibitem[Mendes et~al.(2012)Mendes, Costa, Martins, Fernandes, Vicente, and
+  Freitas]{Mendes2012}
+Ana~Paula Mendes, Alexandra Nunes~da Costa, Alexandra~Delgado Martins, Andr\'e
+  Filipe~Oliveira Fernandes, Sara Margarida Dias do~Ros\'ario Vicente, and
+  T\^ania Carina~Samouco Freitas.
+\newblock Contributos para a constru\c{c}\~ao de um texto foneticamente
+  equilibrado para o {Portugu\^es-Europeu}.
+\newblock \emph{{Revista CEFAC}}, 14:\penalty0 910--917, 10 2012.
 
 \bibitem[Mendon\c{c}a and Alu\'isio(2014)]{Mendonca2014}
 Gustavo Mendon\c{c}a and Sandra Alu\'isio.
@@ -365,10 +451,19 @@ A.~Neri, O.~Mich, M.~Gerosa, and D.~Giuliani.
   2008.
 
 \bibitem[Neto et~al.(2011)Neto, Patrick, Klautau, and Trancoso]{Neto2011}
-N.~Neto, C.~Patrick, A.~Klautau, and I.~Trancoso.
-\newblock Free tools and resources for brazilian portuguese speech recognition.
+Nelson Neto, Carlos Patrick, Aldebaro Klautau, and Isabel Trancoso.
+\newblock Free tools and resources for {Brazilian Portuguese} speech
+  recognition.
 \newblock \emph{Journal of the Brazilian Computer Society}, 17\penalty0
   (1):\penalty0 53--68, 2011.
+
+\bibitem[Nicodem et~al.(2007)Nicodem, Seara, Seara, Anjos, and
+  Seara-Jr]{Nicodem2007}
+M.~Nicodem, I.~Seara, R.~Seara, D.~Anjos, and R.~Seara-Jr.
+\newblock Sele\c{c}\~ao autom\'atica de corpus de texto para sistemas de
+  s\'intese de fala.
+\newblock \emph{XXV Simp\'osio Brasileiro de Telecomunica\c{c}\~oes - SBrT
+  2007}, 2007.
 
 \bibitem[Nobre and Ingemann(1987)]{Nobre1987}
 Maria~Alzira Nobre and Frances Ingemann.
@@ -394,6 +489,13 @@ F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
 \newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
   2011.
 
+\bibitem[Pierrehumbert et~al.(2000)Pierrehumbert, Beckman, and
+  Ladd]{Pierrehumbert2000}
+J.~B.~P. Pierrehumbert, M.~E. Beckman, and D.~R. Ladd.
+\newblock Conceptual foundations of phonology as a laboratory science.
+\newblock In \emph{Phonological knowledge: Conceptual and empirical issues},
+  pages 273--304. Oxford University Press., 2000.
+
 \bibitem[Polyakova and Bonafonte(2006)]{Polyakova2006}
 Tatyana Polyakova and Antonio Bonafonte.
 \newblock Learning from errors in grapheme-to-phoneme conversion.
@@ -411,6 +513,13 @@ Susana Prestes.
 A.~Quicoli.
 \newblock Harmony, lowering and nasalization in brazilian portuguese.
 \newblock \emph{Língua}, 80:\penalty0 295--331, 1990.
+
+\bibitem[Rabiner and Schafer(2007)]{Rabiner2007}
+L.~Rabiner and R.~Schafer.
+\newblock \emph{Introduction to Digital Speech Processing}, volume~1, pages
+  1--194.
+\newblock 2007.
+\newblock ISBN 1-2.
 
 \bibitem[Rauber(2006)]{Rauber2006}
 Andr\'eia Rauber.
@@ -474,6 +583,20 @@ Bruno Schwartzhaupt and Ubirat\~a Alves.
   voice onset time: verifica\c{c}\~ao de dados de tr\^es sistemas
   lingu\'isticos.
 \newblock \emph{F\'orum Lingu\'istico}, 11\penalty0 (1), 2014.
+
+\bibitem[Sedgewick and Flajolet(2013)]{Sedgewick2013}
+Robert Sedgewick and Philippe Flajolet.
+\newblock \emph{An introduction to the analysis of algorithms}.
+\newblock Addison-Wesley-Longman, 2013.
+
+\bibitem[Shen et~al.(1994)Shen, Wang, Lyu, and Lee]{Shen1994}
+Jia-Lin Shen, Hsin-Min Wang, Ren-Yuan Lyu, and Lin-Shan Lee.
+\newblock Incremental speaker adaptation using phonetically balanced training
+  sentences for {Mandarin} syllable recognition based on segmental probability
+  models.
+\newblock In \emph{ICSLP}. ISCA, 1994.
+\newblock URL
+  \url{http://dblp.uni-trier.de/db/conf/interspeech/icslp1994.html\#ShenWLL94}.
 
 \bibitem[Shrawankar and Thakare(2010)]{Shrawankar2010}
 Urmila Shrawankar and Vilas~M. Thakare.
@@ -539,6 +662,14 @@ Ant{\'o}nio Teixeira, Catarina Oliveira, and Lurdes Moutinho.
 \newblock In \emph{Computational Processing of the Portuguese Language}, pages
   212--215. Springer, 2006.
 
+\bibitem[Thangarajan et~al.(2008)Thangarajan, Natarajan, and
+  Selvam]{Thanga2008}
+R.~Thangarajan, A.~M. Natarajan, and M.~Selvam.
+\newblock Word and triphone based approaches in continuous speech recognition
+  for {Tamil} language.
+\newblock \emph{WSEAS Trans. Sig. Proc.}, 4\penalty0 (3):\penalty0 76--85,
+  2008.
+
 \bibitem[Trevisol(2010)]{Trevisol2010}
 Juliana Trevisol.
 \newblock A produ\c{c}\~ao da fricativa interdental vozeada por professores
@@ -574,6 +705,11 @@ United-Nations.
 \newblock \emph{2014 Human Development Report -- Sustaining Human Progress:
   Reducing Vulnerabilities and Building Resilience}.
 \newblock United Nations Development Programme (UNDP), 2014.
+
+\bibitem[Uraga and Gamboa(2004)]{Uraga2004}
+Esmeralda Uraga and César Gamboa.
+\newblock {VOXMEX} speech database: Design of a phonetically balanced corpus.
+\newblock In \emph{LREC}. European Language Resources Association, 2004.
 
 \bibitem[Vasil\'{e}vski(2012)]{Nhenhem2012}
 Vera Vasil\'{e}vski.
@@ -614,6 +750,11 @@ J.~Wells.
 \newblock Overcoming phonetic interference.
 \newblock \emph{English Phonetics, Journal of the English Phonetic Society of
   Japan}, 3:\penalty0 9--21, 2000.
+
+\bibitem[Wikimedia(2014)]{Wikidump2014}
+Wikimedia.
+\newblock {Portuguese Wikipedia} database dump backup.
+\newblock http://dumps.wikimedia.org/ptwiki/20140123/, 2014.
 
 \bibitem[Young et~al.(1994)Young, Odell, and Woodland]{Young1994}
 S.~Young, J.~Odell, and P.~Woodland.
