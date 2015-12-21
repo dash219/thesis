@@ -8,15 +8,14 @@ A level-1 auxiliary file: FrontBackmatter/Dedication.aux
 A level-1 auxiliary file: FrontBackmatter/Abstract.aux
 A level-1 auxiliary file: FrontBackmatter/Contents.aux
 A level-1 auxiliary file: Chapters/ChapIntro.aux
-A level-1 auxiliary file: Chapters/ChapPhonology.aux
-A level-1 auxiliary file: Chapters/ChapSLA.aux
-A level-1 auxiliary file: Chapters/ChapASR.aux
-A level-1 auxiliary file: Chapters/ChapCAPT.aux
-A level-1 auxiliary file: Chapters/ChapHowToAdapt.aux
-A level-1 auxiliary file: Chapters/ChapMethods.aux
-A level-1 auxiliary file: Chapters/ChapResults.aux
+A level-1 auxiliary file: Chapters/ChapFoundations.aux
+A level-1 auxiliary file: Chapters/ChapAeiouado.aux
+A level-1 auxiliary file: Chapters/ChapSpeller.aux
+A level-1 auxiliary file: Chapters/ChapPhonRich.aux
+A level-1 auxiliary file: Chapters/ChapPhoneAlignment.aux
+A level-1 auxiliary file: Chapters/ChapListener.aux
 A level-1 auxiliary file: Chapters/ChapFinalRemarks.aux
-A level-1 auxiliary file: Chapters/ChapAppendix.aux
+A level-1 auxiliary file: Chapters/ChapRules.aux
 A level-1 auxiliary file: FrontBackmatter/Bibliography.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: FrontBackmatter/Colophon.aux
@@ -29,47 +28,52 @@ Warning--I didn't find a database entry for "Muller2001"
 Warning--I didn't find a database entry for "Mporas2007"
 Warning--I didn't find a database entry for "Muniz2004"
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "Baptista2011"
+Warning--empty year in Fossati2008
+Warning--empty year in Fossati2008
 Warning--empty publisher in Rabiner2007
+Warning--empty booktitle in soundex
+Warning--empty publisher in soundex
 Warning--empty booktitle in Strik2009
-You've used 115 entries,
+You've used 145 entries,
             2773 wiz_defined-function locations,
-            1383 strings with 27878 characters,
-and the built_in function-call counts, 51929 in all, are:
-= -- 4574
-> -- 2838
-< -- 100
-+ -- 977
-- -- 861
-* -- 3864
-:= -- 7963
-add.period$ -- 386
-call.type$ -- 115
-change.case$ -- 598
-chr.to.int$ -- 114
-cite$ -- 232
-duplicate$ -- 2588
-empty$ -- 4424
-format.name$ -- 1028
-if$ -- 11105
-int.to.chr$ -- 2
+            1609 strings with 34590 characters,
+and the built_in function-call counts, 69280 in all, are:
+= -- 6245
+> -- 3712
+< -- 140
++ -- 1273
+- -- 1126
+* -- 5197
+:= -- 10450
+add.period$ -- 511
+call.type$ -- 145
+change.case$ -- 776
+chr.to.int$ -- 143
+cite$ -- 296
+duplicate$ -- 3414
+empty$ -- 5838
+format.name$ -- 1351
+if$ -- 14936
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 143
-newline$ -- 605
-num.names$ -- 464
-pop$ -- 1383
+missing$ -- 172
+newline$ -- 787
+num.names$ -- 586
+pop$ -- 1751
 preamble$ -- 1
-purify$ -- 515
+purify$ -- 663
 quote$ -- 0
-skip$ -- 1940
+skip$ -- 2626
 stack$ -- 0
-substring$ -- 1642
-swap$ -- 347
-text.length$ -- 27
+substring$ -- 2480
+swap$ -- 563
+text.length$ -- 47
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1095
-warning$ -- 2
-while$ -- 459
+type$ -- 1425
+warning$ -- 6
+while$ -- 616
 width$ -- 0
-write$ -- 1536
-(There were 9 warnings)
+write$ -- 2000
+(There were 14 warnings)

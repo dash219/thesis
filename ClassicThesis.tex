@@ -55,6 +55,7 @@
 \usepackage{tabularx}
 \usepackage{nameref}
 
+
 \newcommand{\gustavo}[1]{\textbf{#1}}
 %********************************************************************
 % Hyphenation
@@ -92,29 +93,20 @@
 \pagenumbering{arabic}
 %\setcounter{page}{90}
 % use \cleardoublepage here to avoid problems with pdfbookmark
-
 \cleardoublepage
-\ctparttext{This part addresses some fundamental concepts in Linguistics,
-Acoustics, and Automatic Speech Recognition.}
+
+\ctparttext{This part introduces the thesis and presents its theoretical foundations.}
+\part{Prolegomena}\label{part:prolegomena}
 \include{Chapters/ChapIntro}
+\include{Chapters/ChapFoundations}
 
-\part{Some Fundamental Concepts}\label{part:fund-concepts}
-\include{Chapters/ChapPhonology}
-\include{Chapters/ChapSLA}
-\include{Chapters/ChapASR}
-
-
-\ctparttext{This part addresses some fundamental concepts in Linguistics,
-Acoustics, and Automatic Speech Recognition.}
-\part{Related Work}\label{part:related-work}
-\include{Chapters/ChapCAPT}
-\include{Chapters/ChapHowToAdapt}
-
-
-\ctparttext{Results and discussion.}
-\part{Tools and Resources for Non-native Speech Recognition and Evaluati}\label{part:design-listener}
-\include{Chapters/ChapMethods}
-\include{Chapters/ChapResults}
+\ctparttext{This part discusses the resources tools and resources that were developed within this thesis for non-native speech recognition and evaluation.}
+\part{Tools and Resources for Non-native Speech Recognition and Evaluation}\label{part:tools-resources}
+\include{Chapters/ChapAeiouado}
+\include{Chapters/ChapSpeller}
+\include{Chapters/ChapPhonRich}
+\include{Chapters/ChapPhoneAlignment}
+\include{Chapters/ChapListener}
 \include{Chapters/ChapFinalRemarks}
 
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
@@ -124,7 +116,7 @@ Acoustics, and Automatic Speech Recognition.}
 %*******************************************************
 \appendix
 \part{Appendix}
-\include{Chapters/ChapAppendix}
+\include{Chapters/ChapRules}
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************

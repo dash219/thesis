@@ -93,7 +93,7 @@ Similar tools have been developed for other languages, such as Japanese \cite{Ts
 
 \ac{CAPT} systems can provide new opportunities for practicing oral proficiency. With respect to L2 pronunciation, it has been shown that when students have online corrective feedback about their mispronunciations, they can improve more quality their pronunciation skills \cite{Long1983, Lyster2010}. Nonetheless, in the classroom, teachers are not not always able to provide this type of individual feedback given the number of students in a class and the amount of available hours in a \ac{ESL} course. \ac{CAPT} systems can be a solution are able to assist with this matter, since they  can assess one's pronunciation in real time at very low cost. According to \citeauthor{Neri2008} \cite{Neri2008}, by using \ac{CAPT}, students are able improve their pronunciation skills a similar pace to those who attend traditional classrooms.
 
-\section{Research hypotheses}
+\paragraph{Research hypotheses}
 
 The research hypotheses are:
 
@@ -114,18 +114,17 @@ About the speech recognizer and checker:
  \item an HMM/GMM \ac{ASR}, with acoustic parameters estimated from a cross-linguistic corpora (from both English and \ac{BP}), with a multi-pronunciation dictionary which include Brazilian-accented variants created through transformation rules, is an adequate method for recognizing and identifying mispronunciations in forced alignment tasks containing Brazilian-accented English.
 \end{enumerate}
 
-\section{Contributions of the Thesis}
+\paragraph{Contributions of the Thesis}
 
 Within this work, I have investigated and developed a set of tools and resources for non-native speech recognition and correction, focused on Brazilian-accented English. Some of these resources and tools are exclusively for tasks related to processing Brazilian-accented English, but others are more general and can be employed for many other purposes, such as a \ac{G2P} for \ac{BP}, corpus balancing, etc. The full list of contributions is provided below:
 
 \begin{enumerate}
- \item \emph{Aeiouad\^o G2P}: A grapheme-to-phoneme converter for \ac{BP} which uses a hybrid approach, based on both handcrafted rules and machine learning method, as decribed in \citeauthor{Mendonca2014} \cite{Mendonca2014};
- \item \emph{Aeiouad\^o dictionary}: A large machine readable dictionary for \ac{BP}, compiled from a word list extracted from the Portuguese Wikipedia, which was preprocessed in order to filter loanwords, acronyms, scientific names and other spurious data, and then transcribed with Aeiouad\^o G2P).
- \item A method for the extraction of phonetically rich sentences, i.e. sentences with a high variety of triphones distributed in a uniform fashion, which employs a greedy algorithm for comparing triphone distributions among sentences, as described in \citeauthor{Mendonca2014b} \cite{Mendonca2014b};
+ \item \emph{Aeiouad\^o G2P}: A grapheme-to-phoneme converter for \ac{BP} which uses a hybrid approach, based on both handcrafted rules and machine learning method, as decribed in \citeauthor{Mendonca2014} \cite{Mendonca2014}. \emph{Aeiouad\^o dictionary}: A large machine readable dictionary for \ac{BP}, compiled from a word list extracted from the Portuguese Wikipedia, which was preprocessed in order to filter loanwords, acronyms, scientific names and other spurious data, and then transcribed with Aeiouad\^o G2P).
  \item A phonetic speller for user-generated content in \ac{BP}, based on machine learning, which takes advantage of Aeiouad\^o G2P to group phonetically related words, as described in \citeauthor{Mendonca2015} \cite{Mendonca2015}; 
- \item A set of rules for generating pronunciation hypothesis for Brazilian-accented English, considering nine types of mispronunciations, respectively: (i) syllable simplification; (ii) consonant change; (iii) deaspiration of voiceless plosives in initial or stressed positions; (iv) terminal devoicing in word-final obstruents; (v) delateralization and rounding of lateral liquids in final position; (vi) vocalization of final nasals; (vii) velar consonantal paragoge; (viii) vowel assimilation; (ix) interconsonantal epenthesis;
- \item An alignment method for phonetic transcriptions which takes into the phones' distinctive features for finding the optimal phone sequence match;
+ \item A method for the extraction of phonetically rich sentences, i.e. sentences with a high variety of triphones distributed in a uniform fashion, which employs a greedy algorithm for comparing triphone distributions among sentences, as described in \citeauthor{Mendonca2014b} \cite{Mendonca2014b};
  \item A crowdsourced platform for speeding up the process of compiling and transcribing speech corpora;
+ \item A set of rules for generating pronunciation hypothesis for Brazilian-accented English, considering nine types of mispronunciations, respectively: (i) syllable simplification; (ii) consonant change; (iii) deaspiration of voiceless plosives in initial or stressed positions; (iv) terminal devoicing in word-final obstruents; (v) delateralization and rounding of lateral liquids in final position; (vi) vocalization of final nasals; (vii) velar consonantal paragoge; (viii) vowel assimilation; (ix) interconsonantal epenthesis;
+ \item An alignment method for phonetic transcriptions, based on the Needleman-Wunsch algorithm,  which takes into the phones' distinctive features for finding the optimal phone sequence match;
  \item \emph{Listener}:A prototype system for automatic speech recognition and evaluation of Brazilian-accented English, which makes use of forced alignment, \ac{HMM}/\ac{GMM} acoustic models, context free grammars and multipronunciation dictionaries;
 \end{enumerate}
 
@@ -134,7 +133,7 @@ All files, resources and scripts developed are available at the project website\
  \url{http://nilc.icmc.usp.br/listener}
 \end{center}
 
-\section{Thesis Structure}
+\paragraph{Thesis Structure}
 
 This Master's thesis is organized into parts, chapters and sections according to the following.
-\autoref{part:fund-concepts} presents some basic concepts and notions which are necessary for further reading. \autoref{ch:phonetics} discusses the fundamentals of Phonetics and Phonology. \autoref{ch:second-language} debates Second Language Acquisition, which is the area of Applied Linguistics responsible for studying how one acquires an additional language and what are the implications throughout the learning process. In \autoref{ch:speech-recognition} we provide an overview of speech recognition systems. In \autoref{part:related-work}, some related work is discussed. \autoref{part:design-listener} is the last one and describe the design of Listener. \autoref{ch:methods} contains a detailed discussion of methods. The results are presented in \autoref{ch:results}. Finally in \autoref{ch:final-remarks}, we outline some final remarks and plan the next steps for future work.
+\autoref{part:fund-concepts} presents some basic concepts and notions which are necessary for further reading. \autoref{ch:phonetics} discusses the fundamentals of Phonetics and Phonology. \autoref{ch:second-language} debates Second Language Acquisition, which is the area of Applied Linguistics responsible for studying how one acquires an additional language and what are the implications throughout the learning process. In \autoref{ch:speech-recognition} we provide an overview of speech recognition systems. \autoref{part:tools-resources} contains the core of the text and discusses the tools and resources that were investigated and developed within this thesis. \autoref{ch:aieouado-g2p} presents th Aeiouad\^o's grapheme-to-phoneme converter and dictionary as well as a use-case, a phonetic-speller, which employs transcriptions generated by Aeiouad\^o. \autoref{ch:phonetically-rich} proposes a method for the extraction of phonetically-rich sentences. \autoref{ch:alignment} puts forward a method for aligning phonetic transcription, based on the Needleman-Wunsch algorithm for protein or nucleotid alignment. \autoref{ch:listener} describes a prototype system for non-native speech recognition and evaluation of Brazilian-accented English, which makes use of the tools and resources developed in this thesis. Finally in \autoref{ch:final-remarks}, we outline some final remarks and plan the next steps for future work.

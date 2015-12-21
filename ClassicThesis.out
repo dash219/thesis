@@ -6,45 +6,42 @@
 \BOOKMARK [1][-]{lot.1}{List of Tables}{}% 6
 \BOOKMARK [1][-]{lol.1}{Listings}{}% 7
 \BOOKMARK [1][-]{acronyms.1}{Acronyms}{}% 8
-\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 9
-\BOOKMARK [1][-]{section.1.1}{1.1 Research hypotheses}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.2}{1.2 Contributions of the Thesis}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.3}{1.3 Thesis Structure}{chapter.1}% 12
-\BOOKMARK [-1][]{part.1}{Some Fundamental Concepts}{}% 13
-\BOOKMARK [0][]{chapter.2}{2 Phonetics and Phonology}{part.1}% 14
-\BOOKMARK [1][-]{section.2.1}{2.1 The Phonetic Inventory of Brazilian Portuguese}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{2.2 The Phonetic Inventory of American English}{chapter.2}% 16
-\BOOKMARK [0][]{chapter.3}{3 Second Language Acquisition}{part.1}% 17
-\BOOKMARK [1][-]{section.3.1}{3.1 PB}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{3.2 Why Consider L1 in L2 Teaching?}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{3.3 Common Mispronunciation}{chapter.3}% 20
-\BOOKMARK [0][]{chapter.4}{4 Automatic Speech Recognition}{part.1}% 21
-\BOOKMARK [1][-]{section.4.1}{4.1 The big picture}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{4.2 HMM}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{4.3 PB}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.4}{4.4 A Brief History}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.5}{4.5 HMM-based Speech Recognition}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.6}{4.6 Feature Extraction}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.7}{4.7 MFCC Features}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.8}{4.8 Dealing with Noisy Data}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.9}{4.9 Types of Speech Recognition Systems}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.10}{4.10 The Architecture of a Large Vocabulary Continuous Speech Recognition System}{chapter.4}% 31
-\BOOKMARK [-1][]{part.2}{Related Work}{}% 32
-\BOOKMARK [0][]{chapter.5}{5 Computer Assisted Pronunciation Training}{part.2}% 33
-\BOOKMARK [1][-]{section.5.1}{5.1 PB}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.2}{5.2 English}{chapter.5}% 35
-\BOOKMARK [0][]{chapter.6}{6 How to Adapt a Speech Recognition to Non-Native Data}{part.2}% 36
-\BOOKMARK [1][-]{section.6.1}{6.1 PB}{chapter.6}% 37
-\BOOKMARK [1][-]{section.6.2}{6.2 Adaptation Methods for the Acoustic Model}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.3}{6.3 Adaptation Methods for the Pronunciation Model}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.4}{6.4 Adaptation Methods for the Languaeg Model}{chapter.6}% 40
-\BOOKMARK [-1][]{part.3}{Tools and Resources for Non-native Speech Recognition and Evaluati}{}% 41
-\BOOKMARK [0][]{chapter.7}{7 Materials and Methods}{part.3}% 42
-\BOOKMARK [1][-]{section.7.1}{7.1 Aieouad\364's dictionary and G2P converter}{chapter.7}% 43
-\BOOKMARK [1][-]{section.7.2}{7.2 A Method for the Extraction of Phonetically-Rich Sentences}{chapter.7}% 44
-\BOOKMARK [0][]{chapter.8}{8 Results and Discussion}{part.3}% 45
-\BOOKMARK [0][]{chapter.9}{9 Final Remarks}{part.3}% 46
-\BOOKMARK [-1][]{part.4}{Appendix}{}% 47
-\BOOKMARK [0][]{dummy.7}{Bibliography}{part.4}% 48
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.4}% 49
-\BOOKMARK [0][]{declaration.0}{Declaration}{part.4}% 50
+\BOOKMARK [-1][]{part.1}{Prolegomena}{}% 9
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{part.1}% 10
+\BOOKMARK [0][]{chapter.2}{2 Theoretical Foundations}{part.1}% 11
+\BOOKMARK [1][-]{section.2.1}{2.1 Phonetics and Phonology}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{2.2 Second Language Acquisition}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{2.3 Automatic Speech Recognition}{chapter.2}% 14
+\BOOKMARK [-1][]{part.2}{Tools and Resources for Non-native Speech Recognition and Evaluation}{}% 15
+\BOOKMARK [0][]{chapter.3}{3 Aieouad\364's dictionary and G2P converter}{part.2}% 16
+\BOOKMARK [1][-]{section.3.1}{3.1 Introduction}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{3.2 Method}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{3.3 Results}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{3.4 Final Remarks}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{3.5 Acknowledgements}{chapter.3}% 21
+\BOOKMARK [0][]{chapter.4}{4 Phonetic-based Speller}{part.2}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Introduction}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{4.2 Experimental Settings and Methods}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{4.3 Discussion}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{4.4 Related Work}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.5}{4.5 Final Remarks}{chapter.4}% 27
+\BOOKMARK [0][]{chapter.5}{5 A greedy algorithm for the extraction of phonetically rich sentences}{part.2}% 28
+\BOOKMARK [1][-]{section.5.1}{5.1 Introduction}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{5.2 Related Work}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.3}{5.3 Example Evaluation}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.4}{5.4 Final Remarks}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.5}{5.5 Extracted Sentences Sample}{chapter.5}% 33
+\BOOKMARK [0][]{chapter.6}{6 A method for the alignment of phone sequences}{part.2}% 34
+\BOOKMARK [0][]{chapter.7}{7 Listener}{part.2}% 35
+\BOOKMARK [1][-]{section.7.1}{7.1 Tools and Libraries}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.2}{7.2 Speech Corpora}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.3}{7.3 Building the Acoustic Model}{chapter.7}% 38
+\BOOKMARK [1][-]{section.7.4}{7.4 Building the Pronunciation Model}{chapter.7}% 39
+\BOOKMARK [1][-]{section.7.5}{7.5 Building the Grammars and the Language Model}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.6}{7.6 Results}{chapter.7}% 41
+\BOOKMARK [0][]{chapter.8}{8 Final Remarks}{part.2}% 42
+\BOOKMARK [-1][]{part.3}{Appendix}{}% 43
+\BOOKMARK [0][]{appendix.A}{A Rules for generating pronunciation variants}{part.3}% 44
+\BOOKMARK [0][]{dummy.7}{Bibliography}{part.3}% 45
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.3}% 46
+\BOOKMARK [0][]{declaration.0}{Declaration}{part.3}% 47

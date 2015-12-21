@@ -1,4 +1,4 @@
-\begin{thebibliography}{115}
+\begin{thebibliography}{145}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -13,6 +13,15 @@ Mohammad A.~M. Abushariah, Raja~Noor Ainon, Roziati Zainuddin, Moustafa
   language.
 \newblock \emph{Language Resources and Evaluation}, 46\penalty0 (4):\penalty0
   601--634, 2012.
+
+\bibitem[Ahmed et~al.(2009)Ahmed, Luca, and N\"urnberger]{Ahmed2009}
+F.~Ahmed, E.~W.~De Luca, and A.~N\"urnberger.
+\newblock {Revised N-Gram based Automatic Spelling Correction Tool to Improve
+  Retrieval Effectiveness}.
+\newblock \emph{Polibits}, pages 39--48, 12 2009.
+\newblock ISSN 1870-9044.
+\newblock URL
+  \url{http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1870-90442009000200007&nrm=iso}.
 
 \bibitem[Albuquerque and Silva(2011)]{Albuquerque2011}
 Jeniffer Albuquerque and Adelaide Silva.
@@ -32,11 +41,30 @@ Mariane Alves and Izabel Seara.
   falantes brasileiros de ingl\^es como l\'ingua estrangeira.
 \newblock In \emph{Anais do CELSUL 2008}. EDUCAT, 2008.
 
+\bibitem[Andrade et~al.(2012)Andrade, Teixeira, Xavier, Oliveira, Rocha, and
+  Evsukoff]{Andrade2012}
+G.~Andrade, F.~Teixeira, C.R. Xavier, R.S. Oliveira, L.C. Rocha, and A.G.
+  Evsukoff.
+\newblock {HASCH: High Performance Automatic Spell Checker for Portuguese Texts
+  from the Web}.
+\newblock \emph{Proceedings of the International Conference on Computational
+  Science}, 9\penalty0 (0):\penalty0 403 -- 411, 2012.
+\newblock ISSN 1877-0509.
+\newblock \doi{http://dx.doi.org/10.1016/j.procs.2012.04.043}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1877050912001640}.
+
 \bibitem[Arora et~al.(2004)Arora, Arora, Verma, and Agrawal]{Arora2004}
 Karunesh Arora, Sunita Arora, Kapil Verma, and Shyam~Sunder Agrawal.
 \newblock Automatic extraction of phonetically rich sentences from large text
   corpus of {Indian} languages.
 \newblock \emph{INTERSPEECH}, 2004.
+
+\bibitem[Avan\c{c}o et~al.(2014)Avan\c{c}o, Duran, and Nunes]{Avanco2014}
+L.~Avan\c{c}o, M.~Duran, and M.~G.~V. Nunes.
+\newblock {Towards a Phonetic Brazilian Portuguese Spell Checker}.
+\newblock In \emph{Proceedings of ToRPorEsp Workshop PROPOR 2014}, pages
+  24--31, S\~ao Carlos, Brazil, 2014.
 
 \bibitem[Badin et~al.(2010)Badin, Ben~Youssef, Bailly, Elisei, and
   Hueber]{Badin2010}
@@ -107,6 +135,14 @@ Brasil.
 \newblock Diário do Congresso Nacional da República Federativa do Brasil,
   Poder Executivo, Brasília, Brazil, 2009.
 
+\bibitem[Brill and Moore(2000)]{Brill2000}
+E.~Brill and R.~C. Moore.
+\newblock {An Improved Error Model for Noisy Channel Spelling Correction}.
+\newblock In \emph{Proceedings of the 38th Annual Meeting on Association for
+  Computational Linguistics}, ACL '00, pages 286--293, 2000.
+\newblock \doi{10.3115/1075218.1075255}.
+\newblock URL \url{http://dx.doi.org/10.3115/1075218.1075255}.
+
 \bibitem[Brown~Jr et~al.(1991)Brown~Jr, Morris, Hollien, and Howell]{Brown1991}
 WS~Brown~Jr, Richard~J Morris, Harry Hollien, and Elizabeth Howell.
 \newblock Speaking fundamental frequency characteristics as a function of age
@@ -128,6 +164,14 @@ Walcir Cardoso.
 \newblock \emph{Second Language Research}, Online edition:\penalty0 1--33,
   2011.
 
+\bibitem[Carletta(1996)]{Carletta1996}
+J.~Carletta.
+\newblock {Assessing Agreement on Classification Tasks: The Kappa Statistic}.
+\newblock \emph{Computational Linguistics}, 22\penalty0 (2):\penalty0 249--254,
+  June 1996.
+\newblock ISSN 0891-2017.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=230386.230390}.
+
 \bibitem[Castilho(2004)]{Castilho2004}
 Fab\'iola Castilho.
 \newblock \emph{Quest\~oes de pron\'uncia em L\'ingua Inglesa: Fatores
@@ -141,6 +185,23 @@ Fab\'iola Castilho.
 Ben Coppin.
 \newblock Intelig{\^e}ncia artificial.
 \newblock \emph{Rio de Janeiro: LTC}, 2010.
+
+\bibitem[Cucerzan and Brill(2004)]{Cucerzan2004}
+S.~Cucerzan and E.~Brill.
+\newblock {Spelling Correction as an Iterative Process that Exploits the
+  Collective Knowledge of Web Users }.
+\newblock In \emph{Proceedings of the Conference on Empirical Methods on
+  Natural Language Processing EMNLP 2004}, pages 293--300, Barcelona, Spain,
+  July 2004.
+
+\bibitem[Damerau(1964)]{Damerau1964}
+F.~J. Damerau.
+\newblock {A Technique for Computer Detection and Correction of Spelling
+  Errors}.
+\newblock \emph{Communications of ACM}, 7\penalty0 (3):\penalty0 171--176, mar
+  1964.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/363958.363994}.
 
 \bibitem[Damper et~al.(1998)Damper, Marchand, Adamson, and
   Gustafson]{Damper1998}
@@ -156,6 +217,14 @@ Steven Davis and Paul Mermelstein.
   recognition in continuously spoken sentences.
 \newblock \emph{Acoustics, Speech and Signal Processing, IEEE Transactions on},
   28\penalty0 (4):\penalty0 357--366, 1980.
+
+\bibitem[De~Clercq et~al.(2013)De~Clercq, Schulz, Desmet, Lefever, and
+  Hoste]{DeClercq2013}
+O.~De~Clercq, S.~Schulz, B.~Desmet, E.~Lefever, and V.~Hoste.
+\newblock {Normalization of Dutch User-Generated Content}.
+\newblock In \emph{Proceedings of the International Conference Recent Advances
+  in Natural Language Processing RANLP 2013}, pages 179--188, 2013.
+\newblock URL \url{http://aclweb.org/anthology/R13-1024}.
 
 \bibitem[Delatorre and Koerich(2005)]{Delatorre2005}
 F.~Delatorre and R.~Koerich.
@@ -175,6 +244,22 @@ Scrapy developers.
   crawling framework}.
 \newblock Scrapinghub, 2014.
 \newblock \url{http://scrapy.org/}.
+
+\bibitem[Duan and Hsu(2011)]{Duan2011}
+H.~Duan and B.~(Paul) Hsu.
+\newblock {Online Spelling Correction for Query Completion}.
+\newblock In \emph{Proceedings of the 20th International Conference on World
+  Wide Web}, WWW '11, pages 117--126, NY, USA, 2011. ACM.
+\newblock ISBN 978-1-4503-0632-4.
+
+\bibitem[Duran et~al.(2014)Duran, Avan\c{c}o, Alu\'{i}sio, Pardo, and
+  Nunes]{Duran2014}
+M.~Duran, L.~Avan\c{c}o, S.~Alu\'{i}sio, T.~Pardo, and M.~G.~V. Nunes.
+\newblock {Some Issues on the Normalization of a Corpus of Products Reviews in
+  Portuguese}.
+\newblock In \emph{Proceedings of the 9th Web as Corpus Workshop WaC-9}, pages
+  22--28, Gothenburg, Sweden, April 2014.
+\newblock URL \url{http://www.aclweb.org/anthology/W14-0404}.
 
 \bibitem[EducationFirst(2011)]{EF2011}
 EducationFirst.
@@ -210,9 +295,25 @@ W~Tecumseh Fitch and Jay Giedd.
 \newblock \emph{The Journal of the Acoustical Society of America}, 106\penalty0
   (3):\penalty0 1511--1522, 1999.
 
+\bibitem[Fossati and Di~Eugenio()]{Fossati2008}
+D.~Fossati and B.~Di~Eugenio.
+\newblock {I saw TREE trees in the park: How to Correct Real-Word Spelling
+  Mistakes}.
+\newblock In \emph{Proceedings of the Sixth International Conference on
+  Language Resources and Evaluation LREC 2008}.
+
+\bibitem[Fossati and Di~Eugenio(2007)]{Fossati2007}
+D.~Fossati and B.~Di~Eugenio.
+\newblock {A Mixed Trigrams Approach for Context Sensitive Spell Checking}.
+\newblock In Alexander Gelbukh, editor, \emph{Computational Linguistics and
+  Intelligent Text Processing}, volume 4394 of \emph{Lecture Notes in Computer
+  Science}, pages 623--633. Springer, 2007.
+\newblock \doi{10.1007/978-3-540-70939-8_55}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-540-70939-8_55}.
+
 \bibitem[Freitas et~al.(2008)Freitas, Rocha, and Bick]{Floresta2008}
-Cl{\'a}udia Freitas, Paulo Rocha, and Eckhard Bick.
-\newblock Floresta sint{\'a}(c)tica: Bigger, thicker and easier.
+Claudia Freitas, Paulo Rocha, and Eckhard Bick.
+\newblock Floresta sintactica: Bigger, thicker and easier.
 \newblock In \emph{Computational Processing of the {Portuguese} Language},
   pages 216--219. Springer, 2008.
 
@@ -253,12 +354,36 @@ GlobalEnglish.
   Report}.
 \newblock Pearson Always Learning, Pearson, 2013.
 
+\bibitem[Godwin-Jones(2009)]{Godwin2009}
+R.~Godwin-Jones.
+\newblock Emerging technologies: Speech tools and technologies.
+\newblock \emph{Language Learning and Technology}, 13-3:\penalty0 4--11, 2009.
+
 \bibitem[Grijzenhout(2000)]{Grijzenhout2000}
 Janet Grijzenhout.
 \newblock Voicing and devoicing in english, german, and dutch; evidence for
   domain-specific identity constraints.
 \newblock \emph{Theory des Lexikons; Arbeiten des Sonderforschungsbereichs},
   282:\penalty0 1--22, 2000.
+
+\bibitem[Han et~al.(2013)Han, Cook, and Baldwin]{Han2013}
+B.~Han, P.~Cook, and T.~Baldwin.
+\newblock {Lexical Normalization for Social Media Text}.
+\newblock \emph{ACM Trans. Intelligent System Technology}, 4\penalty0
+  (1):\penalty0 5:1--5:27, February 2013.
+\newblock ISSN 2157-6904.
+\newblock \doi{10.1145/2414425.2414430}.
+\newblock URL \url{http://doi.acm.org/10.1145/2414425.2414430}.
+
+\bibitem[Hartmann et~al.(2014)Hartmann, Avan\c{c}o, Balage, Duran, Nunes,
+  Pardo, and Aluísio]{Hartmann2014}
+N.~Hartmann, L.~Avan\c{c}o, P.~Balage, M.~Duran, M.~G.~V. Nunes, T.~Pardo, and
+  S.~Aluísio.
+\newblock {A Large Corpus of Product Reviews in Portuguese: Tackling
+  Out-Of-Vocabulary Words}.
+\newblock In \emph{Proceedings of the Ninth International Conference on
+  Language Resources and Evaluation LREC'14}, pages 3866--3871, 2014.
+\newblock ISBN 978-2-9517408-8-4.
 
 \bibitem[Hayes(2011)]{Hayes2011}
 Bruce Hayes.
@@ -272,12 +397,24 @@ Hynek Hermansky.
 \newblock \emph{the Journal of the Acoustical Society of America}, 87\penalty0
   (4):\penalty0 1738--1752, 1990.
 
+\bibitem[Hirst(2008)]{Hirst2008}
+G.~Hirst.
+\newblock {An evaluation of the contextual spelling checker of Microsoft Office
+  Word 2007}, 2008.
+\newblock URL \url{http://www.cs.toronto.edu/pub/gh/Hirst-2008-Word.pdf}.
+
 \bibitem[Huang et~al.(2001)Huang, Acero, and Hon]{Huang2001}
 Xuedong Huang, Alex Acero, and Hsiao-Wuen Hon.
 \newblock \emph{Spoken Language Processing: A Guide to Theory, Algorithm, and
   System Development}.
 \newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1st edition, 2001.
 \newblock ISBN 0130226165.
+
+\bibitem[Islam and Inkpen(2009)]{Islam2009}
+A.~Islam and D.~Inkpen.
+\newblock {Real-word spelling correction using Google web 1tn-gram data set}.
+\newblock In \emph{In ACM International Conference on Information and Knowledge
+  Management CIKM 2009}, pages 1689--1692, 2009.
 
 \bibitem[Jensen(2004)]{Jensen2004}
 John Jensen.
@@ -352,6 +489,13 @@ Robin Lakoff.
 \newblock \emph{Language in Society}, 2\penalty0 (1), 1973.
 \newblock ISSN 00474045.
 
+\bibitem[Landis and Koch(1977)]{Landis1977}
+J.~R. Landis and G.~G. Koch.
+\newblock {The Measurement of Observer Agreement for Categorical Data}.
+\newblock \emph{Biometrics}, 33\penalty0 (1):\penalty0 pp. 159--174, 1977.
+\newblock ISSN 0006341X.
+\newblock URL \url{http://www.jstor.org/stable/2529310}.
+
 \bibitem[Lei et~al.(2005)Lei, yuh Hwang, and Ostendorf]{Lei2005}
 Xin Lei, Mei yuh Hwang, and Mari Ostendorf.
 \newblock Incorporating tone-related {MLP} posteriors in the feature
@@ -393,6 +537,23 @@ Christopher~D. Manning and Hinrich Sch\"utze.
 \newblock \emph{Foundations of Statistical Natural Language Processing}.
 \newblock MIT Press, 1999.
 
+\bibitem[Martins and Silva(2004)]{Martins2004}
+B.~Martins and M.~J. Silva.
+\newblock {Spelling Correction for Search Engine Queries}.
+\newblock In \emph{Proceedings of the 4th International Conference EsTAL 2004
+  – Espa\~na for Natural Language Processing}, volume 3230 of \emph{Lecture
+  Notes in Computer Science}, pages 372--383, 2004.
+\newblock \doi{10.1007/978-3-540-30228-5_33}.
+
+\bibitem[Mays et~al.(1991)Mays, Damerau, and Mercer]{Mays1991}
+E.~Mays, F.~J. Damerau, and R.~L. Mercer.
+\newblock Context based spelling correction.
+\newblock \emph{Information Processing \& Management}, 27\penalty0
+  (5):\penalty0 517--522, 1991.
+\newblock \doi{http://dx.doi.org/10.1016/0306-4573(91)90066-U"}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/030645739190066U}.
+
 \bibitem[McLoughlin(2009)]{McLoughlin2009}
 Ian McLoughlin.
 \newblock \emph{Applied Speech and Audio Processing -- With Matlab Examples}.
@@ -413,11 +574,12 @@ Ana~Paula Mendes, Alexandra Nunes~da Costa, Alexandra~Delgado Martins, Andr\'e
 \newblock \emph{{Revista CEFAC}}, 14:\penalty0 910--917, 10 2012.
 
 \bibitem[Mendon\c{c}a and Alu\'isio(2014)]{Mendonca2014}
-Gustavo Mendon\c{c}a and Sandra Alu\'isio.
-\newblock Using a hybrid approach to build a pronunciation dictionary for
-  brazilian portuguese.
-\newblock \emph{Proceedings of INTERSPEECH 2014 -- 15th Annual Conference of
-  the International Speech Communication Association}, 2014.
+G.~Mendon\c{c}a and S.~Alu\'isio.
+\newblock {Using a hybrid approach to build a pronunciation dictionary for
+  Brazilian Portuguese}.
+\newblock In \emph{Proceedings of the 15th Annual Conference of the
+  International Speech Communication Association INTERSPEECH 2014}, Singapore,
+  2014.
 
 \bibitem[Mendon\c{c}a et~al.(2014)Mendon\c{c}a, Candeias, Perdig\~ao, Shulby,
   Toniazzo, Klautau, and Alu\'isio]{Mendonca2014b}
@@ -479,15 +641,30 @@ Catarina Oliveira, Lurdes~Castro Moutinho, and Ant\'onio J.~S. Teixeira.
 \newblock URL
   \url{http://www.isca-speech.org/archive/interspeech\_2005/i05\_2933.html}.
 
-\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
-  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
-  Cournapeau, Brucher, Perrot, and Duchesnay]{Scikit2011}
+\bibitem[Pedregosa et~al.(2011{\natexlab{b}})Pedregosa, Varoquaux, Gramfort,
+  Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas,
+  Passos, Cournapeau, Brucher, Perrot, and Duchesnay]{Pedregosa2011}
 F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
   M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
   D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
 \newblock Scikit-learn: Machine learning in {P}ython.
 \newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
-  2011.
+  2011{\natexlab{b}}.
+
+\bibitem[Pedregosa et~al.(2011{\natexlab{a}})Pedregosa, Varoquaux, Gramfort,
+  Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas,
+  Passos, Cournapeau, Brucher, Perrot, and Duchesnay]{Scikit2011}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011{\natexlab{a}}.
+
+\bibitem[Philips(2000)]{2000double}
+L.~Philips.
+\newblock The double metaphone search algorithm.
+\newblock \emph{C/C++ Users Journal}, 18\penalty0 (6), 2000.
 
 \bibitem[Pierrehumbert et~al.(2000)Pierrehumbert, Beckman, and
   Ladd]{Pierrehumbert2000}
@@ -577,6 +754,11 @@ W.~Rocha and N.~Neto.
 \newblock In \emph{Proceedings of the 9th Brazilian Symposium in Information
   and Human Language Technology}, pages 108--115, 2013.
 
+\bibitem[Rusell(1918)]{soundex}
+R.~C. Rusell.
+\newblock {US} {P}atent 1261167 issued 1918-04-02.
+\newblock 1918.
+
 \bibitem[Schwartzhaupt and Alves(2014)]{Scwartzhaupt2014}
 Bruno Schwartzhaupt and Ubirat\~a Alves.
 \newblock A influ\^encia do contexto fon\'etico-fonol\'ogico nos valores de
@@ -634,6 +816,18 @@ Rosane Silveira.
 \newblock \emph{Trab. Ling. Aplic., Campinas}, 51\penalty0 (1):\penalty0
   13--34, 2012.
 
+\bibitem[Sonmez and Ozgur(2014)]{Sonmez2014}
+C.~Sonmez and A.~Ozgur.
+\newblock {A Graph-based Approach for Contextual Text Normalization}.
+\newblock In \emph{Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing EMNLP 2014}, pages 313 -- 324, 2014.
+\newblock URL \url{http://aclweb.org/anthology/D14-1037}.
+
+\bibitem[Steigner and Schröder(2007)]{Steigner2007}
+Jochen Steigner and Marc Schröder.
+\newblock Cross-language phonemisation in {German} text-to-speech synthesis.
+\newblock In \emph{INTERSPEECH 2007}, pages 1913--1916. ISCA, 2007.
+
 \bibitem[Steinwart and Christmann(2008)]{Steinwart2008}
 Ingo Steinwart and Andreas Christmann.
 \newblock \emph{Support vector machines}.
@@ -669,6 +863,14 @@ R.~Thangarajan, A.~M. Natarajan, and M.~Selvam.
   for {Tamil} language.
 \newblock \emph{WSEAS Trans. Sig. Proc.}, 4\penalty0 (3):\penalty0 76--85,
   2008.
+
+\bibitem[Toutanova and Moore(2002)]{Toutanova2002}
+K.~Toutanova and R.~C. Moore.
+\newblock {Pronunciation Modeling for Improved Spelling Correction}.
+\newblock In \emph{Proceedings of the 40th Annual Meeting on Association for
+  Computational Linguistics}, ACL '02, pages 144--151, 2002.
+\newblock \doi{10.3115/1073083.1073109}.
+\newblock URL \url{http://dx.doi.org/10.3115/1073083.1073109}.
 
 \bibitem[Trevisol(2010)]{Trevisol2010}
 Juliana Trevisol.
@@ -711,6 +913,15 @@ Esmeralda Uraga and César Gamboa.
 \newblock {VOXMEX} speech database: Design of a phonetically balanced corpus.
 \newblock In \emph{LREC}. European Language Resources Association, 2004.
 
+\bibitem[van Berkel and Smedt(1988)]{Berkel1988}
+B.~van Berkel and K.~De Smedt.
+\newblock {Triphone Analysis: A Combined Method for the Correction of
+  Orthographical and Typographical Errors}.
+\newblock In \emph{Proceedings of the Second Conference on Applied Natural
+  Language Processing}, pages 77--83, Austin, Texas, USA, February 1988.
+\newblock \doi{10.3115/974235.974250}.
+\newblock URL \url{http://www.aclweb.org/anthology/A88-1011}.
+
 \bibitem[Vasil\'{e}vski(2012)]{Nhenhem2012}
 Vera Vasil\'{e}vski.
 \newblock Phonologic patterns of brazilian portuguese: a grapheme to phoneme
@@ -734,6 +945,12 @@ Xiaoou Wang, Thomas Hueber, and Pierre Badin.
 \newblock In \emph{{Proceedings of the 10th International Seminar on Speech
   Production, ISSP10}}, page~4, Koeln, Allemagne, 2014.
 
+\bibitem[Watanabe and Rose(2012)]{Watanabe2012}
+M.~Watanabe and R.~Rose.
+\newblock Pausology and hesitation phenomena in second language acquisition.
+\newblock \emph{The Routledge Encyclopedia of Second Language Acquisition},
+  pages 480--483, 2012.
+
 \bibitem[Weide(1998)]{CMUdict1998}
 H.~Weide.
 \newblock The cmu pronouncing dictionary, 1998.
@@ -756,10 +973,28 @@ Wikimedia.
 \newblock {Portuguese Wikipedia} database dump backup.
 \newblock http://dumps.wikimedia.org/ptwiki/20140123/, 2014.
 
+\bibitem[Wilcox-O'Hearn et~al.(2008)Wilcox-O'Hearn, Hirst, and
+  Budanitsky]{WilcoxOHearn2008}
+A.~Wilcox-O'Hearn, G.~Hirst, and A.~Budanitsky.
+\newblock {Real-word Spelling Correction with Trigrams: A Reconsideration of
+  the Mays, Damerau, and Mercer Model}.
+\newblock In \emph{Proceedings of the 9th International Conference on
+  Computational Linguistics and Intelligent Text Processing}, CICLing'08, pages
+  605--616, 2008.
+\newblock ISBN 3-540-78134-X, 978-3-540-78134-9.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1787578.1787645}.
+
 \bibitem[Young et~al.(1994)Young, Odell, and Woodland]{Young1994}
 S.~Young, J.~Odell, and P.~Woodland.
 \newblock Tree-based state tying for high accuracy acoustic modelling.
 \newblock \emph{Cambridge University Engineering Department}, 1994.
+
+\bibitem[Zampieri and Amorim(2014)]{Zampieri2014}
+M.~Zampieri and R.~Amorim.
+\newblock {Between Sound and Spelling: Combining Phonetics and Clustering
+  Algorithms to Improve Target Word Recovery}.
+\newblock In \emph{Proceedings of the 9th International Conference on Natural
+  Language Processing PolTAL 2014}, pages 438--449, 2014.
 
 \bibitem[Zampieri et~al.(2012)Zampieri, Gebre, and Nijmegen]{Zampieri2012}
 Marcos Zampieri, Binyam~Gebrekidan Gebre, and Holland Nijmegen.

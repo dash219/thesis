@@ -49,6 +49,11 @@
 %*******************************************************
 \input{classicthesis-config}
 \usepackage{tipa}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{lingmacros}
+\usepackage{tabularx}
+\usepackage{nameref}
 
 
 \newcommand{\gustavo}[1]{\textbf{#1}}
@@ -94,7 +99,7 @@
 Acoustics, and Automatic Speech Recognition.}
 \include{Chapters/ChapIntro}
 
-\part{Some Fundamental Concepts}
+\part{Some Fundamental Concepts}\label{part:fund-concepts}
 \include{Chapters/ChapPhonology}
 \include{Chapters/ChapSLA}
 \include{Chapters/ChapASR}
@@ -102,13 +107,13 @@ Acoustics, and Automatic Speech Recognition.}
 
 \ctparttext{This part addresses some fundamental concepts in Linguistics,
 Acoustics, and Automatic Speech Recognition.}
-\part{Related Work}
+\part{Related Work}\label{part:related-work}
 \include{Chapters/ChapCAPT}
 \include{Chapters/ChapHowToAdapt}
 
 
 \ctparttext{Results and discussion.}
-\part{The Design of Listener}
+\part{Tools and Resources for Non-native Speech Recognition and Evaluati}\label{part:design-listener}
 \include{Chapters/ChapMethods}
 \include{Chapters/ChapResults}
 \include{Chapters/ChapFinalRemarks}

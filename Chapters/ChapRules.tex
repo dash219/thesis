@@ -1,0 +1,173 @@
+%*****************************************
+\chapter{Rules for generating pronunciation variants}\label{ch:rules}
+%*****************************************
+
+
+The pseudocode for each mispronunciation pattern is described in the following subsections. The conventions below apply to all examples:
+
+\begin{enumerate}
+ \item phonetic transcriptions are placed between brackets and follow the Listener phoneset convention ]
+ (see \autoref{sec:listener-phoneset}), therefore [\textipa{"hElow}] becomes [hh eh l ow];
+ \item ortographic forms are placed between angle brackets, like <hello>;
+ \item the dollar sign ``\$'' represents word final boundary, whether in phonetic or ortographic transcription, 
+ thus [ih d\$] means that the transcription ends in [ih d];
+ \item the caret symbol ``\textasciicircum'' denotes word initial boundary, whether in phonetic or 
+ ortographic transcription, thus <\textasciicircum st> means that word begins with <\textasciicircum st>.
+ \item the pipe symbol ``$\vert$'' inside parentheses describes alternatives among a group of phones or 
+ graphemes, e.g. [ah (m$\vert$n$\vert$g)] means that [ah] is imediatelly followed by [m], [n] or [ng].
+\end{enumerate}
+
+\subsection{Syllable Simplification}
+Rules for syllable simplification were created upon production data reported on the following works:
+\citeauthor{Cardoso2011} \citep{Cardoso2011}, \citeauthor{Silveira2012} \citep{Silveira2012}
+\citeauthor{Rauber2004} \citep{Rauber2004}, and \citeauthor{Rebello2006} \citep{Rebello2006}. The rules
+encompass three major cases of syllable simplification. 
+
+The first one refers to stop consonants in word 
+final position, such as the final [\textipa{p}] in ``pop'' which is likely to be produced by learners
+together with an epenthetic vowel [\textipa{I}], whence [\textipa{"p\super hApI}]. 
+
+The second case regards written language
+influencing the learner's pronunciation, e.g. brazilian \ac{ESL} learners tend to pronounce the word ``name'' with a final 
+[\textipa{I}], although such vowel does not occur in the English form: [\textipa{"neIm}]. This happens influenced by written language,
+in \ac{BP} ortography, a final ``e'' means that the word should end with the phone [\textipa{I}], thus the \ac{ESL} student
+transfer put this knowledge into practice in his/her interlanguage. 
+
+The third and last case of syllable simplification concerns initial clusters formed
+by [\textipa{s}] and another consonant, hence initial [\textipa{s}C] clusters. In this case, an epenthetic vowel [\textipa{i}] is appended to the
+beginning of the word and the consonantal cluster is broken into two syllables, so that [\textipa{s}C] becomes [\textipa{is.}C].
+
+The pseudocode containing rules for all these contexts is defined in \autoref{lst:rules-syll-simplification}.
+
+\lstinputlisting[label=lst:rules-syll-simplification,caption=Pronunciation rules for generating syllable simplification cases.]%
+    {Examples/pseudo-rules-syll-simplif.txt}
+
+\subsection{Consonant Change}\label{sec:consonant-change}
+The rules for consonantal change were defined based on the results of
+\citeauthor{Reis2006} \citep{Reis2006} and \citeauthor{Trevisol2010} \citep{Trevisol2010}.
+\autoref{lst:rules-cons-change} describes the pseudecode for generating the mispronunciations regarding consont changes.
+
+\lstinputlisting[float=H,label=lst:rules-cons-change,caption=Pronunciation rules for generating consonant change cases.]%
+    {Examples/pseudo-rules-cons-change.txt}
+    
+\subsection{Deaspiration of Voiceless Plosives in Initial or Stressed Positions}
+
+With regard to the deaspiration of voiceless plosives, we considered the analyses of the phenomenon as described in following papers: 
+\citeauthor{Alves2008} \citep{Alves2008}, \citeauthor{Prestes2012} \citep{Prestes2012}, 
+\citeauthor{Scwartzhaupt2014} \citep{Scwartzhaupt2014} and \citeauthor{Zimmer2006} \citep{Zimmer2006}. These analyses establish 
+fundementally the same, brazilian \ac{ESL} learners tend to replace the aspirated phones in English 
+[\textipa{p\super h}, \textipa{t\super h}, \textipa{k\super h}] by their corresponding deaspirated ones 
+[\textipa{p}, \textipa{t}, \textipa{k}], since the latter ones are part of \ac{BP} phonetic inventory, whereas the former ones are not. 
+
+Therefore, for generating the deaspiration cases, it would simple mean to transform all occurrences of
+[\textipa{p\super h}, \textipa{t\super h}, \textipa{k\super h}] into [\textipa{p}, \textipa{t}, \textipa{k}]. However,
+in \ac{CMUdict}, the difference aspirated voiceless plosives and the deaspirated ones is not pointed out. Both aspirated and 
+non-aspirated plosives are annotated with the same
+symbol, for instance, ``pit'' is transcribed as [p ih t] and ``spit'' as [s p ih t], despite the fact that the former [p] is aspirated 
+and the latter is not. This is also true for aspirated and non-aspirated [t] and [k]. ``Top'' and ``stop'' are transcribed both with a [t]
+although they correspond to different sounds, the same happens with the [k] in ``cat'' and ``scat''.
+
+For solving this problem, we chose to transform all [p, t, k] in the corpus into non-aspirated ones, thus [pp, tt, kk] according
+to Listener's phoneset convention (see \autoref{sec:listener-phoneset}. After replacing all [p, t, k] in the dictionary by
+[pp, tt, kk], we generated their aspirated counterparts, given that their contexts is predictable. In \ac{AmE}, there basically 
+two contexts in which voiceless plosives become aspirated: i) when they occur in a stressed sylllable, not after an [\textipa{s}]; 
+ii) and when they occur in word initial position, irrespective of the stress \citep{Lisker1985}. We rewrote these contexts 
+into rules, then producing all voiceless aspirated in the corpus.
+\footnote{Since deaspiration is also conditioned by the stress of the syllable, we had to move back to the original version of \ac{CMUdict}, 
+where lexical stress is annotated. In spite of this, for simplicity we are going to leave this workaround out of the pseudocode 
+and assume that the dictionary has the stress information.} The pseudocode for the rules is described in \autoref{lst:rules-deaspiration}.
+
+\lstinputlisting[float=H,label=lst:rules-deaspiration,caption=Pronunciation rules for generating plosive deaspiration cases.]%
+    {Examples/pseudo-rules-deaspiration.txt}
+    
+    
+\clearpage
+\subsection{Devoicing in Word-Final Obstruents}
+
+For terminal devoicing cases, we based our rules on the contexts presented by \citeauthor{Castilho2004} \citep{Castilho2004}.
+These rules explicit a phonetic process in which the final [z] becomes devoiced, being produced as [s], in words such as ``Charles'' 
+or ``rose''. That is to say these words pronounced as [\textipa{"roUs}] and [\textipa{"tSArls}], instead of [\textipa{"roUz}] 
+and [\textipa{"tSArlz}].
+
+\citeauthor{Albuquerque2011} \citep{Albuquerque2011} studied cases of terminal devoicing in plosives, as in [\textipa{"dAg}] 
+turning into [\textipa{"dAk}], however their results are inconclusive given the limited sample. 
+Besides the study of \citeauthor{Zimmer2012} contradicts \citeauthor{Albuquerque2011} \citep{Albuquerque2011}, for they found 
+no statistical significance, in what regards to voicing quality, among the realizations of word final obstruents
+between native speakers of English and brazilian \ac{ESL} learners.
+
+For this reason, we decided to discard such phenomenon and deal only with the terminal devoicing of fricatives.
+Thereby a more accurate title for this section would be ``devoicing in word-final fricatives'', yet we 
+preferred to keep the broader natural class ``obstruents'', since that is how the process is commonly referred to in the literature. 
+\autoref{lst:rules-terminal-devoicing} contains the pseudocode for the rewrite rules.
+\footnote{It is worth mentioning that the process described in \autoref{sec:consonant-change}, when [\textipa{D}] is realized as
+[\textipa{T}] in word-final position is also a case of terminal obstruent devoicing. in spite of this, we did not
+find any paper in the literature classifying this phenomenon in such way.}
+
+\lstinputlisting[float=H,label=lst:rules-terminal-devoicing,caption=Pronunciation rules for generating terminal devoicing cases.]%
+    {Examples/pseudo-rules-obstruent-devoicing.txt}
+
+\clearpage    
+\subsection{Delateralization and rounding of lateral liquids in final position}
+In what concerns to the delateralization and rounding of lateral liquids in final position (also known as vocalization of lateral), we based
+our rules in the findings of \citeauthor{Baratieri2006} \citep{Baratieri2006} and \citeauthor{Moore2008} \citep{Moore2008}. Both these authors
+describe the same phonetic contexts in which the phenomenon takes place. According to them the English lateral [\textipa{l}] is
+pronounced as a vowel [\textipa{U}] by many brazilian \ac{ESL} learners, when such consonant occurs in syllable final position before
+a consontar, or in word final position. For instance, learners will tend to say ``salt'' as [\textipa{"kIU}] instead of [\textipa{"kIl}].
+The pseudocode with the rules for generating lateral vocalization mispronunciations is found in \autoref{lst:rules-lateral-vocalization}.
+
+\lstinputlisting[float=H,label=lst:rules-lateral-vocalization,caption=Pronunciation rules for generating lateral vocalization cases.]%
+    {Examples/pseudo-rules-lateral-vocalization.txt}
+
+\clearpage
+\subsection{Vocalization of final nasals}
+
+Rules for the vocalization of final nasals were grounded on the phonological processes described in the following works:
+\citeauthor{Kluge2007} \citep{Kluge2007}, \citeauthor{Kluge2008} \citep{Kluge2008}, \citeauthor{Kluge2012} \citep{Kluge2012}, 
+\citeauthor{Silveira2007} \citep{Silveira2007} and \citeauthor{Silveira2012} \citep{Silveira2012}.
+The rules comprise two main cases with respect to the vocalization of final nasals. 
+
+In the first one, the
+final nasal is deleted, the previous vowel is nasalized and, if the vowel does not exist in \ac{BP}, it is produced as its
+most acoustically similar vowel in \ac{BP}. For instance, in the word ``sandwich'' [\textipa{"s\ae nd.wItS}],
+the  [\textipa{\ae n}] is likely
+to become [\textipa{\~a}] in the production of brazilian \ac{ESL} learners, with the nasal [\textipa{n}] being deleted, the 
+[\textipa{\ae}] vowel being replaced by the \ac{BP} vowel [a] and then becoming nasalized; hence [\textipa{"s\~and.wItS}]. 
+
+The second case addresses L1 spelling patterns interfering in the pronunciation of the brazilian \ac{ESL} learners. This process
+is similar to the one described above, the nasal is deleted and the previous is vowel also nasalized, however the vowel quality is 
+influenced not perceptual traits, but by the ortographic form of the word. The word ``opium'', for example, although ending
+with a schwa [\textipa{@}], [\textipa{"oU.pI.@m}], is usually produced with a [\textipa{\~u}] by the brazilian \ac{ESL} learner, given that an ``u''
+appears in the spelling, so [\textipa{"oU.pI.\~u}].
+
+\autoref{lst:rules-nasal-vocalization} contains the pseudocode for generating both cases of final nasal vocalization.
+
+\lstinputlisting[float=H,label=lst:rules-nasal-vocalization,caption=Pronunciation rules for generating nasal vocalization cases.]%
+    {Examples/pseudo-rules-nasal-vocalization.txt}
+
+\clearpage
+\subsection{Velar consonantal paragoge}
+
+\lstinputlisting[float=H,label=lst:rules-velar-paragoge,caption=Pronunciation rules for generating velar paragoge cases.]%
+    {Examples/pseudo-rules-velar-paragoge.txt}
+
+\clearpage
+\subsection{Vowel assimilation}
+
+The rules for vowel assimilation were determined based on the results of
+\citeauthor{Battistela2010} \citep{Battistela2010}, \citeauthor{Rauber2005} \citep{Rauber2005} and \citeauthor{Rauber2006} \citep{Rauber2006}.
+\autoref{lst:rules-vowel-assimilation} contains the pseudecode for generating pronunciations with vowel assimilations from L1 to L2.
+
+\lstinputlisting[float=H,label=lst:rules-vowel-assimilation,caption=Pronunciation rules for generating vowel assimilation cases.]%
+    {Examples/pseudo-rules-vowel-assimilation.txt}
+
+\clearpage
+\subsection{Interconsonantal epenthesis (-ed and -s morphemes)}
+
+
+
+
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************

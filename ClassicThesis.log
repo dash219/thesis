@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.7.2)  12 DEC 2015 19:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.7.2)  21 DEC 2015 00:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,43 +881,61 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 (./FrontBackmatter/Titlepage.aux) (./FrontBackmatter/Titleback.aux)
 (./FrontBackmatter/Dedication.aux) (./FrontBackmatter/Abstract.aux)
 (./FrontBackmatter/Contents.aux) (./Chapters/ChapIntro.aux)
-(./Chapters/ChapPhonology.aux) (./Chapters/ChapSLA.aux) (./Chapters/ChapASR.aux
-) (./Chapters/ChapCAPT.aux) (./Chapters/ChapHowToAdapt.aux)
-(./Chapters/ChapMethods.aux) (./Chapters/ChapResults.aux)
-(./Chapters/ChapFinalRemarks.aux) (./Chapters/ChapAppendix.aux)
+(./Chapters/ChapFoundations.aux) (./Chapters/ChapAeiouado.aux
+
+LaTeX Warning: Label `g2p-architecture' multiply defined.
+
+
+LaTeX Warning: Label `transcExample' multiply defined.
+
+
+LaTeX Warning: Label `wikipedia' multiply defined.
+
+
+LaTeX Warning: Label `langIdentEval' multiply defined.
+
+
+LaTeX Warning: Label `langIdentWiki' multiply defined.
+
+
+LaTeX Warning: Label `transcriberEval' multiply defined.
+
+) (./Chapters/ChapSpeller.aux) (./Chapters/ChapPhonRich.aux)
+(./Chapters/ChapPhoneAlignment.aux) (./Chapters/ChapListener.aux)
+(./Chapters/ChapFinalRemarks.aux) (./Chapters/ChapRules.aux)
 (./FrontBackmatter/Bibliography.aux) (./FrontBackmatter/Colophon.aux)
 (./FrontBackmatter/Declaration.aux))
 \openout1 = `ClassicThesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 67.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 68.
 
 (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
@@ -928,12 +946,12 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count154
-Package scrhack Info: undefining \float@addtolists on input line 67.
+Package scrhack Info: undefining \float@addtolists on input line 68.
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring ON on input line 67.
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+Package hyperref Info: Link coloring ON on input line 68.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
  (./ClassicThesis.out) (./ClassicThesis.out)
 \@outlinefile=\write4
 \openout4 = `ClassicThesis.out'.
@@ -967,7 +985,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 67.
+LaTeX Info: Redefining \microtypecontext on input line 68.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -983,13 +1001,13 @@ ABD: EveryShipout initializing macros
 \openout2 = `FrontBackmatter/DirtyTitlepage.aux'.
 
  (./FrontBackmatter/DirtyTitlepage.tex)
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 79.
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 79.
+(Font)              scaled to size 7.65005pt on input line 80.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1005,14 +1023,7 @@ Package microtype Info: Loading generic settings for font family
 
 
 
-]
-<./gfx/listener_logo.pdf, id=218, 460.76741pt x 441.65pt>
-File: ./gfx/listener_logo.pdf Graphic file (type pdf)
-
-<use ./gfx/listener_logo.pdf>
-Package pdftex.def Info: ./gfx/listener_logo.pdf used on input line 23.
-(pdftex.def)             Requested size: 170.71652pt x 163.63033pt.
- [3 <./gfx/listener_logo.pdf>])
+] [3])
 \openout2 = `FrontBackmatter/Titleback.aux'.
 
 
@@ -1028,7 +1039,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \openout2 = `FrontBackmatter/Dedication.aux'.
 
  (./FrontBackmatter/Dedication.tex
-<gfx/dad.png, id=232, 667.49374pt x 514.92375pt>
+<gfx/dad.png, id=214, 667.49374pt x 514.92375pt>
 File: gfx/dad.png Graphic file (type png)
  <use gfx/dad.png>
 Package pdftex.def Info: gfx/dad.png used on input line 19.
@@ -1059,31 +1070,40 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (4.3637pt too wide) in paragraph at lines 41--41
- [][] []\T1/pplj/m/sc/10.95/80ls how to adapt a speech recog-ni-tion to non-nat
-ive 
+Overfull \hbox (9.2937pt too wide) in paragraph at lines 41--41
+ [][] []\T1/pplj/m/n/10.95 ii \T1/pplj/m/sc/10.95/80ls tools and re-sources for
+ non-native speech recog- 
  []
 
 
-Overfull \hbox (5.82506pt too wide) in paragraph at lines 44--44
- [][] []\T1/pplj/m/n/10.95 Adaptation Meth-ods for the Pro-nun-ci-a-tion Model 
-[]  
+Overfull \hbox (28.45908pt too wide) in paragraph at lines 76--76
+ [][] []\T1/pplj/m/sc/10.95/80ls a method for the align-ment of phone se-quence
+s []  
  []
 
 
-Overfull \hbox (12.48015pt too wide) in paragraph at lines 46--46
- [][] []\T1/pplj/m/n/10.95 iii \T1/pplj/m/sc/10.95/80ls tools and re-sources fo
-r non-native speech recog- 
+Overfull \hbox (2.92336pt too wide) in paragraph at lines 101--101
+ [][] []\T1/pplj/m/n/10.95 Building the Gram-mars and the Lan-guage Model []  
  []
 
-LaTeX Font Info:    Try loading font information for U+zeur on input line 94.
-(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
+
+Overfull \hbox (15.57262pt too wide) in paragraph at lines 105--105
+ [][] []\T1/pplj/m/sc/10.95/80ls rules for gen-er-at-ing pro-nun-ci-a-tion vari
+-ants []  
+ []
+
+)
+\tf@toc=\write5
+\openout5 = `ClassicThesis.toc'.
+
+LaTeX Font Info:    Try loading font information for U+zeur on input line 19.
+ (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 94.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1091,12 +1111,12 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 94.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 94.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 19.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
@@ -1106,11 +1126,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9])
-\tf@toc=\write5
-\openout5 = `ClassicThesis.toc'.
-
- [10]
+ [9] [10]
 Package tocbasic Info: character protrusion at lof deactivated on input line 32
 .
 
@@ -1121,23 +1137,23 @@ Overfull \hbox (24.95929pt too wide) in paragraph at lines 5--5
  []
 
 
-Overfull \hbox (35.20848pt too wide) in paragraph at lines 11--11
+Overfull \hbox (35.20848pt too wide) in paragraph at lines 9--9
  [][] []\T1/pplj/m/n/10.95 Height (cm) ver-sus vo-cal tract length (mm) [[]]. [
 ]  
  []
 
 
-Overfull \hbox (3.08669pt too wide) in paragraph at lines 14--14
+Overfull \hbox (3.08669pt too wide) in paragraph at lines 12--12
  [][] []\T1/pplj/m/n/10.95 Two com-plex wave-forms gen-er-ated by the same 
  []
 
 
-Overfull \hbox (2.48988pt too wide) in paragraph at lines 17--17
+Overfull \hbox (2.48988pt too wide) in paragraph at lines 15--15
  \T1/pplj/m/n/10.95 forms) with 50% over-lap-ping frames [[]] []  
  []
 
 
-Overfull \hbox (1.9753pt too wide) in paragraph at lines 18--18
+Overfull \hbox (1.9753pt too wide) in paragraph at lines 16--16
  [][] []\T1/pplj/m/n/10.95 Mel scale ver-sus a lin-ear fre-quency scale. []  
  []
 
@@ -1153,7 +1169,59 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 23.
+(scrreprt)              by `\normalfont \itshape ' on input line 19.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 20.
+
+
+Overfull \hbox (1.09734pt too wide) in paragraph at lines 20--20
+ \T1/pplj/m/it/10.95 graphemes yet to be tran-scribed; in black: graphemes 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 21.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 22.
+
+
+Overfull \hbox (1.09734pt too wide) in paragraph at lines 22--22
+ \T1/pplj/m/it/10.95 graphemes yet to be tran-scribed; in black: graphemes 
+ []
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -1170,18 +1238,13 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              by `\normalfont \itshape ' on input line 24.
 
 
-Overfull \hbox (1.09734pt too wide) in paragraph at lines 24--24
- \T1/pplj/m/it/10.95 graphemes yet to be tran-scribed; in black: graphemes 
- []
-
-
-Overfull \hbox (41.86526pt too wide) in paragraph at lines 26--26
+Overfull \hbox (41.86526pt too wide) in paragraph at lines 29--29
  [][] []\T1/pplj/m/n/10.95 Phonetic de-ci-sion tree for HMM state ty-ing [[]]. 
 []  
  []
 
 
-Overfull \hbox (31.23283pt too wide) in paragraph at lines 27--27
+Overfull \hbox (31.23283pt too wide) in paragraph at lines 30--30
  [][] []\T1/pplj/m/n/10.95 Tied-state HMM sys-tem build pro-ce-dure [[]]. []  
  []
 
@@ -1191,7 +1254,83 @@ Overfull \hbox (31.23283pt too wide) in paragraph at lines 27--27
 
 Package tocbasic Info: character protrusion at lot deactivated on input line 43
 .
- (./ClassicThesis.lot
+ (./ClassicThesis.lot [11
+
+]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 9.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 10.
+
+
+Overfull \hbox (5.0904pt too wide) in paragraph at lines 10--10
+ [][] []\T1/pplj/m/it/10.95 Results from the Lan-guage Iden-ti-fier mod-ule -- 
+Train- 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 11.
+
+
+Overfull \hbox (21.8986pt too wide) in paragraph at lines 11--11
+ [][] []\T1/pplj/m/it/10.95 Results from the Lan-guage Iden-ti-fier mod-ule -- 
+Wikipedia 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 12.
+
+
+Overfull \hbox (43.31122pt too wide) in paragraph at lines 12--12
+ [][] []\T1/pplj/m/it/10.95 Results from the Tran-scriber -- Per-for-mance per 
+phone. []  
+ []
+
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              You should note, that in 1994 font command `\it' has
@@ -1206,9 +1345,6 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
 (scrreprt)              by `\normalfont \itshape ' on input line 13.
 
-[11
-
-]
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              You should note, that in 1994 font command `\it' has
@@ -1264,41 +1400,117 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              by `\normalfont \itshape ' on input line 16.
 
 
-Overfull \hbox (43.31122pt too wide) in paragraph at lines 16--16
- [][] []\T1/pplj/m/it/10.95 Results from the Tran-scriber -- Per-for-mance per 
-phone. []  
+Overfull \hbox (9.16919pt too wide) in paragraph at lines 16--16
+ [][] []\T1/pplj/m/it/10.95 Results from the Tran-scriber -- Train-ing Phase. [
+]  
  []
 
 
-Overfull \hbox (8.70944pt too wide) in paragraph at lines 19--19
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 18.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 19.
+
+
+Overfull \hbox (16.9328pt too wide) in paragraph at lines 19--19
+ [][] []\T1/pplj/m/it/10.95 Inter-rater agree-ment for the er-ror de-tec-tion t
+ask []  
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 20.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 21.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 22.
+
+
+Overfull \hbox (8.70944pt too wide) in paragraph at lines 26--26
  [][] []\T1/pplj/m/n/10.95 Sentences' sum-mary af-ter the length fil-ter. []  
  []
 
 
-Overfull \hbox (6.66737pt too wide) in paragraph at lines 20--20
+Overfull \hbox (6.66737pt too wide) in paragraph at lines 27--27
  [][] []\T1/pplj/m/n/10.95 Triphone re-sults from the ex-trac-tion of sen-tence
 s 
  []
 
-
-Overfull \hbox (7.60353pt too wide) in paragraph at lines 29--29
+[12]
+Overfull \hbox (7.60353pt too wide) in paragraph at lines 39--39
  [][] []\T1/pplj/m/n/10.95 Interlingual dic-tio-nary phone con-ven-tion. []  
  []
 
 
-Overfull \hbox (31.03577pt too wide) in paragraph at lines 31--31
+Overfull \hbox (31.03577pt too wide) in paragraph at lines 41--41
  [][] []\T1/pplj/m/n/10.95 Distinctive fea-tures chart for AmE phones [[]]. [] 
  
  []
 
 
-Overfull \hbox (19.46162pt too wide) in paragraph at lines 32--32
+Overfull \hbox (19.46162pt too wide) in paragraph at lines 42--42
  [][] []\T1/pplj/m/n/10.95 Distinctive fea-tures chart for BP phones [[]]. []  
 
  []
 
 
-Overfull \hbox (24.77312pt too wide) in paragraph at lines 33--33
+Overfull \hbox (24.77312pt too wide) in paragraph at lines 43--43
  [][] []\T1/pplj/m/n/10.95 Distinctive fea-tures chart for Lis-tener phones. []
   
  []
@@ -1308,7 +1520,7 @@ Overfull \hbox (24.77312pt too wide) in paragraph at lines 33--33
 \openout7 = `ClassicThesis.lot'.
 
  (./ClassicThesis.lol
-Overfull \hbox (0.6449pt too wide) in paragraph at lines 12--12
+Overfull \hbox (0.6449pt too wide) in paragraph at lines 15--15
  [][] []\T1/pplj/m/n/10.95 Pronunciation rules for gen-er-at-ing syl-la-ble sim
 - 
  []
@@ -1323,13 +1535,21 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [12] [13pdfTeX warning (ext4): destination with the same identifier (name{BP})
- has been already used, duplicate ignored
+ [13]pdfTeX warning (ext4): destination with the same identifier (name{BP}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.82         \acro{BP}{Brazilian Portuguese}
+                                             [14] [15] [16
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.100 ...FCC}{Mel Frequency Cepstral Coefficients}
-                                                  ] [14])
+
+]) [1
+
+
+
+
+
+] [2]
 \openout2 = `Chapters/ChapIntro.aux'.
 
 
@@ -1340,7 +1560,7 @@ en
 although it is yet undefined on input line 6.
 Package acronym Info: Label `acro:EF' newly defined as it shall be overridden
 although it is yet undefined on input line 6.
-<gfx/ef-epi-ranking-2014.pdf, id=494, 319.9152pt x 577.19638pt>
+<gfx/ef-epi-ranking-2014.pdf, id=523, 319.9152pt x 577.19638pt>
 File: gfx/ef-epi-ranking-2014.pdf Graphic file (type pdf)
 
 <use gfx/ef-epi-ranking-2014.pdf>
@@ -1348,16 +1568,11 @@ Package pdftex.def Info: gfx/ef-epi-ranking-2014.pdf used on input line 10.
 (pdftex.def)             Requested size: 336.0pt x 606.2238pt.
 Package acronym Info: Label `acro:HDI' newly defined as it shall be overridden
 although it is yet undefined on input line 17.
- [1
+ [3
 
 
 
-
-
-
-
-
-] [2 <./gfx/ef-epi-ranking-2014.pdf>]
+] [4 <./gfx/ef-epi-ranking-2014.pdf>]
 Overfull \hbox (10.09917pt too wide) in paragraph at lines 21--22
 \T1/pplj/m/n/10.95 (61.39), Bel-gium (61.21), Ger-many (60.89), Slove-nia (60.6
 0), Latvia (59.43)
@@ -1383,17 +1598,17 @@ Overfull \hbox (6.99364pt too wide) in paragraph at lines 45--45
  []|\T1/pplj/b/n/8 Intermediate 
  []
 
-<gfx/ef-epi-brazil-map.pdf, id=546, 362.7954pt x 471.68222pt>
+<gfx/ef-epi-brazil-map.pdf, id=576, 362.7954pt x 471.68222pt>
 File: gfx/ef-epi-brazil-map.pdf Graphic file (type pdf)
 
 <use gfx/ef-epi-brazil-map.pdf>
 Package pdftex.def Info: gfx/ef-epi-brazil-map.pdf used on input line 69.
 (pdftex.def)             Requested size: 268.80103pt x 349.4856pt.
- [3] [4]
+ [5] [6]
 Package acronym Info: Label `acro:BEI' newly defined as it shall be overridden
 although it is yet undefined on input line 77.
- [5 <./gfx/ef-epi-brazil-map.pdf>]
-<gfx/bei-ranking-2013.pdf, id=578, 561.7788pt x 372.9132pt>
+ [7 <./gfx/ef-epi-brazil-map.pdf>]
+<gfx/bei-ranking-2013.pdf, id=607, 561.7788pt x 372.9132pt>
 File: gfx/bei-ranking-2013.pdf Graphic file (type pdf)
 
 <use gfx/bei-ranking-2013.pdf>
@@ -1404,14 +1619,14 @@ Package acronym Info: Label `acro:CAPT' newly defined as it shall be overridden
 although it is yet undefined on input line 90.
 
 
-Package natbib Warning: Citation `GenevaLogic2006' on page 6 undefined on input
+Package natbib Warning: Citation `GenevaLogic2006' on page 8 undefined on input
  line 92.
 
 Package acronym Info: Label `acro:BP' newly defined as it shall be overridden
 although it is yet undefined on input line 92.
 Package acronym Info: Label `acro:ESL' newly defined as it shall be overridden
 although it is yet undefined on input line 94.
-[6 <./gfx/bei-ranking-2013.pdf>]
+[8 <./gfx/bei-ranking-2013.pdf>]
 Overfull \hbox (9.36252pt too wide) in paragraph at lines 104--105
 [] []\T1/pplj/m/n/10.95 phonetically rich cor-pora are more ap-pro-pri-ate for 
 build-ing acous-
@@ -1433,130 +1648,133 @@ Overfull \hbox (0.51503pt too wide) in paragraph at lines 114--115
 
 Package acronym Info: Label `acro:G2P' newly defined as it shall be overridden
 although it is yet undefined on input line 119.
-[7]
-Overfull \hbox (17.27937pt too wide) in paragraph at lines 123--124
-\T1/pplj/m/n/10.95 com-piled from a word list ex-tracted from the Por-tuguese W
-ikipedia,
- []
-
-
+[9]
 Overfull \hbox (15.27478pt too wide) in paragraph at lines 126--127
 [] []\T1/pplj/m/n/10.95 A set of rules for gen-er-at-ing pro-nun-ci-a-tion hy-p
 oth-e-sis for Brazilian-
  []
 
 
-Overfull \hbox (7.293pt too wide) in paragraph at lines 127--128
-\T1/pplj/m/n/10.95 into the phones' dis-tinc-tive fea-tures for find-ing the op
--ti-mal phone
+Overfull \hbox (8.00479pt too wide) in paragraph at lines 127--128
+\T1/pplj/m/n/10.95 dis-tinc-tive fea-tures for find-ing the op-ti-mal phone se-
+quence match; 
  []
 
 Package acronym Info: Label `acro:HMM' newly defined as it shall be overridden
-although it is yet undefined on input line 129.
+although it is yet undefined on input line 128.
 Package acronym Info: Label `acro:GMM' newly defined as it shall be overridden
-although it is yet undefined on input line 129.
-[8]
+although it is yet undefined on input line 128.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 134.
-) [9] [10
+(Font)              scaled to size 9.30756pt on input line 133.
+[10]
+
+LaTeX Warning: Reference `part:fund-concepts' on page 11 undefined on input lin
+e 139.
+
+
+LaTeX Warning: Reference `ch:phonetics' on page 11 undefined on input line 139.
 
 
 
-] [11] [12]
-\openout2 = `Chapters/ChapPhonology.aux'.
+LaTeX Warning: Reference `ch:second-language' on page 11 undefined on input lin
+e 139.
 
- (./Chapters/ChapPhonology.tex
+
+LaTeX Warning: Reference `ch:speech-recognition' on page 11 undefined on input 
+line 139.
+
+)
+Overfull \hbox (3.74593pt too wide) in paragraph at lines 138--100
+\T1/pplj/m/n/10.95 a method for align-ing pho-netic tran-scrip-tion, based on t
+he Needleman-
+ []
+
+[11]
+\openout2 = `Chapters/ChapFoundations.aux'.
+
+ (./Chapters/ChapFoundations.tex [12
+
+
+
+
+]
 Chapter 2.
 
-Overfull \hbox (1.02399pt too wide) in paragraph at lines 5--10
+Overfull \hbox (1.02399pt too wide) in paragraph at lines 7--12
 \T1/pplj/m/n/10.95 clu-daturque. Al-bu-cius ap-pel-lan-tur de-ter-ruis-set id e
 am, viven-dum par-
  []
 
 Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
-although it is yet undefined on input line 11.
+although it is yet undefined on input line 13.
 
-Overfull \hbox (9.1717pt too wide) in paragraph at lines 11--18
+Overfull \hbox (9.1717pt too wide) in paragraph at lines 13--20
 []\T1/pplj/m/n/10.95 Errem om-nium ea per, pro [][][] Uni-fied Mod-el-ing Lan-g
 uage ([])[] congue
  []
 
-) [13
-
-
-
-]
-\openout2 = `Chapters/ChapSLA.aux'.
-
- (./Chapters/ChapSLA.tex [14
-
-
-
-
-]
-Chapter 3.
 LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 5.
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 40.
 LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <9> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 5.
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 40.
 Package acronym Info: Label `acro:L1' newly defined as it shall be overridden
-although it is yet undefined on input line 17.
+although it is yet undefined on input line 52.
 Package acronym Info: Label `acro:L2' newly defined as it shall be overridden
-although it is yet undefined on input line 18.
-
-Overfull \hbox (7.76907pt too wide) in paragraph at lines 21--25
+although it is yet undefined on input line 53.
+[13]
+Overfull \hbox (7.76907pt too wide) in paragraph at lines 56--60
 \T1/pplj/m/n/10.95 própria lín-gua. Analoga-mente, quando falamos uma lín-gua e
 s-trangeira,
  []
 
 
-Overfull \hbox (2.54422pt too wide) in paragraph at lines 33--49
+Overfull \hbox (2.54422pt too wide) in paragraph at lines 68--84
 []\T1/pplj/m/n/10.95 Diversos pon-tos da for-mu-lação ini-cial da hipótese do p
 eríodo crítico
  []
 
-[15]
-Overfull \hbox (1.61673pt too wide) in paragraph at lines 50--63
+
+Overfull \hbox (1.61673pt too wide) in paragraph at lines 85--98
 \T1/pplj/m/n/10.95 coda[5], de modo a com-por uma sílaba travada. Há, por-tanto
 , palavras
  []
 
-[16] [17]
-Overfull \hbox (16.0346pt too wide) in paragraph at lines 162--163
+[14] [15] [16]
+Overfull \hbox (16.0346pt too wide) in paragraph at lines 197--198
 []\T1/pplj/m/n/10.95 2 En-sino de Pronún-cia Es-pecí-fico para Falantes do Por-
 tuguês Brasileiro 
  []
 
 
-Overfull \hbox (2.06418pt too wide) in paragraph at lines 164--172
+Overfull \hbox (2.06418pt too wide) in paragraph at lines 199--207
 \T1/pplj/m/n/10.95 glês, em suas di-ver-sas vari-antes (Hal-l-i-day, 1970; Jone
 s, 1976; O'Connor,
  []
 
-[18]
-Overfull \hbox (10.9986pt too wide) in paragraph at lines 211--218
+[17]
+Overfull \hbox (10.9986pt too wide) in paragraph at lines 246--253
 \T1/pplj/m/n/10.95 ser de-scritas a par-tir de suas pro-priedades acústico-arti
 culatórias. Usual-
  []
 
-[19]
-Overfull \hbox (7.76735pt too wide) in paragraph at lines 299--302
+[18]
+Overfull \hbox (7.76735pt too wide) in paragraph at lines 334--337
 []\T1/pplj/m/n/10.95 Segundo Cristófaro-Silva (2005), as vo-gais do PB con-tabi
 -lizam quinze
  []
 
-[20] [21]
-LaTeX Font Info:    Try loading font information for TS1+pplj on input line 398
+[19] [20]
+LaTeX Font Info:    Try loading font information for TS1+pplj on input line 433
 .
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-) [22]
-Overfull \hbox (2.58519pt too wide) in paragraph at lines 470--482
+) [21]
+Overfull \hbox (2.58519pt too wide) in paragraph at lines 505--517
 \T1/pplj/m/n/10.95 fones in-ex-i-s-tirem no in-ven-tário fonético do PB, dessa 
 maneira, o apren-
  []
 
-[23] [24]
+[22]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin9'.
@@ -1565,332 +1783,305 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.543 {[}v{]}, {[}f{]}, {[}t{]}, {[}t?{]} e {[}Ã˜
+l.578 {[}v{]}, {[}f{]}, {[}t{]}, {[}t?{]} e {[}Ã˜
                                                  {]}, no entanto, todas elas
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-
-Overfull \hbox (3.45103pt too wide) in paragraph at lines 563--571
+[23]
+Overfull \hbox (3.45103pt too wide) in paragraph at lines 598--606
 \T1/pplj/m/n/10.95 da aprox-i-mante [?], em menor con-cen-tração, em quase to-d
 as as regiões
  []
 
-[25]
-Overfull \hbox (1.3056pt too wide) in paragraph at lines 623--632
+[24]
+Overfull \hbox (1.3056pt too wide) in paragraph at lines 658--667
 \T1/pplj/m/n/10.95 zero, a soltura dos ar-tic-u-ladores da con-soante, a par-ti
 r disso, calculam-
  []
 
-[26]
-Overfull \hbox (11.00928pt too wide) in paragraph at lines 667--677
+[25]
+Overfull \hbox (11.00928pt too wide) in paragraph at lines 702--712
 []\T1/pplj/m/n/10.95 Como se nota, no PB, as con-soantes desvozeadas ap-re-sen-
 tam menores
  []
 
-[27] [28]
-Overfull \hbox (29.91913pt too wide) in paragraph at lines 740--757
+[26]
+Overfull \hbox (29.91913pt too wide) in paragraph at lines 775--792
 []\T1/pplj/m/n/10.95 Schwartzhaupt (2012) anal-isou o im-pacto que fa-tores fon
 ético-fonológicos
  []
 
-[29]
-Overfull \hbox (1.02399pt too wide) in paragraph at lines 814--819
+[27] [28]
+Overfull \hbox (1.02399pt too wide) in paragraph at lines 849--854
 \T1/pplj/m/n/10.95 clu-daturque. Al-bu-cius ap-pel-lan-tur de-ter-ruis-set id e
 am, viven-dum par-
  []
 
-[30]) [31]
-\openout2 = `Chapters/ChapASR.aux'.
 
- (./Chapters/ChapASR.tex [32
-
-
-
-
-]
-Chapter 4.
-
-Package natbib Warning: Citation `Gales2007' on page 33 undefined on input line
- 16.
+Overfull \hbox (0.60255pt too wide) in paragraph at lines 872--873
+[] []\T1/pplj/m/sc/10.95/80ls dea-spi-ra-tion of voice-less plo-sives in ini-ti
+al or stressed
+ []
 
 
-Package natbib Warning: Citation `Fink2008' on page 33 undefined on input line 
-27.
+Overfull \hbox (26.5381pt too wide) in paragraph at lines 890--891
+[] []\T1/pplj/m/sc/10.95/80ls in-ter-con-so-nan-tal epenthe-sis (-ed and -s mor
+-phemes)[] \T1/pplj/m/n/10.95 Lorem
+ []
+
+[29]
+
+Package natbib Warning: Citation `Gales2007' on page 30 undefined on input line
+ 907.
 
 
-Package natbib Warning: Citation `Fink2008' on page 33 undefined on input line 
-27.
-
-[33]
-
-Package natbib Warning: Citation `Fink2008' on page 34 undefined on input line 
-54.
+Package natbib Warning: Citation `Fink2008' on page 30 undefined on input line 
+918.
 
 
-Overfull \hbox (1.24757pt too wide) in paragraph at lines 61--62
+Package natbib Warning: Citation `Fink2008' on page 30 undefined on input line 
+918.
+
+[30]
+
+Package natbib Warning: Citation `Fink2008' on page 31 undefined on input line 
+945.
+
+
+Overfull \hbox (1.24757pt too wide) in paragraph at lines 952--953
 \T1/pplj/m/n/10.95 where $\U/zeur/m/n/10.95 Q \U/zeus/m/n/10.95 ½ []$ \T1/pplj/
 m/n/10.95 is a set of $\U/zeur/m/n/10.95 N$ \T1/pplj/m/n/10.95 states. $\U/zeur
 /m/n/10.95 O \U/zeus/m/n/10.95 ½ []$
  []
 
-[34] [35] [36] [37]
-Overfull \hbox (5.50073pt too wide) in paragraph at lines 265--269
+[31] [32] [33] [34]
+Overfull \hbox (5.50073pt too wide) in paragraph at lines 1156--1160
 []\T1/pplj/m/n/10.95 A seguir, será dis-cu-tida ape-nas a ar-quite-tura dos sis
 -temas de RFCGV,
  []
 
 
-Overfull \hbox (18.63994pt too wide) in paragraph at lines 273--286
+Overfull \hbox (18.63994pt too wide) in paragraph at lines 1164--1177
 []\T1/pplj/m/n/10.95 O paradigma ma-joritário em sis-temas de RAF é es-tocás-ti
 co, destacando-
  []
 
-[38] [39]
-Overfull \hbox (0.7156pt too wide) in paragraph at lines 359--363
+[35] [36]
+Overfull \hbox (0.7156pt too wide) in paragraph at lines 1250--1254
 []\T1/pplj/m/n/10.95 Recognizing spon-ta-neous speech is still a huge bar-rier 
 for ma-chines,
  []
 
-[40] <gfx/vocal-tract-size-sex.png, id=869, 978.65625pt x 554.07pt>
+<gfx/vocal-tract-size-sex.png, id=867, 978.65625pt x 554.07pt>
 File: gfx/vocal-tract-size-sex.png Graphic file (type png)
 
 <use gfx/vocal-tract-size-sex.png>
-Package pdftex.def Info: gfx/vocal-tract-size-sex.png used on input line 380.
+Package pdftex.def Info: gfx/vocal-tract-size-sex.png used on input line 1271.
 (pdftex.def)             Requested size: 221.76123pt x 125.54808pt.
 
-<gfx/vocal-tract-size-gender.png, id=873, 602.25pt x 556.0775pt>
+<gfx/vocal-tract-size-gender.png, id=871, 602.25pt x 556.0775pt>
 File: gfx/vocal-tract-size-gender.png Graphic file (type png)
 
 <use gfx/vocal-tract-size-gender.png>
-Package pdftex.def Info: gfx/vocal-tract-size-gender.png used on input line 387
-.
+Package pdftex.def Info: gfx/vocal-tract-size-gender.png used on input line 127
+8.
 (pdftex.def)             Requested size: 221.76123pt x 204.76118pt.
 Package acronym Info: Label `acro:F0' newly defined as it shall be overridden
-although it is yet undefined on input line 393.
-
-<gfx/f0-age-sex.png, id=880, 529.98pt x 662.475pt>
+although it is yet undefined on input line 1284.
+ [37]
+<gfx/f0-age-sex.png, id=885, 529.98pt x 662.475pt>
 File: gfx/f0-age-sex.png Graphic file (type png)
  <use gfx/f0-age-sex.png>
-Package pdftex.def Info: gfx/f0-age-sex.png used on input line 399.
+Package pdftex.def Info: gfx/f0-age-sex.png used on input line 1290.
 (pdftex.def)             Requested size: 221.76123pt x 277.20653pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (6.19922pt too wide) in paragraph at lines 409--411
+Overfull \hbox (6.19922pt too wide) in paragraph at lines 1300--1302
 []\T1/pplj/m/n/10.95 XXXXXXXXXXXXXXXXXXX EX-TEND INTER-SPEAKER VARI-ABIL-
  []
 
-LaTeX Font Info:    Try loading font information for T3+pplj on input line 421.
-
-LaTeX Font Info:    No file T3pplj.fd. on input line 421.
+LaTeX Font Info:    Try loading font information for T3+pplj on input line 1312
+.
+LaTeX Font Info:    No file T3pplj.fd. on input line 1312.
 
 LaTeX Font Warning: Font shape `T3/pplj/m/n' undefined
-(Font)              using `T3/cmr/m/n' instead on input line 421.
+(Font)              using `T3/cmr/m/n' instead on input line 1312.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 Package acronym Info: Label `acro:DNN' newly defined as it shall be overridden
-although it is yet undefined on input line 430.
- [41]
+although it is yet undefined on input line 1321.
+ [38]
 Package acronym Info: Label `acro:MFCC' newly defined as it shall be overridden
 
-although it is yet undefined on input line 445.
+although it is yet undefined on input line 1336.
 Package acronym Info: Label `acro:HTK' newly defined as it shall be overridden
-although it is yet undefined on input line 447.
+although it is yet undefined on input line 1338.
 Package acronym Info: Label `acro:RASR' newly defined as it shall be overridden
 
-although it is yet undefined on input line 447.
+although it is yet undefined on input line 1338.
 
 
-Package acronym Warning: Acronym `RASR' is not defined on input line 447.
+Package acronym Warning: Acronym `RASR' is not defined on input line 1338.
 
 
-Package acronym Warning: Acronym `RASR' is not defined on input line 447.
+Package acronym Warning: Acronym `RASR' is not defined on input line 1338.
 
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <9> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 447.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 1338.
 Package acronym Info: Label `acro:PCM' newly defined as it shall be overridden
-although it is yet undefined on input line 467.
-[42]
+although it is yet undefined on input line 1358.
+[39]
 File: gfx/f0-age-sex.png Graphic file (type png)
  <use gfx/f0-age-sex.png>
-Package pdftex.def Info: gfx/f0-age-sex.png used on input line 500.
+Package pdftex.def Info: gfx/f0-age-sex.png used on input line 1391.
 (pdftex.def)             Requested size: 221.76123pt x 277.20653pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gfx/in-phase-waves.png, id=936, 1204.5pt x 401.5pt>
+<gfx/in-phase-waves.png, id=942, 1204.5pt x 401.5pt>
 File: gfx/in-phase-waves.png Graphic file (type png)
 
 <use gfx/in-phase-waves.png>
-Package pdftex.def Info: gfx/in-phase-waves.png used on input line 515.
+Package pdftex.def Info: gfx/in-phase-waves.png used on input line 1406.
 (pdftex.def)             Requested size: 221.76123pt x 73.921pt.
- [43]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gfx/out-of-phase-waves.png, id=944, 1204.5pt x 401.5pt>
+<gfx/out-of-phase-waves.png, id=943, 1204.5pt x 401.5pt>
 File: gfx/out-of-phase-waves.png Graphic file (type png)
 
 <use gfx/out-of-phase-waves.png>
-Package pdftex.def Info: gfx/out-of-phase-waves.png used on input line 522.
+Package pdftex.def Info: gfx/out-of-phase-waves.png used on input line 1413.
 (pdftex.def)             Requested size: 221.76123pt x 73.921pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gfx/audio-windowing.png, id=947, 909.3975pt x 481.8pt>
+[40] <gfx/audio-windowing.png, id=953, 909.3975pt x 481.8pt>
 File: gfx/audio-windowing.png Graphic file (type png)
 
 <use gfx/audio-windowing.png>
-Package pdftex.def Info: gfx/audio-windowing.png used on input line 537.
+Package pdftex.def Info: gfx/audio-windowing.png used on input line 1428.
 (pdftex.def)             Requested size: 221.76123pt x 117.48697pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package acronym Info: Label `acro:PLP' newly defined as it shall be overridden
-although it is yet undefined on input line 551.
+although it is yet undefined on input line 1442.
 
-Package natbib Warning: Citation `Muller2001' on page 44 undefined on input lin
-e 551.
+Package natbib Warning: Citation `Muller2001' on page 41 undefined on input lin
+e 1442.
 
 
-Package natbib Warning: Citation `Mporas2007' on page 44 undefined on input lin
-e 551.
+Package natbib Warning: Citation `Mporas2007' on page 41 undefined on input lin
+e 1442.
 
-[44] <gfx/mel-scale.pdf, id=978, 578.16pt x 433.62pt>
+[41] <gfx/mel-scale.pdf, id=985, 578.16pt x 433.62pt>
 File: gfx/mel-scale.pdf Graphic file (type pdf)
  <use gfx/mel-scale.pdf>
-Package pdftex.def Info: gfx/mel-scale.pdf used on input line 564.
+Package pdftex.def Info: gfx/mel-scale.pdf used on input line 1455.
 (pdftex.def)             Requested size: 336.0pt x 251.99602pt.
 
-[45]) [46]
-Overfull \hbox (126.88544pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[47 <./gfx/vocal-tract-size-sex.png> <./gfx/vocal-tract-size-gender.png>]
-[48 <./gfx/f0-age-sex.png>]
-Overfull \hbox (126.88544pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[49 <./gfx/in-phase-waves.png> <./gfx/out-of-phase-waves.png> <./gfx/audio-wind
-owing.png> <./gfx/mel-scale.pdf>] [50
-
-
-
-] [51] [52]
-\openout2 = `Chapters/ChapCAPT.aux'.
-
- (./Chapters/ChapCAPT.tex
-Chapter 5.
-[53
-
-
-
-]
-Overfull \hbox (6.38928pt too wide) in paragraph at lines 67--84
+[42] [43]
+Overfull \hbox (6.38928pt too wide) in paragraph at lines 1551--1568
 []\T1/pplj/m/n/10.95 O Macmil-lan Ed-u-ca-tion Sounds: The Pro-nun-ci-a-tion Ap
 p é um aplica-
  []
 
-[54] <gfx/badin-orofacial-clone.png, id=1067, 1021.8175pt x 424.58624pt>
+[44] <gfx/badin-orofacial-clone.png, id=1013, 1021.8175pt x 424.58624pt>
 File: gfx/badin-orofacial-clone.png Graphic file (type png)
 
 <use gfx/badin-orofacial-clone.png>
-Package pdftex.def Info: gfx/badin-orofacial-clone.png used on input line 102.
+Package pdftex.def Info: gfx/badin-orofacial-clone.png used on input line 1586.
+
 (pdftex.def)             Requested size: 221.76123pt x 92.14592pt.
 Package acronym Info: Label `acro:MRI' newly defined as it shall be overridden
-although it is yet undefined on input line 108.
+although it is yet undefined on input line 1592.
 Package acronym Info: Label `acro:CT' newly defined as it shall be overridden
-although it is yet undefined on input line 108.
+although it is yet undefined on input line 1592.
 Package acronym Info: Label `acro:CG' newly defined as it shall be overridden
-although it is yet undefined on input line 109.
+although it is yet undefined on input line 1593.
 
-Overfull \hbox (2.07205pt too wide) in paragraph at lines 107--111
+Overfull \hbox (2.07205pt too wide) in paragraph at lines 1591--1595
 \T1/pplj/m/n/10.95 Res-o-nance Imag-ing ([])[], [][][] Com-puter To-mog-ra-phy 
 ([])[] and video data.
  []
 
-) [55 <./gfx/badin-orofacial-clone.png>]
-\openout2 = `Chapters/ChapHowToAdapt.aux'.
-
- (./Chapters/ChapHowToAdapt.tex
-[56
-
-
-
-
-]
-Chapter 6.
-[57]
-Overfull \hbox (3.4838pt too wide) in paragraph at lines 87--93
+[45] [46]
+Overfull \hbox (3.4838pt too wide) in paragraph at lines 1685--1691
 \T1/pplj/m/n/10.95 palavras homó-grafas het-eró-fonas, isto é, palavras que pos
 -suem mesma
  []
 
 
-Overfull \hbox (8.14859pt too wide) in paragraph at lines 87--93
+Overfull \hbox (8.14859pt too wide) in paragraph at lines 1685--1691
 \T1/pplj/m/n/10.95 (verbo); bem como a dis-tinção das pronún-cias vari-antes de
  uma palavra. 
  []
 
-[58]
-Overfull \hbox (8.30112pt too wide) in paragraph at lines 113--127
+
+Overfull \hbox (8.30112pt too wide) in paragraph at lines 1711--1725
 \T1/pplj/m/n/10.95 arredondadas [i] em sílabas con-tendo oclu-si-vas em coda, p
 or brasileiros
  []
 
-
-Overfull \hbox (7.46886pt too wide) in paragraph at lines 136--148
+[47]
+Overfull \hbox (7.46886pt too wide) in paragraph at lines 1734--1746
 \T1/pplj/m/n/10.95 po-ral-mente, uma vez que pres-supõe um ex-tenso lev-an-ta-m
 ento e análise
  []
 
-[59]
-Overfull \hbox (2.49841pt too wide) in paragraph at lines 194--203
+[48]
+Overfull \hbox (2.49841pt too wide) in paragraph at lines 1792--1801
 \T1/pplj/m/n/10.95 sílabas, não são bem mod-e-la-dos em tri-fones, de modo que 
 é necessário
  []
 
-[60]
-Overfull \hbox (19.33133pt too wide) in paragraph at lines 243--265
+[49]
+Overfull \hbox (19.33133pt too wide) in paragraph at lines 1841--1863
 []\T1/pplj/m/n/10.95 dicionário mul-ti-pronún-cia, através de uma abor-dagem in
 -di-reta baseada
  []
 
-[61]) [62] [63
+) [50] [51 <./gfx/vocal-tract-size-sex.png> <./gfx/vocal-tract-size-gender.png>
+] [52 <./gfx/f0-age-sex.png>] [53 <./gfx/in-phase-waves.png> <./gfx/out-of-phas
+e-waves.png> <./gfx/audio-windowing.png> <./gfx/mel-scale.pdf>] [54 <./gfx/badi
+n-orofacial-clone.png>] [55
 
 
 
-] [64]
-\openout2 = `Chapters/ChapMethods.aux'.
+] [56]
+\openout2 = `Chapters/ChapAeiouado.aux'.
 
- (./Chapters/ChapMethods.tex
-Chapter 7.
+ (./Chapters/ChapAeiouado.tex
+Chapter 3.
 Package acronym Info: Label `acro:CC' newly defined as it shall be overridden
-although it is yet undefined on input line 12.
+although it is yet undefined on input line 10.
 Package acronym Info: Label `acro:BSD' newly defined as it shall be overridden
-although it is yet undefined on input line 12.
+although it is yet undefined on input line 10.
 Package acronym Info: Label `acro:TTS' newly defined as it shall be overridden
-although it is yet undefined on input line 14.
-[65
+although it is yet undefined on input line 12.
+[57
 
 
 
-] [66] <./gfx/flowchart_mod.pdf, id=1181, 309.40594pt x 350.05782pt>
-File: ./gfx/flowchart_mod.pdf Graphic file (type pdf)
+] [58]
+<./gfx/aeiouado-flowchart-mod.pdf, id=1176, 309.40594pt x 350.05782pt>
+File: ./gfx/aeiouado-flowchart-mod.pdf Graphic file (type pdf)
 
-<use ./gfx/flowchart_mod.pdf>
-Package pdftex.def Info: ./gfx/flowchart_mod.pdf used on input line 28.
+<use ./gfx/aeiouado-flowchart-mod.pdf>
+Package pdftex.def Info: ./gfx/aeiouado-flowchart-mod.pdf used on input line 26
+.
 (pdftex.def)             Requested size: 227.62204pt x 257.53777pt.
 
 
@@ -1905,7 +2096,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 29.
+(scrreprt)              by `\normalfont \itshape ' on input line 27.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -1919,27 +2110,27 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 29.
+(scrreprt)              by `\normalfont \itshape ' on input line 27.
 
-[67]
-Overfull \hbox (52.56018pt too wide) in paragraph at lines 40--41
+[59 <./gfx/aeiouado-flowchart-mod.pdf>]
+Overfull \hbox (52.56018pt too wide) in paragraph at lines 38--39
 [] []\T1/pplj/m/n/10.95 on the an-te-penul-ti-mate syl-la-ble if it has an ac-c
 ented vowel $\U/zeur/m/n/10.95 <$\T1/pplj/m/n/10.95 á,â,é,ê,í,ó,ô,ú$\U/zeur/m/n
 /10.95 >$\T1/pplj/m/n/10.95 ; 
  []
 
 
-Overfull \hbox (4.15036pt too wide) in paragraph at lines 41--42
+Overfull \hbox (4.15036pt too wide) in paragraph at lines 39--40
 [] []\T1/pplj/m/n/10.95 on the ul-ti-mate syl-la-ble if it con-tains the ac-cen
 ted vow-els $\U/zeur/m/n/10.95 <$\T1/pplj/m/n/10.95 á,é,ó$\U/zeur/m/n/10.95 >$
  []
 
-[68 <./gfx/flowchart_mod.pdf>]
-<./gfx/transcript_ex.pdf, id=1221, 288.3272pt x 201.00093pt>
-File: ./gfx/transcript_ex.pdf Graphic file (type pdf)
+[60] <./gfx/aeiouado-transcript-ex.pdf, id=1212, 288.3272pt x 201.00093pt>
+File: ./gfx/aeiouado-transcript-ex.pdf Graphic file (type pdf)
 
-<use ./gfx/transcript_ex.pdf>
-Package pdftex.def Info: ./gfx/transcript_ex.pdf used on input line 48.
+<use ./gfx/aeiouado-transcript-ex.pdf>
+Package pdftex.def Info: ./gfx/aeiouado-transcript-ex.pdf used on input line 46
+.
 (pdftex.def)             Requested size: 227.62204pt x 158.68777pt.
 
 
@@ -1954,7 +2145,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 49.
+(scrreprt)              by `\normalfont \itshape ' on input line 47.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -1968,23 +2159,9 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 49.
+(scrreprt)              by `\normalfont \itshape ' on input line 47.
 
-[69 <./gfx/transcript_ex.pdf>]
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 73.
-
+[61 <./gfx/aeiouado-transcript-ex.pdf>]
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              You should note, that in 1994 font command `\it' has
@@ -1997,7 +2174,21 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 73.
+(scrreprt)              by `\normalfont \itshape ' on input line 71.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 71.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2011,7 +2202,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 82.
+(scrreprt)              by `\normalfont \bfseries ' on input line 80.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2025,7 +2216,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 82.
+(scrreprt)              by `\normalfont \bfseries ' on input line 80.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2039,16 +2230,16 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 82.
+(scrreprt)              by `\normalfont \bfseries ' on input line 80.
 
 
-Overfull \hbox (2.91013pt too wide) in paragraph at lines 85--86
+Overfull \hbox (2.91013pt too wide) in paragraph at lines 83--84
 []\T1/pplj/m/n/10.95 The se-lected words cov-ers 90,0% of the Wikipedia con-ten
 t. Al-though
  []
 
 
-Overfull \hbox (8.15872pt too wide) in paragraph at lines 85--86
+Overfull \hbox (8.15872pt too wide) in paragraph at lines 83--84
 \T1/pplj/m/n/10.95 (\T1/pplj/m/it/10.95 dirijem-se \T1/pplj/m/n/10.95 -- it sho
 uld be \T1/pplj/m/it/10.95 dirigem-se\T1/pplj/m/n/10.95 ), used a non-Roman al-
 pha-bet ($\U/zeur/m/n/10.95 ^^U$\T1/pplj/m/it/10.95 ó$\U/zeur/m/n/10.95 ^^M!$\T
@@ -2056,13 +2247,13 @@ pha-bet ($\U/zeur/m/n/10.95 ^^U$\T1/pplj/m/it/10.95 ó$\U/zeur/m/n/10.95 ^^M!$\T
  []
 
 
-Overfull \hbox (6.45125pt too wide) in paragraph at lines 85--86
+Overfull \hbox (6.45125pt too wide) in paragraph at lines 83--84
 \T1/pplj/m/n/10.95 were proper names (\T1/pplj/m/it/10.95 Stolichno\T1/pplj/m/n
 /10.95 , \T1/pplj/m/it/10.95 Zé-pereira\T1/pplj/m/n/10.95 ), sci-en-tific names
  (\T1/pplj/m/it/10.95 Ae-gyp-tophite-
  []
 
-[70]
+[62]
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              You should note, that in 1994 font command `\it' has
@@ -2075,35 +2266,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 90.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 90.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 99.
+(scrreprt)              by `\normalfont \itshape ' on input line 88.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -2117,7 +2280,21 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 105.
+(scrreprt)              by `\normalfont \itshape ' on input line 88.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 97.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -2131,21 +2308,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 105.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 114.
+(scrreprt)              by `\normalfont \itshape ' on input line 103.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -2159,7 +2322,21 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 122.
+(scrreprt)              by `\normalfont \itshape ' on input line 103.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 112.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
@@ -2173,7 +2350,21 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 122.
+(scrreprt)              by `\normalfont \itshape ' on input line 120.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 120.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2187,7 +2378,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 173.
+(scrreprt)              by `\normalfont \bfseries ' on input line 171.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2201,7 +2392,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 173.
+(scrreprt)              by `\normalfont \bfseries ' on input line 171.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2215,7 +2406,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 173.
+(scrreprt)              by `\normalfont \bfseries ' on input line 171.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2229,95 +2420,818 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 173.
+(scrreprt)              by `\normalfont \bfseries ' on input line 171.
 
 
-LaTeX Warning: Float too large for page by 159.32191pt on input line 174.
+LaTeX Warning: Float too large for page by 159.32191pt on input line 172.
 
-[71]
-Overfull \hbox (0.39444pt too wide) in paragraph at lines 178--179
+[63]
+Overfull \hbox (0.39444pt too wide) in paragraph at lines 176--177
 \T1/pplj/m/n/10.95 tuguese and the dic-tio-nary can be con-sid-ered ro-bust eno
 ugh for Large
  []
 
-[72] [73] [74]
+[64] [65] [66]
+Overfull \hbox (1.35161pt too wide) in paragraph at lines 182--196
+\T1/pplj/m/n/10.95 the Por-tuguese Wikipedia dump. Wikipedia ar-ti-cles were tr
+ans-formed
+ []
+
+[67
+
+
+
+]
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 198.
+
+[68]
+File: ./gfx/aeiouado-flowchart-mod.pdf Graphic file (type pdf)
+ <use ./gfx/aeiouado-flowchart-mod.pdf>
+Package pdftex.def Info: ./gfx/aeiouado-flowchart-mod.pdf used on input line 25
+8.
+(pdftex.def)             Requested size: 227.62204pt x 257.53777pt.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 259.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 259.
+
+[69] [70]
+Overfull \hbox (52.56018pt too wide) in paragraph at lines 301--302
+[] []\T1/pplj/m/n/10.95 on the an-te-penul-ti-mate syl-la-ble if it has an ac-c
+ented vowel $\U/zeur/m/n/10.95 <$\T1/pplj/m/n/10.95 á,â,é,ê,í,ó,ô,ú$\U/zeur/m/n
+/10.95 >$\T1/pplj/m/n/10.95 ; 
+ []
+
+
+Overfull \hbox (4.15036pt too wide) in paragraph at lines 302--303
+[] []\T1/pplj/m/n/10.95 on the ul-ti-mate syl-la-ble if it con-tains the ac-cen
+ted vow-els $\U/zeur/m/n/10.95 <$\T1/pplj/m/n/10.95 á,é,ó$\U/zeur/m/n/10.95 >$
+ []
+
+File: ./gfx/aeiouado-transcript-ex.pdf Graphic file (type pdf)
+<use ./gfx/aeiouado-transcript-ex.pdf>
+Package pdftex.def Info: ./gfx/aeiouado-transcript-ex.pdf used on input line 31
+6.
+(pdftex.def)             Requested size: 227.62204pt x 158.68777pt.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 317.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 317.
+
+[71]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 355.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 355.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 364.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 364.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 364.
+
+
+Overfull \hbox (2.91013pt too wide) in paragraph at lines 367--372
+[]\T1/pplj/m/n/10.95 The se-lected words cov-ers 90,0% of the Wikipedia con-ten
+t. Al-though
+ []
+
+
+Overfull \hbox (8.15872pt too wide) in paragraph at lines 367--372
+\T1/pplj/m/n/10.95 (\T1/pplj/m/it/10.95 dirijem-se \T1/pplj/m/n/10.95 -- it sho
+uld be \T1/pplj/m/it/10.95 dirigem-se\T1/pplj/m/n/10.95 ), used a non-Roman al-
+pha-bet ($\U/zeur/m/n/10.95 ^^U$\T1/pplj/m/it/10.95 ó$\U/zeur/m/n/10.95 ^^M!$\T
+1/pplj/m/n/10.95 ),
+ []
+
+
+Overfull \hbox (6.45125pt too wide) in paragraph at lines 367--372
+\T1/pplj/m/n/10.95 were proper names (\T1/pplj/m/it/10.95 Stolichno\T1/pplj/m/n
+/10.95 , \T1/pplj/m/it/10.95 Zé-pereira\T1/pplj/m/n/10.95 ), sci-en-tific names
+ (\T1/pplj/m/it/10.95 Ae-gyp-tophite-
+ []
+
+[72]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 379.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 379.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 388.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 401.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 401.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 410.
+
+[73]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 426.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 426.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 477.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 477.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 477.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 477.
+
+
+LaTeX Warning: Float too large for page by 159.32191pt on input line 478.
+
+
+Overfull \hbox (10.29774pt too wide) in paragraph at lines 493--499
+\T1/pplj/m/n/10.95 dic-tio-nary for Brazil-ian Por-tuguese. High F1-score val-u
+es were achieved
+ []
+
+[74]
 
 Package natbib Warning: Citation `Muniz2004' on page 75 undefined on input line
- 188.
+ 514.
 
 
-Overfull \hbox (3.58018pt too wide) in paragraph at lines 188--189
+Overfull \hbox (3.58018pt too wide) in paragraph at lines 514--515
 \T1/pplj/m/n/10.95 which fol-lows for-mal-ismo DELA (Dic-tio-n-narie Elec-tron-
 ique du LADL) 
  []
 
+) [75] [76]
+\openout2 = `Chapters/ChapSpeller.aux'.
 
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
+ (./Chapters/ChapSpeller.tex
+Chapter 4.
+[77
+
+
+
+
+] [78
+
+
+] [79]
+Overfull \hbox (1.21645pt too wide) in paragraph at lines 25--26
+\T1/pplj/m/n/10.95 con-fu-sion sets [[]], im-prove-ments on the trigram-based n
+oisy-channel
  []
 
-[75
+
+Package natbib Warning: Citation `Baptista2011' on page 80 undefined on input l
+ine 30.
+
+[80] [81]
+Overfull \hbox (0.37695pt too wide) in paragraph at lines 49--51
+[]\T1/pplj/m/n/10.95 If none of these pho-netic mod-ules suc-ceed, the sec-ond 
+layer chooses
+ []
+
+
+Overfull \hbox (1.99161pt too wide) in paragraph at lines 52--53
+\T1/pplj/m/n/10.95 cor-rec-tion of com-mon mis-spellings in UGC in BP of dif-fe
+r-ent phonetic-
+ []
+
+
+Overfull \hbox (7.09016pt too wide) in paragraph at lines 52--53
+\T1/pplj/m/n/10.95 glish. In-stead, our goal is to as-sess the meth-ods with re
+-gard to phonetic-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[][]\T1/pplj/m/n/9 Currently, a BP ver-sion of the pho-netic rules can be found
+ at
+ []
+
+[82]
+Overfull \hbox (8.47626pt too wide) in paragraph at lines 77--81
+\T1/pplj/m/n/10.95 pur-pose, since it con-sists of the state of the art in grap
+heme-to-phoneme
+ []
+
+[83] <gfx/speller_architecture.pdf, id=1436, 328.97906pt x 299.61937pt>
+File: gfx/speller_architecture.pdf Graphic file (type pdf)
+
+<use gfx/speller_architecture.pdf>
+Package pdftex.def Info: gfx/speller_architecture.pdf used on input line 94.
+(pdftex.def)             Requested size: 168.0pt x 153.00958pt.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 95.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 95.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (9.47498pt too wide) in paragraph at lines 97--101
+\T1/pplj/m/n/10.95 num-ber of sug-ges-tions, con-sid-er-ing the fol-low-ing as-
+pects: or-tho-graphic,
+ []
+
+[84] [85 <./gfx/speller_architecture.pdf>]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 113.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 113.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/8'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (38.95956pt too wide) in paragraph at lines 114--132
+ [][] 
+ []
+
+[86]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 158.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 158.
+
+
+Overfull \hbox (1.49184pt too wide) in paragraph at lines 179--180
+\T1/pplj/m/n/10.95 (char-ac-ter in-ser-tion, dele-tion, re-place-ment or trans-
+po-si-tion), usu-
+ []
+
+[87]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 194.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 194.
+
+[88]
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 223.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 223.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 244.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 244.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 249.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 249.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 249.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 249.
+
+[89] [90] [91]
+Overfull \hbox (1.86626pt too wide) in paragraph at lines 282--283
+\T1/pplj/m/n/10.95 tional mod-ule with a grapheme-to-phoneme con-verter. The gr
+apheme-
+ []
+
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 284.
+) [92]
+\openout2 = `Chapters/ChapPhonRich.aux'.
+
+ (./Chapters/ChapPhonRich.tex
+Chapter 5.
+
+Overfull \hbox (26.76254pt too wide) in paragraph at lines 6--18
+[] []\T1/pplj/m/sc/10.95/80ls ab-stract[] \T1/pplj/m/n/10.95 A method is pro-po
+sed for com-pil-ing a cor-pus of phonetically-
+ []
+
+
+Overfull \hbox (1.10847pt too wide) in paragraph at lines 6--18
+\T1/pplj/m/n/10.95 rich tri-phone sen-tences; i.e., sen-tences with a high va-r
+i-ety of tri-phones,
+ []
+
+
+Overfull \hbox (21.89377pt too wide) in paragraph at lines 6--18
+\T1/pplj/m/n/10.95 pora for Brazil-ian Por-tuguese. The data em-ployed comes fr
+om Wikipedia's
+ []
+
+[93
+
+
+
 
 ]
-Overfull \hbox (2.05629pt too wide) in paragraph at lines 242--246
+Overfull \hbox (2.05629pt too wide) in paragraph at lines 46--50
 \T1/pplj/m/n/10.95 phonemes, syl-la-bles, di-phones, tri-phones, feet, etc. For
  lan-guages such
  []
 
-[76]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
+
+Overfull \hbox (2.92387pt too wide) in paragraph at lines 51--54
+\T1/pplj/m/n/10.95 pro-duce the tri-phone dis-tri-bu-tion of a given lan-guage 
+[[]][[]][[]][[]]. 
  []
 
-[77]
-Overfull \hbox (54.08572pt too wide) in paragraph at lines 291--295
+
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
+ []
+
+[94]
+Overfull \hbox (54.08572pt too wide) in paragraph at lines 95--99
 []\T1/pplj/m/n/10.95 They have worked with CETEN-Folha cor-pus (www.linguateca.
 pt/cetenfolha/)
  []
 
 
-Overfull \hbox (0.29744pt too wide) in paragraph at lines 291--295
+Overfull \hbox (0.29744pt too wide) in paragraph at lines 95--99
 \T1/pplj/m/n/10.95 tences pho-net-i-cally and prosod-i-cally rich, be-ing 1,000
  de-cla-tives, 1,000
  []
 
-
-Overfull \hbox (8.51933pt too wide) in paragraph at lines 320--322
+[95]
+Overfull \hbox (8.51933pt too wide) in paragraph at lines 124--126
 \T1/pplj/m/n/10.95 Our al-go-rithm for ex-tract-ing rich sen-tences was im-ple-
 mented in Python
  []
 
 
-Overfull \hbox (11.45851pt too wide) in paragraph at lines 320--322
+Overfull \hbox (11.45851pt too wide) in paragraph at lines 124--126
 \T1/pplj/m/n/10.95 and fol-lows a greedy heuris-tic. The dis-tance met-ric is c
 al-cu-lated through
  []
 
-[78]
-Overfull \hbox (22.60156pt too wide) in paragraph at lines 358--358
+
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
+ []
+
+[96]
+Overfull \hbox (22.60156pt too wide) in paragraph at lines 162--162
 []\T1/fvm/m/n/10.95 Metrics <- [] //List made of tuples with sentences and eucl
 idean[] 
  []
 
 
-Overfull \hbox (22.60156pt too wide) in paragraph at lines 358--358
+Overfull \hbox (22.60156pt too wide) in paragraph at lines 162--162
 []      \T1/fvm/m/n/10.95 calculate the distance between Sentence+Selected and 
 Ideal[] 
  []
 
 
-Overfull \hbox (12.25323pt too wide) in paragraph at lines 366--369
+Overfull \hbox (12.25323pt too wide) in paragraph at lines 170--173
 \T1/pplj/m/n/10.95 As a proof-of-concept we eval-u-ated our method by build-ing
  phoneticaly-
  []
 
 
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[79]
-
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
 (scrreprt)              been defined for compatiblitiy to Script 2.0 only.
@@ -2329,21 +3243,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 373.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 373.
+(scrreprt)              by `\normalfont \bfseries ' on input line 177.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2357,7 +3257,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 373.
+(scrreprt)              by `\normalfont \bfseries ' on input line 177.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2371,7 +3271,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 373.
+(scrreprt)              by `\normalfont \bfseries ' on input line 177.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2385,13 +3285,28 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 373.
+(scrreprt)              by `\normalfont \bfseries ' on input line 177.
 
 
-Overfull \hbox (54.78989pt too wide) in paragraph at lines 372--377
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 177.
+
+
+Overfull \hbox (54.78989pt too wide) in paragraph at lines 176--181
  [] 
  []
 
+[97]
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -2404,21 +3319,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 402.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 402.
+(scrreprt)              by `\normalfont \bfseries ' on input line 206.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -2432,478 +3333,306 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 402.
+(scrreprt)              by `\normalfont \bfseries ' on input line 206.
 
 
-Package natbib Warning: Citation `Watanabe2012' on page 80 undefined on input l
-ine 413.
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 206.
 
-[80]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
+
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
  []
 
-[81]
-Overfull \hbox (12.68106pt too wide) in paragraph at lines 434--439
+[98] [99]
+Overfull \hbox (12.68106pt too wide) in paragraph at lines 238--243
 \T1/pplj/m/n/10.95 For this ex-am-ple eval-u-a-tion, we dis-cuss the ex-trac-ti
 on of 250 phonetially-
  []
 
 
-Overfull \hbox (6.22206pt too wide) in paragraph at lines 462--476
+Overfull \hbox (6.22206pt too wide) in paragraph at lines 266--280
  [] 
  []
 
 
-Overfull \hbox (0.33307pt too wide) in paragraph at lines 480--486
+Overfull \hbox (0.33307pt too wide) in paragraph at lines 284--290
 []\T1/pplj/m/n/10.95 As it can be seen through the type-/-to-ken tri-phone ra-t
 io, the method
  []
 
 
-Package natbib Warning: Citation `Steigner2007' on page 82 undefined on input l
-ine 497.
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
+ []
 
-[82
+[100
+
+] [101]
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
+ []
+
+[102] [103
 
 ]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
  []
 
-[83] [84]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
+[104] [105]
+Overfull \hbox (58.0554pt too wide) has occurred while \output is active
+[]|[]|  
  []
 
-[85
+[106]) [107]
+\openout2 = `Chapters/ChapPhoneAlignment.aux'.
 
-] [86]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
+ (./Chapters/ChapPhoneAlignment.tex [108
 
-[87] [88]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
 
-[89] [90]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
 
-[91] [92]
-Overfull \hbox (0.31851pt too wide) in paragraph at lines 876--882
+
+]
+Chapter 6.
+) [109]
+\openout2 = `Chapters/ChapListener.aux'.
+
+ (./Chapters/ChapListener.tex [110
+
+
+
+
+]
+Chapter 7.
+[111] [112] [113] [114]
+Overfull \hbox (0.31851pt too wide) in paragraph at lines 251--257
 \T1/pplj/m/n/10.95 síveis pronún-cias des-viantes dos apren-dizes, por meio de 
 re-gras trans-
  []
 
 
-Overfull \hbox (1.71942pt too wide) in paragraph at lines 876--882
+Overfull \hbox (1.71942pt too wide) in paragraph at lines 251--257
 \T1/pplj/m/n/10.95 chama-dos na lit-er-atura como di-cionários mul-ti-pronún-ci
 a (Strik & Cuc-
  []
 
-
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[93]
-Overfull \hbox (4.99498pt too wide) in paragraph at lines 905--915
+[115]
+Overfull \hbox (4.99498pt too wide) in paragraph at lines 280--290
 \T1/pplj/m/n/10.95 cional, cor-re-spon-dendo a sim-ples es-tru-turas de se-leçã
 o, ou con-struções
  []
 
 
-Overfull \hbox (12.70811pt too wide) in paragraph at lines 916--917
+Overfull \hbox (12.70811pt too wide) in paragraph at lines 291--292
 []\T1/pplj/m/n/10.95 Quadro 7: Con-tex-tos para apli-cação de re-gras de sim-pl
 i-fi-cação silábica. 
  []
 
-[94]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[95]
-Overfull \hbox (15.8274pt too wide) in paragraph at lines 1005--1023
+[116] [117]
+Overfull \hbox (15.8274pt too wide) in paragraph at lines 380--398
 []\T1/pplj/m/n/10.95 No âm-bito da ed-u-cação, a gam-i-fi-cação tem sido ex-plo
 -rada no chamado
  []
 
-[96]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[97]
-Overfull \hbox (11.6701pt too wide) in paragraph at lines 1089--1090
+[118]
+Overfull \hbox (11.6701pt too wide) in paragraph at lines 464--465
 []\T1/pplj/m/n/10.95 Figura 18. Flux-o-grama de fun-ciona-mento do script se-le
 -tor de palavras. 
  []
 
-[98]
-Overfull \hbox (2.96916pt too wide) in paragraph at lines 1193--1207
+[119] [120]
+Overfull \hbox (2.96916pt too wide) in paragraph at lines 568--582
 \T1/pplj/m/n/10.95 palavra aparente-mente sim-ples, como ``com-bined'', ap-re-s
 en-tou 12 vari-
  []
 
 
-Overfull \hbox (4.85036pt too wide) in paragraph at lines 1193--1207
+Overfull \hbox (4.85036pt too wide) in paragraph at lines 568--582
 \T1/pplj/m/n/10.95 antes de pronún-cia ape-nas no que diz re-speito Ã  sim-pli-
 fi-cação silábica.
  []
 
-
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[99]
+[121]
 Package acronym Info: Label `acro:WER' newly defined as it shall be overridden
-although it is yet undefined on input line 1227.
+although it is yet undefined on input line 602.
 Package acronym Info: Label `acro:PER' newly defined as it shall be overridden
-although it is yet undefined on input line 1237.
- [100]
+although it is yet undefined on input line 612.
 Package acronym Info: Label `acro:RTF' newly defined as it shall be overridden
-although it is yet undefined on input line 1246.
-
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[101]
+although it is yet undefined on input line 621.
+ [122] [123]
 Package acronym Info: Label `acro:CSR' newly defined as it shall be overridden
-although it is yet undefined on input line 1305.
+although it is yet undefined on input line 680.
 
-Overfull \hbox (1.73204pt too wide) in paragraph at lines 1337--1338
+Overfull \hbox (1.73204pt too wide) in paragraph at lines 712--713
 [] []\T1/pplj/m/n/10.95 disfluencies phe-nom-ena, such as mis-pro-nun-ci-a-tion
 s, ver-bal dele-
  []
 
-[102]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
+[124] [125] [126] [127
 
-[103] [104]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[105
-
-] [106]
+] [128]
 Package acronym Info: Label `acro:AmE' newly defined as it shall be overridden
-although it is yet undefined on input line 1396.
+although it is yet undefined on input line 771.
 
-<gfx/example-oxford-definition.png, id=1618, 716.6775pt x 546.04pt>
+<gfx/example-oxford-definition.png, id=1887, 716.6775pt x 546.04pt>
 File: gfx/example-oxford-definition.png Graphic file (type png)
 
 <use gfx/example-oxford-definition.png>
-Package pdftex.def Info: gfx/example-oxford-definition.png used on input line 1
-405.
+Package pdftex.def Info: gfx/example-oxford-definition.png used on input line 7
+80.
 (pdftex.def)             Requested size: 221.76123pt x 168.95404pt.
 Package acronym Info: Label `acro:POS' newly defined as it shall be overridden
-although it is yet undefined on input line 1412.
+although it is yet undefined on input line 787.
 Package acronym Info: Label `acro:IPA' newly defined as it shall be overridden
-although it is yet undefined on input line 1413.
+although it is yet undefined on input line 788.
 
-Overfull \hbox (45.57451pt too wide) in paragraph at lines 1420--1469
+Overfull \hbox (45.57451pt too wide) in paragraph at lines 795--844
  [][] 
  []
 
 Package acronym Info: Label `acro:VBR' newly defined as it shall be overridden
-although it is yet undefined on input line 1485.
+although it is yet undefined on input line 860.
 Package acronym Info: Label `acro:SNR' newly defined as it shall be overridden
-although it is yet undefined on input line 1486.
+although it is yet undefined on input line 861.
 
-Overfull \hbox (2.73927pt too wide) in paragraph at lines 1484--1487
+Overfull \hbox (2.73927pt too wide) in paragraph at lines 859--862
 \T1/pplj/m/n/10.95 and fe-male), with high-quality mi-cro-phones, in sound-isol
 ation rooms.
  []
 
 
-LaTeX Warning: Reference `fig:spectrogram-happiness' on page 107 undefined on i
-nput line 1489.
+LaTeX Warning: Reference `fig:spectrogram-happiness' on page 129 undefined on i
+nput line 864.
 
+[129
 
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
+] [130] [131 <./gfx/example-oxford-definition.png>] [132
 
-[107
-
-] [108]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[109 <./gfx/example-oxford-definition.png>] [110
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[111]
+] [133]
 Package acronym Info: Label `acro:CMUdict' newly defined as it shall be overrid
 den
-although it is yet undefined on input line 1553.
+although it is yet undefined on input line 928.
 Package acronym Info: Label `acro:ASCII' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 1564.
+although it is yet undefined on input line 939.
 
 
-LaTeX Warning: Float too large for page by 29.37337pt on input line 1616.
+LaTeX Warning: Float too large for page by 29.37337pt on input line 991.
 
 
-LaTeX Warning: Reference `sec:aeiouado' on page 112 undefined on input line 161
-9.
+LaTeX Warning: Reference `sec:aeiouado' on page 134 undefined on input line 994
+.
 
 
-Overfull \hbox (0.931pt too wide) in paragraph at lines 1619--1624
+Overfull \hbox (0.931pt too wide) in paragraph at lines 994--999
 \T1/pplj/m/n/10.95 based on the di-alect of São Paulo city and con-tains 39 dif
 -fer-ent phones.
  []
 
 
-Overfull \hbox (16.39235pt too wide) in paragraph at lines 1619--1624
+Overfull \hbox (16.39235pt too wide) in paragraph at lines 994--999
 \T1/pplj/m/n/10.95 The dic-tio-nary makes use of a hy-brid ap-proach for con-ve
 rt-ing graphemes
  []
 
 
-Overfull \hbox (23.5323pt too wide) in paragraph at lines 1630--1675
+Overfull \hbox (23.5323pt too wide) in paragraph at lines 1005--1050
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 11.3629pt on input line 1675.
+LaTeX Warning: Float too large for page by 11.3629pt on input line 1050.
 
-[112
+[134
 
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[113] [114]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[115]
-Overfull \hbox (9.2452pt too wide) in paragraph at lines 1752--1817
+] [135] [136] [137]
+Overfull \hbox (9.2452pt too wide) in paragraph at lines 1127--1192
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 30.3315pt on input line 1817.
+LaTeX Warning: Float too large for page by 30.3315pt on input line 1192.
 
-[116]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[117] [118
+[138] [139] [140
 
 ]
-Overfull \hbox (10.3852pt too wide) in paragraph at lines 1911--1912
+Overfull \hbox (10.3852pt too wide) in paragraph at lines 1286--1287
 []\T1/pplj/m/n/10.95 Whereas us-ing dis-tinc-tive fea-tures, all cases of ger-m
 an final-obstruent
  []
 
-
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[119] <gfx/decision-tree.png, id=1793, 674.52pt x 634.37pt>
+[141] <gfx/decision-tree.png, id=2060, 674.52pt x 634.37pt>
 File: gfx/decision-tree.png Graphic file (type png)
 
 <use gfx/decision-tree.png>
-Package pdftex.def Info: gfx/decision-tree.png used on input line 1949.
+Package pdftex.def Info: gfx/decision-tree.png used on input line 1324.
 (pdftex.def)             Requested size: 221.76123pt x 208.55869pt.
-
-<gfx/state-tying-tree.png, id=1798, 499.8675pt x 662.475pt>
+ [142]
+<gfx/state-tying-tree.png, id=2069, 499.8675pt x 662.475pt>
 File: gfx/state-tying-tree.png Graphic file (type png)
 
 <use gfx/state-tying-tree.png>
-Package pdftex.def Info: gfx/state-tying-tree.png used on input line 1975.
+Package pdftex.def Info: gfx/state-tying-tree.png used on input line 1350.
 (pdftex.def)             Requested size: 221.76123pt x 293.89574pt.
- [120]
 Package acronym Info: Label `acro:ATR' newly defined as it shall be overridden
-although it is yet undefined on input line 1997.
+although it is yet undefined on input line 1372.
 
-Overfull \hbox (6.46765pt too wide) in paragraph at lines 1997--1998
+Overfull \hbox (6.46765pt too wide) in paragraph at lines 1372--1373
 [] []\T1/pplj/m/it/10.95 Place fea-tures\T1/pplj/m/n/10.95 : an-te-rior, coro-n
 al, dis-tributed, high, low, back, round
  []
 
 Package acronym Info: Label `acro:HSP' newly defined as it shall be overridden
-although it is yet undefined on input line 1998.
+although it is yet undefined on input line 1373.
 
-Overfull \hbox (7.82936pt too wide) in paragraph at lines 1998--1999
+Overfull \hbox (7.82936pt too wide) in paragraph at lines 1373--1374
 [] []\T1/pplj/m/it/10.95 Laryngeal fea-tures\T1/pplj/m/n/10.95 : voice and [][]
 [] Height-ened Sub-glot-tal Pres-sure ([])[]; 
  []
 
-<gfx/features-place.png, id=1814, 521.95pt x 363.3575pt>
+<gfx/features-place.png, id=2081, 521.95pt x 363.3575pt>
 File: gfx/features-place.png Graphic file (type png)
 
 <use gfx/features-place.png>
-Package pdftex.def Info: gfx/features-place.png used on input line 2009.
+Package pdftex.def Info: gfx/features-place.png used on input line 1384.
 (pdftex.def)             Requested size: 221.76123pt x 154.37776pt.
 
 
-LaTeX Warning: Float too large for page by 10.23347pt on input line 2065.
+LaTeX Warning: Float too large for page by 10.23347pt on input line 1440.
 
 
-LaTeX Warning: Float too large for page by 37.47356pt on input line 2119.
+LaTeX Warning: Float too large for page by 37.47356pt on input line 1494.
 
 
-LaTeX Warning: Float too large for page by 51.41174pt on input line 2191.
+LaTeX Warning: Float too large for page by 51.41174pt on input line 1566.
 
+[143] [144 <./gfx/decision-tree.png>] [145 <./gfx/state-tying-tree.png (PNG cop
+y)> <./gfx/features-place.png>] [146] [147] [148]
 
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
+LaTeX Warning: Reference `ch:second-language' on page 149 undefined on input li
+ne 1584.
 
-[121] [122 <./gfx/decision-tree.png>]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[123 <./gfx/state-tying-tree.png (PNG copy)> <./gfx/features-place.png>]
-[124]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[125] [126]
 Package acronym Info: Label `acro:regex' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 2218.
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 2221.
+although it is yet undefined on input line 1593.
+[149
 
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[127
-
-]
-Overfull \hbox (9.04576pt too wide) in paragraph at lines 2238--2239
-[] []\T1/pplj/m/n/10.95 ortographic forms are placed be-tween an-gle brack-ets,
- like <hello>; 
- []
-
-(./Examples/pseudo-rules-syll-simplif.txt [128]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[129]) (./Examples/pseudo-rules-cons-change.txt)
-Overfull \hbox (4.77982pt too wide) in paragraph at lines 2282--2288
-[][]\T1/pplj/m/n/10.95 Zim-mer[][][] [[]]. These anal-y-ses es-tab-lish fun-de-
-men-tally the same, brazil-
- []
-
-[130]
-
-LaTeX Warning: Reference `lst:rules-deaspiration' on page 131 undefined on inpu
-t line 2305.
-
-(./Examples/pseudo-rules-deaspiration.txt)
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[131] [132]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[133]
-
-LaTeX Warning: Reference `lst:rules-terminal-devoicing' on page 134 undefined o
-n input line 2328.
-
-(./Examples/pseudo-rules-obstruent-devoicing.txt) [134
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[135]
-
-LaTeX Warning: Reference `lst:rules-lateral-vocalization' on page 136 undefined
- on input line 2343.
-
-(./Examples/pseudo-rules-lateral-vocalization.txt) [136
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[137]
-
-LaTeX Warning: Reference `lst:rules-nasal-vocalization' on page 138 undefined o
-n input line 2369.
-
-(./Examples/pseudo-rules-nasal-vocalization.txt)
-
-LaTeX Warning: Float too large for page by 45.48116pt on input line 2372.
-
-[138
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[139] (./Examples/pseudo-rules-velar-paragoge.txt) [140
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[141] (./Examples/pseudo-rules-vowel-assimilation.txt) [142
-
-]
-Overfull \hbox (19.69978pt too wide) has occurred while \output is active
- []|[]|
- []
-
-[143]) [144
-
-]
-\openout2 = `Chapters/ChapResults.aux'.
-
- (./Chapters/ChapResults.tex
-Chapter 8.
-) [145
-
-
-
-
-]
+]) [150]
 \openout2 = `Chapters/ChapFinalRemarks.aux'.
 
- (./Chapters/ChapFinalRemarks.tex [146
-
-
-
-
-]
-Chapter 9.
+ (./Chapters/ChapFinalRemarks.tex
+Chapter 8.
 
 Overfull \hbox (19.19835pt too wide) in paragraph at lines 20--44
 []\T1/pplj/m/n/10.95 A lit-er-atura per-ti-nente da área foi re-visada e méto-d
@@ -2928,94 +3657,170 @@ Overfull \hbox (4.30359pt too wide) in paragraph at lines 20--44
 ses de pronún-
  []
 
-[147] [148]) [149] [150
+[151
 
 
 
-] [151] [152]
-\openout2 = `Chapters/ChapAppendix.aux'.
 
- (./Chapters/ChapAppendix.tex) [153
+] [152]) [153] [154
+
+
+
+] [155] [156]
+\openout2 = `Chapters/ChapRules.aux'.
+
+ (./Chapters/ChapRules.tex
+Appendix A.
+
+Overfull \hbox (9.04576pt too wide) in paragraph at lines 11--12
+[] []\T1/pplj/m/n/10.95 ortographic forms are placed be-tween an-gle brack-ets,
+ like <hello>; 
+ []
+
+[157
+
+
+
+] (./Examples/pseudo-rules-syll-simplif.txt [158])
+(./Examples/pseudo-rules-cons-change.txt) [159]
+(./Examples/pseudo-rules-deaspiration.txt) [160] [161] [162]
+(./Examples/pseudo-rules-obstruent-devoicing.txt) [163
+
+] [164]
+Overfull \hbox (4.13937pt too wide) in paragraph at lines 111--117
+\T1/pplj/m/n/10.95 au-thors de-scribe the same pho-netic con-texts in which the
+ phe-nomenon
+ []
+
+(./Examples/pseudo-rules-lateral-vocalization.txt) [165
+
+] [166]
+(./Examples/pseudo-rules-nasal-vocalization.txt)
+
+LaTeX Warning: Float too large for page by 45.48116pt on input line 145.
+
+[167
+
+] [168] (./Examples/pseudo-rules-velar-paragoge.txt) [169
+
+] [170]
+(./Examples/pseudo-rules-vowel-assimilation.txt) [171
+
+] [172]) [173
 
 ]
 \openout2 = `FrontBackmatter/Bibliography.aux'.
 
 
-(./FrontBackmatter/Bibliography.tex (./ClassicThesis.bbl [154
+(./FrontBackmatter/Bibliography.tex (./ClassicThesis.bbl [174
 
 
 
 
-] [155]
-Underfull \hbox (badness 1616) in paragraph at lines 147--152
+] [175] [176]
+Underfull \hbox (badness 1616) in paragraph at lines 208--213
 [] []\T1/pplj/m/n/10.95 Robert I Damper, Y Marc-hand, MJ Adam-son, and Kjell
  []
 
-[156] [157] [158]
-Underfull \hbox (badness 10000) in paragraph at lines 402--405
+[177] [178] [179] [180]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin9'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.544 ...Espa\~na for Natural Language Processing}
+                                                  , volume 3230 of \emph{Lec...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin9'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.544 ...Espa\~na for Natural Language Processing}
+                                                  , volume 3230 of \emph{Lec...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+[181]
+Underfull \hbox (badness 2894) in paragraph at lines 549--556
+[] []\T1/pplj/m/n/10.95 E. Mays, F. J. Dam-erau, and R. L. Mer-cer.  Con-text
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--566
 [] []\T1/pplj/m/n/10.95 Medialab.  Wikipedia ex-trac-tor.
  []
 
-[159]
-Underfull \hbox (badness 5578) in paragraph at lines 424--429
+
+Underfull \hbox (badness 5578) in paragraph at lines 586--591
 [] []\T1/pplj/m/n/10.95 Gustavo Men-donça, Sara Can-deias, Fer-nando Perdigão,
  []
 
-[160]
-Underfull \hbox (badness 1596) in paragraph at lines 475--481
+[182]
+Underfull \hbox (badness 1596) in paragraph at lines 637--643
 [] []\T1/pplj/m/n/10.95 Catarina Oliveira, Lur-des Cas-tro Moutinho, and An-tón
 io
  []
 
-[161]
-Underfull \hbox (badness 10000) in paragraph at lines 566--572
+[183]
+Underfull \hbox (badness 10000) in paragraph at lines 743--749
 [] []\T1/pplj/m/n/10.95 Hugh Rob-johns.  A brief his-tory of mi-cro-phones.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--572
+Underfull \hbox (badness 10000) in paragraph at lines 743--749
 [][]$\T1/fvm/m/n/10.95 http : / / microphone-[]data . com / /media / filestore 
 / articles /
  []
 
-[162] [163]
-Underfull \hbox (badness 2088) in paragraph at lines 743--747
+[184] [185] [186]
+Underfull \hbox (badness 2088) in paragraph at lines 960--964
 [] []\T1/pplj/m/n/10.95 Robert Weide.  The CMU Pro-nounc-ing Dic-tio-nary 0.7a.
 
  []
 
-[164])) [165]
+[187])) [188]
 \openout2 = `FrontBackmatter/Colophon.aux'.
 
- (./FrontBackmatter/Colophon.tex) [166
+ (./FrontBackmatter/Colophon.tex) [189
 
 
 ]
 \openout2 = `FrontBackmatter/Declaration.aux'.
 
 
-(./FrontBackmatter/Declaration.tex) [167
+(./FrontBackmatter/Declaration.tex [190
 
 
 
 
-]
+]) [191]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
 (./ClassicThesis.aux (./FrontBackmatter/DirtyTitlepage.aux)
 (./FrontBackmatter/Titlepage.aux) (./FrontBackmatter/Titleback.aux)
 (./FrontBackmatter/Dedication.aux) (./FrontBackmatter/Abstract.aux)
 (./FrontBackmatter/Contents.aux) (./Chapters/ChapIntro.aux)
-(./Chapters/ChapPhonology.aux) (./Chapters/ChapSLA.aux) (./Chapters/ChapASR.aux
-) (./Chapters/ChapCAPT.aux) (./Chapters/ChapHowToAdapt.aux)
-(./Chapters/ChapMethods.aux) (./Chapters/ChapResults.aux)
-(./Chapters/ChapFinalRemarks.aux) (./Chapters/ChapAppendix.aux)
+(./Chapters/ChapFoundations.aux) (./Chapters/ChapAeiouado.aux)
+(./Chapters/ChapSpeller.aux) (./Chapters/ChapPhonRich.aux)
+(./Chapters/ChapPhoneAlignment.aux) (./Chapters/ChapListener.aux)
+(./Chapters/ChapFinalRemarks.aux) (./Chapters/ChapRules.aux)
 (./FrontBackmatter/Bibliography.aux) (./FrontBackmatter/Colophon.aux)
 (./FrontBackmatter/Declaration.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
 
 
  *File List*
@@ -3155,7 +3960,6 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 FrontBackmatter/DirtyTitlepage.tex
    t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
 FrontBackmatter/Titlepage.tex
-./gfx/listener_logo.pdf
 FrontBackmatter/Titleback.tex
 FrontBackmatter/Dedication.tex
  gfx/dad.png
@@ -3171,10 +3975,8 @@ Chapters/ChapIntro.tex
 gfx/ef-epi-ranking-2014.pdf
 gfx/ef-epi-brazil-map.pdf
 gfx/bei-ranking-2013.pdf
-Chapters/ChapPhonology.tex
-Chapters/ChapSLA.tex
+Chapters/ChapFoundations.tex
  ts1pplj.fd    2004/09/06 font definitions for TS1/pplj.
-Chapters/ChapASR.tex
 gfx/vocal-tract-size-sex.png
 gfx/vocal-tract-size-gender.png
 gfx/f0-age-sex.png
@@ -3185,16 +3987,23 @@ gfx/in-phase-waves.png
 gfx/out-of-phase-waves.png
 gfx/audio-windowing.png
 gfx/mel-scale.pdf
-Chapters/ChapCAPT.tex
 gfx/badin-orofacial-clone.png
-Chapters/ChapHowToAdapt.tex
-Chapters/ChapMethods.tex
-./gfx/flowchart_mod.pdf
-./gfx/transcript_ex.pdf
+Chapters/ChapAeiouado.tex
+./gfx/aeiouado-flowchart-mod.pdf
+./gfx/aeiouado-transcript-ex.pdf
+./gfx/aeiouado-flowchart-mod.pdf
+./gfx/aeiouado-transcript-ex.pdf
+Chapters/ChapSpeller.tex
+gfx/speller_architecture.pdf
+Chapters/ChapPhonRich.tex
+Chapters/ChapPhoneAlignment.tex
+Chapters/ChapListener.tex
 gfx/example-oxford-definition.png
 gfx/decision-tree.png
 gfx/state-tying-tree.png
 gfx/features-place.png
+Chapters/ChapFinalRemarks.tex
+Chapters/ChapRules.tex
 Examples/pseudo-rules-syll-simplif.txt
 Examples/pseudo-rules-cons-change.txt
 Examples/pseudo-rules-deaspiration.txt
@@ -3203,18 +4012,15 @@ Examples/pseudo-rules-lateral-vocalization.txt
 Examples/pseudo-rules-nasal-vocalization.txt
 Examples/pseudo-rules-velar-paragoge.txt
 Examples/pseudo-rules-vowel-assimilation.txt
-Chapters/ChapResults.tex
-Chapters/ChapFinalRemarks.tex
-Chapters/ChapAppendix.tex
 FrontBackmatter/Bibliography.tex
 ClassicThesis.bbl
 FrontBackmatter/Colophon.tex
 FrontBackmatter/Declaration.tex
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `ClassicThesis.out' has not changed.
-(rerunfilecheck)             Checksum: DFD71C0CA1A4685975B9A79B1B8B3A67;3393.
+(rerunfilecheck)             Checksum: 772E489B59C3952E90BF3A1FB7718E73;3041.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -3222,18 +4028,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 20270 strings out of 493304
- 307907 string characters out of 6139872
- 843875 words of memory out of 5000000
- 22162 multiletter control sequences out of 15000+600000
- 110661 words of font info for 168 fonts, out of 8000000 for 9000
+ 20453 strings out of 493304
+ 310919 string characters out of 6139872
+ 811003 words of memory out of 5000000
+ 22272 multiletter control sequences out of 15000+600000
+ 114187 words of font info for 170 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 52i,14n,67p,1346b,2331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,14n,67p,1538b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -3254,10 +4060,10 @@ r/share/texmf/fonts/type1/fkr/tipa/tipa9.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on ClassicThesis.pdf (181 pages, 7270265 bytes).
+Output written on ClassicThesis.pdf (207 pages, 7071521 bytes).
 PDF statistics:
- 2712 PDF objects out of 2984 (max. 8388607)
- 2406 compressed objects within 25 object streams
- 957 named destinations out of 1000 (max. 500000)
- 21488 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 3019 PDF objects out of 3580 (max. 8388607)
+ 2670 compressed objects within 27 object streams
+ 1036 named destinations out of 1200 (max. 500000)
+ 21976 words of extra memory for PDF output out of 24883 (max. 10000000)
 
