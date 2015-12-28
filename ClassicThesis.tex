@@ -54,9 +54,15 @@
 \usepackage{lingmacros}
 \usepackage{tabularx}
 \usepackage{nameref}
+\usepackage{vowel}
 
-
+\let\ipa\textipa
 \newcommand{\gustavo}[1]{\textbf{#1}}
+\newcommand{\BlankCell}{}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\pt}[1]{\emph{#1}}
+\newcommand{\eng}[1]{\emph{#1}}
 %********************************************************************
 % Hyphenation
 %*******************************************************
@@ -95,13 +101,8 @@
 % use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage
 
-\ctparttext{This part introduces the thesis and presents its theoretical foundations.}
-\part{Prolegomena}\label{part:prolegomena}
 \include{Chapters/ChapIntro}
 \include{Chapters/ChapFoundations}
-
-\ctparttext{This part discusses the resources tools and resources that were developed within this thesis for non-native speech recognition and evaluation.}
-\part{Tools and Resources for Non-native Speech Recognition and Evaluation}\label{part:tools-resources}
 \include{Chapters/ChapAeiouado}
 \include{Chapters/ChapSpeller}
 \include{Chapters/ChapPhonRich}

@@ -4,26 +4,61 @@
 
 \section{Phonetics and Phonology}\label{sec:phonetics-phonology}
 
-Lorem ipsum at nusquam appellantur his, ut eos erant homero
-concludaturque. Albucius appellantur deterruisset id eam, vivendum
-partiendo dissentiet ei ius. Vis melius facilisis ea, sea id convenire
-referrentur, takimata adolescens ex duo. Ei harum argumentum per. Eam
-vidit exerci appetere ad, ut vel zzril intellegam interpretaris.
+There is an endless debate about what are the boundaries between phonetics and phonology \cite{Steriade2000}. However, for the purpose of this thesis, we will assume the classical definition, which states that phonetics is the study of the physical properties of the sounds used in languages, whereas phonology is corcerned with how the way these sounds are organized into patterns and systems \cite{Davenport2010}.
 
-Errem omnium ea per, pro \ac{UML} congue populo ornatus cu, ex qui
-dicant nemore melius. No pri diam iriure euismod. Graecis eleifend
-appellantur quo id. Id corpora inimicus nam, facer nonummy ne pro,
-kasd repudiandae ei mei. Mea menandri mediocrem dissentiet cu, ex
-nominati imperdiet nec, sea odio duis vocent ei. Tempor everti
-appareat cu ius, ridens audiam an qui, aliquid admodum conceptam ne
-qui. Vis ea melius nostrum, mel alienum euripidis eu.
+To the first time reader this distinction might seem a bit unclear and confusing at first. Phonetics main goal is to study the sounds used in speech and provide methods for their description, classification and transcription. On the other hand, phonology is the branch of linguistics which studies sound systems of languages, in other words, how sounds are organized into a system of contrasts which are used distinctively to express meaning \cite{Crystal2011}. It is interesting to notice that, despite the fact that speech is above all a continuous phenomenon, both phonetics and phonology will conjecture that speech can be examined through discrete units or segments.\footnote{In this case, we are referring to classical phonetics and phonology. There are contemporary frameworks, such as articulatory phonology or dynamic models, which add time to the equation and consider speech as a continuous phenomenon. But this is beyond the scope of this thesis.}
 
+Phonetics will analyze the a stream of speech from the viewpoint of a phone, i.e. the smallest perceptible discrete segment \cite{Crystal2011}. Phones are concrete units, which can be described in terms of their acoustic features or articulatory gestures. Usually, phones are represented with symbols from the \ac{IPA}, which virtually enrolls all sounds that the human vocal tract could possibly produce. For convenience, the \ac{IPA} chart is plotted in \autoref{fig:ipa-chart}.
+
+\begin{figure}[!ht]
+        \noindent\makebox[\textwidth]
+        {\includegraphics[width=0.7\paperwidth]{gfx/ipa-chart-2005.pdf}}
+        \caption{IPA Chart.}\label{fig:ipa-chart}
+\end{figure}
+
+
+The phones in the \ac{IPA} chart are organized into tables which take into account several properties of the sounds, such as major classes (e.g. ``pulmonic consonants'' or ``vowels''); manner of articulation (e.g. ``plosive'', ``nasal'' or ``trill''); place of articulation (e.g. ``bilabial'', ``dental'' or ``alveolar''); status of the glottis (e.g. ``voiced'', ``voiceless'' or ``aspirated''); type of stress (e.g. ``primary'' or ``secondary''); as well as some other segmental or supra-segmental aspects. For English and Brazilian Portuguese, the most relevant tables are the ones which contain pulmonic consonants, the table at the top, and vowels, the diagram in the center right position. 
+
+Pulmonic consonants are organized as follows: rows designate the manner of articulation, i.e. how the consonant is produced; and columns describe the place of articulation, i.e. where in the phonatory system tract the consonant is articulated. Each cell in the table may contain up to two phones, those which are aligned to the left are devoiced (meaning that the glottis is open when they are produced); and those which are aligned to the right are voiced (which means that the glottis is closed when the phone is uttered). 
+
+One refers to each phone by describing its phonetic properties, for instance, the first phone in the table is \ipa{[p]}, a voiceless bilabial plosive. It means that the symbol \ipa{[p]} corresponds to a consonant which is produced with a movement of both lips, with the glottis open, in a plosive manner. In other words, \ipa{[p]} describes the sound that is made by first blocking the airflow with both lips closed so that no air can pass, and then by increasing the pressure inside the vocal tract in such way that the air pressure is so high that it bursts the region where it was blocked and passes through, producing sound.
+
+The voiced counterpart of \ipa{[p]} is \ipa{[b]}, a voiced bilabial plosive, which means that \ipa{[b]} is produced in the same way of \ipa{[p]}, except that for \ipa{[b]} the glottis is closed and not open when the air bursts through the lips. To give a few more examples of how symbols are referred to: \ipa{[n]} is called an alveolar nasal, \ipa{[S]} is a voiceless postalveolar fricative, \ipa{[H]} is a voiced glotal fricative and so on.
+
+Vowels, on the other hand, are described with a different set of features. The vowel diagram (also called vowel trapezium) provides an schematic arrangement of the vowels which summarizes the vowel height of the tongue and/or jaw, as well as how far back the tongue is for articulating each vowel. The vertical position indicates the vowel height, which is related to how close the tongue is to the roof of the mouth or how open is the jaw. Close vowels, which are produced with tongue close to the roof of the mouth, such as the \ipa{[u]} in \pt{\textbf{u}va} (grape), are placed at the top of the diagram. In contrast, open vowels, i.e. those which are pronounced with the jaw open or with the tongue distant from the roof of the mouth, such as the \ipa{[a]} in \pt{\textbf{a}ve} (bird), are at the bottom of the vowel trapezium. The horizontal position reveals the vowel backness, or the place of the tongue relative to the back of the mouth. Front vowels, such as \ipa{[i]} as in \pt{p\textbf{i}pa} (kite), are found in the left part of the vowel diagram; whereas back vowels, like \ipa{[O]} in \pt{r\textbf{o}\c{c}a} (small farm), are on the right side.
+
+Vowels and consonants are put together in sequence in order to form words, phrases and sentences. For instance, the word \pt{exce\c{c}\~ao} (exception) can be transcribed as as the sequence of phones \ipa{[e.se's\~a\~U]}. As one might notice, the digraph ``xc'' and the c-cedilla will be mapped into the phone \ipa{[s]}, since both graphemes refer to the same sound: a voiceless alveolar fricative. Since in Portuguese we use a script that is quite transparent in terms of letter-to-sound conversion, we tend to assume a one-to-one relation between the number of letters in a word and the number of phones it contains, but this is not always true. For instance, the word \pt{t\'axi} (taxi) has four letters, but five phones: \ipa{['tak.sI]}; in contrast, \pt{aqui} (here) has four letters but only three phones \ipa{[a'ki]}. Despite their close relation, one must not mistaken letters and phone symbols, the former refers to written language and the latter to the speech stream.
+
+\clearpage
 \subsection{The Phonetic Inventory of Brazilian Portuguese} 
-Non vices medical da. Se qui peano distinguer demonstrate, personas
-internet in nos. Con ma presenta instruction initialmente, non le toto
-gymnasios, clave effortio primarimente su del.\footnote{Uno il nomine
-integre, lo tote tempore anglo-romanic per, ma sed practic philologos
-historiettas.}
+
+There is much debate about which set of phones best describes the phonetic inventory of Brazilian Portuguese. Several analyses have been proposed by different researchers through the years \cite{Bisol2005, Cagliari2002, Camara1970, Cristofaro2005, Neves1999}, and despite the fact that the analyses usually concur with respect to core questions, there is a lot disagreement in terms of convention and the usage of different phones.  For instance, some authors propose that the postonic ``a'' should be transcribed as \ipa{[5]}, whereas others argue that it is more centralized and closer to the schwa \ipa{[@]}. Similarly, some researchers defend that the glides in Portuguese have a stronger consonantal aspect, thus being transcribed \ipa{[w]} and \ipa{[j]}; at the same time, others argue for a more vocalic nature of these sounds and prefer to represent them as \ipa{[\textsubarch{U}]} and \ipa{[\textsubarch{I}]} respectively. 
+
+There is not even a consensus as to which dialect one refers to when one says ``Brazilian Portuguese''. As a matter of fact, Brazilian Portuguese is the native language of nearly 190 million speakers in Brazil \cite{Ethnologue2005} and several dialects are currently spoken in different parts of the country. Researchers have different opinions as to what should be considered the ``standard dialect'' or the most neutral one.
+
+For the sake of this thesis, we will assume the analysis proposed by \citeauthor{Cristofaro2005}, since it is widely known and well-established in the area.
+
+{\renewcommand{\arraystretch}{0.8}
+\begin{table}[!ht]
+\centering
+\setlength{\tabcolsep}{0.4em}
+\caption{Brazilian Portuguese consonants}
+\begin{tabular}{|l|lr|lr|lr|lr|lr|lr|lr|}
+\hline
+ & \multicolumn{ 2}{c|}{\scriptsize Bilabial} & \multicolumn{ 2}{c|}{\scriptsize Labiod.} & \multicolumn{ 2}{c|}{\scriptsize Alveolar} & \multicolumn{ 2}{c|}{\specialcell[t]{\scriptsize Postalv.}} & \multicolumn{ 2}{c|}{\scriptsize Palatal} & \multicolumn{ 2}{c|}{\scriptsize Velar} & \multicolumn{ 2}{c|}{\scriptsize Glottal} \\ \hline
+\scriptsize Plosive & \ipa{p} & \ipa{b} &  &  & \ipa{t} & \ipa{d} &  &  &  &  & \ipa{k} & \ipa{g} &  &  \\ \hline
+\scriptsize Affricate &  &  &  &  & \ipa{tS} & \ipa{dZ} &  &  &  &  &  &  &  &  \\ \hline
+\scriptsize Nasal &  & \ipa{m} &  &  &  & \ipa{n} &  &  &  & \ipa{\textltailn} &  &  &  &  \\ \hline
+\scriptsize Trill &  &  &  &  &  & \ipa{r} &  &  &  &  &  &  &  &  \\ \hline
+\specialcell[t]{\scriptsize Tap} &  &  &  &  &  & \ipa{R} &  &  &  &  &  &  &  &  \\ \hline
+\scriptsize Fricative &  &  & \ipa{f} & \ipa{v} & \ipa{s} & \ipa{z} & \ipa{S} & \ipa{Z} &  &  & \ipa{x} & \ipa{G} & \ipa{h} & \ipa{H} \\ \hline
+\scriptsize Approximant &  &  &  &  &  & \ipa{\*r}  &  &  &  & \ipa{j} &  & \ipa{w} &  &  \\ \hline
+\scriptsize Lateral Appr.  &  &  &  &  &  & \ipa{l} &  &  &  & \ipa{L} &  &  &  &  \\ \hline
+\end{tabular}
+\label{ch:pt-br-consonants}
+\end{table}
+\renewcommand{\arraystretch}{1}}
+
 
 \subsection{The Phonetic Inventory of American English} 
 Non vices medical da. Se qui peano distinguer demonstrate, personas
@@ -233,7 +268,10 @@ Crist\'ofaro-Silva (2012).
 
 3 Fon\'etica, Fonologia e as Unidades de Descri\c{c}\~ao da Fala
 
-A Fon\'etica e a Fonologia s\~ao os ramos de estudo da Lingu\'istica que
+Speech is, by its nature, a continuous phenomenon. Whether we analyze. taken in terms of articulation or its perceptual. 
+
+
+Phonetics is the area of  phonology are the area which stuA Fon\'etica e a Fonologia s\~ao os ramos de estudo da Lingu\'istica que
 investigam a sonoridade da fala (Crist\'ofaro-Silva \& Yehia, 2008). A
 fala humana \'e, por natureza, um fen\^omeno cont\'inuo. Quer se a tome em seu
 n\'ivel de produ\c{c}\~ao articulat\'oria, por meio do estudo da movimenta\c{c}\~ao de
@@ -310,9 +348,7 @@ invent\'ario fon\'etico descrito por Ogden (2012); e para o PB, o descrito
 por Crist\'ofaro-Silva (2005). Os Quadro 1 a 4 sintetizam o conjunto de
 fones que tais autores prop\~oem para cada uma das l\'inguas.{[}8{]}
 
-        Quadro 1: Fones consonantais do portugu\^es brasileiro
 
-                                [pic]
 
 Conforme se observa no Quadro 1, o invent\'ario fon\'etico consonantal do PB
 \'e composto por 26 sons: seis oclusivos {[}p, b, t, d, k, g{]}, dois
