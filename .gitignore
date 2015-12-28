@@ -2,3 +2,9 @@
 *.aux
 **/*.bbl
 *.bbl
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.toc
