@@ -2,11 +2,16 @@
 \chapter{Phonetic-based Speller}\label{ch:speller}
 %*****************************************
 
-\begin{abstract}
+\paragraph{Abstract}
+\footnote{This chapter contains an extended version of the recently submitted paper:
+
+\begin{itemize}
+ \item \bibentry{Mendonca2015}
+\end{itemize}}
 Recently, spell checking (or spelling correction systems) has regained attention 
 due to the need of normalizing user-generated content (UGC) on the web. UGC presents 
 new challenges to spellers, as its register is much more informal and contains much
-more variability than traditional spelling correction systems can handle. This paper proposes 
+more variability than traditional spelling correction systems can handle. This chapter proposes 
 two new approaches to deal with spelling correction of UGC in Brazilian Portuguese (BP), 
 both of which take into account phonetic errors. The first approach is based on three phonetic
 modules running in a pipeline. The second one is based on machine learning, with soft decision 
@@ -14,7 +19,6 @@ making, and considers context-sensitive misspellings. We compared our methods wi
 others on a human annotated UGC corpus of reviews of products. The machine learning approach surpassed 
 all other methods, with 78.0\% correction rate, very low false positive (0.7\%) and false 
 negative rate (21.9\%). 
-\end{abstract}
 
 \section{Introduction}
 
@@ -27,21 +31,26 @@ Dictionary-based approaches can be ineffective when the task is to detect and co
 Errors due to phonetic similarity also impose difficulties to spell checkers. They occur when a writer knows well the pronunciation of a word but does not know how to spell it. This kind of error requires new approaches to combine phonetic models and models for correcting typographic and/or real-word errors. In \cite{Zampieri2014}, for example, the authors use a linear combination of two measures -- the Levenshtein distance between
 two strings and the Levenshtein distance between the Soundex \cite{soundex} code of two strings.
 Phonetic errors usually occur due to inconsistent spellings rules, ambiguous word breaking and fast introduction of new words, mainly related to technology jargon, affecting both native and non-native speakers of a language \cite{Duan2011}. 
+
 \cite{Baptista2011} detail these problems in a typology of spelling errors in the scenery of written language acquisition: errors produced by lack of understanding of  letter-to-sound correspondences in written language, by fails in the transcription of the oral language, by breaking rules based on phonology or morphology and by inconsistent spelling rules. Due to these several kinds of error this task is still difficult.
+
 Some applications require interactive spelling correction (e.g. typing a text or a search query),  whereas others require fully automatic correction, (e.g. corpus normalization). While in the first kind of applications the spell checker presents several suggestions to the user, the second one requires a spell checker that elects the better suggestion (first hit accuracy), as there is no user to take the decision.
+
 In the last decade, some researchers have revisited spell checking issues motivated by web applications, such as search query engines and sentiment analysis tools based on natural language processing (NLP) of UGC, e.g. Twitter data or product reviews.
 The search engine Google has turned popular the facility of auto-completing, where suggestions to prefixes of a query are offered; this is still a process of interactive spelling correction. There is also another kind of facility where a unique suggestion is given after the query is typed, with the link of the documents recovered for it \cite{Duan2011}, \cite{Cucerzan2004}. This facility demands a high precision automatic spelling correction. 
+
 Normalization of UGC has received great attention also because the performance of NLP tools (e.g. taggers, parsers and named entity recognizers) is greatly decreased when applied to UGC. Besides misspelled words, this kind of text presents a long list of problems, such as acronyms and proper names with inconsistent capitalization, abbreviations introduced by chat-speak style, slang terms mimicking the spoken language, loanwords from English as technical jargon, as well as problems related to ungrammatical language and lack of punctuation \cite{Duran2014,DeClercq2013,Han2013,Andrade2012}.
-UCG normalization also requires automatic spelling correction, i.e., there is a need to automatically select the word that will more likely correct the misspelled word, not relying on a list of candidates for human selection. 
+UGC normalization also requires automatic spelling correction, i.e., there is a need to automatically select the word that will more likely correct the misspelled word, not relying on a list of candidates for human selection. 
 
 In \cite{Andrade2012} the authors propose a spell checker for Brazilian Portuguese (BP) to work on the top of Web text collectors. They have tested their method on news portals and on informal texts collected from Twitter in BP. However, they do not inform the error correction rate of the system. Furthermore, while their focus is on the response time of the application, they do not address real-word errors.
 
-This paper presents two new spell checking methods for UGC in BP. The first of them deals with phonetically motivated errors, a recurrent problem in UCG not addressed by traditional spell checkers. The second one deals additionally with real-word errors.
+This chapter presents two new spell checking methods for UGC in BP. The first of them deals with phonetically motivated errors, a recurrent problem in UGC not addressed by traditional spell checkers. The second one deals additionally with real-word errors.
 We present a comparison of these methods with a baseline system and JaSpell over a new and large benchmark corpus for this task. The corpus contains product reviews with 38,128 tokens and 4,083 annotated errors. Such corpus is also a contribution of our study\footnote{The small benchmark of 120 tokens used in \cite{Martins2004} and \cite{Ahmed2009} 
 is not representative of our scenario.}. 
-This paper is structured as follows. In Section~\ref{sec:method} we describe our methods, the setup of the experiments and the corpus we compiled. In Section~\ref{sec:results} we present the results. In Section~\ref{sec:related} we discuss related work on spelling correction of phonetic and real-word errors. To conclude, the final remarks are outlined in Section~\ref{sec:final-remarks}.
 
-\section{Experimental Settings and Methods}\label{sec:method}
+This chapter is structured as follows. In Section~\ref{sec:speller-method} we describe our methods, the setup of the experiments and the corpus we compiled. In Section~\ref{sec:speller-results} we present the results. In Section~\ref{sec:speller-related} we discuss related work on spelling correction of phonetic and real-word errors. To conclude, the final remarks are outlined in Section~\ref{sec:speller-final-remarks}.
+
+\section{Experimental Settings and Methods}\label{sec:speller-method}
 
 In this Section we present the four methods compared in our evaluation. Two of them are used by existing spellers, one is taken as baseline and the other is taken as benchmark. The remaining two are novel methods developed within the project reported herein. After describing in detail the novel methods, we present the corpus specifically developed to evaluate BP spellers, as well as the evaluation metrics.
 The first one is the open source spell checker JaSpell for Portuguese (Baseline method). The second is acombination of phonetic rules and Soundex applied to candidates generated by 1 and 2 edit distance (Benchmark method). The third (nome1) and the fourth (nome2) are the two novel methods presented by this paper. The (nome1) is an improvement of the Benchmark method, a pipeline of three phonetic modules applied to candidates generated by 1 and 2 edit distance and by phonetic similarity - a manually built set of phonetic-based rules, a grapheme-to-phoneme converter, and the Soundex method adapted to BP (called here as Grapheme-to-Phoneme method). The (nome2) is a context-sensitive speller, based on machine learning, applied to candidates generated by 1 and 2 edit distance, by phonetic similarity and by word combinations of diacritics (called here as Machine Learning).
@@ -60,8 +69,34 @@ JaSpell classifies the candidates for a misspelled word according to the word fr
 
 The method presented in \cite{Avanco2014} is taken as benchmark. It combines phonetic knowledge in the form of a set of rules and the algorithm Soundex. It was inspired by the analysis of errors of the same corpus of products' reviews \cite{Hartmann2014} that inspired our proposals. Furthermore, as such method aims to be used for normalizing web texts, it performs automatic spelling correction. 
 
-To increase the accuracy of the first hit, this method relies in some ranking heuristics. The strategies developed by the authors consider the phonetic proximity between the input wrong word and the candidates to substitute it. If the typed word does not belong to the lexicon, a set of candidates is generated by applying one and two edit distances from the original word and the words in the lexicon. Then a set of phonetic rules for Brazilian Portuguese codifies letters and digraphs which have similar sounds in a specific code. If necessary, the next step performs the algorithm Soundex, slightly modified for BP. Finally, if none of these phonetic-based algorithms is able to suggest a correction, the candidate with the highest frequency in a reference corpus among the ones with the least edition-distance is suggested. The lexicon used is the Unitex-PB\footnote{http://www.nilc.icmc.usp.br/nilc/projects/unitex-pb/web/} and the frequency list was taken from Corpus Brasileiro\footnote{http://corpusbrasileiro.pucsp.br/cb/}.
+To increase the accuracy of the first hit, this method relies in some ranking heuristics. The strategies developed by the authors consider the phonetic proximity between the input wrong word and the candidates to substitute it. If the typed word does not belong to the lexicon, a set of candidates is generated by applying one and two edit distances from the original word and the words in the lexicon. Then a set of phonetic rules for Brazilian Portuguese codifies letters and digraphs which have similar sounds in a specific code. If necessary, the next step performs the algorithm Soundex, slightly modified for BP. Finally, if none of these phonetic-based algorithms is able to suggest a correction, the candidate with the highest frequency in a reference corpus among the ones with the least edition-distance is suggested. The lexicon used is the Unitex-PB\footnote{http://www.nilc.icmc.usp.br/nilc/projects/unitex-pb/web/} and the frequency list was taken from Corpus Brasileiro\footnote{http://corpusbrasileiro.pucsp.br/cb/}. The pseudocode for the algorithm can be found in \autoref{fig:pseudocode-method2}.
 
+\begin{figure}
+\scriptsize
+\caption{Pseudocode: Method II - Benchmark}\label{fig:pseudocode-method2}
+\begin{lstlisting}
+ 1: function CorrectWord(w)
+ 2:     if w in Unitex then
+ 3:         return w
+ 4:     else
+ 5:         w_trans <- pt_rules(w)  # apply PT-Rules to word
+ 6:         w_soundex <- soundex(w)  # get word Soundex code
+ 7:         sugs <- lev(Unitex, 2)  # get words with dist. 1 or 2
+ 8:         
+ 9:         # Look for rule transcription match
+10:         for sug in sugs do
+11:             sug_trans <- pt_rules(sug)
+12:             if w_trans == sug_trans then
+13:                 return sug
+14:   
+15:         # Look for soundex code match
+16:         for sug in sugs do
+17:             sug_soundex <- soundex(sug)
+18:             if w_soundex == sug_soundex then
+19:                 return sug
+20:         return most frequent suggestion
+\end{lstlisting}
+\end{figure}
 
 
 \subsection{Method III - Grapheme-to-Phoneme based Method (GPM)}
@@ -81,7 +116,41 @@ Since the converter was developed primarily for text-to-speech and automatic spe
 
 The usage of the grapheme-to-phoneme converter is a bit different from a simple pipeline. According to Toutanova \cite{Toutanova2002}, phonetic-based errors usually need larger edit distances to be detected. For instance, the word "durex" (\emph{sellotape}) and one of its misspelled forms "dur\'equis" have an edit distance of 5 units, despite having very similar or equal phonetic forms: \textipa{[du'rEks]} $\sim$ \textipa{[du'rEkIs]}. Therefore, instead of simply increasing the edit distance, which would imply in having a larger number of candidates to filter, we decided to do the reverse process. We transcribed the Unitex-PB dictionary and stored it into a database, with the transcriptions as keys. Thus, in order to obtain words which are phonetic similar words, we transcribe the input word and look it up in the database. Considering the "dur\'equis" example, we would first transcribe it as \textipa{[du'rE.kIs]}, and then check if there are any words in the database with this transcription. In this case, it would return "durex", the expected form.
 
-The only difference of GPM in comparison with Method II lies in the G2P transcription match, which takes place prior to Soundex.
+The only difference of GPM in comparison with Method II lies in the G2P transcription match, which takes place prior to Soundex. The pseudocode for the algorithm can be found in \autoref{fig:pseudocode-method3}. 
+
+
+\begin{figure}
+\scriptsize
+\caption{Pseudocode: Method III - GPM}\label{fig:pseudocode-method3}
+\begin{lstlisting}
+ 1: function CorrectWord(w)
+ 2:     if w in Unitext then
+ 3:         return w
+ 4:     else
+ 5:         w_trans <- pt_rules(w)  # apply PT-Rules to word
+ 5:         w_phono <- g2p(w)  # apply G2P converter to word
+ 6:         w_soundex <- soundex(w)  # get word Soundex code
+ 7:         sugs <- lev(Unitex, 2)  # get words with dist. 1 or 2
+ 8:         
+ 9:         # Look for rule transcription match
+10:         for sug in sugs do
+11:             sug_trans <- pt_rules(sug)
+12:             if w_trans == sug_trans then
+13:                 return sug
+14:   
+15:         # Look for G2P transcription in database
+16:         if transcription of word in database == w_phono then
+17:             return word
+18:
+19:         # Look for soundex code match
+20:         for sug in sugs do
+21:             sug_soundex <- soundex(sug)
+22:             if w_soundex == sug_soundex then
+23:                 return sug
+24:         return most frequent suggestion
+\end{lstlisting}
+\end{figure}
+
 In spite of being better than the baseline because they tackle phonetic-motivated errors, Method II and GPM have a limitation: they do not correct real word errors. The following method is intended to overcome this shortcoming by using context information.
 
 
@@ -91,7 +160,7 @@ Method IV has the advantage of bringing together many approaches to spelling cor
 
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=0.5\textwidth]{gfx/speller_architecture.pdf}
+    \includegraphics[width=0.8\textwidth]{gfx/speller_architecture.pdf}
 \caption{\label{fig:sys3-architecture} \it Architecture of the GPM-ML}
 \end{figure}
 The method is based on three main steps: (i) candidate word generation, (ii) feature extraction and (iii) candidate selection. 
@@ -102,34 +171,29 @@ but missed a keystroke and typed "meda" instead. The Levenshtein module would ge
 As for phonetic similarity, the Aeiouado's grapheme-to-phoneme converter \cite{Mendonca2014} was used to group phonetically related words. We transcribed the Unitex-PB word list  phonetically and stored all word transcriptions along with their orthographic form into a database, exactly as we did for GPM. Thus for generating suggestions which are phonetically similar to the word typed by the user, we obtain its phonetic transcription and look it up in the database.
 
 The diacritic module is responsible for generating words which are similar to the word typed by the user with respect to diacritic symbols. This module was proposed since we observed that most of the misspellings in the corpus were caused by a lack or misuse of diacritics. BP has
-five types of diacritics: accute (\'{}), cedilla (ç), circumflex (\^{}), grave (\`{}) and tilde (\~{}). The diacritics often indicate different vowel quality, timbre or stress. However, these symbols are rarely used in UGC, and the reader uses the the context to  disambiguate the intended word. In order to allow the speller to deal with this problem, the diacritic model generates, given a word input, all possible word combinations of diacritics. Once more, the Unitex-PB is used as reference. 
+five types of diacritics: accute (\'{}), cedilla (\c{c}), circumflex (\^{}), grave (\`{}) and tilde (\~{}). The diacritics often indicate different vowel quality, timbre or stress. However, these symbols are rarely used in UGC, and the reader uses the the context to  disambiguate the intended word. In order to allow the speller to deal with this problem, the diacritic model generates, given a word input, all possible word combinations of diacritics. Once more, the Unitex-PB is used as reference. 
 
 After word generation, the feature extraction phase takes place. This phase is responsible  for extracting relevant information from the list of words generated in the previous step. The aim is to allow the classifier to compare these words with the one typed by the user, in such a way that the classifier is able to choose to keep the typed word or to replace it with one of the generated suggestions. 
 
-As misspelling errors may be of different nature (such as typographical, phonological or related to diacritics), we try to select features that encompass all these phenomena. For each word suggestion produced in the word generation phase, we extract 14 features, as described in Table~\ref{tab:features}.
-\begin{table}[!ht]
-\scriptsize
-\centering
-\caption{\label{tab:features} {\it List of features}}
-\begin{tabular}{|lp{10 cm}|}
-\hline
-\multicolumn{1}{|c}{\textbf{Feature}} & \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
-1. \textsc{typedOrGen} & whether the word was typed by the user or was produced in the word generation phase; \\
-2. \textsc{isTypo} & 1 if the word was generated by the typographical module; 0 otherwise; \\
-3. \textsc{isPhone} & 1 if the word was generated by the phonetic module; 0 otherwise; \\ 
-4. \textsc{isDiac} & 1 if the word was generated by the diacritic module; 0 otherwise; \\
-5. \textsc{typedProb} & the unigram probability of the word typed; \\
-6. \textsc{genUniProb} & the unigram probability of the word suggestion; \\
-7. \textsc{typedTriProb} & the trigram probability of the word typed; \\
-8. \textsc{genTriProb} & the trigram probability of the word suggestion; \\
-9. \textsc{typoLevDist} & the levenshtein distance between the typed word and the suggestion; \\
-10. \textsc{insKeyDist} & the sum of the key insertion distances; \\
-11. \textsc{delKeyDist} & the sum of the key deletion distances; \\
-12. \textsc{replKeyDist} & the sum of the key replacement distances; \\
-13. \textsc{keyDists} & the sum of all previous three types of key distances; \\
-14. \textsc{phoneLevDist} & the levenshtein distance between of the phonetic transcription of the typed word and of the suggestion. \\ \hline
-\end{tabular}
-\end{table}
+As misspelling errors may be of different nature (such as typographical, phonological or related to diacritics), we try to select features that encompass all these phenomena. For each word suggestion produced in the word generation phase, we extract 14 features:
+
+\begin{enumerate}
+\setlength{\itemsep}{1pt}
+\item \textsc{typedOrGen}: whether the word was typed by the user or was produced in the word generation phase;
+\item \textsc{isTypo}: 1 if the word was generated by the typographical module; 0 otherwise;
+\item \textsc{isPhone}: 1 if the word was generated by the phonetic module; 0 otherwise;
+\item \textsc{isDiac}: 1 if the word was generated by the diacritic module; 0 otherwise;
+\item \textsc{typedProb}: the unigram probability of the word typed;
+\item \textsc{genUniProb}: the unigram probability of the word suggestion;
+\item \textsc{typedTriProb}: the trigram probability of the word typed;
+\item \textsc{genTriProb}: the trigram probability of the word suggestion;
+\item \textsc{typoLevDist}: the levenshtein distance between the typed word and the suggestion;
+\item \textsc{insKeyDist}: the sum of the key insertion distances;
+\item \textsc{delKeyDist}: the sum of the key deletion distances;
+\item \textsc{replKeyDist}: the sum of the key replacement distances;
+\item \textsc{keyDists}: the sum of all previous three types of key distances;
+\item \textsc{phoneLevDist}: the levenshtein distance between of the phonetic transcription of the typed word and of the suggestion. 
+\end{enumerate}
 
 The probabilities come from a language model trained over a subset of the Corpus Brasileiro (\emph{circa} 10 million tokens). Good-Turing smoothing is used to estimate the probability of unseen trigrams.
 After feature extraction, the word selection phase comes into play. It consists of a Decision Tree Classifier which was trained over the dataset presented in Section~\ref{sec:dataset}, with the features we discussed. 
@@ -212,7 +276,7 @@ false positives (correct words that are wrongly detected as errors) and the tota
 false negatives (wrong words that are detected as correct) and the total number of errors.
 In addition, the correction hit rates are evaluated by misspelling categories. In the analysis, we do not take into account the "int\_slang" and "other" categories, since both show a very irregular behavior and constitute specific types of spelling correction.
 
-\section{Discussion}\label{sec:results}
+\section{Discussion}\label{sec:speller-results}
 
 In Table~\ref{tab:sys-comparison}, we summarize all methods' results. As one can observe, the GPM-ML achieved the best overall performance, with the best results in at least three rates: detection, correction and false positive. Both methods we proposed in this paper, GPM and GPM-ML, performed better than the baseline in all metrics. However, GPM did not show any improvement in comparison to the benchmark. In fact, the addition of the grapheme-to-phoneme converter decreased the performance in what concerns to the correction rate. By analyzing the output of GPM, we noticed that there seems to be some overlapping information between the phonetic rules and the grapheme-to-phoneme module. Apparently, the phonetic rules were able to cover all cases which could be solved by adding the grapheme-to-phoneme converter. Therefore our hypothesis was not supported. 
 
@@ -270,24 +334,16 @@ As already mentioned, GPM (Method III) did not show any gain in comparison with 
 GPM-ML (Method IV) achieved the best performance among all methods in what regards to correction hit rate (78.0\%). Some misspelling categories showed a very high correction rate, such as non-contextual diacritic errors (96.6\%) and non-contextual phonological errors (81.1\%). The trigram Language Model proved to be effective for capturing some contextual misspellings, as can be seen by the contextual diacritic correction rate (64.5\%). However, the method was not able to properly infer contextual phonological misspellings (8.1\%). We hypothesize that this result might be caused by the few number of contextual phonological instances in the corpus used for training (there were only 49 cases of contextual phonological misspellings). Such a small number of cases is not adequate for ensuring good performance by machine learning techniques. No significant improvement was found with respect to typographical errors (55.4\%) in comparison to the other previous methods.
 
 
-\section{Related Work}\label{sec:related}
+\section{Related Work}\label{sec:speller-related}
 
 The first approaches to spelling correction date back to Damerau \cite{Damerau1964} and address the problem by analyzing the edit distance of the words. He proposes a speller based on a reference dictionary and on an algorithm to check for out-of-vocabulary (OOV) words. The method assumes that words which are not found in the dictionary have at most one error, which was caused by a letter insertion, deletion, substitution or transposition. OOV words are then compared to the words from the dictionary. The one error threshold was established to avoid high computational cost.
 An improved error model for spelling correction, which works for letter sequences of lengths up to 5 and is also able to deal with phonetic errors was proposed by \cite{Brill2000}. It embeds a noisy channel model for spell checking based on string to string edits. This model depends on the probabilistic modeling of sub-string transformations. 
 As texts present several kinds of misspellings, no single method will cover all of them, therefore it is very natural to combine methods which supplement each other. This approach was pursued by \cite{Toutanova2002} who included information on pronunciation to the model of typographical errors correction. \cite{Toutanova2002} and also \cite{Berkel1988} took the pronunciation of the misspelled words into account by using the technology of grapheme-to-phoneme converters. The later proposed the use of triphone analysis as a new correction strategy to combine phonemic transcription with trigram analysis, since they performed better than either grapheme-to-phoneme conversion or trigram analysis alone, in their evaluation. 
 Our GPM method also combines models to correct typographical errors by using information on edition distance, information on pronunciation provided by a set of phonetic rules, on a grapheme-to-phoneme converter and finally on the output of the Soundex method. In this two-layer method these modules are put in sequence, as we take advantage of the high precision of the phonetic rules before trying the converter; typographical errors are corrected in the last pass of the process. We understand that the probabilistic classification framework used by \cite{Toutanova2002} is very interesting and would provide better results to our two-layer method. Therefore, we decided to take advantage of a machine learning approach to decide how to correct a word, by using candidates generated by one and two edit distance, phonetic similarity and word combinations of diacritics. In our GPM-ML proposal, we adapted the output of a grapheme-to-phoneme converter which was developed for automatic speech recognition, and used it together with a keyboard model and a language model to provide features for a decision tree classifier.  We had to broaden the transcriptions in order to deal with real-word errors related to diacritics, since the transcriptions are too much detailed for spelling correction purposes. With this new proposal one can deal with a special group of real-word errors caused by the presence or absence of diacritics, besides phonetic and typographic errors.
 
-\section{Final Remarks}\label{sec:final-remarks}
+\section{Final Remarks}\label{sec:speller-final-remarks}
 
 We compared four spelling correction methods for UGC in BP, two of which consist of novel approaches and were proposed in this paper. The Method III (GPM) consisted of an upscale version of the benchmark method. In comparison to benchmark, it contained an additional module with a grapheme-to-phoneme converter. The grapheme-to-phoneme converter was intended to provide the speller with transcriptions that were not so fine-grained or specific as those generated by the phonetic rules and also not so coarse-grained as those created by Soundex. However, it didn't work as well as expected.  The Machine Learning version of GPM, the GPM-ML, however, presented a good overall performance, as it is the unique that addresses the problem of real word errors, and surpass all other methods in most situations.  It reached 78.0\% in correction rate, with very low false positive (0.7\%) and false negative (21.9\%), thus establishing the new state of the art in spelling correction for UGC in BP. As for future work, we intend to improve GPM-ML by expanding the training database, by testing other language models as well as new phone conventions. In addition, we plan to more fully evaluate it into different testing corpora. We also envisage, in due course, the development of an internet slang module.
-
-\begin{lstlisting}[float,caption=A floating example]
-for i:=maxint to 0 do
-begin
-{ do nothing }
-end;
-# use this to present the pseudocode
-\end{lstlisting}
 
 %*****************************************
 %*****************************************

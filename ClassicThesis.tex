@@ -55,10 +55,12 @@
 \usepackage{tabularx}
 \usepackage{nameref}
 \usepackage{vowel}
+\usepackage{bibentry}
+\usepackage[noend]{algpseudocode}
+\nobibliography*
 
 \let\ipa\textipa
 \newcommand{\gustavo}[1]{\textbf{#1}}
-\newcommand{\BlankCell}{}
 \newcommand{\specialcell}[2][c]{%
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\pt}[1]{\emph{#1}}
@@ -108,7 +110,7 @@
 \include{Chapters/ChapPhonRich}
 \include{Chapters/ChapPhoneAlignment}
 \include{Chapters/ChapListener}
-\include{Chapters/ChapFinalRemarks}
+\include{Chapters/ChapConclusions}
 
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
 %\include{multiToC} % <--- just debug stuff, ignore for your documents

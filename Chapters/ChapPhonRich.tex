@@ -140,28 +140,30 @@ the euclidean distance between the triphone distribution of the set made up with
 of selected sentences and removed from the corpus. after, the loop starts over, considering for the 
 calculation of the distance not just each sentence in isolation, but a set comprising each remaining 
 sentence in the corpus together with the sentences already selected in the last step. When the list reaches 
-$n$ selected sentences, the execution is suspended. The pseudocode for the algorithm is described below.
+$n$ selected sentences, the execution is suspended. The pseudocode for the algorithm is \autoref{fig:phon-rich-pseudocode}.
 
-\noindent
-\begin{verbatim}
-Corpus <- List of available sentences
-Selected <- [] // List of selected sentences
-Metrics <- [] //List made of tuples with sentences and euclidean 
-           distance values
-Ideal <- Ideal corpus, with all equiprobable triphones
 
-while length(Selected) < n do:
-  for Sentence in Corpus:
-      calculate the distance between Sentence+Selected and Ideal
-      append Sentence and its metric in the list Metrics
-  BestSentence <- select the sentence in the loop with the
-                  minimum distance
-  append BestSentece to Selected
-  clear the Metrics list
-end.
-\end{verbatim}
-%
-\noindent
+\begin{figure}
+\scriptsize
+\caption{Pseudocode: Method for extracting phonetically-rich sentences.}\label{fig:phon-rich-pseudocode}
+\begin{lstlisting}
+ 1: Corpus <- List of available sentences
+ 2: Selected <- []  # List of selected sentences
+ 3: Metrics <- []  # List made of tuples with sentences and euclidean 
+ 4:            distance values
+ 5: Ideal <- Ideal corpus, with all equiprobable triphones
+ 6: 
+ 7: while length(Selected) < n do:
+ 8:   for Sentence in Corpus:
+ 9:       calculate the distance between Sentence+Selected and Ideal
+10:       append Sentence and its metric in the list Metrics
+11:   BestSentence <- select the sentence in the loop with the
+12:                   minimum distance
+13:   append BestSentece to Selected
+14:   clear the Metrics list
+15: end.
+\end{lstlisting}
+\end{figure}
 
 
 \section{Example Evaluation}
