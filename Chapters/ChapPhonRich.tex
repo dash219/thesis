@@ -2,8 +2,9 @@
 \chapter{A greedy algorithm for the extraction of phonetically rich sentences}\label{ch:phonetically-rich}
 %*****************************************
 
-\paragraph{Abstract}
-A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
+\section*{Abstract}
+
+\footnote{This chapter contains an extended version of the following paper, which was originally presented on August 20th 2014, at the 14th International Telecommunications Symposium in S\~ao Paulo: \bibentry{Mendonca2014b}}A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
 i.e., sentences with a high variety of triphones, distributed in a uniform fashion. 
 Such a corpus is of interest for a wide range of contexts, from automatic speech 
 recognition to speech therapy. We evaluated this method by building phonetically-rich corpora for Brazilian Portuguese. The data employed comes 
@@ -92,7 +93,7 @@ gap of phonetically-balanced corpora available for BP does not consider prosody,
 the available corpora only deals with phonetic representativeness without considering 
 prosody representativeness.
 
-They have worked with CETENFolha corpus (www.linguateca.pt/cetenfolha/) which has circa of 
+They have worked with CETENFolha corpus \footnote{www.linguateca.pt/cetenfolha/} which has circa of 
 1,5 million sentences in order to gather 4,000 sentences phonetically and prosodically 
 rich, being 1,000 declatives, 1,000 partial interrogatives, 1,000 total interrogatives, 
 500 alternatives and 500 exclamatives.   
@@ -149,19 +150,17 @@ $n$ selected sentences, the execution is suspended. The pseudocode for the algor
 \begin{lstlisting}
  1: Corpus <- List of available sentences
  2: Selected <- []  # List of selected sentences
- 3: Metrics <- []  # List made of tuples with sentences and euclidean 
- 4:            distance values
- 5: Ideal <- Ideal corpus, with all equiprobable triphones
+ 3: Metrics <- []  # List of tuples with sentences + dist values
+ 4: Ideal <- [] # Ideal corpus, with all equiprobable triphones
+ 5: N <- Number of desired sentences
  6: 
- 7: while length(Selected) < n do:
+ 7: while length(Selected) < N do:
  8:   for Sentence in Corpus:
- 9:       calculate the distance between Sentence+Selected and Ideal
-10:       append Sentence and its metric in the list Metrics
-11:   BestSentence <- select the sentence in the loop with the
-12:                   minimum distance
-13:   append BestSentece to Selected
-14:   clear the Metrics list
-15: end.
+ 9:       calculate distance between Selected+Sentence and Ideal
+10:       append Sentence and its metric to the Metrics list
+11:   BestSentence <- select the sentence with the min distance
+12:   append BestSentece to Selected
+13:   clear the Metrics list
 \end{lstlisting}
 \end{figure}
 

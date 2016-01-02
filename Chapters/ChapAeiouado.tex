@@ -2,14 +2,9 @@
 \chapter{Aieouad\^o's dictionary and G2P converter}\label{ch:aieouado-g2p}
 %*****************************************
 
-\paragraph{Abstract}
-\footnote{This chapter contains an extended version of the paper:
+\section*{Abstract}
 
-\begin{itemize}
- \item \bibentry{Mendonca2014}
-\end{itemize}
-
-which was originally presented on September 16th 2014, at the 15th INTERSPEECH conference in Singapore.} This chapter describes the method employed to build a machine-readable 
+\footnote{This chapter contains an extended version of the following paper, which was originally presented on September 16th 2014, at the 15th INTERSPEECH conference in Singapore: \bibentry{Mendonca2014}}This chapter describes the method employed to build a machine-readable 
 pronunciation 
 dictionary for Brazilian Portuguese. The dictionary makes use of a hybrid approach for
 converting graphemes into phonemes, based on both manual transcription rules and machine
@@ -322,21 +317,6 @@ the rules we developed are language-specific, the architecture we used for compi
 rules and machine learning classifiers, can be successfully replicated in other languages. In addition, the entire dictionary,
 all scripts, algorithms and corpora were made publicly available.
 
-\paragraph{Further developments}
-
-Since the publishing date of our paper (\citeauthor{Mendonca2014}~\cite{Mendonca2014}), Aeiouad\^o \ac{G2P} has been improved. Recently, we increased the training database to XXX words (XXX phone tokens). Moreover we are now using extra morphological information in order to determine the grapheme's transcription, mostly to solve the problems with the mid vowels \textipa{[E, e, O, o]}. 
-
-Previously we were using only the parts of speech as the source of morphological information. We assumed that by just providing the words' parts of speech, the Decision Tree Classifier would be able to learn and differ pairs of heterophonic homographs, such as ``jogo'' \textsc{noun} \emph{(game)} and ``jogo'' \textsc{verb} \emph{(I play)}, or ``governo'' \textsc{noun} \emph{(government)} and ``governo'' \textsc{verb} \emph{(I rule)}. However, given the poor performance of the conversor in discerning between \textipa{[E]} vs. \textipa{[e]}, and \textipa{[O]} vs. \textipa{[o]}; we decided to refine the morphological features. 
-
-We adapted the training database to the Unitex-PB dictionary \cite{Muniz2004}, which follows  formalismo DELA (Dictionnarie Electronique du LADL)
-
-There is a huge lexicon with,
-
-This type of alternation is very productive in \ac{BP}.  reported to have collected 1,812 pairs of heterophonic homographs in dictionaries and , although only 226 occurred in corpus).
-
-, Pandu , although in a corpus analysis, only 226 \cite{Shulby2013}.
-
-However this is not the case. Previously, only the word class information was used to determine. We thought that would be enough to 
 
 \section{Acknowledgements}
 Part of the results presented in this paper were obtained through research activity in the project titled 

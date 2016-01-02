@@ -1,0 +1,438 @@
+%*****************************************
+\chapter{A greedy algorithm for the extraction of phonetically rich sentences}\label{ch:phonetically-rich}
+%*****************************************
+
+\paragraph{Abstract}
+A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
+i.e., sentences with a high variety of triphones, distributed in a uniform fashion. 
+Such a corpus is of interest for a wide range of contexts, from automatic speech 
+recognition to speech therapy. We evaluated this method by building phonetically-rich corpora for Brazilian Portuguese. The data employed comes 
+from Wikipedia's dumps, which were converted into plain text, segmentized and 
+phonetically transcribed. The method consists of comparing the distance between 
+the triphone distribution of the available sentences to an ideal uniform distribution, with 
+equiprobable triphones. A greedy algorithm was implemented to recognize and evaluate 
+the distance among sentences. A heuristic metric is proposed for pre-selecting 
+sentences for the algorithm, in order to quicken its execution. The results show 
+that, by applying the proposed metric, one can build corpora with more uniform 
+triphone distributions.
+
+
+\section{Introduction}
+
+In what regards to speech technology, although there are some studies which employ words~\cite{Thanga2008}, syllables~\cite{Gana2001} and monophones~\cite{Kumar2014} to develop Automatic Speech Recognition (ASR) and Text to Speech (TTS) systems, most of the current research widely makes use of contextual phone units, such as triphones and diphones.
+
+The issue of developing a phonetically-rich triphone sentences corpus is of great significance for many areas 
+of knowledge. In many applications of  ASR and Speech Synthesis, for instance, rich speech databases are important for properly estimating the acoustic models \cite{Rabiner2007}. In Speech Therapy, phonetically-rich sentences are often employed in reading aloud tasks so as to assess the speech production of patients in various phonetic/phonological contexts \cite{Mendes2012}. Laboratory Phonologists
+are also interested in such corpora in order to develop prompts for analyzing speech production and variability \cite{Pierrehumbert2000}.
+
+Formally, the task discussed in this work can be described as follows: given a corpus $K$ with $s$ sentences,
+find a subset $P$ containing $s_p$ sentences, such that the triphones that compose $s_p$ holds a 
+uniform distribution as much as possible. Despite it's apparent simplicity, in what concerns computational complexity,
+the task cannot be considered a simple one. Since it has a combinatorial nature, it lacks a polynomial-time
+solution and should be regarded as an intractable problem \cite{Sedgewick2013}.
+
+We evaluate the proposed method 
+%for the extraction of sentences in order to
+in building a phonetically-rich triphone sentences corpus for Brazilian Portuguese. The sentences come from the Portuguese Wikipedia dump 
+\cite{Wikidump2014}, which was converted into plain text, segmentized and phonetically transcribed. The algorithm employs 
+a greedy approach to select sentences, in a way such that the triphone distribution in the selected sentences is as uniform as possible. In order to expedite its execution, a heuristic metric is proposed 
+to pre-select sentences for the algorithm, favoring the least frequent triphones over the most frequent ones.
+
+The remainder of this paper is organized as follows. In Section 2, we briefly describe the related work available in the literature.In Section 3, we describe the method proposed. In Section 4, we evaluate it by building phonetically-rich corpora for Brazilian Portuguese. The final remarks are outlined in Section 5.
+
+
+\section{Related Work}
+
+Speech can be analyzed in a myriad of forms. The Phonetic or Phonological structure of a 
+language can be described through phones, phonemes, syllables, diphones, triphones, feet, etc. 
+For languages such as Mandarim, in which tones have a phonological value, one must even posit 
+units such as tonemes in order to properly describe speech phenomena \cite{Lei2005}.
+
+Many methods have been proposed for extracting phonetically-balanced corpora, that is to say 
+corpora made of sentences which reproduce the triphone distribution of a given language 
+\cite{Abushariah2012}\cite{Shen1994}\cite{Timit1993}\cite{Uraga2004}. 
+
+It is known that many linguistic phenomena, including triphone sets, show a Zipfian distribution
+ \cite{Manning1999}.
+A phonetically-balanced corpus, for this reason, is a corpus which follows Zipf's law in 
+representing each triphone inversely proportional to its rank in the frequency table. 
+
+These kinds of corpora are important specially for Large Vocabulary Continuous Speech 
+Recognition (LVCSR), where unbalanced triphone representations can achieve better Word Error 
+Rates (WER). However, phonetically-balanced corpora are not adequate for many other tasks, 
+even regarding Speech Recognition. When building a system  to assess one's pronunciation 
+quality or to synthesize speech, for instance, more accurate results can be attained by 
+using uniform triphone representations, i.e. phonetically-rich corpora. 
+
+Phonetically-rich corpora in our work are those which show sentences with a high variety of 
+triphones, distributed in a uniform fashion regardless its representation in the language. 
+In other words, in order to build such corpora, Zipf's law must be nullified, by favoring 
+less frequent triphones and disfavoring more frequent ones. However, there are studies that 
+consider other definitions and even other basic units to build phonetically-rich corpora.
+
+In Abushariah et al. \cite{Abushariah2012}, the concept of ``rich'' is used in the sense that the set must 
+contain all the phonemes of Arabic language (the chosen language for their study) 
+but without a need for a uniform distribution. The set of sentences was handmade 
+developed by linguists/experts.They used a set of 663 words, also defined  by hand, 
+and then Arabic independent sentences have been written using the 663 phonetically 
+rich words. The final database consists of 367 sentences with 2 to 9 words per sentence.
+
+Arora et al.\cite{Arora2004} considered syllables as the basic unit to extract automatically 
+phonetically-rich sentences from a large text corpus of Indian language, 
+justifying their choice because a syllable is the smallest segment of uterance. 
+In their process to extract the sentences for a given corpus the chosen set 
+should have the same distribution of syllabic words and also the same distribution 
+of consonant, vowel and other symbols.
+
+Nicodem et al.\cite{Nicodem2007} deals specifically with Brazilian Portuguese (BP) 
+and proposed a method based on genetic algorithms to select a set of sentences 
+for a speech syntesis system. Their goal was to select a recording corpus that would 
+improve the phonetic and prosodic variability of the system. They tried to fulfill the 
+gap of phonetically-balanced corpora available for BP does not consider prosody, that is, 
+the available corpora only deals with phonetic representativeness without considering 
+prosody representativeness.
+
+They have worked with CETENFolha corpus (www.linguateca.pt/cetenfolha/) which has circa of 
+1,5 million sentences in order to gather 4,000 sentences phonetically and prosodically 
+rich, being 1,000 declatives, 1,000 partial interrogatives, 1,000 total interrogatives, 
+500 alternatives and 500 exclamatives.   
+
+Their approach is composed of 4 stages, including grapheme-to-phoneme conversion, 
+prosodic annotation, feature vector representation, and selection. 
+The authors obtain prosodic features based on the pitch (they use a TTS to obtain the pitch contour), identifying tone events (H+, H-, H, L, and L-, where H and L stands for high and low, respectively) and using N for neutral, 
+for each syllabe. Using these features to represent each sentence, the execute a genetic algorithm to select a subset. Their paper, however, is not 
+clear about how the fitness function meets both constraints (phonetic and prosodic) since 
+their method only includes prosodic features.
+
+\subsection{Heuristic Metric}
+
+For the expedition of the sentence extraction through the greedy algorithm, due to its high time complexity order,
+we set a heuristic metric to pre-select sentences and rank them according to the triphones they contained. The metric 
+uses the probability of the triphones in  the Corpus in order to favor the least frequent triphones over the most frequent ones. 
+It consists of a summation of the reciprocal probability for each triphone in the sentence.
+
+Formally, this can be defined in the following way. Consider a corpus $K$ consisting of a set of sentences 
+$S = \left \{ s_1, s_2, s_3, ..., s_n \right \}$. Each sentence $s$ is formed by $m$ triphones, represented as $T = \left \{ t_1, t_2, t_3, ..., t_m \right \}$. Given a corpus, the \emph{a priori} probability of the triphones can be calculated straightforwadly: let $P_K(t_i)$ be the probability of the triphone $t_i$ in the corpus $K$, then $P_K(t_i)$ is the number of times $t_i$ occur divided by the total number of triphones in $K$. For that matter, a sentence $s$ can be considered phonetically-rich if it possess many triphones with low probability of occurence. Therefore, we define the phonetic richness of a sentence $s$ as the summation of its triphones' reciprocal probabilities:
+
+\begin{equation}
+\varrho(s) = \sum_{i=1}^{m} \frac{1}{P_K(t_i)}
+\end{equation}
+
+
+\subsection{Algorithm}
+
+Our algorithm for extracting rich sentences was implemented in Python and follows a greedy heuristic. The distance
+metric is calculated through the SciPy library \cite{Scipy2014}.
+
+Greedy algorithms have been widely used in Computer Science, when the optimum solution of the problem can 
+not be guaranteed \cite{Coppin2010}. Greedy strategies  make locally optimal choices hoping to find the global 
+optimum. Notwithstanding, in many cases, greedy algorithms have been notorious for jams at local maxima, since the best solution 
+for a given problem may not concur with the sum of each partial best choice. However, for the extraction of
+phonetically rich sentences, this approach is suitable, owing to the fact that it is computationally intractable
+to analyze all possible sets of sentences.
+
+We initialize the algorithm by applying the heuristic metric described in Section 3.2 to all sentences in the 
+corpus. After this, all sentences are ranked in descending order and the first 50,000 sentences with 
+the best values are selected. This metric was proposed because the algorithm has an order of $O(mn^2)$ time complexity, 
+where $n$ is the number of sentences and $m$ the number of selected triphones, and its execution was slow considering
+all the sentences available in the corpus. Afterwards, the algorithm loops through 50,000 sentences and calculates 
+the euclidean distance between the triphone distribution of the set made up with the selected sentences and the current sentence to an ideal corpus, containing equiprobable triphones. The sentence with the minimum value is appended to a list 
+of selected sentences and removed from the corpus. after, the loop starts over, considering for the 
+calculation of the distance not just each sentence in isolation, but a set comprising each remaining 
+sentence in the corpus together with the sentences already selected in the last step. When the list reaches 
+$n$ selected sentences, the execution is suspended. The pseudocode for the algorithm is \autoref{fig:phon-rich-pseudocode}.
+
+
+\begin{figure}
+\scriptsize
+\caption{Pseudocode: Method for extracting phonetically-rich sentences.}\label{fig:phon-rich-pseudocode}
+\begin{lstlisting}
+ 1: Corpus <- List of available sentences
+ 2: Selected <- []  # List of selected sentences
+ 3: Metrics <- []  # List of tuples with sentences + dist values
+ 4: Ideal <- [] # Ideal corpus, with all equiprobable triphones
+ 5: N <- Number of desired sentences
+ 6: 
+ 7: while length(Selected) < N do:
+ 8:   for Sentence in Corpus:
+ 9:       calculate distance between Selected+Sentence and Ideal
+10:       append Sentence and its metric to the Metrics list
+11:   BestSentence <- select the sentence in the loop with the
+12:                   minimum distance
+13:   append BestSentece to Selected
+14:   clear the Metrics list
+\end{lstlisting}
+\end{figure}
+
+
+\section{Example Evaluation}
+\subsection{Corpus}
+
+As a proof-of-concept we evaluated our method by building phoneticaly-rich corpora for Brazilian Portuguese. The original 
+database of sentences consisted of the Wikipedia dump produced on 23\textsuperscript{rd} January 2014.
+Table 1 summarizes the data.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline \bf Articles & \bf Word Tokens  & \bf Word Types & \bf Triphone Tokens & \bf Triphone Types\\\hline
+820,000 & 168,823,100 & 9,688,039 & 0 & 0\\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{wikipedia-summary} Portuguese Wikipedia Summary -- Dumped on 23\textsuperscript{rd} January 2014.}
+\end{table}
+
+In order to obtain only plain text from Wikipedia articles, we used the software WikiExtractor \cite{Wikiextractor2013}, to strip 
+all of the MediaWiki markups and other metadata. 
+
+Then, we segmentized the output into sentences, by applying the Punkt sentence segmentizer \cite{Kiss2006}. Punkt is a
+language-independent tool, which can be trained to tokenize sentences. It is distributed together with NLTK \cite{NLTK2009}, where it 
+already comes with a model for Portuguese, trained on the Floresta Sinta(c)tica Treebank \cite{Floresta2008}.
+
+Following, each sentence was transcribed phonetically by using a pronunciation dictionary for each language variety. 
+For Brazilian Portuguese, we employed the UFPAdic 3.0 \cite{Neto2011}, which contains 38 triphones and 64,847 entries. Given 
+its encyclopedic nature, many sentences in Wikipedia present dates, periods, percentages and other numerical information. 
+For this reason, we decided to supplement the dictionaries, by introducing the pronunciation of numbers from 0 to 2014. The
+pronunciations were defined manually and embedded into the dictionary.
+
+The transcription task was carried out in the following way: a Python script was developed to loop over each sentence 
+and check if all it's belonging words were listed on the dictionary. If all the words were listed, the sentence was 
+accepted, otherwise rejected. Due to the fact that many words which occur in Wikipedia were not registered in the 
+pronunciation dictionary, a large number of sentences had to be discarded. Details are described in Table 2.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline \bf Total Sentences & \bf Used & \bf Used/total\\ \hline
+7,809,647 & 1,229,422 & 15.7\% \\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{wikipedia-used-discarded} Sentences' summary after WikiExtractor and Punkt.}
+\end{table}
+
+Some pilot experiments showed that the metric benefited sentences which were too long, as they had more 
+triphones; or too short, as some of them had very rare triphones. The problem with long sentences is that they
+can be too complex for a recording prompt, inducing speech disfluencies such as pauses, false starts, 
+lenghtenings, repetitions and self-correction \cite{Watanabe2012}. In addition, the short sentences selected by
+the algorithm were usually only nominal, containing titles, topics or proper names; therefore, they would
+not be adequate for sentence prompts. For this reason, we filtered the sentences, selecting only those which had
+an average size (i.e. between 20 and 60 triphones, and more than four words). Further information is given in Table 3.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Total Sentences} & \textbf{Short} & \textbf{Average} & \textbf{Long} \\ \hline
+1,229,422 & 15,581 & 873,546 & 340,295 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{filtered-sent} Sentences' summary after the length filter.}
+\end{table}
+
+After that, we applied the heuristic metric described in Section 3.2, and the top 50,000 sentences were selected.
+
+\clearpage
+\subsection{Discussion}
+
+For this example evaluation, we discuss the extraction of 250 phonetially-rich sentences. Table 4 describes some triphone statistics for different sets of sentences extracted with the method proposed. The first column presents the number of extracted sentences; the second number of different triphones or triphone types; the third the number of triphone tokens; and the last the triphone type/token ratio which can be used to measure the method's performance. 
+Owing to the fact that no other methods for the extraction of phonetically-rich triphone sentences were found in the literature,
+we established a list of random sentences as the baseline for comparison. Table 5 contains the data regarding sentences selected randomly. The list of random sentences derives from the pool of 
+50,000 sentences described in Section 4.1. Ten different seed states were used in order to ensure
+randomness, the average of these results are presented in the Table. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Sentences & Triphone Types & Triphone Tokens & Type/Token \\ \hline
+25 & 923 & 928 & 0.99 \\
+50 & 1485 & 1541 & 0.96 \\
+75 & 1965 & 2151 & 0.91 \\
+100 & 2389 & 2774 & 0.86 \\
+125 & 2736 & 3384 & 0.81 \\
+150 & 3091 & 4075 & 0.76 \\
+175 & 3390 & 4736 & 0.72 \\
+200 & 3715 & 5477 & 0.68 \\
+225 & 3991 & 6200 & 0.64 \\
+250 & 4189 & 6908 & 0.61 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{results-tri-extracted} Triphone results from the extraction of sentences through our method.}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Sentences & Triphone Types & Triphone Tokens & Type/Token Ratio \\ \hline
+25 & 774 & 1121 & 0.69 \\
+50 & 1318 & 2037 & 0.65 \\ 
+75 & 1713 & 3093 & 0.55 \\ 
+100 & 1917 & 3968 & 0.48 \\ 
+125 & 2352 & 5166 & 0.46 \\ 
+150 & 2564 & 6110 & 0.42 \\ 
+175 & 2820 & 7375 & 0.38 \\ 
+200 & 2961 & 8000 & 0.37 \\ 
+225 & 3211 & 9578 & 0.34 \\ 
+250 & 3335 & 10482 & 0.32 \\ \hline
+\end{tabular}
+\end{center}
+\caption{\label{results-tri-random} Triphone results from the sentences taken randomly.}
+\end{table}
+
+As it can be seen through the type/token triphone ratio, the method is capable of extracting sentences in a much more uniform way. 
+For 250 sentences, our method was capable of extracting 4189 distinct triphones, as opposed to 3335 in the random set; a difference of 854 
+novel distinct triphones. Furthermore, this higher number of distinct triphones was achieved with less triphone tokens (6908 \emph{vs.} 10482), in a way that the type/token 
+ratio for the method we propose was almost double the baseline: \emph{0.61} in contrast to \emph{0.32}. Considering sets with different 
+numbers of sentences, the method outperformed the random selection in all experiments. A Kolmogorov-Smirnov Test 
+(K--S Test) confirms that the sentences selected through our method are closer to a uniform distribution than the ones extracted randomly.
+
+One can observe that, as the number of selected sentences increases, the type/token ratio decreases. It may be the case that, 
+after a huge number of sentences, the method's output converges to a limit such that no statistical significance can be noticed 
+while comparing to a random selection. However, given time limitations, it was not feasible to analyze such a situation.
+As the number of selected sentences increases so does the number of triphones for comparison. After a while,
+the number of triphones for comparison becomes so large that the algorithm's execution time might not be proper for 
+practical applications.
+
+Additionally, the algorithm's output needs to be revised. Despite all our caution in the data preparation process, we noticed
+that some of the sentences selected by the algorithm were, in fact, caused by mistakes from the pronunciation dictionary.
+Foreign and loan words are known to be a problem for grapheme to 
+phoneme conversion because they do not follow the orthographic patterns of the target language \cite{Steigner2007}. Several 
+sentences selected by our algorithm contained foreign words which were registered in the dictionary with an abnormal pronunciations, such
+as \emph{Springsteen} \textipa{[spR\~igste\~e]}, \emph{hill} \textipa{[iww]}, \emph{world} \textipa{[wohwdZ]}. Since no other words are registered with the triphones \textipa{[e-e+\~e]} or \textipa{[e-\~e]} except for 
+\emph{Springsteen}, the algorithm ends up by selecting the sentence in which it occurs. Seeing that our method 
+of comparing triphone distributions is greedy, our algorithm is fooled into believing that these are rare jewels. 
+While this may be the case either way, the algorithm cannot function properly with incorrect transcriptions. 
+
+A corpus with 100 revised sentences extracted by this method can be found in the Appendix A.
+
+\clearpage
+\section{Final Remarks}
+
+We proposed a method for compiling a corpus of phonetically-rich triphone sentences for Brazilian Portuguese.
+All sentences considered come from the Portuguese Wikipedia dumps, which were converted into plain
+text and segmentized. Our method consisted of comparing the distance between the triphone distribution
+of the sentences to a uniform distribution, with equiprobable triphones. The algorithm followed
+a greedy strategy in evaluating the distance metric. The results showed that our method is capable 
+of extracting sentences in a much more uniform way, while comparing to a random selection. 
+For 250 sentences, we were able to extract 854 new distinct triphones, in a set of sentences
+with a much higher type/token ratio. However, the method has its limitations. As discussed,
+it depends entirely on the quality of the pronunciation dictionary. If the pronunciation dictionary
+has some incorrect words, it might be the case that the algorithm favors such words, if they possess
+triphone types not registered in other words. As a future work, we intend to define a method that recognizes foreign words and excludes them from the selected sentences. All resources developed in this paper are freely available on the web\footnote{Omitted for blind review.}.
+
+\section{Extracted Sentences Sample}
+
+\textbf{Triphone Types:} 2307 | \textbf{Tokens:} 2959 | \textbf{Type/Token Ratio:} 0.78.
+
+\begin{enumerate}
+\item A ilha fica t\~ao pr\'oxima da praia que, quando a mar\'e baixa, pode ser atingida a p\'e.
+\item Diadorim \'e Reinaldo filho do grande chefe Joca Ramiro tra\'ido por Herm\'ogenes.
+\item A Sic\'ilia tem alguns moinhos ainda em bom estado de conserva\c{c}\~ao que lhe d\~ao beleza e encanto.
+\item Em geral, chegaram ao Brasil como escravos vindos de Angola, Congo, e Mo\c{c}ambique.
+\item A sardinha \'e um peixe comum nas \'aguas do mar Mediterr\^aneo.
+\item Possuem esse nome pois costumam viver na plumagem dos pombos urbanos.
+\item \'E brilhante, doce e muito harm\^onico, sem presen\c{c}a de metal na voz.
+\item Para fechar Alessandro Del Piero fez outro aos 121'.
+\item Roman Polanski dirige Chinatown com Jack Nicholson.
+\item A atriz sabe falar fluentemente espanhol.
+\item Eles achavam Get\'ulio Vargas um problema.
+\item Oppenheimer captura cavalo com pe\~ao.
+\item Um bago tem tamanho m\'edio n\~ao uniforme.
+\item Segundo relat\'orio da for\c{c}a a\'erea belga h\'a confrontos com a Uni\~ao Sovi\'etica.
+\item \'E irm\~ao do tamb\'em antrop\'ologo Gilberto Velho.
+\item Ganhou sete Oscar e oito Emmy.
+\item Qual \'e minha perspectiva agora?
+\item Ela \'e um fantasma verde, feminino!
+\item Justin em seguida volta no tempo.
+\item N\'os fizemos um \'album do Korn.
+\item Desde ent\~ao Ed\'ilson \'e f\~a dessas bandas.
+\item H\'a um s\'o senhor uma s\'o f\'e um s\'o batismo.
+\item Ivan Lins faria um show em Mossor\'o \`a noite.
+\item Cresceram maior que um gato.
+\item H\'a loca\c{c}\~oes dispon\'iveis em T\'oquio no Jap\~ao.
+\item Preso a um tronco nenhum lugar \'e seguro!
+\item Hoje \'e professor em\'erito da UFBA.
+\item Veio at\'e aqui e n\~ao vai mergulhar?
+\item Lu\'is Jer\^onimo \'e um jovem rico.
+\item Na hora pensei: "tenho que fazer isso?"
+\item A campanha teve coordena\c{c}\~ao de Sanches.
+\item A mulher que voc\^e me deu, fugiu.
+\item Eu nunca tive um encontro com Bianca.
+\item Homer jura vingan\c{c}a a Burns.
+\item Beijo, me liga e amanh\~a sei l\'a!
+\item Um col\'egio \'e como um ser vivo.
+\item Sophie \'e filha de um amigo gay de Alan Greg.
+\item Xuxa guarda rancor e \'e ambiciosa.
+\item No mesmo ano conhece Aldir Blanc em Viena.
+\item \'E um imenso painel reunindo um elenco famoso.
+\item A S\'e integra tr\^es belos \'org\~aos.
+\item Em ambos, Shannon conquistou medalha.
+\item A terra \'e abundante em recursos como vinagre e \'oleo vegetal.
+\item Fa\c{c}a sua escolha e bom jogo!
+\item Quem \'e que poderia sonhar com algo assim?
+\item Ela \'e ruiva com olhos azuis.
+\item Deu a louca na chapeuzinho!
+\item De onde venho e para onde vou?
+\item Eu choro e sofro tormentas!
+\item Um falc\~ao pousa em um pedregulho.
+\item Ningu\'em tenha medo, nem fraqueza!
+\item \'E membro do grupo Monty Python.
+\item A sondagem de Senna pela Benetton e a chegada \`a kart.
+\item Isto \'e um neg\'ocio e a \'unica coisa que importa \'e ganhar
+\item Robert \'e um forte glut\~ao da equipe.
+\item Um b\'arbaro no ex\'ercito romano?
+\item Inf\^ancia e juventude em Linz.
+\item J\'a ir \`a argentina era muito bom!
+\item Fiquei com inveja dele.
+\item H\'a drag\~oes ao redor do mundo!
+\item Edmond \'e pai do bi\'ologo Jean.
+\item A m\~ae lhe telefonava \`as vezes.
+\item Tonho \'e t\'imido, humilde e sincero.
+\item Andr\'e Jung ocupa um lugar central no f\'orum.
+\item Lois pergunta: "voc\^e \'e um homem ou um alien\'igena?"
+\item Sua voz \'e um assobio fino e longo.
+\item Por isso \'e sempre bom conferir!
+\item Celso Lafer recuperou a j\'oia e devolveu-lhe.
+\item \'E pr\'oxima ao Rio Parna\'iba.
+\item Lendo aquilo fica bem dif\'icil.
+\item A faculdade de John Oxford at\'e hoje possui f\~as fi\'eis.
+\item Existe uma cren\c{c}a moderna no drag\~ao chin\^es.
+\item Sean Connery j\'a sugeriu que Gibson fosse James Bond.
+\item A raiz dos dentes \'e longa.
+\item Essa noite produziu um feito singular.
+\item Fim da segunda guerra mundial.
+\item --No Zorra, eu fazia humor rasgado.
+\item Charles v\^e um homem ser morto em um tiroteio.
+\item Tinham um novo senhor agora.
+\item \'E comum ocorrerem fen\^omenos \'opticos com estas nuvens.
+\item Era um c\~ao de pelo escuro e olhos negros.
+\item H\'a t\'itulos na regi\~ao tcheca da Tchecoslov\'aquia.
+\item Raquel Torres vai investigar a \'area.
+\item Clay foge e leva a jovem Jane como ref\'em.
+\item Djavan jogou futebol e h\'oquei no gelo na inf\^ancia.
+\item A origem do fagote \'e bastante remota.
+\item Um jedi nunca usa a for\c{c}a para lucro ou ganho pessoal.
+\item Chamavam Jos\'e Alencar de Zez\'e.
+\item Um c\'odigo fonte \'e um sistema complexo.
+\item A igreja tem um altar barroco.
+\item Lu\'is Eduardo pronunciou a senha: "esgoto".
+\item Quanto ao sexo: macho ou f\^emea?
+\item A r\'adio Caxias cumpriu esse papel.
+\item Roger Lion \'e um campe\~ao orgulhoso que ama boxe.
+\item Um outeiro \'e menor que um morro.
+\item Hitoshi Sakimoto nasceu em Yokohama.
+\item Nenhum is\'otopo do ur\^anio \'e est\'avel.
+\item Chicago \'e um bairro tranquilo e festivo.
+\item Hong Kong continua a utilizar a lei comum inglesa.
+\item S\'o cinco funcionam como museus.
+\end{enumerate}
+
+
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************
+%*****************************************

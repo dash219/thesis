@@ -1,0 +1,16 @@
+% ******************************* Thesis Dedidcation ********************************
+
+\begin{dedication} 
+
+\begin{center}
+    To the loving memory of my father, \\ \smallskip
+    \emph{Tarc\'izio Ot\'avio Almeida}. \\ \medskip
+    1947\,--\,2003
+\end{center}
+
+\begin{figure}[!htb]
+        {\includegraphics[width=.66\linewidth]{gfx/dad.png}}
+\end{figure}
+
+\end{dedication}
+

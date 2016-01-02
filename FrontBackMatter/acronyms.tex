@@ -1,0 +1,67 @@
+% ************************* Thesis Acronyms and Glossary ********************
+
+% Define a command to make the glossary manipulation easier
+% \newdualentry[glossary options][acronym options]{label}{abbrv}{long}{description}
+\usepackage{xparse}
+\DeclareDocumentCommand{\newdualentry}{ O{} O{} m m m m } {
+  \newglossaryentry{gls-#3}{name={#5},text={#5\glsadd{#3}},
+    description={#6},#1
+  }
+  \makeglossaries
+  \newacronym[see={[Glossary:]{gls-#3}},#2]{#3}{#4}{#5\glsadd{gls-#3}}
+}
+
+\newdualentry{API}{API}{Application Programming Interface}{Term used in computer science to refer to a list of routines, protocols and tools for building applications. Roughly speaking, an API lists all classes, methods and functions that a given package has.}
+
+% ******************************* Thesis Acronyms ***************************
+
+\newacronym{AmE}{AmE}{American English}
+\newacronym{ARPA}{ARPA}{Advanced Research Projects Agency}
+\newacronym{ASCII}{ASCII}{American Standard Code for Information Interchange}
+\newacronym{ASR}{ASR}{Automatic Speech Recognition}
+\newacronym{ATR}{ATR}{Advanced Tongue Root}
+\newacronym{BEI}{BEI}{Business English Index}
+\newacronym{BP}{BP}{Brazilian Portuguese}
+\newacronym{BSD}{BSD}{Berkeley Software Distribution}
+\newacronym{CAPT}{CAPT}{Computer Assisted Pronunciation Training}
+\newacronym{CC}{CC}{Creative Commons}
+\newacronym{CEFR}{CEFR}{Common European Framework of Reference}
+\newacronym{CG}{CG}{Computer Graphics}
+\newacronym{CMUdict}{CMUdict}{Carnegie Mellon University Pronouncing Dictionary}
+\newacronym{CSR}{CSR}{Continuous Speech Recognition}
+\newacronym{CT}{CT}{Computer Tomography}
+\newacronym{DNN}{DNN}{Deep Neural Network}
+\newacronym{DRY}{DRY}{Don't Repeat Yourself}
+\newacronym{EF-EPI}{EF-EPI}{EF English Proficiency Index}
+\newacronym{EF}{EF}{Education First}
+\newacronym{ESL}{ESL}{English as a Second Language}
+\newacronym{F0}{F0}{Fundamental Frequency}
+\newacronym{G2P}{G2P}{Grapheme-to-Phoneme}
+\newacronym{GMM}{GMM}{Gaussian Mixture Model}
+\newacronym{HDI}{HDI}{Human Development Index}
+\newacronym{HMM}{HMM}{Hidden Markov Model}
+\newacronym{HSP}{HSP}{Heightened Subglottal Pressure}
+\newacronym{HTK}{HTK}{Hidden Markov Model Toolkit}
+\newacronym{IPA}{IPA}{International Phonetic Alphabet}
+\newacronym{L1}{L1}{First or Native Language}
+\newacronym{L2}{L2}{Second Language}
+\newacronym{MFCC}{MFCC}{Mel Frequency Cepstral Coefficients}
+\newacronym{MRI}{MRI}{Magnetic Resonance Imaging}
+\newacronym{PCM}{PCM}{Pulse Code Modulation}
+\newacronym{PER}{PER}{Phone Error Rate}
+\newacronym{PLP}{PLP}{Perceptual Linear Prediction}
+\newacronym{POS}{POS}{Part of Speech}
+\newacronym{regex}{regex}{Regular Expression}
+\newacronym{RTF}{RTF}{Real Time Factor}
+\newacronym{RASR}{RASR}{RASR}
+\newacronym{SER}{SER}{Sentence Error Rate}
+\newacronym{SLA}{SLA}{Second Language Acquisition}
+\newacronym{SNR}{SNR}{Signal-to-Noise Ratio}
+\newacronym{TTS}{TTS}{Text To Speech}
+\newacronym{UML}{UML}{Unified Modeling Language}
+\newacronym{VBR}{VBR}{Variable Bit Rate}
+\newacronym{WER}{WER}{Word Error Rate}
+\newacronym{WSJ0}{WSJ0}{Wall Street Journal Corpus - Phase I}
+
+% ******************************* Thesis Glossary ***************************
+
