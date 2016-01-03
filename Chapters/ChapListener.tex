@@ -787,8 +787,8 @@ As one may notice in \autoref{fig:oxford-example}, the entry has many informatio
 (v) \ac{POS} data; (vi) definition; (vii) some example sentences; (viii) and a list of synonyms. The pronunciation
 follows Oxford's own transcription convention, which can be mapped on the \ac{IPA} as in \autoref{tab:oxford-dictionary-ipa}.
 
-\renewcommand{\arraystretch}{0.8}% Tighter
-\begin{table}[Hp]
+{\renewcommand{\arraystretch}{0.8}% Tighter
+\begin{table}[!ht]
 \caption[Oxford Dictionary phone convention.]{Oxford Dictionary phone convention.}
 \smallskip
 \centering
@@ -842,7 +842,7 @@ follows Oxford's own transcription convention, which can be mapped on the \ac{IP
 \end{tabular}
 \label{tab:oxford-dictionary-ipa}
 \end{table}
-\renewcommand{\arraystretch}{1.0}% Normal
+\renewcommand{\arraystretch}{1.0}}% Normal
 
 For compiling the corpus, we built a spider through Scrapy \cite{Scrapy2014}, a web crawling framework for Python specially 
 designed to crawl websites and extract structured data from their pages. In total, $49,263$ entries were crawled. This number 

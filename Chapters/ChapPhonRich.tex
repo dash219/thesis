@@ -4,7 +4,7 @@
 
 \section*{Abstract}
 
-\footnote{This chapter contains an extended version of the following paper, which was originally presented on August 20th 2014, at the 14th International Telecommunications Symposium in S\~ao Paulo: \bibentry{Mendonca2014b}}A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
+\footnote{This chapter contains an extended version of the following paper, which was originally presented on August 20th 2014, at the 14th Internaitonal Telecommunications Symposium in S\~ao Paulo: \bibentry{Mendonca2014b}}A method is proposed for compiling a corpus of phonetically-rich triphone sentences; 
 i.e., sentences with a high variety of triphones, distributed in a uniform fashion. 
 Such a corpus is of interest for a wide range of contexts, from automatic speech 
 recognition to speech therapy. We evaluated this method by building phonetically-rich corpora for Brazilian Portuguese. The data employed comes 
@@ -172,7 +172,7 @@ As a proof-of-concept we evaluated our method by building phoneticaly-rich corpo
 database of sentences consisted of the Wikipedia dump produced on 23\textsuperscript{rd} January 2014.
 Table 1 summarizes the data.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline \bf Articles & \bf Word Tokens  & \bf Word Types & \bf Triphone Tokens & \bf Triphone Types\\\hline
@@ -201,7 +201,7 @@ and check if all it's belonging words were listed on the dictionary. If all the 
 accepted, otherwise rejected. Due to the fact that many words which occur in Wikipedia were not registered in the 
 pronunciation dictionary, a large number of sentences had to be discarded. Details are described in Table 2.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline \bf Total Sentences & \bf Used & \bf Used/total\\ \hline
@@ -220,7 +220,7 @@ the algorithm were usually only nominal, containing titles, topics or proper nam
 not be adequate for sentence prompts. For this reason, we filtered the sentences, selecting only those which had
 an average size (i.e. between 20 and 60 triphones, and more than four words). Further information is given in Table 3.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -233,7 +233,6 @@ an average size (i.e. between 20 and 60 triphones, and more than four words). Fu
 
 After that, we applied the heuristic metric described in Section 3.2, and the top 50,000 sentences were selected.
 
-\clearpage
 \subsection{Discussion}
 
 For this example evaluation, we discuss the extraction of 250 phonetially-rich sentences. Table 4 describes some triphone statistics for different sets of sentences extracted with the method proposed. The first column presents the number of extracted sentences; the second number of different triphones or triphone types; the third the number of triphone tokens; and the last the triphone type/token ratio which can be used to measure the method's performance. 
@@ -242,7 +241,7 @@ we established a list of random sentences as the baseline for comparison. Table 
 50,000 sentences described in Section 4.1. Ten different seed states were used in order to ensure
 randomness, the average of these results are presented in the Table. 
 
-\begin{table}[H]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -262,7 +261,7 @@ Sentences & Triphone Types & Triphone Tokens & Type/Token \\ \hline
 \caption{\label{results-tri-extracted} Triphone results from the extraction of sentences through our method.}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -306,9 +305,8 @@ as \emph{Springsteen} \textipa{[spR\~igste\~e]}, \emph{hill} \textipa{[iww]}, \e
 of comparing triphone distributions is greedy, our algorithm is fooled into believing that these are rare jewels. 
 While this may be the case either way, the algorithm cannot function properly with incorrect transcriptions. 
 
-A corpus with 100 revised sentences extracted by this method can be found in the Appendix A.
+A corpus with 100 revised sentences extracted by this method can be found in the \autoref{appendix:rich-sentences}.
 
-\clearpage
 \section{Final Remarks}
 
 We proposed a method for compiling a corpus of phonetically-rich triphone sentences for Brazilian Portuguese.
@@ -321,115 +319,7 @@ For 250 sentences, we were able to extract 854 new distinct triphones, in a set 
 with a much higher type/token ratio. However, the method has its limitations. As discussed,
 it depends entirely on the quality of the pronunciation dictionary. If the pronunciation dictionary
 has some incorrect words, it might be the case that the algorithm favors such words, if they possess
-triphone types not registered in other words. As a future work, we intend to define a method that recognizes foreign words and excludes them from the selected sentences. All resources developed in this paper are freely available on the web\footnote{Omitted for blind review.}.
-
-\section{Extracted Sentences Sample}
-
-\textbf{Triphone Types:} 2307 | \textbf{Tokens:} 2959 | \textbf{Type/Token Ratio:} 0.78.
-
-\begin{enumerate}
-\item A ilha fica t\~ao pr\'oxima da praia que, quando a mar\'e baixa, pode ser atingida a p\'e.
-\item Diadorim \'e Reinaldo filho do grande chefe Joca Ramiro tra\'ido por Herm\'ogenes.
-\item A Sic\'ilia tem alguns moinhos ainda em bom estado de conserva\c{c}\~ao que lhe d\~ao beleza e encanto.
-\item Em geral, chegaram ao Brasil como escravos vindos de Angola, Congo, e Mo\c{c}ambique.
-\item A sardinha \'e um peixe comum nas \'aguas do mar Mediterr\^aneo.
-\item Possuem esse nome pois costumam viver na plumagem dos pombos urbanos.
-\item \'E brilhante, doce e muito harm\^onico, sem presen\c{c}a de metal na voz.
-\item Para fechar Alessandro Del Piero fez outro aos 121'.
-\item Roman Polanski dirige Chinatown com Jack Nicholson.
-\item A atriz sabe falar fluentemente espanhol.
-\item Eles achavam Get\'ulio Vargas um problema.
-\item Oppenheimer captura cavalo com pe\~ao.
-\item Um bago tem tamanho m\'edio n\~ao uniforme.
-\item Segundo relat\'orio da for\c{c}a a\'erea belga h\'a confrontos com a Uni\~ao Sovi\'etica.
-\item \'E irm\~ao do tamb\'em antrop\'ologo Gilberto Velho.
-\item Ganhou sete Oscar e oito Emmy.
-\item Qual \'e minha perspectiva agora?
-\item Ela \'e um fantasma verde, feminino!
-\item Justin em seguida volta no tempo.
-\item N\'os fizemos um \'album do Korn.
-\item Desde ent\~ao Ed\'ilson \'e f\~a dessas bandas.
-\item H\'a um s\'o senhor uma s\'o f\'e um s\'o batismo.
-\item Ivan Lins faria um show em Mossor\'o \`a noite.
-\item Cresceram maior que um gato.
-\item H\'a loca\c{c}\~oes dispon\'iveis em T\'oquio no Jap\~ao.
-\item Preso a um tronco nenhum lugar \'e seguro!
-\item Hoje \'e professor em\'erito da UFBA.
-\item Veio at\'e aqui e n\~ao vai mergulhar?
-\item Lu\'is Jer\^onimo \'e um jovem rico.
-\item Na hora pensei: "tenho que fazer isso?"
-\item A campanha teve coordena\c{c}\~ao de Sanches.
-\item A mulher que voc\^e me deu, fugiu.
-\item Eu nunca tive um encontro com Bianca.
-\item Homer jura vingan\c{c}a a Burns.
-\item Beijo, me liga e amanh\~a sei l\'a!
-\item Um col\'egio \'e como um ser vivo.
-\item Sophie \'e filha de um amigo gay de Alan Greg.
-\item Xuxa guarda rancor e \'e ambiciosa.
-\item No mesmo ano conhece Aldir Blanc em Viena.
-\item \'E um imenso painel reunindo um elenco famoso.
-\item A S\'e integra tr\^es belos \'org\~aos.
-\item Em ambos, Shannon conquistou medalha.
-\item A terra \'e abundante em recursos como vinagre e \'oleo vegetal.
-\item Fa\c{c}a sua escolha e bom jogo!
-\item Quem \'e que poderia sonhar com algo assim?
-\item Ela \'e ruiva com olhos azuis.
-\item Deu a louca na chapeuzinho!
-\item De onde venho e para onde vou?
-\item Eu choro e sofro tormentas!
-\item Um falc\~ao pousa em um pedregulho.
-\item Ningu\'em tenha medo, nem fraqueza!
-\item \'E membro do grupo Monty Python.
-\item A sondagem de Senna pela Benetton e a chegada \`a kart.
-\item Isto \'e um neg\'ocio e a \'unica coisa que importa \'e ganhar
-\item Robert \'e um forte glut\~ao da equipe.
-\item Um b\'arbaro no ex\'ercito romano?
-\item Inf\^ancia e juventude em Linz.
-\item J\'a ir \`a argentina era muito bom!
-\item Fiquei com inveja dele.
-\item H\'a drag\~oes ao redor do mundo!
-\item Edmond \'e pai do bi\'ologo Jean.
-\item A m\~ae lhe telefonava \`as vezes.
-\item Tonho \'e t\'imido, humilde e sincero.
-\item Andr\'e Jung ocupa um lugar central no f\'orum.
-\item Lois pergunta: "voc\^e \'e um homem ou um alien\'igena?"
-\item Sua voz \'e um assobio fino e longo.
-\item Por isso \'e sempre bom conferir!
-\item Celso Lafer recuperou a j\'oia e devolveu-lhe.
-\item \'E pr\'oxima ao Rio Parna\'iba.
-\item Lendo aquilo fica bem dif\'icil.
-\item A faculdade de John Oxford at\'e hoje possui f\~as fi\'eis.
-\item Existe uma cren\c{c}a moderna no drag\~ao chin\^es.
-\item Sean Connery j\'a sugeriu que Gibson fosse James Bond.
-\item A raiz dos dentes \'e longa.
-\item Essa noite produziu um feito singular.
-\item Fim da segunda guerra mundial.
-\item --No Zorra, eu fazia humor rasgado.
-\item Charles v\^e um homem ser morto em um tiroteio.
-\item Tinham um novo senhor agora.
-\item \'E comum ocorrerem fen\^omenos \'opticos com estas nuvens.
-\item Era um c\~ao de pelo escuro e olhos negros.
-\item H\'a t\'itulos na regi\~ao tcheca da Tchecoslov\'aquia.
-\item Raquel Torres vai investigar a \'area.
-\item Clay foge e leva a jovem Jane como ref\'em.
-\item Djavan jogou futebol e h\'oquei no gelo na inf\^ancia.
-\item A origem do fagote \'e bastante remota.
-\item Um jedi nunca usa a for\c{c}a para lucro ou ganho pessoal.
-\item Chamavam Jos\'e Alencar de Zez\'e.
-\item Um c\'odigo fonte \'e um sistema complexo.
-\item A igreja tem um altar barroco.
-\item Lu\'is Eduardo pronunciou a senha: "esgoto".
-\item Quanto ao sexo: macho ou f\^emea?
-\item A r\'adio Caxias cumpriu esse papel.
-\item Roger Lion \'e um campe\~ao orgulhoso que ama boxe.
-\item Um outeiro \'e menor que um morro.
-\item Hitoshi Sakimoto nasceu em Yokohama.
-\item Nenhum is\'otopo do ur\^anio \'e est\'avel.
-\item Chicago \'e um bairro tranquilo e festivo.
-\item Hong Kong continua a utilizar a lei comum inglesa.
-\item S\'o cinco funcionam como museus.
-\end{enumerate}
-
+triphone types not registered in other words. As a future work, we intend to define a method that recognizes foreign words and excludes them from the selected sentences. All resources developed in this paper are freely available on the web \footnote{http://nilc.icmc.usp.br/listener}.
 
 %*****************************************
 %*****************************************
