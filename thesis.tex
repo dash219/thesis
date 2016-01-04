@@ -95,7 +95,7 @@
 \usepackage{graphicx}
 \usepackage[xindy]{imakeidx}
 \makeindex
-\usepackage[acronym,toc]{glossaries} % make a separate list of acronyms
+\usepackage[acronym,toc,nonumberlist]{glossaries} % make a separate list of acronyms
 \makeglossaries
 
 \nobibliography*
@@ -157,7 +157,7 @@
 
 \listoftables
 
-\printglossary[type=\acronymtype,title={List of acronyms}]
+\printglossary[type=\acronymtype,title={List of acronyms},style=long]
 
 % ******************************** Main Matter *********************************
 \mainmatter
@@ -207,6 +207,7 @@
 \include{Appendices/rich-sentences-examples}
 
 \end{appendices}
+
 
 % *************************************** Index ********************************
 %\printthesisindex % If index is present
