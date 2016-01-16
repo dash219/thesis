@@ -3,6 +3,50 @@
 \chapter{Listener}\label{ch:listener}
 %*****************************************
 
+\section*{Resumo}
+Pesquisas recentes t\^em avaliado o Brasil entre os pa\'ises com menor n\'ivel
+de profici\^encia em l\'ingua inglesa. Este projeto busca criar um recurso
+que possa contribuir para a melhoria desse cen\'ario. O objetivo \'e
+desenvolver um reconhecedor de pron\'uncia para falantes do portugu\^es
+brasileiro (PB) aprendizes de ingl\^es, chamado Listener, que seja capaz
+de fornecer ao usu\'ario feedback sobre sua pron\'uncia. Recursos
+semelhantes j\'a foram desenvolvidos para outras l\'inguas, no entanto, para
+o PB, h\'a ainda uma lacuna a ser explorada. A hip\'otese de pesquisa \'e que
+\'e poss\'ivel construir tal reconhecedor de pron\'uncia atrav\'es de: (i) uma
+classifica\c{c}\~ao de erros de pron\'uncia que leve em conta a transfer\^encia de
+padr\~oes de L1 para L2; (ii) um modelo ac\'ustico que agregue dados de fala
+do ingl\^es tanto de nativos, quanto de aprendizes; (iii) um dicion\'ario de
+pron\'uncia que contenha a transcri\c{c}\~ao das pron\'uncias desviantes do
+aprendiz; e (iv) um modelo de l\'ingua que condiga com a sintaxe do
+aprendiz. Nove erros de pron\'uncia foram selecionados para serem tratados
+pelo Listener, assumindo-se, como pron\'uncia padr\~ao, o General American
+(GA). A engine Julius ser\'a empregada como base do reconhecedor. O modelo
+ac\'ustico ser\'a compilado a partir de um corpus de fala de nativos de
+ingl\^es: TIMIT Acoustic-Phonetic Continuous Speech Corpus{[}1{]}; e outro
+de aprendizes: COBAI - Corpus Oral Brasileiro de Aprendizes de
+Ingl\^es{[}2{]}. O dicion\'ario a ser empregado \'e o CMU Pronouncing
+Dictionary, ao qual ser\~ao acrescentaremos as hip\'oteses de pron\'uncia dos
+aprendizes, por meio de regras. O modelo de l\'ingua ser\'a gerado a partir
+da Simple English Wikipedia em conjunto com um corpus de textos escritos
+por aprendizes de ingl\^es, o COMAprend{[}3{]}, um dos tr\^es corpus do
+projeto COMET da Faculdade de Filosofia, Letras e Ci\^encias Humanas da
+Universidade de S\~ao Paulo. A efici\^encia do reconhecedor ser\'a avaliada
+por meio de medidas de Word Error Rate (WER), Character Error Rate (CER)
+e matrizes de confus\~ao. O reconhecedor proposto visa a propiciar a
+cria\c{c}\~ao de sistemas de treino de pron\'uncia mediado por computador. De
+modo a verificar a viabilidade do m\'etodo ora proposto, um prot\'otipo do
+reconhecedor foi elaborado e avaliado intrinsecamente. Um excerto do
+COBAI e de um corpus de erros induzidos especialmente coletado para este
+prot\'otipo foram utilizados para alimentar o modelo ac\'ustico
+(\textasciitilde{}3h50min de fala). O prot\'otipo foi desenvolvido para
+reconhecer erros relacionados à simplifica\c{c}\~ao sil\'abica. As variantes de
+pron\'uncia foram adicionadas no dicion\'ario atrav\'es de um conjunto de 20
+regras. As taxas de WER obtidas foram de 61\% para um l\'exico de 5.768
+entradas, e de 78\% para alinhamento for\c{c}ado, indicando, portanto, que o
+m\'etodo \'e promissor.\dots
+
+\section{Introduction}
+
 O reconhecedor de pron\'uncia ora proposto ser\'a implementado a partir do
 motor de reconhecimento de fala Julius (Lee \& Kawahara, 2009). Nove
 erros de pron\'uncia foram selecionados para serem tratados pelo Listener,

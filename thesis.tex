@@ -78,6 +78,11 @@
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
+\usepackage{currfile}
+\usepackage{filehook}
+\usepackage{filemod}
+\usepackage{gincltex}
+\usepackage[subpreambles]{standalone}
 \input{Preamble/preamble}
 \usepackage{tipa}
 \usepackage{multicol}
@@ -94,6 +99,7 @@
 \usepackage[noend]{algpseudocode}
 \usepackage{graphicx}
 \usepackage[xindy]{imakeidx}
+\usepackage{pdfpages}
 \makeindex
 \usepackage[acronym,toc,nonumberlist]{glossaries} % make a separate list of acronyms
 \makeglossaries
@@ -109,6 +115,15 @@
 \newcommand{\eng}[1]{\emph{#1}}
 \newcommand{\gloss}[1]{\textsc{#1}}
 
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblechapter[1]{%
+  \refstepcounter{chapter}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}}
 
 \input{FrontBackMatter/acronyms}
 % ************************ Thesis Information & Meta-data **********************
@@ -164,10 +179,25 @@
 
 \include{Chapters/ChapIntro}
 \include{Chapters/ChapFoundations}
-\include{Chapters/ChapAeiouado}
-\include{Chapters/ChapSpeller}
-\include{Chapters/ChapPhonRich}
-\include{Chapters/ChapListener}
+
+\chapter{Copy of the articles}
+\invisiblesection{Using a hybrid approach to build a pronunciation dictionary for Brazilian Portuguese}
+\includepdf[pages={1-},scale=0.90, pagecommand={}]{Chapters/PaperAeiouado.pdf}
+%\include{Chapters/ChapAeiouado}
+
+\invisiblesection{Evaluating phonetic spellers for user-generated content in Brazilian Portuguese}
+\includepdf[pages={1-},scale=1.0, pagecommand={}]{Chapters/PaperSpeller.pdf}
+%\include{Chapters/ChapSpeller}
+
+\invisiblesection{A Method for the Extraction of Phonetically-Rich Triphone Sentences}
+\includepdf[pages={1-},scale=0.85, pagecommand={}]{Chapters/PaperPhonRich.pdf}
+%\include{Chapters/ChapPhonRich}
+
+\invisiblesection{Listener: A prototype system for automatic speech recognition and evaluation of
+Brazilian-accented English}
+\includepdf[pages={1-},scale=0.85, pagecommand={}]{Chapters/Listener/sbc-template.pdf}
+
+%\include{Chapters/ChapListener}
 \include{Chapters/ChapConclusions}
 
 
