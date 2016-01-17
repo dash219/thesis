@@ -4,6 +4,10 @@
 %*****************************************
 
 \section*{Resumo}
+Recent surveys have shown that Brazil is among the countries with the lowest knowledge of the English language. In Education First's English Proficiency Index (2012), for instance, Brazil ranked 46th out of 54 countries. In GlobalEnglish (2013),Brazil achieved a similar position, being ranked as 71nd of 77 positions in what concernsto Business English Proficiency. This project aims at developing a tool for improvingthese indexes. The goal is to build up an ASR-based Pronunciation System for BrazilianPortuguese (BP) speakers English L2 learners. The Pronunciation System proposedherein, called Listener, will be able to provide online feedback regarding thepronunciation of the user. Similar tools are available for other languages (Tsubota et al.2004; Genevalogic, 2006; Strik et al., 2008; Neri et al., 2008; Reis & Hazan, 2011),however, for BP, there is still a gap to be explored. The research hypothesis states that itis possible to build up an efficient Pronunciation System through: (i) an errorclassification that takes into account phonetic and phonological transfer from L1 to L2,(ii) an acoustic model that contains speech data from both native speakers and EnglishL2 learners, (iii) a pronunciation dictionary which includes the transcription of themispronunciations that learners are likely to make, and (iv) a language model befittingthe syntax of the learner. Ten mispronunciations will be selected and processed by theListener, according recent literature in english pronunciation teaching for nativebrazilian speakers (Godoy et al., 2006; Zimmer et al., 2009; Cristófaro-Silva, 2012).The General American (GA) will be considered the standard accent. The engine Julius(Lee & Kawahara, 2009) is used as the basis of the recognizer. The acoustic model willbe built up based on two speech corpora, one containing data of native Englishspeakers: TIMIT Acoustic-Phonetic Continuous Speech Corpus1, and another of EnglishL2 learners: COBAI - Corpus Oral Brasileiro de Aprendizes de Inglês2. VoxForgeSpeech Corpus' word list3 will serve as the basis of the pronunciation dictionary. Thetranscription of the mispronunciations of the learners will be added to the dictionary,manually, by transformational rules and, automatically, by machine learning algorithms,such as Transformation-Based Learning (Brill, 1995). The language model will becompiled over 99,508 articles from Simple English Wikipedia. Word Error Rate (WER),Character Error Rate (CER) and confusion matrices will be the measurements used toevaluate the performance of the recognizer. The Listener proposed herein aims atallowing the development of Computer-Assisted Pronunciation Training (CAPT)Systems for English
+
+
+
 Pesquisas recentes t\^em avaliado o Brasil entre os pa\'ises com menor n\'ivel
 de profici\^encia em l\'ingua inglesa. Este projeto busca criar um recurso
 que possa contribuir para a melhoria desse cen\'ario. O objetivo \'e
@@ -91,9 +95,9 @@ tipos de erros elencados em Zimmer et al. (2009), por se tratar da
 investiga\c{c}\~ao mais abrangente sobre o assunto. Os desvios de pron\'uncia
 selecionados est\~ao sintetizados no Quadro 5.
 
-   Quadro 5: Desvios de pron\'uncias a ser analisados pelo Listener.
+ Quadro 5: Desvios de pron\'uncias a ser analisados pelo Listener.
 
-                                [pic]
+ [pic]
 
 2 Simplifica\c{c}\~ao sil\'abica
 
@@ -124,7 +128,7 @@ incorpora grande parte das t\'ecnicas do estado da arte em reconhecimento
 de fala e executa Reconhecimento de Fala Cont\'inuo com Grande Vocabul\'ario
 (LVCSR). Sua arquitetura est\'a sintetizada na Figura 14.
 
-                                [pic]
+ [pic]
 
 Figura 14: Arquitetura do motor de reconhecimento de fala Julius (Lee \&
 Kawahara, 2009).
@@ -136,7 +140,7 @@ determinada a\c{c}\~ao solicitada ao Julius. No caso do reconhecedor de
 pron\'uncia, a sa\'ida ser\'a constitu\'ida pela transcri\c{c}\~ao da fala e da
 avalia\c{c}\~ao de sua pron\'uncia.
 
-  Para  se  construir  um  reconhecedor  fala  atrav\'es  do  Julius,  s\~ao
+ Para se construir um reconhecedor fala atrav\'es do Julius, s\~ao
 
 necess\'arios: um modelo ac\'ustico, um dicion\'ario de pron\'uncia e um modelo
 de l\'ingua. Mais detalhes sobre a elabora\c{c}\~ao desses modelos, de maneira a
@@ -312,7 +316,7 @@ entradas, transcritas foneticamente em formato ARPAbet (Zue \& Seneff,
 Quadro 6: Exemplo de entradas no dicion\'ario de pron\'uncia do CMU
 Pronouncing Dictionary.
 
-                                [pic]
+ [pic]
 
 Como se observa, o dicion\'ario possui tr\^es campos: (i) um interno, para
 identifica\c{c}\~ao da palavra, (ii) um com a palavra em sua forma
@@ -334,7 +338,7 @@ dicion\'ario de exce\c{c}\~oes.
 
 Quadro 7: Contextos para aplica\c{c}\~ao de regras de simplifica\c{c}\~ao sil\'abica.
 
-                                [pic]
+ [pic]
 
 11 Elabora\c{c}\~ao do Modelo de L\'ingua
 
@@ -440,8 +444,8 @@ escondida. As pistas cont\^em informa\c{c}\~oes gerais sobre os pa\'ises, como
 Vikings'' ou ``Eu a vi embarcando em um avi\~ao cuja bandeira era vermelha
 e azul''. A Figura 15 apresenta uma tela do jogo.
 
-  Figura 15: Captura de tela do jogo "Where in the World Is Carmen
-                             Sandiego?".
+ Figura 15: Captura de tela do jogo "Where in the World Is Carmen
+ Sandiego?".
 
 ``Where in the World Is Carmen Sandiego?'' foi lan\c{c}ado em 1985 e, desde
 ent\~ao, diversas empresas de edutainment t\^em tentado repetir o sucesso do
@@ -503,7 +507,7 @@ do script. Das 5.000 palavras mais frequentes no COCA, 1.855
 apresentaram contexto em que \'e poss\'ivel haver simplifica\c{c}\~ao sil\'abica,
 tais palavras, portanto, foram selecionadas para leitura.
 
-                                [pic]
+ [pic]
 
 Figura 18. Fluxograma de funcionamento do script seletor de palavras.
 
@@ -531,9 +535,9 @@ foi empregado para facilitar a organiza\c{c}\~ao das transcri\c{c}\~oes. Aten\c{
 especial foi dedicada à an\'alise da ocorr\^encia ou n\~ao do fen\^omeno de
 simplifica\c{c}\~ao sil\'abica, erro alvo do prot\'otipo.
 
-                                [pic]
+ [pic]
 
-  Figure 1: Workspace utilizado na transcri\c{c}\~ao fon\'etica do corpus.
+ Figure 1: Workspace utilizado na transcri\c{c}\~ao fon\'etica do corpus.
 
 4 Elabora\c{c}\~ao do modelo dicion\'ario de pron\'uncia
 
@@ -575,7 +579,7 @@ utilizado na elabora\c{c}\~ao das variantes \'e constitu\'ido pela uni\~ao do
 invent\'ario fon\'etico do PB segundo Crist\'ofaro-Silva (2005), e o do AmE
 segundo Ogden (2012).
 
-  Certas regras criam contexto fon\'etico para  que  outras  se  apliquem.
+ Certas regras criam contexto fon\'etico para que outras se apliquem.
 
 Por exemplo, ap\'os se aplicar regra 15, {[}Vm\#{]} \textgreater{}
 {[}VNASALbi\#{]} / , \'e poss\'ivel se aplicar tamb\'em a regra 7, {[}b\#{]}
@@ -586,7 +590,7 @@ para a aplica\c{c}\~ao da regra 7, gerando-se tamb\'em a variante {[}bombi{]}.
 De tal maneira, as regras t\^em de ser aplicadas iterativamente, at\'e
 esgotar todas as possibilidades de criar novas variantes.
 
-  No caso do dicion\'ario de pron\'uncia do prot\'otipo, as  21  regras  foram
+ No caso do dicion\'ario de pron\'uncia do prot\'otipo, as 21 regras foram
 
 aplicadas cinco vezes, at\'e o n\'umero de palavras do dicion\'ario se
 estabilizar, isto \'e, at\'e a aplica\c{c}\~ao das regras n\~ao adicionar nenhuma
@@ -595,7 +599,7 @@ de palavras.
 
 Gr\'afico 1: Crescimento do n\'umero de palavras do dicion\'ario de pron\'uncia.
 
-                                [pic]
+ [pic]
 
 Como se observa, houve um aumento consider\'avel no n\'umero de palavras.
 Para 1.855 palavras-base, foram geradas 5.742 variantes, de maneira que
@@ -605,9 +609,9 @@ chegaram a apresentar at\'e 24 possibilidades de pron\'uncia, como
 ``employment'', ``entertainment'', ``independent'' e ``unemployment''. A
 Tabela 4 resume as estat\'isticas do n\'umero de variantes por palavra.
 
-            Tabela 4: Variantes de pron\'uncia por palavra.
+ Tabela 4: Variantes de pron\'uncia por palavra.
 
-                                [pic]
+ [pic]
 
 O grande n\'umero de possibilidades geradas para algumas palavras n\~ao era
 esperado e pode trazer preju\'izos para o reconhecedor. Uma palavra
@@ -730,7 +734,7 @@ prompting texts have been pre-filtered to insure unambiguous pronunciations of w
 comprises spontaneous dictation by journalists with varying degrees of experience in dictation, 
 the precise number of speakers is informed in the documentation. As for the recording environment, 
 a Sennheiser close-talking head-mounted microphone was used together with a secondary microphone of 
-varying types.  
+varying types. 
 
 \autoref{tab:wsj0-summary} describes a summary of the WSJ0 corpus.
 
@@ -739,12 +743,12 @@ varying types.
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  Recorded files & X \\
-  Total speech time & X \\
-  Average time per file & X \\
-  Original format & X \\
-  Number of different speakers & X \\
-  \bottomrule
+ Recorded files & X \\
+ Total speech time & X \\
+ Average time per file & X \\
+ Original format & X \\
+ Number of different speakers & X \\
+ \bottomrule
 \end{tabular}
 \label{tab:wsj0-summary}
 \end{table}
@@ -779,12 +783,12 @@ The portion of the WSJ0 that we used is detailed in \autoref{tab:wsj0-used-summa
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  Recorded files & X \\
-  Total speech time & X \\
-  Average time per file & X \\
-  Original format & X \\
-  Number of different speakers & X \\
-  \bottomrule
+ Recorded files & X \\
+ Total speech time & X \\
+ Average time per file & X \\
+ Original format & X \\
+ Number of different speakers & X \\
+ \bottomrule
 \end{tabular}
 \label{tab:wsj0-used-summary}
 \end{table}
@@ -801,12 +805,12 @@ Lorem ipsum quod dolor sit amet.
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  Recorded files & 6,892 \\
-  Total speech time & ~6.8 hours \\
-  Average time per file & 1.02 seconds \\
-  Original format & WAV 16kHz \\
-  Number of different speakers & 53 \\
-  \bottomrule
+ Recorded files & 6,892 \\
+ Total speech time & ~6.8 hours \\
+ Average time per file & 1.02 seconds \\
+ Original format & WAV 16kHz \\
+ Number of different speakers & 53 \\
+ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -820,10 +824,10 @@ and entries, together with over $600,000 synonyms$\footnote{\url{http://www.oxfo
 A word example can be found in \autoref{fig:oxford-example}.
 
 \begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/example-oxford-definition.png}}
-        \caption{Entry example in the Oxford Dictionary online.}
-        \label{fig:oxford-example}
+ \myfloatalign
+ {\includegraphics[width=.66\linewidth]{gfx/example-oxford-definition.png}}
+ \caption{Entry example in the Oxford Dictionary online.}
+ \label{fig:oxford-example}
 \end{figure}
 
 As one may notice in \autoref{fig:oxford-example}, the entry has many information: (i) the word itself, in ortographic form;
@@ -912,12 +916,12 @@ A summary of the corpus can be seen in \autoref{fig:spectrogram-happiness}.
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  Recorded files & 49,263 \\
-  Total speech time & ~4 hours \\
-  Average time per file & 1.02 seconds \\
-  Original format & MP3 (VBR) \\
-  Number of different speakers & Unknown \\
-  \bottomrule
+ Recorded files & 49,263 \\
+ Total speech time & ~4 hours \\
+ Average time per file & 1.02 seconds \\
+ Original format & MP3 (VBR) \\
+ Number of different speakers & Unknown \\
+ \bottomrule
 \end{tabular}
 \label{tab:oxford-summary}
 \end{table}
@@ -943,12 +947,12 @@ Lorem ipsum quod dolor sit amet.
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  Recorded files & 6,892 \\
-  Total speech time & ~6.8 hours \\
-  Average time per file & 1.02 seconds \\
-  Original format & WAV 16kHz \\
-  Number of different speakers & 53 \\
-  \bottomrule
+ Recorded files & 6,892 \\
+ Total speech time & ~6.8 hours \\
+ Average time per file & 1.02 seconds \\
+ Original format & WAV 16kHz \\
+ Number of different speakers & 53 \\
+ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -1057,7 +1061,7 @@ is presented in Table~\autoref{tab:aeiouado-conv}.
 7 & e & [\textipa{e}] & dedo & d e d U \\
 8 & e$\sim$ & [\textipa{\~e}] & venda & v e$\sim$ d @ \\
 9 & f & [\textipa{f}] & frio & f 4 i U \\
-10 & g & [\textipa{g}] & gula & g u l @  \\
+10 & g & [\textipa{g}] & gula & g u l @ \\
 11 & G & [\textipa{G}] & carga & carga \\
 12 & i & [\textipa{i}] & a\'i & a i \\
 13 & I & [\textipa{I}] & come & k o$\sim$ m I \\
@@ -1170,14 +1174,14 @@ The final phoneset, which we used as the basis for our \ac{ASR} system, can be f
 \centering
 \begin{tabular}{ccccc} \toprule
 \tableheadline{\#} & \tableheadline{Interl. Phone} & \tableheadline{IPA Phone} & \tableheadline{Example} & \tableheadline{Transcription} \\ \midrule
- 1 & \small a & \small  [\textipa{@}] & \small \emph{da} & \small d a \\ 
-\small 2 & \small aa & \small  [\textipa{A}] & \small odd & \small aa d \\ 
-\small 3 & \small aaa & \small  [\textipa{a}] & \small \emph{d\'a} & \small d aaa \\ 
-\small 4 & \small ae & \small  [\textipa{\ae}] & \small cat & \small k ae t \\ 
-\small 5 & \small ah & \small  [\textipa{@}] & \small but & \small b ah t \\ 
-\small 6 & \small ahw & \small  [\textipa{@U}] & \small xxx & \small xx xx \\ 
-\small 7 & \small am & \small  [\textipa{\~a}] & \small xxx & \small xx xx \\ 
-\small 8 & \small ao & \small  [\textipa{O}] & \small for & \small f ao r \\ 
+ 1 & \small a & \small [\textipa{@}] & \small \emph{da} & \small d a \\ 
+\small 2 & \small aa & \small [\textipa{A}] & \small odd & \small aa d \\ 
+\small 3 & \small aaa & \small [\textipa{a}] & \small \emph{d\'a} & \small d aaa \\ 
+\small 4 & \small ae & \small [\textipa{\ae}] & \small cat & \small k ae t \\ 
+\small 5 & \small ah & \small [\textipa{@}] & \small but & \small b ah t \\ 
+\small 6 & \small ahw & \small [\textipa{@U}] & \small xxx & \small xx xx \\ 
+\small 7 & \small am & \small [\textipa{\~a}] & \small xxx & \small xx xx \\ 
+\small 8 & \small ao & \small [\textipa{O}] & \small for & \small f ao r \\ 
 \small 9 & \small aow & \small [\textipa{OU}] & \small xxx & \small xx xx \\ 
 \small 10 & \small aw & \small [\textipa{aU}] & \small cow & \small k aw \\ 
 \small 11 & \small awm & \small [\textipa{\~a\~U}] & \small \emph{n\~ao} & \small n awm \\ 
@@ -1188,13 +1192,13 @@ The final phoneset, which we used as the basis for our \ac{ASR} system, can be f
 \small 16 & \small d & \small [\textipa{d}] & \small do & \small d uw \\ 
 \small 17 & \small dh & \small [\textipa{D}] & \small that & \small dh ae tt \\ 
 \small 18 & \small e & \small [\textipa{e}] & \small \emph{eu} & \small e w \\ 
-\small 19 & \small eh  & \small [\textipa{E}] & \small merry & \small m eh r iy \\ 
+\small 19 & \small eh & \small [\textipa{E}] & \small merry & \small m eh r iy \\ 
 \small 20 & \small em & \small [\textipa{\~e}] & \small \emph{entendi} & \small em tt em jh i \\ 
 \small 21 & \small ey & \small [\textipa{eI}] & \small April & \small ey pp r iy ll \\ 
 \small 22 & \small eym & \small [\textipa{\~e\~I}] & \small \emph{hein} & \small eym \\ 
 \small 23 & \small f & \small [\textipa{f}] & \small fat & \small f ae tt \\ 
 \small 24 & \small g & \small [\textipa{g}] & \small guy & \small g ay \\ 
-\small 25 & \small hh & \small [\textipa{h}] & \small heat & \small hh iy tt  \\ 
+\small 25 & \small hh & \small [\textipa{h}] & \small heat & \small hh iy tt \\ 
 \small 26 & \small ih & \small [\textipa{I}] & \small bit & \small b ih tt \\ 
 \small 27 & \small i & \small [\textipa{I}] & \small \emph{comi} & \small k o m i \\ 
 \small 28 & \small im & \small [\textipa{\~i}] & \small \emph{sim} & \small s im \\ 
@@ -1221,7 +1225,7 @@ The final phoneset, which we used as the basis for our \ac{ASR} system, can be f
 \small 49 & \small t & \small [\textipa{t\super h}] & \small time & \small t ay m \\ 
 \small 50 & \small th & \small [\textipa{T}] & \small three & \small th r iy \\ 
 \small 51 & \small tt & \small [\textipa{t}] & \small \emph{tudo} & \small tt uw d u \\ 
-\small 52 & \small u & \small [\textipa{U}]  & \small \emph{como} & \small kk om m u \\ 
+\small 52 & \small u & \small [\textipa{U}] & \small \emph{como} & \small kk om m u \\ 
 \small 53 & \small uh & \small [\textipa{U}] & \small could & \small k uw d \\ 
 \small 54 & \small um & \small [\textipa{\~u}] & \small \emph{rum} & \small hh um \\ 
 \small 55 & \small uw & \small [\textipa{u}] & \small wood & \small w uw d \\ 
@@ -1252,7 +1256,7 @@ the positive examples which occur in a corpus, rare or non-occuring phenomena ar
 This is the case for triphone \ac{HMM} models. 
 
 Natural languages have, on average, $30$ different phones. The language believed to have the smallest phonetic inventory is 
-Rotokas (East Papuan, New Guinea), with 11 phones, and the one with largest is !X\'o\~o  (Khoisan, Botswana/Namibia), 
+Rotokas (East Papuan, New Guinea), with 11 phones, and the one with largest is !X\'o\~o (Khoisan, Botswana/Namibia), 
 with 160 \citep{Hayes2011}. English is usually assumed to have 37 to 41 phones, depending on the dialect. 
 
 In the \ac{CMUdict} \citep{CMU2008}, 39 phones are used to describe the words of \ac{AmE}. When it comes to triphones, in theory, 
@@ -1301,12 +1305,12 @@ addition of the suffix \{-\textipa{e}\}. \autoref{tab:german-devoicing} contains
 \smallskip
 \centering
 \begin{tabular}{ccc} \toprule
-  \tableheadline{Plural form} & \tableheadline{Singular form} & \tableheadline{Gloss} \\ \midrule
-  Hun[\textipa{d}]e & Hun[\textipa{t}] & \small{dog} \\
-  Die[\textipa{b}]e & Die[\textipa{p}] & \small{thief} \\
-  Ber[\textipa{g}]e & Ber[\textipa{k}] & \small{mountain} \\
-  M\"au[\textipa{z}] & Mau[\textipa{s}] & \small{mouse} \\
-  \bottomrule
+ \tableheadline{Plural form} & \tableheadline{Singular form} & \tableheadline{Gloss} \\ \midrule
+ Hun[\textipa{d}]e & Hun[\textipa{t}] & \small{dog} \\
+ Die[\textipa{b}]e & Die[\textipa{p}] & \small{thief} \\
+ Ber[\textipa{g}]e & Ber[\textipa{k}] & \small{mountain} \\
+ M\"au[\textipa{z}] & Mau[\textipa{s}] & \small{mouse} \\
+ \bottomrule
 \end{tabular}
 \label{tab:german-devoicing}
 \end{table}
@@ -1315,16 +1319,16 @@ As one can observe at the provided examples, the plural forms contain only voice
 devoiced counterparts. To express this phonological process within structural phonology, one would have to introduce at
 least four rules:
 \[
-[\textipa{b}] \rightarrow [\textipa{p}]  / \_ \# 
+[\textipa{b}] \rightarrow [\textipa{p}] / \_ \# 
 \]
 \[
-[\textipa{d}] \rightarrow [\textipa{t}]  / \_ \#
+[\textipa{d}] \rightarrow [\textipa{t}] / \_ \#
 \]
 \[
-[\textipa{g}] \rightarrow [\textipa{k}]  / \_ \#
+[\textipa{g}] \rightarrow [\textipa{k}] / \_ \#
 \]
 \[
-[\textipa{d}] \rightarrow [\textipa{s}]  / \_ \#
+[\textipa{d}] \rightarrow [\textipa{s}] / \_ \#
 \]
 
 Whereas using distinctive features, all cases of german final-obstruent devoicing can be explained by a single rule:
@@ -1339,7 +1343,7 @@ Whereas using distinctive features, all cases of german final-obstruent devoicin
 \]
 
 The main benefits of distinctive features lie in their capability of making generalizations, that is to say
-of grouping phones together in a meningful way.  Phonologists have long known that sounds that share the same manner, 
+of grouping phones together in a meningful way. Phonologists have long known that sounds that share the same manner, 
 place of articulation, or voicing level behave similarly. Distinctive features provide a way to express this
 in an elegant way, by stablishing that feature matrices which are not fully specified do form a natural class. 
 Therefore a distinctive features matrix
@@ -1364,10 +1368,10 @@ form and leaf nodes define \ac{HMM} states. Once the tree is built, its structur
 be tied among triphone models. \autoref{fig:decision-tree} presents an example of a phonetic decision tree.
 
 \begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/decision-tree.png}}
-        \caption{Phonetic decision tree for HMM state tying \citep{Young1994}.}
-        \label{fig:decision-tree}
+ \myfloatalign
+ {\includegraphics[width=.66\linewidth]{gfx/decision-tree.png}}
+ \caption{Phonetic decision tree for HMM state tying \citep{Young1994}.}
+ \label{fig:decision-tree}
 \end{figure}
 
 The tree input is each triphone being analysed.
@@ -1390,10 +1394,10 @@ the 1\textsuperscript{st} emitting HMM state of the analysed triphone $A$ to [Na
 \autoref{fig:state-tying-tree} summarizes the state tying procedure.
 
 \begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/state-tying-tree.png}}
-        \caption{Tied-state HMM system build procedure \citep{Young1994}.}
-        \label{fig:state-tying-tree}
+ \myfloatalign
+ {\includegraphics[width=.66\linewidth]{gfx/state-tying-tree.png}}
+ \caption{Tied-state HMM system build procedure \citep{Young1994}.}
+ \label{fig:state-tying-tree}
 \end{figure}
 
 For building the phonetic decision tree for Listener, we based ourselves on the distinctive feature set proposed by 
@@ -1424,10 +1428,10 @@ to dintinguish up to $2^n$ phones. In \autoref{fig:features-place}, a comparison
 regions of articulation. For a full explanation of each feature, please see \citeauthor{Jensen2004} \citep{Jensen2004}.
 
 \begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/features-place.png}}
-        \caption{Distinctive features for places of places of articulation \citep{Jensen2004}.}
-        \label{fig:features-place}
+ \myfloatalign
+ {\includegraphics[width=.66\linewidth]{gfx/features-place.png}}
+ \caption{Distinctive features for places of places of articulation \citep{Jensen2004}.}
+ \label{fig:features-place}
 \end{figure}
 
 According to this set of distinctive features, we can arrange the entire phonetic inventory of \ac{AmE} as in \autoref{tab:dist-features-eng}
@@ -1438,8 +1442,8 @@ and that of \ac{BP} as in \autoref{tab:dist-features-bp}.
 \caption{Distinctive features chart for AmE phones \citep{Jensen2004}.}
 \begin{center}
 \begin{tabular}{|cc|cccccccccccccccccc|}\hline
- &  & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{3-20}
-\rotatebox[origin=c]{90}{\textsc{\textsc{CMU symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{  distributed  }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
+ & & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{3-20}
+\rotatebox[origin=c]{90}{\textsc{\textsc{CMU symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{ distributed }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
 AA & [\textipa{A}] & + & - & + & + & - & + & - & - & - & - & - & - & - & - & + & + & + & - \\[-3.5pt]
 AE & [\textipa{ae}] & + & - & + & + & - & + & - & - & - & - & - & - & - & - & + & - & - & - \\[-3.5pt]
 AH & [\textipa{@}] & + & - & + & + & - & + & - & - & - & - & - & - & - & - & - & + & - & - \\[-3.5pt]
@@ -1489,8 +1493,8 @@ ZH & [\textipa{Z}] & - & + & - & + & - & - & - & - & + & - & - & - & - & - & - &
 \caption{Distinctive features chart for BP phones \citep{Jensen2004}.}
 \begin{center}
 \begin{tabular}{|cc|cccccccccccccccccc|}\hline
- &  & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{3-20}
-\rotatebox[origin=c]{90}{\textsc{\textsc{CMU symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{  distributed  }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
+ & & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{3-20}
+\rotatebox[origin=c]{90}{\textsc{\textsc{CMU symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{ distributed }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
 a & [\textipa{a}] & + & - & + & + & - & + & - & - & - & - & - & - & - & - & + & + & + & -\\[-4pt]
 a$\sim$ & [\textipa{\~a}] & + & - & + & + & - & + & + & - & - & - & - & - & - & - & + & + & + & -\\[-4pt]
 b & [\textipa{b}] & - & + & - & + & - & - & - & - & - & - & + & - & - & - & - & - & - & -\\[-4pt]
@@ -1543,8 +1547,8 @@ Z & [\textipa{z}] & - & + & - & + & - & - & - & - & + & - & - & - & - & - & - & 
 \caption{Distinctive features chart for Listener phones.}
 \begin{center}
 \begin{tabular}{|ccc|cccccccccccccccccc|}\hline
- & &  & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{4-21}
-\# & \rotatebox[origin=c]{90}{\textsc{\textsc{Listener symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{  distributed  }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
+ & & & \multicolumn{18}{c|}{\textsc{Distinctive features}} \\ \cline{4-21}
+\# & \rotatebox[origin=c]{90}{\textsc{\textsc{Listener symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{IPA symbol}}} & \rotatebox[origin=c]{90}{\textsc{\textsc{syllabic}}} & \rotatebox[origin=c]{90}{\textsc{consonantal}} & \rotatebox[origin=c]{90}{\textsc{sonorant}} & \rotatebox[origin=c]{90}{\textsc{voice}} & \rotatebox[origin=c]{90}{\textsc{HSP}} & \rotatebox[origin=c]{90}{\textsc{continuant}} & \rotatebox[origin=c]{90}{\textsc{nasal}} & \rotatebox[origin=c]{90}{\textsc{lateral}} & \rotatebox[origin=c]{90}{\textsc{strident}} & \rotatebox[origin=c]{90}{\textsc{del. release}} & \rotatebox[origin=c]{90}{\textsc{anterior}} & \rotatebox[origin=c]{90}{\textsc{coronal}} & \rotatebox[origin=c]{90}{\textsc{ distributed }} & \rotatebox[origin=c]{90}{\textsc{high}} & \rotatebox[origin=c]{90}{\textsc{low}} & \rotatebox[origin=c]{90}{\textsc{back}} & \rotatebox[origin=c]{90}{\textsc{ATR}} & \rotatebox[origin=c]{90}{\textsc{round}} \\ \hline
 \footnotesize 1 & \small a & \footnotesize [\textipa{@}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize -\\ 
 \footnotesize 2 & \small aa & \footnotesize [\textipa{A}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - \\
 \footnotesize 3 & \small aaa & \footnotesize [\textipa{a}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize -\\
@@ -1554,51 +1558,51 @@ Z & [\textipa{z}] & - & + & - & + & - & - & - & - & + & - & - & - & - & - & - & 
 \footnotesize 7 & \small ao & \footnotesize [\textipa{O}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + \\
 \footnotesize 8 & \small aw & \footnotesize [\textipa{aU}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 9 & \small awm & \footnotesize [\textipa{\~w}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
-\footnotesize 10 & \small ay & \footnotesize [\textipa{aI}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\  \hline
+\footnotesize 10 & \small ay & \footnotesize [\textipa{aI}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ \hline
 \footnotesize 11 & \small aym & \footnotesize [\textipa{\~y}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
 \footnotesize 12 & \small b & \footnotesize [\textipa{b}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 13 & \small ch & \footnotesize [\textipa{tS}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
-\footnotesize 15 & \small d & \footnotesize [\textipa{d}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\  \hline
+\footnotesize 15 & \small d & \footnotesize [\textipa{d}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\ \hline
 \footnotesize 16 & \small dh & \footnotesize [\textipa{D}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 17 & \small e & \footnotesize [\textipa{e}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize -\\
 \footnotesize 18 & \small eh & \footnotesize [\textipa{E}] & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 19 & \small em & \footnotesize [\textipa{\~e}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize -\\
-\footnotesize 20 & \small ey & \footnotesize [\textipa{A\*r}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - \\  \hline
+\footnotesize 20 & \small ey & \footnotesize [\textipa{A\*r}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - \\ \hline
 \footnotesize 21 & \small eym & \footnotesize [\textipa{\~y}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
 \footnotesize 22 & \small f & \footnotesize [\textipa{f}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 23 & \small g & \footnotesize [\textipa{g}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 24 & \small hh & \footnotesize [\textipa{h}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
-\footnotesize 25 & \small i & \footnotesize [\textipa{i}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize -\\  \hline
+\footnotesize 25 & \small i & \footnotesize [\textipa{i}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize -\\ \hline
 \footnotesize 26 & \small ih & \footnotesize [\textipa{I}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 27 & \small im & \footnotesize [\textipa{\~i}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize -\\
 \footnotesize 28 & \small iy & \footnotesize [\textipa{i}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - \\ 
 \footnotesize 29 & \small jh & \footnotesize [\textipa{dZ}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
-\footnotesize 30 & \small k & \footnotesize [\textipa{k}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\  \hline
+\footnotesize 30 & \small k & \footnotesize [\textipa{k}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ \hline
 \footnotesize 31 & \small kk & \footnotesize [\textipa{k}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
 \footnotesize 32 & \small l & \footnotesize [\textipa{l}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 33 & \small lh & \footnotesize [\textipa{L}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\ 
 \footnotesize 34 & \small m & \footnotesize [\textipa{m}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
-\footnotesize 35 & \small n & \footnotesize [\textipa{n}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\  \hline
+\footnotesize 35 & \small n & \footnotesize [\textipa{n}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ \hline
 \footnotesize 36 & \small ng & \footnotesize [\textipa{N}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 37 & \small nh & \footnotesize [\textipa{\textltailn}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\ 
 \footnotesize 38 & \small o & \footnotesize [\textipa{o}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize +\\
 \footnotesize 39 & \small om & \footnotesize [\textipa{\~o}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize +\\ 
-\footnotesize 40 & \small ow & \footnotesize [\textipa{oU}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + \\  \hline
+\footnotesize 40 & \small ow & \footnotesize [\textipa{oU}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + \\ \hline
 \footnotesize 41 & \small oy & \footnotesize [\textipa{OI}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + \\ 
 \footnotesize 42 & \small oym & \footnotesize [\textipa{\~y}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
 \footnotesize 43 & \small p & \footnotesize [\textipa{p}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 44 & \small pp & \footnotesize [\textipa{p}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
-\footnotesize 45 & \small r & \footnotesize [\textipa{\*r}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\  \hline
+\footnotesize 45 & \small r & \footnotesize [\textipa{\*r}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ \hline
 \footnotesize 46 & \small rd & \footnotesize [\textipa{R}] & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\ 
 \footnotesize 47 & \small s & \footnotesize [\textipa{s}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 48 & \small sh & \footnotesize [\textipa{S}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 49 & \small t & \footnotesize [\textipa{t}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
-\footnotesize 50 & \small th & \footnotesize [\textipa{T}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\  \hline
+\footnotesize 50 & \small th & \footnotesize [\textipa{T}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ \hline
 \footnotesize 51 & \small tt & \footnotesize [\textipa{t}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize -\\
 \footnotesize 52 & \small u & \footnotesize [\textipa{u}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize +\\
 \footnotesize 53 & \small uh & \footnotesize [\textipa{U}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + \\ 
 \footnotesize 54 & \small um & \footnotesize [\textipa{\~u}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize +\\
-\footnotesize 55 & \small uw & \footnotesize [\textipa{u}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + \\  \hline
+\footnotesize 55 & \small uw & \footnotesize [\textipa{u}] & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize + \\ \hline
 \footnotesize 56 & \small v & \footnotesize [\textipa{v}] & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 57 & \small w & \footnotesize [\textipa{w}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
 \footnotesize 58 & \small y & \footnotesize [\textipa{y}] & \footnotesize - & \footnotesize - & \footnotesize + & \footnotesize + & \footnotesize - & \footnotesize + & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - & \footnotesize - \\ 
@@ -1641,7 +1645,7 @@ with \ac{regex} knows, \ac{regex} rules might get too clumsy and hard to underst
 re.sub('(ih|iy) (m|n|ng) (#|[^aeiouyw])', r'i~ \3', pron)
 \end{lstlisting}
 
-To one not familiar with how the dictionary is structured, this rule, in our opinion, could be somewhat meaningless. Therefore,  to 
+To one not familiar with how the dictionary is structured, this rule, in our opinion, could be somewhat meaningless. Therefore, to 
 render the text easier to read, we are going to describe the rules in a pseudocode with a rather flexible notation
 \footnote{For those who are insterested in checking the code itself, it can be downloaded on the site of the project:
 \url{http://nilc.icmc.usp.br/listener}}

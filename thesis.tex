@@ -78,11 +78,6 @@
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
-\usepackage{currfile}
-\usepackage{filehook}
-\usepackage{filemod}
-\usepackage{gincltex}
-\usepackage[subpreambles]{standalone}
 \input{Preamble/preamble}
 \usepackage{tipa}
 \usepackage{multicol}
@@ -179,25 +174,7 @@
 
 \include{Chapters/ChapIntro}
 \include{Chapters/ChapFoundations}
-
-\chapter{Copy of the articles}
-\invisiblesection{Using a hybrid approach to build a pronunciation dictionary for Brazilian Portuguese}
-\includepdf[pages={1-},scale=0.90, pagecommand={}]{Chapters/PaperAeiouado.pdf}
-%\include{Chapters/ChapAeiouado}
-
-\invisiblesection{Evaluating phonetic spellers for user-generated content in Brazilian Portuguese}
-\includepdf[pages={1-},scale=1.0, pagecommand={}]{Chapters/PaperSpeller.pdf}
-%\include{Chapters/ChapSpeller}
-
-\invisiblesection{A Method for the Extraction of Phonetically-Rich Triphone Sentences}
-\includepdf[pages={1-},scale=0.85, pagecommand={}]{Chapters/PaperPhonRich.pdf}
-%\include{Chapters/ChapPhonRich}
-
-\invisiblesection{Listener: A prototype system for automatic speech recognition and evaluation of
-Brazilian-accented English}
-\includepdf[pages={1-},scale=0.85, pagecommand={}]{Chapters/Listener/sbc-template.pdf}
-
-%\include{Chapters/ChapListener}
+\include{Chapters/ChapArticles}
 \include{Chapters/ChapConclusions}
 
 
