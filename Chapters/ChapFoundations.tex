@@ -1387,7 +1387,103 @@ Lorem ipsum
 \section{Automatic Speech Recognition}\label{sec:speech-recognition}
 %*****************************************
 
-\subsection{The big picture}
+\subsection{A Brief History}
+
+Although the task of recognizing words from speech might seem apparently simple beforehand -- after all, humans start doing it with as little as four months -- the issue is actually very complex one. Roughly speaking the purpose of an \ac{ASR} system is to transform, in a precise and efficient way, the acoustic parameters of a speech signal into readable text \cite{Rabiner2007}.
+
+If each word in a language was pronounced in the same way by all speakers in every situation, the task of automatic speech recognition would be considered solved. However the linguistic reality is quite the opposite. In fact, it is no exaggeration to say that a vowel is never pronounced in the exact same way -- i.e. with the same acoustic properties -- even considering a single speaker \cite{Johnson2004}. Intra- and inter-speaker variability are inherent to natural languages.
+
+Over the years, many methods have been 
+proposed to attempt to solve the problem of automatic speech recognition. 
+However until now no solution has been found and machines are still
+a very long way from performing like humans. \autoref{tab:comparison-human-mach} presents a comparison between the performance
+of humans and machines in some recognition tasks.
+
+\begin{table}[!ht]
+  \caption[Word error rate comparisons between human and machines on similar tasks \citep{Huang2001}.]{Word error rate comparisons between human and machines on similar tasks \citep{Huang2001}.}
+  \smallskip
+  \centering
+  \begin{tabular}{lcrr} \toprule
+      \textbf{Tasks} & \textbf{Voc. size} & \textbf{Humans} & \textbf{Machines} \\ \midrule
+      \small Connected digits & 10 & 0.009\% & 0.720\% \\
+      \small Alphabet letters & 26 & 1\% & 5\% \\
+      \small Spontaneous telephone \\ speech & 2,000 & 3.8\% & 36.7\% \\
+      \small WSJ with clean \\ \small speech & 5,000 & 0.9\% & 4.5\% \\
+      \small WSJ with noisy \\ \small speech (10-db SNR) & 5,000 & 1.1\% & 8.6\% \\
+      \small Clean speech based \\ \small on trigram sentences & 20,000 & 7.6\% & 4.4\% \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:comparison-human-mach}
+\end{table}
+
+As one may observe, humans outperform machines in almost every task, specially the more complex ones. 
+Humans' are indeed the topline for the speech recognition task, the uttermost dream of each speech 
+scientist alive is to build a system capable of performing similarly to humans. Although this dream is somewhat near
+for rather simple tasks like connected digits, for other contexts a long path yet lies ahead. 
+
+Recognizing spontaneous speech is still a huge barrier for machines, as can be seen from the huge difference
+in the spontaneous telephone corpus: whereas humans had a WER of $3.8\%$, for machines this rate is up to $36.7\%$.
+Such result is mainly due to linguistic variability. Language varies not only among speakers (the so-called 
+inter-speaker variability), but also within the same speaker (intra-speaker) \citep{Benzeghiba2007}. 
+
+Considering inter-speaker differences, factors such as gender, age, social, and regional 
+origin, health and emotional state might have a huge impact on the speech signal \citep{Benzeghiba2007}.
+Sociolinguistics has long known that gender affects language usage, in fact, men and women tend to use different language constructions.
+In her seminal paper in the field, \citet{Lakoff1973} \citep{Lakoff1973} found that, in women's speech, strong expressions 
+of feeling are avoided, uncertainty is favored, and means of expression in regard to subject-matter deemed ``trivial'' to the 
+``real'' world are elaborated. 
+
+Put aside social aspects, men, women and children's speech are also contrasting because of morphological differences
+in their vocal tract. Sex and development influence body size, and there is a strong correlation between vocal tract length and body size 
+(either height or weight); in addition to this, the relative proportions of men and women's oral and pharyngeal cavity are unlike 
+\cite{Fitch1999}. \autoref{fig:vocal-tract-morphology-sex} presents a comparison between height and
+vocal tract length for men, women and children. \autoref{fig:vocal-tract-morphology} presents a model of the vocal tract morphology considering
+age.
+
+\begin{figure}[H]
+        \myfloatalign
+        {\includegraphics[width=.66\linewidth]{./gfx/vocal-tract-size-sex.png}}
+        \caption{Height (cm) versus vocal tract length (mm).}
+        \label{fig:vocal-tract-morphology-sex}
+\end{figure}
+
+\begin{figure}[H]
+        \myfloatalign
+        {\includegraphics[width=.66\linewidth]{./gfx/vocal-tract-size-gender.png}}
+        \caption{Averaged vocal tract morphology.}
+        \label{fig:vocal-tract-morphology}
+\end{figure}
+
+As one can observe, men's vocal tract are longer than women's, followed and obviously children. These morphology differences 
+affect the speech signal thorougly, specially in what concerns to the \ac{F0}. \ac{F0} can be defined as the 
+lowest frequency in the signal counting from zero. \autoref{fig:f0-age-sex} compares the \ac{F0} values
+between male and females considering aging.
+
+\begin{figure}[!ht]
+        \myfloatalign
+        {\includegraphics[width=.66\linewidth]{./gfx/f0-age-sex.png}}
+        \caption{F0 and pitch sigma versus age for males and females.}
+        \label{fig:f0-age-sex}
+\end{figure}
+
+One can notice from \autoref{fig:f0-age-sex}, that no difference is found between male and female voice at a very young age. 
+In fact, boys and girls have roughly the same \ac{F0} values. However, when they reach puberty, differences begin to appear. 
+This period is commonly called the voice mutation or voice change, when the \ac{F0} for male voice has huge drop, while 
+for female voice the drop is quite small. In terms of perception, this is period when the male voice lowers and geets deeper.
+
+Back to \autoref{tab:comparison-human-mach}, it is interesting to notice that humans
+performed better in all speech recognition tasks, but one: ``Clean speech based on trigram sentences''.
+This one task consists of recognizing sentences which were randomly generated using the WSJ trigram language model. 
+Therefore, humans had no advantage over machines in what concerns to syntactic or semantic knowledge. 
+This result highlights one of the most important feature of human hearing, that is, we make a large use of syntactic, 
+semantic and also pragmatic information in order to understand speech. While hearing do not take into account simply 
+the acoustic signal, but the whole context. Language is a social tool, which aims at successfull interaction. When someone steps into a snack bar and orders 
+an [\textipa{aIs"krim}], the vendor has no doubt that this sequence of phones refers to ``ice cream'' and not ``I scream'', 
+albeit they are pronounced exactly the same. Although such sequence of phones might be ambiguous in the phonetic level,
+it is not in higher linguistic levels, such as syntax (the verb ``order'' is usually followed by a noun), semantics 
+(the object of order has to be something purchasable) and pragmatics (one does not buy his own shout!).
+
+\subsection{The fundamental equation}
 
 Basically, all statistical methods of \ac{ASR} are dedicated into solving one fundamental 
 equation, which can be described as follows. Let $O$ be a sequence of observable acoustic 
@@ -1433,53 +1529,9 @@ W*= \arg\max_{W}P(O|W)P(W)
 $P(O|W)$, the probability of an observable acoustic feature vector given a word sequence, is calculated by 
 an acoustic model. In turn, $P(W)$, the \emph{a priori} probability of words is reckoned by a language model.
 
-\subsection{Hidden Markov Models and Speech Recognition}
+\subsection{Architecture of an Automatic Speech Recognition}
 
-Markov models consist a set of mathematical models which are suitable for the statistical description of symbol
-and state sequences \cite{Fink2008}. The simplest form of Markov models are Markov chain models, 
-which represent a system with a set of spaces in which transitions from one state to another occur. 
-Within Markov processes, systems are assumed to be memoryless, that is, the conditional probability
-of future states is only dependent on the present state. To put it another way, Markov models assume that,
-given a certain system with states and transitions, the current state does not depend upon the 
-sequence of events that preceded it, the so-called Markov property. 
-
-\ac{HMM}s can be formally described as a 5-tuple $\lambda = \left (Q, O, \Pi, A, B\right )$, where $Q = \left \{q_1, q_2, q_3, ..., q_N\right \}$  is a set of $N$ states. $O = \left \{o_1, o_2, o_3, ..., o_T\right \}$ is a set of $T$ observations taken from time $t = 1$ to $t = T$. At each time $t$ it is assumed that the system will be at a specific state $q$, which is hidden, only the observations are directly visible. $\Pi = \left \{\pi_i \right \}$ is a vector with the initial state probabilities, such that
-\begin{equation}
-\pi_i = Pr(q_i), t = 0
-\end{equation}
-$A = [a_{ij}]$ is matrix with the state transition probabilities so that
-\begin{equation}
-a_{ij} = P(q_t = j | q_{t-1} = i),  1 \leq, i, j \leq N
-\end{equation}
-and $B = [b_{jt}]$ is a matrix with the emission probability of each state. Assuming a \ac{GMM} to model the state emission probabilities -- the so-called GMM/HMM model; we can define that, for a state $j$, the probability $b_j(o_t)$ of generating $o_t$ is given by
-\begin{equation}
- b_j(o_t) = \prod_{s=1}^{S}\left [ \sum_{m=1}^{M_{js}} c_{jsm}\mathcal{N}(o_{st}; \mu_{jsm}, \Sigma_{jsm}) \right ]^{\gamma_s}
-\end{equation}
-where $\gamma s$ is a stream weight, with default value is one, $M_{js}$ is the number of mixture components in state $j$ for stream $s$, $c_{jsm}$ is the weight of the $m$\textsuperscript{th} component and $\mathcal{N}(\cdot; \mu_{jsm}, \Sigma_{jsm})$ is a multivariate Gaussian with mean vector $\mu$ and covariance matrix $\Sigma$, that is
-\begin{equation}
- \mathcal{N}(o; \mu, \Sigma) = (\sqrt{(2\pi)^{n}\left |\Sigma\right |})^{-e^{-\frac{1}{2}(o-\mu)^{T}\Sigma^{-1}(o-\mu)}}
-\end{equation}
-where $n$ is the dimensionality of $o$.
-
-The following constraints apply:
-\begin{equation}
-a_{ij} \geq 0
-\end{equation}
-that is, the probability of moving from state from any state $i$ to $j$ is not null, and
-\begin{equation}
-\sum_{j=1}^{N} a_{ij} \geq 1, \forall i
-\end{equation}
-
-\subsection{PB}
-15 Reconhecimento Autom\'atico de Fala (RAF)
-
-O prop\'osito de um reconhecedor de fala \'e transformar, de forma eficiente
-e precisa, o sinal ac\'ustico da fala em sua contraparte textual (Rabiner
-\& Schafer, 2007). Se cada palavra da l\'ingua fosse pronunciada de forma
-id\^entica por todos os falantes e em todos os contextos, a tarefa de
-Reconhecimento Autom\'atico de Fala (doravante RAF) seria algo banal. Mas
-isso n\~ao acontece: a realidade lingu\'istica \'e demasiado variante, quer
-inter- , quer intrafalantes. Pode-se, por fim, dizer que uma vogal nunca
+Pode-se, por fim, dizer que uma vogal nunca
 \'e pronunciada de uma mesma maneira. Furui (2001) sumariza os problemas
 do RAF em quatro: (i) dificuldades em lidar com coarticula\c{c}\~ao e redu\c{c}\~ao;
 (ii) dificuldades de segmenta\c{c}\~ao da fala; (iii) diferen\c{c}as
@@ -1566,61 +1618,6 @@ componentes: (i) um modelo de l\'ingua, (ii) um modelo ac\'ustico e (iii) um
 modelo de pron\'uncia, ou dicion\'ario de pron\'uncia. Por fim, as fases de
 teste e an\'alise buscam verificar se os modelos constru\'idos se ad\'equam à
 realidade lingu\'istica ou ao prop\'osito a que o reconhecedor se disp\~oe.
-
-16 Representa\c{c}\~ao Digital da Fala
-
-Para desenvolver tecnologias de fala, \'e preciso antes encontrar formas
-de codificar, computacionalmente, a informa\c{c}\~ao presente na fala. A fala
-humana, como constitui um ve\'iculo de informa\c{c}\~ao, pode ser vista a partir
-de uma perspectiva da Teoria Matem\'atica da Comunica\c{c}\~ao (Shannon,
-1948){[}11{]}, sendo considerada um sinal ac\'ustico. Tecnicamente, sinais
-s\~ao sequencias de estados em um sistema de comunica\c{c}\~ao que codificam uma
-mensagem.
-
-Sinais constituem o objeto central de estudo da \'area de Processamento de
-Sinal, que busca investigar formas de analisar ou modificar os sinais,
-no intuito de deles extrair informa\c{c}\~ao ou de adequ\'a-los a um determinado
-fim (Ingle e Proakis, 2011{[}12{]}). Embora a maior parte dos sinais que
-nos rodeia seja anal\'ogica, em muitas vezes, seu processamento \'e feito
-n\~ao de forma anal\'ogica, mas digital. De acordo com Ingle e Proakis
-(2011){[}13{]}, os sistemas de Processamento de Sinal Digital (DSP) s\~ao
-vantajosos, pois:
-
-n\~ao necessitam a aquisi\c{c}\~ao de equipamento espec\'ifico (que s\~ao, muitas
-das vezes, caros), podendo ser desenvolvidos em computadores pessoais;
-
-baseiam-se apenas em opera\c{c}\~oes num\'ericas de adi\c{c}\~ao e multiplica\c{c}\~ao, o
-que lhes d\'a estabilidade, n\~ao sendo necess\'ario calibragem ou
-padroniza\c{c}\~ao, como \'e comum nos sistemas anal\'ogicos;
-
-s\~ao altamente adapt\'aveis, de modo que suas opera\c{c}\~oes podem ser
-modificadas em tempo real, usualmente, atrav\'es de t\'ecnicas de
-programa\c{c}\~ao simples.
-
-Um esquema de um sistema de processamento de sinal digital \'e apresentado
-na Figura 8.
-
-                                [pic]
-
-Figura 8: Esquema de um sistema de processamento de sinal digital (Ingle
-e Proakis, 2011).
-
-Embora a maior parte dos sinais do mundo seja anal\'ogica - entre os quais
-a fala, seu processamento, muitas vezes, d\'a-se gere sinais anal\'ogicos,
-
-Embora a maior parte dos sinais com que
-
-O processamento de sinais pode ser feito de forma anal\'ogica ou digital.
-
-A \'area do conhecimento respons\'avel por tal busca \'e o Processamento de
-Sinal.
-
-A \'area respons\'avel por esse
-
-Do ponto de vista da Teoria da Informa\c{c}\~ao, sinais s\~ao sequencias de
-estados em um sistema de comunica\c{c}\~ao que codificam uma mensagem.
-
-(Ingle e Proakis, 2010)
 
 17 Tipos de Reconhecedores de Fala
 
@@ -1710,120 +1707,51 @@ exemplo, tal modelo mapeia a sequ\^encia de fones {[}fal?{]} na palavra
 ``falo''. O modelo de l\'ingua, por sua vez, estima as ordena\c{c}\~oes de
 palavras mais prov\'aveis na l\'ingua.
 
-\subsection{A Brief History}
+\subsection{Hidden Markov Models in Speech Recognition}
 
-Although the task of recognizing words from speech might seem apparently simple beforehand,
-(after all humans start doing it with as little as four months! (XXXX INSERT CITATION)),
-the issue is actually very complex one. Over the years, many methods have been 
-proposed to attempt to solve the problem of speech recognition. However until now no solution has been found and machines are still
-a very long way from performing like humans. \autoref{tab:comparison-human-mach} presents a comparison between the performance
-of humans and machines in some recognition tasks.
-
-\begin{table}[!ht]
-  \caption[Word error rate comparisons between human and machines on similar tasks \citep{Huang2001}.]{Word error rate comparisons between human and machines on similar tasks \citep{Huang2001}.}
-  \smallskip
-  \centering
-  \begin{tabular}{lcrr} \toprule
-      \textbf{Tasks} & \textbf{Voc. size} & \textbf{Humans} & \textbf{Machines} \\ \midrule
-      \small Connected digits & 10 & 0.009\% & 0.720\% \\
-      \small Alphabet letters & 26 & 1\% & 5\% \\
-      \small Spontaneous telephone \\ speech & 2,000 & 3.8\% & 36.7\% \\
-      \small WSJ with clean \\ \small speech & 5,000 & 0.9\% & 4.5\% \\
-      \small WSJ with noisy \\ \small speech (10-db SNR) & 5,000 & 1.1\% & 8.6\% \\
-      \small Clean speech based \\ \small on trigram sentences & 20,000 & 7.6\% & 4.4\% \\
-    \bottomrule
-  \end{tabular}
-  \label{tab:comparison-human-mach}
-\end{table}
-
-As one may observe, humans outperform machines in almost every task, specially the more complex ones. 
-Humans' are indeed the topline for the speech recognition task, the uttermost dream of each speech 
-scientist alive is to build a system capable of performing similarly to humans. Although this dream is somewhat near
-for rather simple tasks like connected digits, for other contexts a long path yet lies ahead. 
-
-Recognizing spontaneous speech is still a huge barrier for machines, as can be seen from the huge difference
-in the spontaneous telephone corpus: whereas humans had a WER of $3.8\%$, for machines this rate is up to $36.7\%$.
-Such result is mainly due to linguistic variability. Language varies not only among speakers (the so-called 
-inter-speaker variability), but also within the same speaker (intra-speaker) \citep{Benzeghiba2007}. 
-
-Considering inter-speaker differences, factors such as gender, age, social, and regional 
-origin, health and emotional state might have a huge impact on the speech signal \citep{Benzeghiba2007}.
-Sociolinguistics has long known that gender affects language usage, in fact, men and women tend to use different language constructions.
-In her seminal paper in the field, \citet{Lakoff1973} \citep{Lakoff1973} found that, in women's speech, strong expressions 
-of feeling are avoided, uncertainty is favored, and means of expression in regard to subject-matter deemed ``trivial'' to the 
-``real'' world are elaborated. 
-
-Put aside social aspects, men, women and children's speech are also contrasting because of morphological differences
-in their vocal tract. Sex and development influence body size, and there is a strong correlation between vocal tract length and body size 
-(either height or weight); in addition to this, the relative proportions of men and women's oral and pharyngeal cavity are unlike 
-\cite{Fitch1999}. \autoref{fig:vocal-tract-morphology-sex} presents a comparison between height and
-vocal tract length for men, women and children. \autoref{fig:vocal-tract-morphology} presents a model of the vocal tract morphology considering
-age.
-
-\begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/vocal-tract-size-sex.png}}
-        \caption{Height (cm) versus vocal tract length (mm) \cite{Fitch1999}.}
-        \label{fig:vocal-tract-morphology-sex}
-\end{figure}
-
-\begin{figure}[H]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/vocal-tract-size-gender.png}}
-        \caption{Averaged vocal tract morphology \cite{Fitch1999}.}
-        \label{fig:vocal-tract-morphology}
-\end{figure}
-
-As one can observe, men's vocal tract are longer than women's, followed and obviously children. These morphology differences 
-affect the speech signal thorougly, specially in what concerns to the \ac{F0}. \ac{F0} can be defined as the 
-lowest frequency in the signal counting from zero. \autoref{fig:f0-age-sex} compares the \ac{F0} values
-between male and females considering aging.
-
-\begin{figure}[!ht]
-        \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/f0-age-sex.png}}
-        \caption{F0 and pitch sigma versus age for males and females \cite{Brown1991}.}
-        \label{fig:f0-age-sex}
-\end{figure}
-
-One can notice from \autoref{fig:f0-age-sex}, that no difference is found between male and female voice at a very young age. 
-In fact, boys and girls have roughly the same \ac{F0} values. However, when they reach puberty, differences begin to appear. 
-This period is commonly called the voice mutation or voice change, when the \ac{F0} for male voice has huge drop, while 
-for female voice the drop is quite small. In terms of perception, this is period when the male voice lowers and geets deeper.
-
-XXXXXXXXXXXXXXXXXXX EXTEND INTER-SPEAKER VARIABILITY
-XXXXXXXXXXXXXXXXXXX DESCRIBE INTRA-SPEAKER VARIABILITY
-
-But let's get back to \autoref{tab:comparison-human-mach}. It is interesting to notice that humans
-performed better in all speech recognition tasks, but one: ``Clean speech based on trigram sentences''.
-This one task consists of recognizing sentences which were randomly generated using the WSJ trigram language model. 
-Therefore, humans had no advantage over machines in what concerns to syntactic or semantic knowledge. 
-This result highlights one of the most important feature of human hearing, that is, we make a large use of syntactic, 
-semantic and also pragmatic information in order to understand speech. While hearing do not take into account simply 
-the acoustic signal, but the whole context. 
-
-Language is a social tool, which aims at successfull interaction. When someone steps into a snack bar and orders 
-an [\textipa{aIs"krim}], the vendor has no doubt that this sequence of phones refers to ``ice cream'' and not ``I scream'', 
-albeit they are pronounced exactly the same. Although such sequence of phones might be ambiguous in the phonetic level,
-it is not in higher linguistic levels, such as syntax (the verb ``order'' is usually followed by a noun), semantics 
-(the object of order has to be something purchasable) and pragmatics (one does not buy his own shout!).
-
-
-\subsection{HMM-based Speech Recognition} 
 \ac{HMM} is the most widespread and successfull paradigm in \ac{ASR}. When \ac{HMM} were first applied
-to speech recognition in the late $70$'s, they were completely revoluationary.
+to speech recognition in the late 70's, they were completely revoluationary.
 Up until recently \ac{DNN} seem to be next prominent paradigm in \ac{ASR}.
 \ac{HMM} have been applied
-to \ac{ASR} since the late $70$'s, and they have gathered the best results until recently.
+to \ac{ASR} since the late 70's, and they have gathered the best results until recently.
 
 A \ac{HMM} is a statistical Markov model in which the states are assumed to be hidden, i.e. they are
-not directly visible, only the state's outputs are observable. Each state has a probability distribution 
-over the possible output tokens, in such a way that output generated by the HMM states provides some information
-about the hidden sequence of states which was traversed.
+not directly visible, only the state's outputs are observable\cite{Fink2008}. Each state has a probability distribution over the possible output tokens, in such a way that output generated by the HMM states provides some information about the hidden sequence of states which was traversed.  The simplest form of Markov models are Markov chain models, 
+which represent a system with a set of spaces in which transitions from one state to another occur. 
+Within Markov processes, systems are assumed to be memoryless, that is, the conditional probability
+of future states is only dependent on the present state. To put it another way, Markov models assume that,
+given a certain system with states and transitions, the current state does not depend upon the 
+sequence of events that preceded it, the so-called Markov property. 
+
+\ac{HMM}s can be formally described as a 5-tuple $\lambda = \left (Q, O, \Pi, A, B\right )$, where $Q = \left \{q_1, q_2, q_3, ..., q_N\right \}$  is a set of $N$ states. $O = \left \{o_1, o_2, o_3, ..., o_T\right \}$ is a set of $T$ observations taken from time $t = 1$ to $t = T$. At each time $t$ it is assumed that the system will be at a specific state $q$, which is hidden, only the observations are directly visible. $\Pi = \left \{\pi_i \right \}$ is a vector with the initial state probabilities, such that
+\begin{equation}
+\pi_i = Pr(q_i), t = 0
+\end{equation}
+$A = [a_{ij}]$ is matrix with the state transition probabilities so that
+\begin{equation}
+a_{ij} = P(q_t = j | q_{t-1} = i),  1 \leq, i, j \leq N
+\end{equation}
+and $B = [b_{jt}]$ is a matrix with the emission probability of each state. Assuming a \ac{GMM} to model the state emission probabilities -- the so-called GMM/HMM model; we can define that, for a state $j$, the probability $b_j(o_t)$ of generating $o_t$ is given by
+\begin{equation}
+ b_j(o_t) = \prod_{s=1}^{S}\left [ \sum_{m=1}^{M_{js}} c_{jsm}\mathcal{N}(o_{st}; \mu_{jsm}, \Sigma_{jsm}) \right ]^{\gamma_s}
+\end{equation}
+where $\gamma s$ is a stream weight, with default value is one, $M_{js}$ is the number of mixture components in state $j$ for stream $s$, $c_{jsm}$ is the weight of the $m$\textsuperscript{th} component and $\mathcal{N}(\cdot; \mu_{jsm}, \Sigma_{jsm})$ is a multivariate Gaussian with mean vector $\mu$ and covariance matrix $\Sigma$, that is
+\begin{equation}
+ \mathcal{N}(o; \mu, \Sigma) = (\sqrt{(2\pi)^{n}\left |\Sigma\right |})^{-e^{-\frac{1}{2}(o-\mu)^{T}\Sigma^{-1}(o-\mu)}}
+\end{equation}
+where $n$ is the dimensionality of $o$.
+
+The following constraints apply:
+\begin{equation}
+a_{ij} \geq 0
+\end{equation}
+that is, the probability of moving from state from any state $i$ to $j$ is not null, and
+\begin{equation}
+\sum_{j=1}^{N} a_{ij} \geq 1, \forall i
+\end{equation}
 
 \subsection{Feature Extraction}
 
-\paragraph{Preambulus}
 Feature extraction is an importart part of speech recognition systems. The feacture extraction 
 phase is responsible for identifying or enhancing the components of the signal that are relevant 
 for recognizing speech sounds, while discarding or diminishing the effect of unuseful information, 
@@ -1839,17 +1767,15 @@ remains basically the same as the carbon microphone invented by David Hughes two
 A microphone is simply an acoustic-to-electric sensor, which converts variations in air pressure (that is, sound)
 into an electrical signal. Microphones have a very thin membrane, called diaphragm, which vibrates when struck by 
 sound waves.  When the diaphragm vibrates, it puts to move a sensitive capsule attached to it, 
-that converts its movement into electrical pulses. Most of the current microphones are dynamic, which means 
-that their capsule consist of  .... (XXX VER WIIPEDIA)
+that converts its movement into electrical pulses. Most of the current microphones are based on electromagnetic induction (a.k.a dynamic microphones).
 
 After capturing speech through a microphone, one usually wants to store it for later access. In order
 to store speech digitally on a computer, a coding scheme is mandatory. In the literature, many coding schemes have
 been proposed, such as linear PCM, $\mu$-law, A-law PCM, APCM, DPCM, DM, and ADPCM \cite{Huang2001}. The details of 
 each type of speech coder is beyond the scope of this dissertation, the reader can 
 find an description of each scheme in \citet{Huang2001} \citep{Huang2001} or \citet{Furui2001} \citep{Furui2001}. 
-Following we will give a brief discussion of linear PCM, which is the standard way of storing audios in digital format. 
 
-\ac{PCM} is a type of analog-to-digital conversion, which constitutes the basis of the WAV digital audio format, together
+For our purposes, Linear PCM is the only relevant one, since it is the standard way of storing audios in digital format. \ac{PCM} is a type of analog-to-digital conversion, which constitutes the basis of the WAV digital audio format, together
 with other lossless formats such as AIF and AU.
 \footnote{Other types of popular audio files which use lossy data compression, such as MP3, WMA, OGG or AAC (a format common to 
 DivX videos) do not use PCM. Instead}. 
@@ -1857,8 +1783,7 @@ PCM coding is based on two properties: (i) a sampling rate of the audio and a (i
 number of audio samples that are taken per second from the signal, in turn the bit depth is the number of bits 
 of information in each audio sample. Both values must be constant and should be defined prior to recording (actually coding) an audio. 
 The sampling and the bit depth are closely related to the audio quality, that is, the higher the sampling and the depth
-the better the fidelity of the digital audio to the analog speech signal. Picture XXX presents an example of a linear PCM 
-representation, at different sampling rates and bit depths, of an audio containing the utterance ``Speech recognition''.
+the better the fidelity of the digital audio to the analog speech signal.
 
 Linear PCM assumes that the discrete signal $x[n]$ is bounded, that is,
 \begin{equation}
@@ -1897,14 +1822,14 @@ the signal waveform becomes unsuitable for human analysis and consequently for b
 
 \begin{figure}[!ht]
         \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/in-phase-waves.png}}
+        {\includegraphics[width=.66\linewidth]{./gfx/in-phase-waves.png}}
         \caption{Example of in-phase waves.}
         \label{fig:in-phase-waves}
 \end{figure}
 
 \begin{figure}[!ht]
         \myfloatalign
-        {\includegraphics[width=.66\linewidth]{gfx/out-of-phase-waves.png}}
+        {\includegraphics[width=.66\linewidth]{./gfx/out-of-phase-waves.png}}
         \caption{Example of out-of-phase waves.}
         \label{fig:out-of-phase-waves}
 \end{figure}
@@ -1963,20 +1888,6 @@ the buzz that a computer cooler makes, car horns on the street and so on are all
 can be regarded as noise. Consider, for instance, that you are trying to recognize John's speech in an application, 
 however Mary is close to him talking on the phone, to the extent that traces of her voice are added to the signal. In this
 scenario, Mary's voice is actually noisy data, since it is undesirable for the given purpose. 
-
-\subsection{Types of Speech Recognition Systems} 
-Errem omnium ea per, pro \ac{UML} congue populo ornatus cu, ex qui
-dicant nemore melius. No pri diam iriure euismod. Graecis eleifend
-appellantur quo id. Id corpora inimicus nam, facer nonummy ne pro,
-kasd repudiandae ei mei. Mea menandri mediocrem dissentiet cu, ex
-nominati imperdiet nec, sea odio duis vocent ei. Tempor everti
-appareat cu ius, ridens audiam an qui, aliquid admodum conceptam ne
-qui. Vis ea melius nostrum, mel alienum euripidis eu.
-
-\subsection{The Architecture of a Large Vocabulary Continuous Speech Recognition System} 
-Non vices medical da. Se qui peano distinguer demonstrate, personas
-internet in nos. Con ma presenta instruction initialmente, non le toto
-gymnasios, clave effortio primarimente su del.
 
 
 %*****************************************
