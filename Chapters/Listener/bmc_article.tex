@@ -55,6 +55,7 @@
 \usepackage[utf8]{inputenc} %unicode support
 \usepackage{array}
 \usepackage{tipa}
+\usepackage{fixltx2e}
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 
@@ -306,6 +307,58 @@ W*= \arg\max_{W}P(O|W)P(W)
 
 $P(O|W)$ is the conditional probability of an observable acoustic feature vector given a word sequence, is calculated by an acoustic model. In turn, $P(W)$, the \emph{a priori} probability of words is reckoned by a language model or through context free grammars.
 
+%*****************************************
+\section*{Materials and Methods}
+%*****************************************
+
+\subsection*{\textbf{Architecture of Listener}}
+
+For speech recognition -- or, in fact, any supervised  machine learning task -- the best
+scenario for training a model is when you have a huge amount of data which is large and
+diverse enough so that it fully represents population. However, this is usually not the case. 
+There is not much data available for training acoustic models for many languages.
+
+To build a speech corpora, one must first carry out an analysis of the phones in a language, in order to examine how sounds are distributed and which phonological phenomena might be involved. Then define a corpus to be read by subject which is representative of the. Contact the subjects and coordinate the recordings, making sure that the corpora will be sociolinguistcally representative in terms of sex, age, dialect and social strata, etc. Postprocess the audio files, by splitting, organizing, checking the audio quality.
+
+As one might notice, compiling speech corpora is something that is not only complex, but also quite time consuming -- and therefore costly. Obviously, the scenario is even worse for non-native speech recognition.
+Due to this data scarcity, one can find in the literature for \emph{CAPT} several approaches which make use of data from acoustic models with data from different sources.
+
+We can group these models into four types:
+
+
+Acoustic models for pronunciation training can be divided into three groups,
+according to the source of the data. 
+
+
+\subsection*{\textbf{Pronunciation Model}}
+
+Pronunciation models are lexica with words and their corresponding phonetic transcriptions, according to a given convention. In other words, pronunciation models have the role of linking phones from the acoustic model to words defined in the language model. For speech recognition purposes, phonetic gammabets like ARPAbet or SAMPA are often employed to avoid problems with data formatting or encoding. In ARPAbet, phones are converted into sequences of ASCII characters, in such a way that a word like ``speech'' [\textipa{'spi:tS}] becomes a [S P IY1 CH] \cite{CMUDict2015}.
+
+For non-native speech recognition, multipronunciation dictionaries are often employed in order to address phenomena of negative-transference from the L1 to L2. These dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}.
+
+
+\renewcommand{\arraystretch}{1.2}% Tighter
+\begin{table}[!ht]
+\caption[Mispronunciation types.]{Mispronunciation types selected for the prototype system with examples of the expected pronunciation and the one with negative transfer from L1 to L2.}
+\setlength\tabcolsep{1.8pt}
+\small
+\begin{tabular}{lllll}
+\hline
+\textbf{\#} & \textbf{Description} & \textbf{Example} & \textbf{Expect.} & \textbf{Mispron.} \\  \hline
+1 & Initial epenthesis & school & [\textipa{sku:l}] & [\textipa{isku:l}] \\
+2 & Coda epenthesis & dog & [\textipa{dA:g}] & [\textipa{dA:gi}] \\
+3 & Terminal devoicing & does & [\textipa{d2z}] & [\textipa{d2s}] \\
+4 & Consonantal change & think & [\textipa{TINk}] & [\textipa{fINk}] \\
+5 & Deaspiration in plosives & tea & [\textipa{t\super hi:}] & [\textipa{ti:}] \\
+6 & Vocalization of laterals & well & [\textipa{wEl}] & [\textipa{wew}] \\
+7 & Vocalization of nasals & beam & [\textipa{bi:m}] & [\textipa{b\~i}] \\
+8 & Vowel change & put & [\textipa{p\super hUt}] & [\textipa{p\super h2t}] \\
+9 & Velar paragoge & wing & [\textipa{wIN}] & [\textipa{wINg}] \\ \hline
+\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1.0}
+
+
 \subsection*{\textbf{Acoustic Model}}
 
 Acoustic Models (AM) are used within speech recognition to map the acoustic parameters of into phonemes.  AMs are estimated through supervised training over a transcribed speech corpus -- often with the Forward-Backward algorithm by modeling phones via Hidden Markov Models (HMM) \cite{Rabiner1989}. Markov models are very suitable for the statistical description of symbol and state sequences \cite{Fink2014}. Within Markov processes, systems are assumed to be memoryless, that is, the conditional probability of future states is only dependent on the present state. To put it another way, the current state does not depend upon the 
@@ -336,117 +389,31 @@ that is, the probability of moving from state from any state $i$ to $j$ is not n
 \sum_{j=1}^{N} a_{ij} = 1, \forall i
 \end{equation}
 
+For building Listener, HMM/GMM were applied to represent triphones. A triphone is a contextual phone, i.e. it is a phonetic unit of analysis which, for a given phone $p$, takes into account the previous phone $p-1$ and following one $p+1$. For instance, in a word like ``speech'' [s p iy ch], the phone [iy] would correspond to the triphone [\textsubscript{p}iy\textsubscript{ch}], indicating that [iy] occurs after a [p] and before a [ch]. The full of transcription of ``speech'' in triphones would be [\textsubscript{\#}s\textsubscript{p} \textsubscript{s}p\textsubscript{iy} \textsubscript{p}iy\textsubscript{ch} \textsubscript{iy}ch\textsubscript{\#}], it still has the same four phone, the only difference is that its phones are defined in context.
+
+For estimating the values and probabilities of the HMM/GMM the CMU Sphinx Toolkit was used \cite{CMU2016}. 
+Particularly, the acoustic model was trained over several different corpora, which contained, in total, ~40 hours of audio from native speakers of English or Brazilian Portuguese, as well as non-native data in Brazilian-accented English. The acoustic model was estimated considering a phonetic inventory of XX phones, containing 4,000 tied states and 16 gaussian densities per state. The last two values were defined based on a pilot experiment over a sample from the available corpora.
+
+
 \subsection*{\textbf{Context Free Grammars}}
 
-Context Free grammarsPronunciation models have the role of linking phones from the AM to words in the LM. To sum up, pronunciation models are basically lexica with words and their corresponding phonetic transcriptions, according to a given transription.
+Context Free Grammars are formal grammars in which every rule takes the form:
 
-\subsection*{\textbf{Pronunciation Model}}
+\begin{equation}
+A \rightarrow \gamma
+\end{equation}
+where $A$ is a nonterminal and $\gamma$ corresponds to a single or sequence of nonterminal or terminal symbol \cite{Jurafsky2000}. In speech recognition, Context Free Grammars were the first attempt to broaden speech recognition to a context larger than digits, letters and menu commands; but they were rapidly replaced by statistical Language Models, as the latter scale better and require much less manual work \cite{Gales2008}. However, CFGs are still used when the user input is part of a limited set and the accuracy is more relevant than coverage. For instance, a CFG for defining a simple grammar for calling or contacting a friend can be represented as follows:
 
-Pronunciation models have the role of linking phones from the AM to words in the LM. To sum up, pronunciation models are basically lexica with words and their corresponding phonetic transcriptions, according to a given transription.
-
-Multipronunciation dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}.
-
-%*****************************************
-\section*{Brazilian-Accented English}
-%*****************************************
-
-\renewcommand{\arraystretch}{1.2}% Tighter
 \begin{table}[!ht]
-\caption[Mispronunciation types.]{Mispronunciation types selected for the prototype system with examples of the expected pronunciation and the one with negative transfer from L1 to L2.}
-\setlength\tabcolsep{1.8pt}
-\small
-\begin{tabular}{ccccc}
-\hline
-\textbf{\#} & \textbf{Description} & \textbf{Example} & \textbf{Expect.} & \textbf{Mispron.} \\  \hline
-1 & Initial epenthesis & school & [\textipa{sku:l}] & [\textipa{isku:l}] \\
-2 & Coda epenthesis & dog & [\textipa{dA:g}] & [\textipa{dA:gi}] \\
-3 & Terminal devoicing & does & [\textipa{d2z}] & [\textipa{d2s}] \\
-4 & Consonantal change & think & [\textipa{TINk}] & [\textipa{fINk}] \\
-5 & Deaspiration in plosives & tea & [\textipa{t\super hi:}] & [\textipa{ti:}] \\
-6 & Vocalization of laterals & well & [\textipa{wEl}] & [\textipa{wew}] \\
-7 & Vocalization of nasals & beam & [\textipa{bi:m}] & [\textipa{b\~i}] \\
-8 & Vowel change & put & [\textipa{p\super hUt}] & [\textipa{p\super h2t}] \\
-9 & Velar paragoge & wing & [\textipa{wIN}] & [\textipa{wINg}] \\ \hline
+\begin{tabular}{|lll|} \hline
+GRAMMAR & $\rightarrow$ & COMMAND; \\
+COMMAND & $\rightarrow$ & (PLEASE) ACTION NAME (PLEASE); \\
+ACTION & $\rightarrow$ & ``call'', ``phone'', ``send (an) email to''; \\
+NAME & $\rightarrow$ & ``Mary'', ``John'', ``Dave'', ``Steve''; \\ 
+PLEASE & $\rightarrow$ & ``please'' \\ \hline
 \end{tabular}
 \end{table}
-\renewcommand{\arraystretch}{1.0}
 
-
-
-
-
-
-%*****************************************
-\section{Materials and Methods}
-%*****************************************
-
-\subsection{Architecture of Listener}
-
-For speech recognition -- or, in fact, any supervised  machine learning task -- the best
-scenario for training a model is when you have a huge amount of data which is large and
-diverse enough so that it fully represents population. However, this is usually not the case. 
-There is not much data available for training acoustic models for many languages.
-
-To build a speech corpora, one must first carry out an analysis of the phones in a language, in order to examine how sounds are distributed and which phonological phenomena might be involved. Then define a corpus to be read by subject which is representative of the. Contact the subjects and coordinate the recordings, making sure that the corpora will be sociolinguistcally representative in terms of sex, age, dialect and social strata, etc. Postprocess the audio files, by splitting, organizing, checking the audio quality.
-
-As one might notice, compiling speech corpora is something that is not only complex, but also quite time consuming -- and therefore costly. Obviously, the scenario is even worse for non-native speech recognition.
-Due to this data scarcity, one can find in the literature for \emph{CAPT} several approaches which make use of data from acoustic models with data from different sources.
-
-We can group these models into four types:
-
-
-Acoustic models for pronunciation training can be divided into three groups,
-according to the source of the data. 
-
-\section*{Materials and Methods}
-\subsection*{\textbf{Multipronunciation Dictionary}}
-
-Multipronunciation dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}.
-
-
-\section*{Content}
-Text and results for this section, as per the individual journal's instructions for authors. %\cite{koon,oreg,khar,zvai,xjon,schn,pond,smith,marg,hunn,advi,koha,mouse}
-
-\section*{Section title}
-Text for this section \ldots
-\subsection*{Sub-heading for section}
-Text for this sub-heading \ldots
-\subsubsection*{Sub-sub heading for section}
-Text for this sub-sub-heading \ldots
-\paragraph*{Sub-sub-sub heading for section}
-Text for this sub-sub-sub-heading \ldots
-In this section we examine the growth rate of the mean of $Z_0$, $Z_1$ and $Z_2$. In
-addition, we examine a common modeling assumption and note the
-importance of considering the tails of the extinction time $T_x$ in
-studies of escape dynamics.
-We will first consider the expected resistant population at $vT_x$ for
-some $v>0$, (and temporarily assume $\alpha=0$)
-%
-\[
- E \bigl[Z_1(vT_x) \bigr]= E
-\biggl[\mu T_x\int_0^{v\wedge
-1}Z_0(uT_x)
-\exp \bigl(\lambda_1T_x(v-u) \bigr)\,du \biggr].
-\]
-%
-If we assume that sensitive cells follow a deterministic decay
-$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
-$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
-estimate the expected value as
-%
-\begin{eqnarray}\label{eqexpmuts}
-E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
-\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du
-\nonumber\\
-&=& \frac{\mu}{r}x^{1-{\lambda_1}/{\lambda_0}v}\log x\int_0^{v\wedge
-1}x^{-u(1+{\lambda_1}/{r})}\,du
-\nonumber\\
-&=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
-\frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
-\end{eqnarray}
-%
-Thus we observe that this expected value is finite for all $v>0$ (also see \cite{koon,khar,zvai,xjon,marg}).
-%\nocite{oreg,schn,pond,smith,marg,hunn,advi,koha,mouse}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
