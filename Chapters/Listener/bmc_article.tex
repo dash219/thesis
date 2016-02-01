@@ -56,6 +56,7 @@
 \usepackage{array}
 \usepackage{tipa}
 \usepackage{fixltx2e}
+\usepackage{algorithm}
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 
@@ -122,11 +123,12 @@ Brazilian-accented English}
 \author[
    addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
    corref={aff1},                       % id of corresponding address, if any
-   noteref={n1},                        % id's of article notes, if any
+   %noteref={n1},                        % id's of article notes, if any
    email={gustavoauma@gmail.com}   % email address
 ]{\inits{GA}\fnm{Gustavo A} \snm{Mendon\c{c}a}}
 \author[
    addressref={aff1},
+   corref={aff1},
    email={sandram@icmc.usp.br}
 ]{\inits{SM}\fnm{Sandra M} \snm{Aluisio}}
 
@@ -158,7 +160,7 @@ Brazilian-accented English}
 
 \begin{artnotes}
 %\note{Sample of title note}     % note to the article
-\note[id=n1]{Equal contributor} % note, connected to author
+%\note[id=n1]{Equal contributor} % note, connected to author
 \end{artnotes}
 
 \end{fmbox}% comment this for two column layout
@@ -274,7 +276,7 @@ As one might notice,  the B1 level describe someones who is usually able to unde
 With respect of Business English proficiency, Brazil performance is even more concerning. On the 
 Business English Index (BEI) of 2013 \cite{BEI2013}, Brazil reached the 71\textsuperscript{st} position out of 77 countries analyzed. We attained a score of 3.27 points, in a scale from 1 to 10, being placed at the ``Beginner'' range, the lowest range considered by the index. We were close to countries such as El Salvador (3.24), Saudi Arabia (3.14) and Honduras (2.92) which up until recently had experienced civil wars or dictatorship governments. BEI describes individuals at the beginner level as those who ``can read and communicate using only simple questions and statements, but can't communicate and understand basic business information during phone calls''. Again, we can see that this is a very limited linguistic competence, that would not allow one not even to perform the most elementary day-to-day task in a company or industry work environment.
 
-Given this scenario, it is clear that we desperately need to improve English language proficiency among Brazilians. This project seeks to be an initial step towards this direction. We developed a prototype system for automatic speech recognition and evaluation of Brazilian-accented English, called \emph{Listener}, which is capable of recognizing utterances in Brazilian-accented English and identifying which are the mispronunciations. The system is based on an Automatic Speech Recognition system which makes use of forced alignment, \emph{HMM}/\emph{GMM} acoustic models, context free grammars and multipronunciation dictionaries.\footnote{All files, resources and scripts developed are available at the project website. Due to copyright reasons, the corpora used for training the acoustic models cannot be made available: http://nilc.icmc.usp.br/listener}
+Given this scenario, it is clear that we desperately need to improve English language proficiency among Brazilians. This project seeks to be an initial step towards this direction. We developed a prototype system for automatic speech recognition and evaluation of Brazilian-accented English, called \emph{Listener}, which is capable of recognizing utterances in Brazilian-accented English and identifying which are the mispronunciations. The system is based on an Automatic Speech Recognition system which makes use of forced alignment, \emph{HMM}/\emph{GMM} acoustic models, context free grammars and multipronunciation dictionaries\footnote{All files, resources and scripts developed are available at the project website. Due to copyright reasons, the corpora used for training the acoustic models cannot be made available: http://nilc.icmc.usp.br/listener}.
 
 %*****************************************
 \section*{Automatic Speech Recognition}\label{sec:speech-recognition}
@@ -332,14 +334,16 @@ according to the source of the data.
 
 \subsection*{\textbf{Pronunciation Model}}
 
-Pronunciation models are lexica with words and their corresponding phonetic transcriptions, according to a given convention. In other words, pronunciation models have the role of linking phones from the acoustic model to words defined in the language model. For speech recognition purposes, phonetic gammabets like ARPAbet or SAMPA are often employed to avoid problems with data formatting or encoding. In ARPAbet, phones are converted into sequences of ASCII characters, in such a way that a word like ``speech'' [\textipa{'spi:tS}] becomes a [S P IY1 CH] \cite{CMUDict2015}.
+Pronunciation models are lexica with words and their corresponding phonetic transcriptions, according to a given convention. In other words, pronunciation models have the role of linking phones from the acoustic model to words defined in the language model. For speech recognition purposes, phonetic gammabets like ARPAbet or SAMPA are often employed to avoid problems with data formatting or encoding. In ARPAbet, phones are converted into sequences of ASCII characters, in such a way that a word like ``speech'' [\textipa{'spi:tS}] becomes [s p iy1 ch] \cite{CMUDict2008}.
 
-For non-native speech recognition, multipronunciation dictionaries are often employed in order to address phenomena of negative-transference from the L1 to L2. These dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}.
+For non-native speech recognition, multipronunciation dictionaries are often employed in order to address phenomena of negative-transference from the L1 to L2. These dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}. For building the pronunciation model for Listener, the literature on pronunciation training was analyzed and transformation rules were defined based on the most common mispronunciations among Brazilians. The pronunciation model was inspired by several works for pronunciation training, focused on Brazilian-accented English \citep{Zimmer2004, Zimmer2009, Cristofaro2015}.
 
+
+, which describes several common pronunciation errors that native speakers of Brazilian Portuguese usually make while learning English as an additional language (see Table ~\ref{tab-mispronunciations}).
 
 \renewcommand{\arraystretch}{1.2}% Tighter
 \begin{table}[!ht]
-\caption[Mispronunciation types.]{Mispronunciation types selected for the prototype system with examples of the expected pronunciation and the one with negative transfer from L1 to L2.}
+\caption[Mispronunciation types.]{Mispronunciation types selected for the prototype system with examples of the expected pronunciation and the one with negative transfer from L1 to L2.}\label{tab-mispronunciations}
 \setlength\tabcolsep{1.8pt}
 \small
 \begin{tabular}{lllll}
@@ -358,6 +362,54 @@ For non-native speech recognition, multipronunciation dictionaries are often emp
 \end{table}
 \renewcommand{\arraystretch}{1.0}
 
+All linguistic contexts described by Zimmer \cite{Zimmer2004} were converted into transcription rules in order to generate the variants for the pronunciation dictionary. The full list of rules can be found in the project's website. A sample of these rules can be found in Figure ~\ref{pseudocode-rules}. These transcription rules are then applied to a base dictionary in order to append it with new pronunciation variants.
+
+\begin{figure}[!ht]
+  \caption{\csentence{Building the pronunciation model.}
+      Pseudocode with the rules for generating pronunciation variants (sample).}
+      \label{pseudocode-rules}
+\small
+\begin{tabular}{l} \hline
+\small
+\\ 
+\textbf{\# Initial epenthesis} \\
+if [s p] in initial position $\rightarrow$ [iy s p] \# sport \\
+if [s t] in initial position $\rightarrow$ [iy s t] \# start \\
+if [s k] in initial position $\rightarrow$ [iy s k] \# skate \\
+if [s m] in initial position $\rightarrow$ [iy s m] \# small \\
+if [s n] in initial position $\rightarrow$ [iy s n] \# snake \\
+ ...  \\
+\textbf{\# Coda epenthesis} \\
+if [p] in final position $\rightarrow$ [p ih] \# stop \\
+if [b] in final position $\rightarrow$ [b ih] \# bob \\
+if [t] in final position $\rightarrow$ [t ih] \# boat \\
+if [d] in final position $\rightarrow$ [d ih] \# and \\ 
+if [k] in final position $\rightarrow$ [k ih] \# book \\
+if [g] in final position $\rightarrow$ [g ih] \# dog \\
+ ...  \\
+if [m] and ortho ends in $<$me$>$ $\rightarrow$ [m ih] \# time \\
+if [s] and ortho ends in $<$ce$>$ $\rightarrow$ [s ih] \# nice \\
+ ...  \\
+\textbf{\# Consonantal change} \\
+if [th] $\rightarrow$ [f] \# think \\
+if [th] $\rightarrow$ [s] \# think \\
+if [th] $\rightarrow$ [t] \# think \\
+... \\
+if [t iy] $\rightarrow$ [ch iy] \# teen \\
+if [t ih] $\rightarrow$ [ch iy] \# poetic \\
+ ... \\
+\textbf{\# Vocalization of nasal consonants} \\
+if [iy m] in final position $\rightarrow$ [im] \# him \\
+if [ae n] in final position $\rightarrow$ [em] \# can \\
+... \\
+\end{tabular}
+\end{figure}
+
+It is worth noticing that, in terms of context, there is often overlapping among rules. For instance, in a word like ``think'' [th ih ng k], there is a rule for converting [th] into [f], another one for converting it into [s], or [t], etc. There are even rules which create context for other ones to apply, for instance, in ``boat'' [b ow t], if epenthesis takes place, generating [b ow t ih], then [t] could undergo consonantal change/palatalization, thus producing [b ow ch ih].
+
+To make sure that all pronunciation variants are generated, the rules are run inside a while loop, which iterates over each word in the base dictionary generating and adding these new pronunciation to the dictionary; and the loop only stops when there are no new variants.
+
+For the pilot system of Listener, we used as a base dictionary the CMUdict \cite{CMUDict2008}, which contains over 134,000 entries and their pronunciations in American English. However, in the test sets for Listener there are just 1,841 unique words, so only these were considered in this experiment. These transcription rules were run over these 1,841 unique words and 8,457 new pronunciation variants were generated (=10,298 entries in the final dictionary). In such a way, the average pronunciation per word is 5.6. 
 
 \subsection*{\textbf{Acoustic Model}}
 
@@ -389,9 +441,9 @@ that is, the probability of moving from state from any state $i$ to $j$ is not n
 \sum_{j=1}^{N} a_{ij} = 1, \forall i
 \end{equation}
 
-For building Listener, HMM/GMM were applied to represent triphones. A triphone is a contextual phone, i.e. it is a phonetic unit of analysis which, for a given phone $p$, takes into account the previous phone $p-1$ and following one $p+1$. For instance, in a word like ``speech'' [s p iy ch], the phone [iy] would correspond to the triphone [\textsubscript{p}iy\textsubscript{ch}], indicating that [iy] occurs after a [p] and before a [ch]. The full of transcription of ``speech'' in triphones would be [\textsubscript{\#}s\textsubscript{p} \textsubscript{s}p\textsubscript{iy} \textsubscript{p}iy\textsubscript{ch} \textsubscript{iy}ch\textsubscript{\#}], it still has the same four phone, the only difference is that its phones are defined in context.
+For building Listener, HMM/GMM were applied to represent triphones. A triphone is a contextual phone, i.e. it is a phonetic unit of analysis which, for a given phone $p$, takes into account the previous phone $p-1$ and following one $p+1$. For instance, in a word like ``speech'' [s p iy ch], the phone [iy] would correspond to the triphone [\textsubscript{p}iy\textsubscript{ch}], indicating that [iy] occurs after a [p] and before a [ch]. The full of transcription of ``speech'' in triphones would be [\textsubscript{\#}s\textsubscript{p} \textsubscript{s}p\textsubscript{iy} \textsubscript{p}iy\textsubscript{ch} \textsubscript{iy}ch\textsubscript{\#}], it still has the same number of phone, the only difference is that the phones are now defined context.
 
-For estimating the values and probabilities of the HMM/GMM the CMU Sphinx Toolkit was used \cite{CMU2016}. 
+For estimating the values and probabilities of the HMM/GMM the CMU Sphinx Toolkit was used \cite{Walker2004}. 
 Particularly, the acoustic model was trained over several different corpora, which contained, in total, ~40 hours of audio from native speakers of English or Brazilian Portuguese, as well as non-native data in Brazilian-accented English. The acoustic model was estimated considering a phonetic inventory of XX phones, containing 4,000 tied states and 16 gaussian densities per state. The last two values were defined based on a pilot experiment over a sample from the available corpora.
 
 
@@ -414,6 +466,13 @@ PLEASE & $\rightarrow$ & ``please'' \\ \hline
 \end{tabular}
 \end{table}
 
+
+%*****************************************
+\section*{Results and Discussion}
+%*****************************************
+
+For speech recognition -- or, in fact, any supervised  machine learning task -- the best
+scenario for training a model is w
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
