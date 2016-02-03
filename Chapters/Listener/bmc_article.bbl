@@ -1,0 +1,640 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{23}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{IMF2015}
+\begin{bbook}
+\bauthor{\bsnm{Fund}, \binits{I.M.}}:
+\bbtitle{World Economic Outlook.}
+\bpublisher{International Monetary Fund},
+\blocation{Washington, DC, USA}
+(\byear{2015})
+\end{bbook}
+\endbibitem
+
+%%% 2
+\bibitem{EF2015}
+\begin{bbook}
+\bauthor{\bsnm{EducationFirst}}:
+\bbtitle{EF English Proficiency Index 2015}.
+\bpublisher{Education First Ltd.},
+\blocation{Lucerne}
+(\byear{2015})
+\end{bbook}
+\endbibitem
+
+%%% 3
+\bibitem{BEI2013}
+\begin{bbook}
+\bauthor{\bsnm{GlobalEnglish}}:
+\bbtitle{The 2013 Business English Index \& Globalization of English Report},
+p. \bfpage{15}.
+\bpublisher{Pearson Always Learning},
+\blocation{Pearson}
+(\byear{2013})
+\end{bbook}
+\endbibitem
+
+%%% 4
+\bibitem{Huang2001}
+\begin{bbook}
+\bauthor{\bsnm{Huang}, \binits{X.}},
+\bauthor{\bsnm{Acero}, \binits{A.}},
+\bauthor{\bsnm{Hon}, \binits{H.-W.}}:
+\bbtitle{Spoken Language Processing: A Guide to Theory, Algorithm, and System
+  Development},
+\bedition{1st} edn.,
+p. \bfpage{980}.
+\bpublisher{Prentice Hall PTR},
+\blocation{Upper Saddle River, NJ, USA}
+(\byear{2001})
+\end{bbook}
+\endbibitem
+
+%%% 5
+\bibitem{Candeias2014}
+\begin{bchapter}
+\bauthor{\bsnm{Candeias}, \binits{S.}},
+\bauthor{\bsnm{Veiga}, \binits{A.}}:
+\bctitle{Chapter twelve the dialogue between man and machine -- the role of
+  language theory and technology}.
+In: \bbtitle{The Role Of Language Theory And Technology},
+pp. \bfpage{215}--\blpage{226}
+(\byear{2014}).
+\bcomment{New Language Technologies and Linguistic Research}
+\end{bchapter}
+\endbibitem
+
+%%% 6
+\bibitem{Gales2008}
+\begin{barticle}
+\bauthor{\bsnm{Gales}, \binits{M.}},
+\bauthor{\bsnm{Young}, \binits{S.}}:
+\batitle{The application of hidden markov models in speech recognition}.
+\bjtitle{Foundations and trends in signal processing}
+\bvolume{1}(\bissue{3}),
+\bfpage{195}--\blpage{304}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{CMUDict2008}
+\begin{botherref}
+\oauthor{\bsnm{Weide}, \binits{R.}}:
+The {CMU Pronouncing Dictionary 0.7a}.
+Carnegie Mellon University
+(2008).
+\url{http://www.speech.cs.cmu.edu/cgi-bin/cmudict}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem{Strik2001}
+\begin{bchapter}
+\bauthor{\bsnm{Strik}, \binits{H.}}:
+\bctitle{Pronunciation adaptation at the lexical level}.
+In: \bbtitle{ISCA Tutorial and Research Workshop (ITRW) on Adaptation Methods
+  for Speech Recognition}
+(\byear{2001})
+\end{bchapter}
+\endbibitem
+
+%%% 9
+\bibitem{Zimmer2004}
+\begin{bbook}
+\bauthor{\bsnm{Zimmer}, \binits{M.}}:
+\bbtitle{A Transfer\^{e}ncia do Conhecimento Fon\'{e}tico-Fonológico do
+  Portugu\^{e}s Brasileiro (L1) Para O Ingl\^{e}s (L2) na Recodifica\c{c}\~{a}o
+  Leitora: Uma Abordagem Conexionista. Disserta\c{c}\~{a}o de Doutorado}.
+\bpublisher{Pontifícia Universidade Católica do Rio Grande do Sul},
+\blocation{Porto Alegre}
+(\byear{2004})
+\end{bbook}
+\endbibitem
+
+%%% 10
+\bibitem{Zimmer2009}
+\begin{bbook}
+\bauthor{\bsnm{Zimmer}, \binits{M.}},
+\bauthor{\bsnm{Silveira}, \binits{R.}},
+\bauthor{\bsnm{Alves}, \binits{U.}}:
+\bbtitle{Pronunciation Instruction for Brazilians: Bringing Theory and Practice
+  Together}.
+\bpublisher{Cambridge Scholars},
+\blocation{Newcastle}
+(\byear{2009})
+\end{bbook}
+\endbibitem
+
+%%% 11
+\bibitem{Cristofaro2015}
+\begin{bbook}
+\bauthor{\bsnm{Silva}, \binits{T.C.}}:
+\bbtitle{Pron{\'u}ncia do Ingl{\^e}s Para Falantes do Portugu{\^e}s
+  brasileiro}.
+\bpublisher{Contexto}, \blocation{???}
+(\byear{2015})
+\end{bbook}
+\endbibitem
+
+%%% 12
+\bibitem{Rabiner1989}
+\begin{barticle}
+\bauthor{\bsnm{Rabiner}, \binits{L.R.}}:
+\batitle{A tutorial on hidden markov models and selected applications in speech
+  recognition}.
+\bjtitle{Proceedings of the IEEE}
+\bvolume{77}(\bissue{2}),
+\bfpage{257}--\blpage{286}
+(\byear{1989})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem{Fink2014}
+\begin{bbook}
+\bauthor{\bsnm{Fink}, \binits{G.A.}}:
+\bbtitle{Markov Models for Pattern Recognition: from Theory to Applications}.
+\bpublisher{Springer},
+\blocation{London}
+(\byear{2014})
+\end{bbook}
+\endbibitem
+
+%%% 14
+\bibitem{Juang2005}
+\begin{bbook}
+\bauthor{\bsnm{Juang}, \binits{B.}},
+\bauthor{\bsnm{Rabiner}, \binits{L.}}:
+In: \beditor{\bsnm{Brown}, \binits{K.}} (ed.)
+\bbtitle{Automatic Speech Recognition - A Brief History of the Technology},
+p. \bfpage{24}.
+\bpublisher{Elsevier},
+\blocation{Amsterdam}
+(\byear{2005})
+\end{bbook}
+\endbibitem
+
+%%% 15
+\bibitem{Walker2004}
+\begin{botherref}
+\oauthor{\bsnm{Walker}, \binits{W.}},
+\oauthor{\bsnm{Lamere}, \binits{P.}},
+\oauthor{\bsnm{Kwok}, \binits{P.}},
+\oauthor{\bsnm{Raj}, \binits{B.}},
+\oauthor{\bsnm{Singh}, \binits{R.}},
+\oauthor{\bsnm{Gouvea}, \binits{E.}},
+\oauthor{\bsnm{Wolf}, \binits{P.}},
+\oauthor{\bsnm{Woelfel}, \binits{J.}}:
+Sphinx-4: A flexible open source framework for speech recognition
+(2004)
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem{Garofolo1993}
+\begin{botherref}
+\oauthor{\bsnm{Garofolo}, \binits{J.S.}},
+\oauthor{\bsnm{Lamel}, \binits{L.F.}},
+\oauthor{\bsnm{Fisher}, \binits{W.M.}},
+\oauthor{\bsnm{Fiscus}, \binits{J.G.}},
+\oauthor{\bsnm{Pallett}, \binits{D.S.}}:
+Darpa timit acoustic-phonetic continous speech corpus cd-rom. nist speech disc
+  1-1.1.
+NASA STI/Recon Technical Report N
+\textbf{93}
+(1993)
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem{Garofolo2007}
+\begin{botherref}
+\oauthor{\bsnm{Garofolo}, \binits{J.}},
+\oauthor{\bsnm{Graff}, \binits{D.}},
+\oauthor{\bsnm{Paul}, \binits{D.}},
+\oauthor{\bsnm{Pallett}, \binits{D.}}:
+Csr-i (wsj0) complete.
+Linguistic Data Consortium, Philadelphia
+(2007)
+\end{botherref}
+\endbibitem
+
+%%% 18
+\bibitem{Morgan2008}
+\begin{botherref}
+\oauthor{\bsnm{Morgan}, \binits{J.}},
+\oauthor{\bsnm{Ackerlind}, \binits{S.}},
+\oauthor{\bsnm{Packer}, \binits{S.}}:
+West point brazilian portuguese speech.
+Linguistic Data Consortium, Philadelphia
+(2008)
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem{Lander1995}
+\begin{bchapter}
+\bauthor{\bsnm{Lander}, \binits{T.}},
+\bauthor{\bsnm{Cole}, \binits{R.A.}},
+\bauthor{\bsnm{Oshika}, \binits{B.T.}},
+\bauthor{\bsnm{Noel}, \binits{M.}}:
+\bctitle{The ogi 22 language telephone speech corpus.}
+In: \bbtitle{Eurospeech}
+(\byear{1995})
+\end{bchapter}
+\endbibitem
+
+%%% 20
+\bibitem{Jurafsky2000}
+\begin{bbook}
+\bauthor{\bsnm{Jurafsky}, \binits{D.}},
+\bauthor{\bsnm{Martin}, \binits{J.}}:
+\bbtitle{Speech and Language Processing : an Introduction to Natural Language
+  Processing Computational Linguistics, and Speech Recognition},
+\bedition{2ª} edn.
+\bpublisher{Prentice Hall},
+\blocation{New Jersey, USA}
+(\byear{2000})
+\end{bbook}
+\endbibitem
+
+%%% 21
+\bibitem{Srikanth2012}
+\begin{bchapter}
+\bauthor{\bsnm{Srikanth}, \binits{R.}},
+\bauthor{\bsnm{Salsman}, \binits{L.B.J.}}:
+\bctitle{Automatic pronunciation evaluation and mispronunciation detection
+  using cmusphinx}.
+In: \bbtitle{24th International Conference on Computational Linguistics},
+p. \bfpage{61}
+(\byear{2012}).
+\bcomment{COLING}
+\end{bchapter}
+\endbibitem
+
+%%% 22
+\bibitem{Mendonca2014}
+\begin{botherref}
+\oauthor{\bsnm{Mendon\c{c}a}, \binits{G.}},
+\oauthor{\bsnm{Candeias}, \binits{S.}},
+\oauthor{\bsnm{Perdig\~ao}, \binits{F.}},
+\oauthor{\bsnm{Shulby}, \binits{C.}},
+\oauthor{\bsnm{Toniazzo}, \binits{R.}},
+\oauthor{\bsnm{Klautau}, \binits{A.}},
+\oauthor{\bsnm{Alu\'isio}, \binits{S.}}:
+A method for the extraction of phonetically-rich triphone sentences.
+Proceedings of ITS 2014 -- International Telecommunications Symposium
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 23
+\bibitem{Shulby2015}
+\begin{bbook}
+\bauthor{\bsnm{Shulby}, \binits{C.D.}}:
+\bbtitle{Iprompter: an Intelligent Pronunciation Tutor for Brazilian Students
+  of Academic English (qualifying Examination Monograph)}.
+\bpublisher{Universidade de S\~ao Paulo}, \blocation{???}
+(\byear{2015})
+\end{bbook}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>World Economic Outlook.</p></title>
+  <aug>
+    <au><snm>Fund</snm><fnm>IM</fnm></au>
+  </aug>
+  <publisher>Washington, DC, USA: International Monetary Fund</publisher>
+  <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B2">
+  <title><p>EF English Proficiency Index 2015</p></title>
+  <aug>
+    <au><cnm>EducationFirst</cnm></au>
+  </aug>
+  <publisher>Lucerne: Education First Ltd.</publisher>
+  <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B3">
+  <title><p>The 2013 Business English Index &amp Globalization of English
+  Report</p></title>
+  <aug>
+    <au><cnm>GlobalEnglish</cnm></au>
+  </aug>
+  <publisher>Pearson: Pearson Always Learning</publisher>
+  <pubdate>2013</pubdate>
+  <fpage>15</fpage>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Spoken Language Processing: A Guide to Theory, Algorithm, and
+  System Development</p></title>
+  <aug>
+    <au><snm>Huang</snm><fnm>X</fnm></au>
+    <au><snm>Acero</snm><fnm>A</fnm></au>
+    <au><snm>Hon</snm><fnm>HW</fnm></au>
+  </aug>
+  <publisher>Upper Saddle River, NJ, USA: Prentice Hall PTR</publisher>
+  <edition>1</edition>
+  <pubdate>2001</pubdate>
+  <fpage>980</fpage>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Chapter Twelve The Dialogue Between Man And Machine -- The Role Of
+  Language Theory And Technology</p></title>
+  <aug>
+    <au><snm>Candeias</snm><fnm>S</fnm></au>
+    <au><snm>Veiga</snm><fnm>A</fnm></au>
+  </aug>
+  <source>The Role Of Language Theory And Technology</source>
+  <pubdate>2014</pubdate>
+  <fpage>215</fpage>
+  <lpage>226</lpage>
+</bibl>
+
+<bibl id="B6">
+  <title><p>The application of hidden Markov models in speech
+  recognition</p></title>
+  <aug>
+    <au><snm>Gales</snm><fnm>M</fnm></au>
+    <au><snm>Young</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Foundations and trends in signal processing</source>
+  <publisher>Now Publishers Inc.</publisher>
+  <pubdate>2008</pubdate>
+  <volume>1</volume>
+  <issue>3</issue>
+  <fpage>195</fpage>
+  <lpage>-304</lpage>
+</bibl>
+
+<bibl id="B7">
+  <title><p>The {CMU Pronouncing Dictionary 0.7a}</p></title>
+  <aug>
+    <au><snm>Weide</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Carnegie Mellon University</source>
+  <pubdate>2008</pubdate>
+  <note>\url{http://www.speech.cs.cmu.edu/cgi-bin/cmudict}</note>
+</bibl>
+
+<bibl id="B8">
+  <title><p>Pronunciation adaptation at the lexical level</p></title>
+  <aug>
+    <au><snm>Strik</snm><fnm>H</fnm></au>
+  </aug>
+  <source>ISCA Tutorial and Research Workshop (ITRW) on Adaptation Methods for
+  Speech Recognition</source>
+  <pubdate>2001</pubdate>
+</bibl>
+
+<bibl id="B9">
+  <title><p>A Transfer\^{e}ncia do Conhecimento Fon\'{e}tico-Fonológico do
+  Portugu\^{e}s Brasileiro (L1) para o Ingl\^{e}s (L2) na Recodifica\c{c}\~{a}o
+  Leitora: Uma Abordagem Conexionista. Disserta\c{c}\~{a}o de
+  Doutorado</p></title>
+  <aug>
+    <au><snm>Zimmer</snm><fnm>M.</fnm></au>
+  </aug>
+  <publisher>Porto Alegre: Pontifícia Universidade Católica do Rio Grande do
+  Sul</publisher>
+  <pubdate>2004</pubdate>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Pronunciation Instruction for Brazilians: Bringing Theory and
+  Practice Together</p></title>
+  <aug>
+    <au><snm>Zimmer</snm><fnm>M.</fnm></au>
+    <au><snm>Silveira</snm><fnm>R.</fnm></au>
+    <au><snm>Alves</snm><fnm>U.</fnm></au>
+  </aug>
+  <publisher>Newcastle: Cambridge Scholars</publisher>
+  <pubdate>2009</pubdate>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Pron{\'u}ncia do ingl{\^e}s para falantes do portugu{\^e}s
+  brasileiro</p></title>
+  <aug>
+    <au><snm>Silva</snm><fnm>TC</fnm></au>
+  </aug>
+  <publisher>Contexto</publisher>
+  <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B12">
+  <title><p>A tutorial on hidden Markov models and selected applications in
+  speech recognition</p></title>
+  <aug>
+    <au><snm>Rabiner</snm><fnm>LR</fnm></au>
+  </aug>
+  <source>Proceedings of the IEEE</source>
+  <publisher>IEEE</publisher>
+  <pubdate>1989</pubdate>
+  <volume>77</volume>
+  <issue>2</issue>
+  <fpage>257</fpage>
+  <lpage>-286</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>Markov models for pattern recognition: from theory to
+  applications</p></title>
+  <aug>
+    <au><snm>Fink</snm><fnm>GA</fnm></au>
+  </aug>
+  <publisher>London: Springer Science \& Business Media</publisher>
+  <pubdate>2014</pubdate>
+</bibl>
+
+<bibl id="B14">
+  <title><p>Automatic Speech Recognition - A Brief History of the
+  Technology</p></title>
+  <aug>
+    <au><snm>Juang</snm><fnm>B.</fnm></au>
+    <au><snm>Rabiner</snm><fnm>L.</fnm></au>
+  </aug>
+  <source>Elsevier Encyclopedia of Language and Linguistics</source>
+  <publisher>Amsterdam: Elsevier</publisher>
+  <editor>Brown, K.</editor>
+  <pubdate>2005</pubdate>
+  <fpage>24</fpage>
+</bibl>
+
+<bibl id="B15">
+  <title><p>Sphinx-4: A flexible open source framework for speech
+  recognition</p></title>
+  <aug>
+    <au><snm>Walker</snm><fnm>W</fnm></au>
+    <au><snm>Lamere</snm><fnm>P</fnm></au>
+    <au><snm>Kwok</snm><fnm>P</fnm></au>
+    <au><snm>Raj</snm><fnm>B</fnm></au>
+    <au><snm>Singh</snm><fnm>R</fnm></au>
+    <au><snm>Gouvea</snm><fnm>E</fnm></au>
+    <au><snm>Wolf</snm><fnm>P</fnm></au>
+    <au><snm>Woelfel</snm><fnm>J</fnm></au>
+  </aug>
+  <publisher>Sun Microsystems, Inc.</publisher>
+  <pubdate>2004</pubdate>
+</bibl>
+
+<bibl id="B16">
+  <title><p>DARPA TIMIT acoustic-phonetic continous speech corpus CD-ROM. NIST
+  speech disc 1-1.1</p></title>
+  <aug>
+    <au><snm>Garofolo</snm><fnm>JS</fnm></au>
+    <au><snm>Lamel</snm><fnm>LF</fnm></au>
+    <au><snm>Fisher</snm><fnm>WM</fnm></au>
+    <au><snm>Fiscus</snm><fnm>JG</fnm></au>
+    <au><snm>Pallett</snm><fnm>DS</fnm></au>
+  </aug>
+  <source>NASA STI/Recon Technical Report N</source>
+  <pubdate>1993</pubdate>
+  <volume>93</volume>
+</bibl>
+
+<bibl id="B17">
+  <title><p>Csr-i (wsj0) complete</p></title>
+  <aug>
+    <au><snm>Garofolo</snm><fnm>J</fnm></au>
+    <au><snm>Graff</snm><fnm>D</fnm></au>
+    <au><snm>Paul</snm><fnm>D</fnm></au>
+    <au><snm>Pallett</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Linguistic Data Consortium, Philadelphia</source>
+  <pubdate>2007</pubdate>
+</bibl>
+
+<bibl id="B18">
+  <title><p>West Point Brazilian Portuguese Speech</p></title>
+  <aug>
+    <au><snm>Morgan</snm><fnm>J.</fnm></au>
+    <au><snm>Ackerlind</snm><fnm>S.</fnm></au>
+    <au><snm>Packer</snm><fnm>S.</fnm></au>
+  </aug>
+  <source>Linguistic Data Consortium, Philadelphia</source>
+  <pubdate>2008</pubdate>
+</bibl>
+
+<bibl id="B19">
+  <title><p>The OGI 22 language telephone speech corpus.</p></title>
+  <aug>
+    <au><snm>Lander</snm><fnm>T</fnm></au>
+    <au><snm>Cole</snm><fnm>RA</fnm></au>
+    <au><snm>Oshika</snm><fnm>BT</fnm></au>
+    <au><snm>Noel</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Eurospeech</source>
+  <pubdate>1995</pubdate>
+</bibl>
+
+<bibl id="B20">
+  <title><p>Speech and language processing : an introduction to natural
+  language processing computational linguistics, and speech
+  recognition</p></title>
+  <aug>
+    <au><snm>Jurafsky</snm><fnm>D.</fnm></au>
+    <au><snm>Martin</snm><fnm>J.</fnm></au>
+  </aug>
+  <publisher>New Jersey, USA: Prentice Hall</publisher>
+  <edition>2</edition>
+  <pubdate>2000</pubdate>
+</bibl>
+
+<bibl id="B21">
+  <title><p>Automatic Pronunciation Evaluation And Mispronunciation Detection
+  Using CMUSphinx</p></title>
+  <aug>
+    <au><snm>Srikanth</snm><fnm>R</fnm></au>
+    <au><snm>Salsman</snm><fnm>LBJ</fnm></au>
+  </aug>
+  <source>24th International Conference on Computational Linguistics</source>
+  <pubdate>2012</pubdate>
+  <fpage>61</fpage>
+</bibl>
+
+<bibl id="B22">
+  <title><p>A Method for the Extraction of Phonetically-Rich Triphone
+  Sentences</p></title>
+  <aug>
+    <au><snm>Mendon\c{c}a</snm><fnm>G</fnm></au>
+    <au><snm>Candeias</snm><fnm>S</fnm></au>
+    <au><snm>Perdig\ ao</snm><fnm>F</fnm></au>
+    <au><snm>Shulby</snm><fnm>C</fnm></au>
+    <au><snm>Toniazzo</snm><fnm>R</fnm></au>
+    <au><snm>Klautau</snm><fnm>A</fnm></au>
+    <au><snm>Alu\'isio</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Proceedings of ITS 2014 -- International Telecommunications
+  Symposium</source>
+  <publisher>S\~ao Paulo: IEEE</publisher>
+  <pubdate>2014</pubdate>
+</bibl>
+
+<bibl id="B23">
+  <title><p>Iprompter: an intelligent pronunciation tutor for Brazilian
+  students of academic English (qualifying examination monograph)</p></title>
+  <aug>
+    <au><snm>Shulby</snm><fnm>CD</fnm></au>
+  </aug>
+  <publisher>Universidade de S\~ao Paulo</publisher>
+  <pubdate>2015</pubdate>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment

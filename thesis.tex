@@ -153,9 +153,17 @@
 
 \frontmatter
 
-\begin{titlepage}
-  \maketitle
-\end{titlepage}
+%\begin{titlepage}
+  %\maketitle
+%\end{titlepage}
+
+
+\includepdf[pages={1-},scale=1.00]{FrontBackMatter/cover_en.pdf}
+\cleardoublepage
+\includepdf[pages={1-},scale=1.00]{FrontBackMatter/title_page_pt.pdf}
+\includepdf[pages={1-},scale=1.00]{FrontBackMatter/ficha_catalografica.pdf}
+\includepdf[pages={1-},scale=1.00]{FrontBackMatter/title_page_en.pdf}
+\cleardoublepage
 
 \include{FrontBackMatter/dedication}
 \include{FrontBackMatter/declaration}
@@ -219,6 +227,6 @@
 
 % *************************************** Index ********************************
 %\printthesisindex % If index is present
-\printglossary[type=main,style=altlist]
+%\printglossary[type=main,style=altlist]
 
 \end{document}

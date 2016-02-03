@@ -82,18 +82,21 @@ Instead, we decided to focus on investigating and building resources for Natural
     \item Part-of-speech tags are able to provide enough information for a hybrid \ac{G2P} to distinguish between heterophonic homograph pairs, such as "gov[\textipa{e}]rno" (government) "gov[\textipa{E}]rno" (I govern).
   \end{enumerate}
 
+\bigskip
 \paragraph*{Spelling correction}
   \begin{enumerate}
     \setcounter{enumi}{4}
     \item A considerable part of the typos that users make are phonologically-motivated, therefore phonetic transcription can be used to improve the coverage of spelling correction systems.
   \end{enumerate}
 
+  
 \paragraph*{Corpus building}
   \begin{enumerate}
     \setcounter{enumi}{5}
     \item Greedy algorithms can help to produce richer speech corpora by making local optimal decisions, through analysing the triphone sequences of the sentences in a corpus and extracting those which keep the triphone distribution as uniform as possible in each iteration.
   \end{enumerate}
 
+  
 \paragraph*{Automatic pronunciation assessment}
   \begin{enumerate}
     \setcounter{enumi}{6}
@@ -104,17 +107,18 @@ Instead, we decided to focus on investigating and building resources for Natural
     \item The additional pronunciation variants do not harm the performance.
   \end{enumerate}
 
+  
 \section*{Contributions of the Thesis} 
 
 Within this work, we have investigated and developed a set of tools and resources which integrate phonetic knowledge -- and benefit from it. Some of these tools were created and tested in tasks related to processing Brazilian-accented English or Brazilian Portuguese, but their architecture and methods are certainly scalable to other languages or scenarios. The full list of contributions is provided below\footnote{All files, resources and scripts developed are available at the project website. Due to copyright reasons, the corpora used for training the acoustic models cannot be made available.  \emph{(http://nilc.icmc.usp.br/listener)}}:
 
 \begin{enumerate}
- \item \emph{Aeiouad\^o G2P}: A grapheme-to-phoneme converter for \ac{BP} which uses a hybrid approach, based on both handcrafted rules and machine learning method, as decribed in \citeauthor{Mendonca2014} \cite{Mendonca2014}. \emph{Aeiouad\^o dictionary}: A large machine readable dictionary for \ac{BP}, compiled from a word list extracted from the Portuguese Wikipedia, which was preprocessed in order to filter loanwords, acronyms, scientific names and other spurious data, and then transcribed with Aeiouad\^o G2P).
+ \item \emph{Aeiouad\^o G2P}: A grapheme-to-phoneme converter for \ac{BP} which uses a hybrid approach, based on both handcrafted rules and machine learning method, as published in \citeauthor{Mendonca2014} \cite{Mendonca2014}. \emph{Aeiouad\^o dictionary}: A large machine readable dictionary for \ac{BP}, compiled from a word list extracted from the Portuguese Wikipedia, which was preprocessed in order to filter loanwords, acronyms, scientific names and other spurious data, and then transcribed with Aeiouad\^o G2P).
  \item A phonetic speller for user-generated content in \ac{BP}, based on machine learning, which takes advantage of Aeiouad\^o G2P to group phonetically related words, as described in \citeauthor{Mendonca2015} \cite{Mendonca2015}; 
- \item A method for the extraction of phonetically-rich sentences, i.e. sentences with a high variety of triphones distributed in a uniform fashion, which employs a greedy algorithm for comparing triphone distributions among sentences, as described in \citeauthor{Mendonca2014b} \cite{Mendonca2014b};
- \item \emph{Listener}: A prototype system for automatic speech recognition and evaluation of Brazilian-accented English, which makes use of forced alignment, \ac{HMM}/\ac{GMM} acoustic models, context-free grammars and multipronunciation dictionaries \cite{Mendonca2016};
+ \item A method for the extraction of phonetically-rich sentences, i.e. sentences with a high variety of triphones distributed in a uniform fashion, which employs a greedy algorithm for comparing triphone distributions among sentences, as presented in \citeauthor{Mendonca2014b} \cite{Mendonca2014b};
+ \item \emph{Listener}: A prototype system for automatic speech recognition and evaluation of Brazilian-accented English, which makes use of forced alignment, \ac{HMM}/\ac{GMM} acoustic models, context-free grammars and multipronunciation dictionaries, as presented in \citeauthor{Mendonca2016} \cite{Mendonca2016};
 \end{enumerate}
 
 \section*{Thesis Structure}
 
-This Master's thesis is organised into four chapters and follows the structure of a sandwich thesis, consisting of a collection of published or in-press articles. Chapter ~\ref{ch:foundations} presents the theoretical foundations, with an introduction to phonetics, as well as automatic speech recognition. Chapter ~\ref{ch:articles} contains all articles that were published throughout the execution of this work or which are in-press. Section ~\ref{sec:aeiouado} presents the Aeiouad\^o's dictionary and \ac{G2P} converter, which was built uppon a hybrid strategy for converting graphemes into phones, with manual transcription rules, as well as machine learning. Section ~\ref{sec:speller} presents a use case of Aeiouad\^o, namely a phonetic-speller which employs the transcriptions generated by the grapheme-to-phoneme converter. Section ~\ref{sec:phon-rich} proposes a method for the extraction of phonetically-rich sentences, which can be used for building more representative speech corpora. Section ~\ref{sec:listener} describes a prototype system for non-native speech recognition and evaluation of Brazilian-accented English, which makes use of the tools and resources developed in this thesis. Finally in Chapter ~\ref{ch:conclusions}, we present the overall conclusions, some limitations we found, together with the next steps for future work. A glossary can be found at the back of the thesis in order to help the reader with uncommon terms or specialized jargon.
+This Master's thesis is organised into four chapters and follows the structure of a sandwich thesis, consisting of a collection of published or in-press articles. Chapter ~\ref{ch:foundations} presents the theoretical foundations, with an introduction to phonetics, as well as automatic speech recognition. Chapter ~\ref{ch:articles} contains all articles that were published throughout the execution of this work or which are in-press. Section ~\ref{sec:aeiouado} presents the Aeiouad\^o's dictionary and \ac{G2P} converter, which was built uppon a hybrid strategy for converting graphemes into phones, with manual transcription rules, as well as machine learning. Section ~\ref{sec:speller} presents a use case of Aeiouad\^o, namely a phonetic-speller which employs the transcriptions generated by the grapheme-to-phoneme converter. Section ~\ref{sec:phon-rich} proposes a method for the extraction of phonetically-rich sentences, which can be used for building more representative speech corpora. Section ~\ref{sec:listener} describes a prototype system for non-native speech recognition and evaluation of Brazilian-accented English, which makes use of the tools and resources developed in this thesis. Finally in Chapter ~\ref{ch:conclusions}, we present the overall conclusions, some limitations we found, together with the next steps for future work.

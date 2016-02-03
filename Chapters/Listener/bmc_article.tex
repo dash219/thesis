@@ -58,6 +58,8 @@
 \usepackage{fixltx2e}
 \usepackage{algorithm}
 \usepackage{enumerate}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+%\usepackage{pdfpages}
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
 
@@ -78,8 +80,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\def\includegraphic{}
-\def\includegraphics{}
+%\def\includegraphic{}
+%\def\includegraphics{}
 
 
 
@@ -180,7 +182,7 @@ Brazilian-accented English}
 \begin{abstractbox}
 
 \begin{abstract} % abstract
-This project seeks to be a primary step towards developing a pronunciation assessment system for Brazilian-accented English. The prototype, called Listener, is based on speech recognition and comprises three modules: (i) a pronunciation model; (ii) an acoustic model; and (iii) a Context Free Grammar. Pronunciation variants were added manually to the lexicon through transcription rules. The acoustic model was trained on data from both English, Portuguese and Brazilian-accented English. Context Free Grammars were used to allow forced-alignment. The prototype achieved a true positive rate of 0.90 on detecting mispronunciations in clean speech. However, in noisy data, the performance was severely damaged, being as low as 0.57 for isolated words or 0.31 for words+sentences.
+Recent surveys have shown that Brazil is among the countries with the lowest knowledge of the English language. Considering that English is the current lingua franca, any effort that seeks to improve such knowledge is worthwhile. This paper presents a project aimed at being a primary step towards developing a pronunciation assessment system for Brazilian-accented English. Lately, with increased computing power and improved speech recognition, research on automated pronunciation error detection and pronunciation assessment has gained attention. The prototype developed herein, called Listener, is based on speech recognition and comprises three modules: (i) a pronunciation model; (ii) an acoustic model; and (iii) a context free grammar. Pronunciation variants were added manually to a lexicon of 1,841 words through transcription rules. The acoustic model was trained on a combined model, which is fed with data from English, Portuguese and Brazilian-accented English. Context free grammars were used to allow forced-alignment. The prototype achieved a true positive rate of 0.90 on detecting mispronunciations in clean speech. However, in noisy data, the performance was severely damaged, being as low as 0.57 for isolated words or 0.31 for words+sentences.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -239,13 +241,13 @@ This project seeks to be a primary step towards developing a pronunciation asses
 
 \pagestyle{plain}
 %************************************************
-\section*{Introduction}
+\section{Introduction}
 %************************************************
-According to the International Monetary Found (IMF) \cite{IMF2015}, in 2015, Brazil as the seventh largest economy in the world with a GDP of US\$ 2.34 trillions. A survey by The Economist (2013) says that, since 2009, the growth of BRICS accounts for 55\% of the entire world economy growth. The current economic scenario is extremely favourable for Brazil to increase its global influence; however with regard to the ability to communicate globally, Brazil occupies a much more modest position. 
+According to the International Monetary Found (IMF) \cite{IMF2015}, in 2015, Brazil is the seventh largest economy in the world with a GDP of US\$ 2.34 trillions. A survey by The Economist (2013) says that, since 2009, the growth of BRICS accounts for 55\% of the entire world economy growth. The current economic scenario is extremely favourable for Brazil to increase its global influence; however with regard to the ability to communicate globally, Brazil occupies a much more modest position. 
 
-In 2015, Brazil ranked 41\textsuperscript{st} out of 70 countries in the English Proficiency Index (EF-EPI) \cite{EF2015}, classified among countries with low English proficiency, with 51.05 points. Scandinavian countries led the very high proficiency rankings, with Sweden (70.94) in the first position, Denmark (70.05) in third the spot and Norway (67.83) in fourth. Brazil performance was close to several other Latin America countries, such as Peru (52.46), Chile (51.88), Ecuador (51.67), Uruguay (50.25) and Colombia (46.54). The only exception in Latin America was Argentina that, despite the recent great depression was ranked 15\textsuperscript{th}, being classified as high proficiency, with a score of 60.26.
+In 2015, Brazil ranked 41\textsuperscript{st} out of 70 countries in the English Proficiency Index (EF-EPI) \cite{EF2015}, classified among countries with low English proficiency, with 51.05 points. Scandinavian countries led the very high proficiency rankings, with Sweden (70.94) in the first position, Denmark (70.05) in third the spot and Norway (67.83) in fourth. Brazil performance was close to several other Latin America countries, such as Peru (52.46), Chile (51.88), Ecuador (51.67), Uruguay (50.25) and Colombia (46.54). The only exception in Latin America was Argentina that, despite the recent great depression, was ranked 15\textsuperscript{th}, being classified as high proficiency, with a score of 60.26.
 
-The EF-EPI bands are aligned to the Common European Framework of Reference for Languages (CEFR) in the following way: the very high proficiency band corresponds to CEFR level B2; very low proficiency to A2; high, moderate and low proficiency bands to B1 with different punctuations. In case, Brazil's low proficiency rank is analogous to the CEFR level B1, that describes an independent language user with the intermediate communication skills:
+The EF-EPI bands are aligned to the Common European Framework of Reference for Languages (CEFR) in the following way: the very high proficiency band corresponds to CEFR level B2; very low proficiency to A2; high, moderate and low proficiency bands to B1 with different punctuations. In case, Brazil's low proficiency rank is analogous to the CEFR level B1, that describes an independent language user with the intermediate communication skills (see Table ~\ref{tab:cefr-levels}.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[!htpb]
@@ -268,20 +270,22 @@ The EF-EPI bands are aligned to the Common European Framework of Reference for L
 \end{table}
 \renewcommand{\arraystretch}{1.0}
 
-As one might notice,  the B1 level describe someones who is usually able to understand familiar matters, deal with traveling situations, describe personal experiences and plans, and produce simple texts about subjects of personal interest. Needless to say, this is a very restricted communicative competence, which limits English usage primarily to the personal domain. 
+As one might notice,  the B1 level describes an individual who is usually able to understand familiar matters, deal with traveling situations, describe personal experiences and plans, and produce simple texts about subjects of personal interest. Needless to say, this is a very restricted communicative competence, which limits English usage primarily to the personal domain. 
 
 With respect of Business English proficiency, Brazil performance is even more concerning. On the 
 Business English Index (BEI) of 2013 \cite{BEI2013}, Brazil reached the 71\textsuperscript{st} position out of 77 countries analyzed. We attained a score of 3.27 points, in a scale from 1 to 10, being placed at the ``Beginner'' range, the lowest range considered by the index. We were close to countries such as El Salvador (3.24), Saudi Arabia (3.14) and Honduras (2.92) which up until recently had experienced civil wars or dictatorship governments. BEI describes individuals at the beginner level as those who ``can read and communicate using only simple questions and statements, but can't communicate and understand basic business information during phone calls''. Again, we can see that this is a very limited linguistic competence, that would not allow one not even to perform the most elementary day-to-day task in a company or industry work environment.
 
-Given this scenario, it is clear that we desperately need to improve English language proficiency among Brazilians. This project seeks to be an initial step towards this direction. We developed a prototype system for automatic speech recognition and evaluation of Brazilian-accented English, called \emph{Listener}, which is capable of recognizing utterances in Brazilian-accented English and identifying which are the mispronunciations. The system is based on an Automatic Speech Recognition system which makes use of forced alignment, \emph{HMM}/\emph{GMM} acoustic models, context free grammars and multipronunciation dictionaries\footnote{All files, resources and scripts developed are available at the project website. Due to copyright reasons, the corpora used for training the acoustic models cannot be made available: http://nilc.icmc.usp.br/listener}.
+Given this scenario, it is clear that we desperately need to improve English language proficiency among Brazilians. This project seeks to be an initial step towards this direction. We developed a prototype system for automatic speech recognition and evaluation of Brazilian-accented English, called \emph{Listener}, which is capable of recognizing utterances in Brazilian-accented English and identifying which are the mispronunciations. The system was designed especially for graduate students who want to improve their pronunciation skills. The interest in this group is due to the fact that graduate students often need to speak English in order to publicize their research, for instance, by attending conferences or giving lectures. The system is based on an Automatic Speech Recognition system which makes use of forced alignment, \emph{HMM}/\emph{GMM} acoustic models, context free grammars and multipronunciation dictionaries\footnote{All files, resources and scripts developed are available at the project website: http://nilc.icmc.usp.br/listener. Due to copyright reasons, the corpora used for training the acoustic models cannot be made available. }.
+
+This paper is structured as follows. Section ~\ref{sec:speech-recognition} presents some fundamental concepts in speech recognition. Section ~\ref{method} discusses the materials and methods, with an overview of pronunciation models, acoustic models, as well as context free grammars. Results are shown in Section ~\ref{results}. Finally, in Section ~\ref{conclusion} we present the overal conclusions, discuss the work limitations and present some future work.
 
 %*****************************************
-\section*{Automatic Speech Recognition}\label{sec:speech-recognition}
+\section{Automatic Speech Recognition}\label{sec:speech-recognition}
 %*****************************************
 
 Automatic Speech Recognition (ASR) can be defined as the task of converting spoken language into readable text by computers in real-time \cite{Huang2001}. 
 
-Speech is certainly the most natural human way of communication. Allowing people to interact with their gadgets through voice may greatly improve the user-experience, especially in a world which is becoming more and more mobile-oriented.  ASR nowadays is present in many widely-used applications, such as personal assistants, speech-to-text processing, domotics, call routing, etc.
+Speech is certainly the most natural human way of communication. Allowing people to interact with their gadgets through voice may greatly improve the user-experience, especially in a world which is becoming more and more mobile-oriented. Currently, ASR is present in many widely-used applications, such as personal assistants, speech-to-text processing, domotics, call routing, etc. \cite{Candeias2014}
 
 All state-of-the-art paradigms in ASR are stochastic and they basically try to solve one single equation, which is called the fundamental equation of \emph{ASR}. It can be described as follows. Let $O$ be a sequence of observable acoustic feature vectors and $W$ be a word sequence, the most likely word sequence $W*$ is given by:
 
@@ -303,20 +307,27 @@ which is suitable for a generative model. For a single audio input, the probabil
 W*= \arg\max_{W}P(O|W)P(W)
 \end{equation}
 
-$P(O|W)$ is the conditional probability of an observable acoustic feature vector given a word sequence, is calculated by an acoustic model. In turn, $P(W)$, the \emph{a priori} probability of words is reckoned by a language model or through grammars.
+$P(O|W)$ is the conditional probability of an observable acoustic feature vector given a word sequence, is calculated by an acoustic model. In turn, $P(W)$, the \emph{a priori} probability of words is reckoned by a language model or through grammars. 
+
+\begin{figure*}[!ht]
+
+        {\includegraphics[width=1.7\linewidth]{gfx/asr-architecture.pdf}}
+        \caption{Architecture of a continuous speech recognition system. Note: in the Listener prototype, the language model is replaced by a context free grammar.}
+        \label{fig:asr-gen-architecture}
+\end{figure*}
 
 %*****************************************
-\section*{Materials and Methods}
+\section{Materials and Methods}\label{method}
 %*****************************************
 
-\subsection*{\textbf{Architecture of Listener}}
+\subsection{Architecture of Listener}\label{architecture}
 The prototype of the Listener system has three modules: (i) a pronunciation model; (ii) an acoustic model; and (iii) a context free grammar. In the following subsections each of these modules will be discussed in detail.
 
-\subsection*{\textbf{Pronunciation Model}}
+\subsection{Pronunciation Model}\label{pron_model}
 
-Pronunciation models are lexica with words and their corresponding phonetic transcriptions, according to a given convention. In other words, pronunciation models have the role of linking phones from the acoustic model to words defined in the language model. For speech recognition purposes, phonetic gammabets like ARPAbet or SAMPA are often employed to avoid problems with data formatting or encoding. In ARPAbet, phones are converted into sequences of ASCII characters, in such a way that a word like ``speech'' [\textipa{'spi:tS}] becomes [s p iy1 ch] \cite{CMUDict2008}.
+Pronunciation models are lexica with words and their corresponding phonetic transcriptions, according to a given convention. In other words, pronunciation models have the role of linking phones from the acoustic model to words defined in the language model. For speech recognition purposes, phonetic a like ARPAbet or SAMPA are often employed to avoid problems with data formatting or encoding. In ARPAbet, phones are converted into sequences of ASCII characters, in such a way that a word like ``speech'' [\textipa{'spi:tS}] becomes [s p iy1 ch] \cite{CMUDict2008}.
 
-For non-native speech recognition, multipronunciation dictionaries are often employed in order to address phenomena of negative-transference from the L1 to L2. These dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}. For building the pronunciation model for Listener, the literature on pronunciation training was analyzed and transformation rules were defined based on the most common mispronunciations among Brazilians. The pronunciation model was inspired by several works for pronunciation training, focused on Brazilian-accented English \citep{Zimmer2004, Zimmer2009, Cristofaro2015}. In total, we gathered 13 mispronunciation patterns for Listener, the full list with examples can be found in Table ~\ref{tab-mispronunciations}.
+For non-native speech recognition, multipronunciation dictionaries are often employed in order to address phenomena of negative-transference from the L1 to L2 \cite{Strik2001}. These dictionaries are a type of pronunciation model where pronunciation variants are explicitly added to the lexicon of the ASR \cite{Strik2001}. For building the pronunciation model for Listener, the literature on pronunciation training was analyzed and transformation rules were defined based on the most common mispronunciations among Brazilians. The pronunciation model was inspired by several works for pronunciation training, focused on Brazilian-accented English \citep{Zimmer2004, Zimmer2009, Cristofaro2015}. In total, we gathered 13 mispronunciation patterns for Listener, the full list with examples can be found in Table ~\ref{tab-mispronunciations}.
 
 \renewcommand{\arraystretch}{1.2}% Tighter
 \begin{table}[!ht]
@@ -391,9 +402,9 @@ It is worth noticing that, in terms of context, there is often overlapping among
 
 To make sure that all pronunciation variants are generated, the rules are run inside a while loop, which iterates over each word in the base dictionary generating and adding these new pronunciation to the dictionary; and the loop only stops when there are no new variants.
 
-For the pilot system of Listener, we used as a base dictionary the CMUdict \cite{CMUDict2008}, which contains over 134,000 entries and their pronunciations in American English. However, in the test sets for Listener there are just 1,841 unique words, so only these were considered in this experiment. These transcription rules were run over these 1,841 unique words and 8,457 new pronunciation variants were generated (=10,298 entries in the final dictionary). In such a way, the average pronunciation per word is 5.6. 
+For the pilot system of Listener, we used the CMUdict \cite{CMUDict2008} as a base dictionary, which contains over 134,000 entries and their pronunciations in American English. However, in the test sets for Listener there are 1,841 unique words, therefore only these were considered in this experiment. These transcription rules were run over these 1,841 unique words and 8,457 new pronunciation variants were generated (totalling 10,298 entries in the final dictionary). In such a way, the average pronunciation per word is 5.6. 
 
-\subsection*{\textbf{Acoustic Model}}
+\subsection{Acoustic Model}
 
 Acoustic Models (AM) are used within speech recognition to map the acoustic parameters of into phonemes.  AMs are estimated through supervised training over a transcribed speech corpus -- often with the Forward-Backward algorithm by modeling phones via Hidden Markov Models (HMM) \cite{Rabiner1989}. Markov models are very suitable for the statistical description of symbol and state sequences \cite{Fink2014}. Within Markov processes, systems are assumed to be memoryless, that is, the conditional probability of future states is only dependent on the present state. To put it another way, the current state does not depend upon the 
 sequence of events that preceded it. Hidden Markov Models (HMM) are just a special type of Markov processes which contain hidden states.
@@ -426,23 +437,33 @@ that is, the probability of moving from state from any state $i$ to $j$ is not n
 For building Listener, HMM/GMM were applied to represent triphones. A triphone is a contextual phone, i.e. it is a phonetic unit of analysis which, for a given phone $p$, takes into account the previous phone $p-1$ and following one $p+1$. For instance, in a word like ``speech'' [s p iy ch], the phone [iy] would correspond to the triphone [\textsubscript{p}iy\textsubscript{ch}], indicating that [iy] occurs after a [p] and before a [ch]. The full of transcription of ``speech'' in triphones would be [\textsubscript{\#}s\textsubscript{p} \textsubscript{s}p\textsubscript{iy} \textsubscript{p}iy\textsubscript{ch} \textsubscript{iy}ch\textsubscript{\#}], it still has the same number of phone, the only difference is that the phones are now defined context.
 
 For estimating the values and probabilities of the HMM/GMM the CMU Sphinx Toolkit was used \cite{Walker2004}. 
-Particularly, the acoustic model was trained over several different corpora, which contained, in total, ~40 hours of audio from native speakers of English or Brazilian Portuguese, as well as non-native data in Brazilian-accented English. The acoustic model was estimated considering a phonetic inventory of XX phones, containing 4,000 tied states and 16 gaussian densities per state. The last two values were defined based on a pilot experiment over a sample from the available corpora.
+Particularly, the acoustic model was trained over several different corpora, which contained, in total, ~40 hours of audio from native speakers of English or Brazilian Portuguese, as well as non-native data in Brazilian-accented English. 
+
+Particularly, the following corpora were used for training the models:
+
+\begin{enumerate}
+ \item English: TIMIT \cite{Garofolo1993} and WSJ0 \cite{Garofolo2007};
+ \item Portuguese: West Point BP \cite{Morgan2008} and OGI-22 \cite{Lander1995};
+ \item Brazilian-accented English: Listener Corpus (described in Subsection \ref{corpus-listener-w}).
+\end{enumerate}
+
+The acoustic model was estimated considering a phonetic inventory of 54 phones, containing 4,000 tied states and 16 gaussian densities per state. The last two values were defined based on a pilot experiment over a sample from the available corpora.
 
 
-\subsection*{\textbf{Context Free Grammars}}
+\subsection{Context Free Grammars}
 
-Context Free Grammars are formal grammars in which every rule takes the form:
+Context free grammars are formal grammars in which every rule takes the form:
 
 \begin{equation}
 A \rightarrow \gamma
 \end{equation}
-where $A$ is a nonterminal and $\gamma$ corresponds to a single or sequence of nonterminal or terminal symbol \cite{Jurafsky2000}. In speech recognition, Context Free Grammars were the first attempt to broaden speech recognition to a context larger than digits, letters and menu commands; but they were rapidly replaced by statistical Language Models, as the latter scale better and require much less manual work \cite{Gales2008}.
+where $A$ is a nonterminal and $\gamma$ corresponds to a single or sequence of nonterminal or terminal symbol \cite{Jurafsky2000}. In speech recognition, context free grammars were the first attempt to broaden speech recognition to a context larger than digits, letters and menu commands; but they were rapidly replaced by statistical Language Models, as the latter scale better and require much less manual work \cite{Gales2008}.
 
-For building the prototype of Listener, Context Free Grammars were used in order to build grammars to allow to the pronunciation variants to be recognized. The procedure is similar to the one described by \citet{Srikanth2012}, but instead of using phones as units, we focused on words, in order to be able to detect mispronunciatinos which involve larger context, such as syllables in cases of initial/coda epenthesis or palatalization. Basically, each mispronunciation pattern is defined as a non-terminal, which is then rewritten into the word lemma. Thus, the final prompt is able to recognize all combinations of pronunciation variants. A simplified example of such grammar is shown in Figure ~\ref{cfg-example}, which defines the rules for the prompt ``I like Apple''. 
+For building the prototype of Listener, rules were used in order to build grammars to allow to the pronunciation variants to be recognized. The procedure is similar to the one described by Srikanth and Salsman \cite{Srikanth2012}, but instead of using phones as units, we focused on words, in order to be able to detect mispronunciatinos which involve larger context, such as syllables in cases of initial/coda epenthesis or palatalization. Basically, each mispronunciation pattern is defined as a non-terminal, which is then rewritten into the word lemma. Thus, the final prompt is able to recognize all combinations of pronunciation variants. A simplified example of such grammar is shown in Figure ~\ref{cfg-example}, which defines the rules for the prompt ``I like Apple''. 
 
 \scriptsize
 \begin{figure}[!ht]
-  \caption{\csentence{Context Free Grammars used for recognizing mispronunciations.}
+  \caption{\csentence{Context free grammars used for recognizing mispronunciations.}
       Each mispronunciation entry is defined as a non-terminal.}
       \label{cfg-example}
 \begin{tabular}{l} \hline
@@ -463,19 +484,19 @@ APPLE\_3 $\rightarrow$ [eh p ow]; \\
 \normalsize
 
 %*****************************************
-\section*{Results and Discussion}
+\section{Results and Discussion}\label{results}
 %*****************************************
 
-The system was evaluated on three different test sets, all of them were compiled especially for this project and were made publicly available\footnote{The corpora can be found at the project's website: http://nilc.icmc.usp.br/listener}. In the following subsections we describe each of them and present the results.
+The system was evaluated on three different test sets, all of them were compiled especially for this project and were made publicly available at the project's website. In the following subsections we describe each of them and present the results.
 
-\subsection*{\textbf{Test Set I: Corpus of Induced Errors}}
-This test set consists of a speaker-dependent corpus of induced errors in isolated words (6,177 words $\sim$2 hours). This corpus was recorded by a single male speaker with good proficiency of English, who induced pronunciation errors while reading isolated words in English. The recordings were made with a high-fidelity microphone in a quiet room, in order to reduce background noise. The corpus contains both audios with the expected pronunciation ($\sim$30\%) and with pronunciation errors ($\sim$70\%).
+\subsection{Test Set I: Corpus of Induced Errors}
+This test set consists of a speaker-dependent corpus of induced errors in isolated words (6,177 words $\sim$2 hours). This corpus was recorded by a single male speaker with good proficiency of English (CEFR: C2), who induced pronunciation errors while reading isolated words in English. The recordings were made with a high-fidelity microphone in a quiet room, in order to reduce background noise. The corpus contains both audios with the expected pronunciation ($\sim$30\%) and with pronunciation errors ($\sim$70\%).
 
 Results for the Induced test set can be found in Table ~\ref{rec-induced}.
 
 \small
 \begin{table}[ht!]
-\caption{Recognition results for each phone in the Induced test set. Results are grouped by mispronunciation pattern, and the percentages for True Positives (TP) and Type-I/Type-II errors are shown.}
+\caption{Recognition results for each phone in the Induced test set. Results are grouped by mispronunciation pattern, and the percentages for True Positives (TP) and Type I (false positive), Type II (false negative) errors are shown.}
 \setlength{\tabcolsep}{0.3em}
 \begin{tabular}{clcccc} \hline
 \textbf{\#} & \textbf{Category} & \textbf{Counts} & \textbf{TP} & \textbf{Type-I} & \textbf{Type-II} \\ \hline
@@ -502,16 +523,16 @@ Results for the Induced test set can be found in Table ~\ref{rec-induced}.
 
 As one might observe, the overall phone recognition for the Induced corpus was 0.93. Considering only phones with pronunciation errors, the ratio of true positives was 0.90. The expected phones showed a true positives ratio of 0.96. Initial epenthesis was the mispronunciation which was recognized with the highest accuracy, all 38 cases in the corpus were correctly identified. The system was able to detect initial sequences of [iy s C], as in ``stop'' [iy s t ao p], with no losses. Following, the best recognition performance was found in cases of general insertion, for instance, when one adds an extraneous phone to the end of a word, e.g. ``work'' [w ah r k s]. The true positive rate for generation insertion was 0.97. were the ones which were identified with the  velar paragoge was the mispronunciation pattern which was recognized in most. Cases of velar paragoge, as in ``king'' [k ih ng g] or [k ih ng g ih] were accurately inferred in 0.97 cases. The worst results were found for vocalization of laterals (0.45), followed by th-fronting (0.67). The lower performance for these mispronunciations patterns types might be due to the fact that these errors involve phones which are acoustically similar. It could also be due to the fact that there is less data for these cases, but further investigation is needed. The rate of Type-I error, or false positives, was very small. The highest value was found in cases of consonantal change, which had a Type-I error rate of 0.06. Type-II errors occurred more often, vocalization of laterals had a ratio of 0.55, th-froning of 0.33 and coda epenthesis had 0.21.
 
-\subsection*{\textbf{Test Set II:Listener Corpus (isolated-words)}}
+\subsection{Test Set II:Listener Corpus (isolated-words)}\label{corpus-listener-w}
 
-The second test set is a subset of the Listener Corpus, which contains only prompts with isolated words. The \emph{Listener Corpus} was compiled especially for this work, in order to be a reference corpus for developing Computer Assisted Pronunciation Training focused on Brazilian-accented English. The corpus was built through crowdsourcing and contains native-speakers of Brazilian Portuguese reading word and pre-defined sentences in English. In total, 67 volunteers were recorded (7,208 prompts $\sim$7 hours). The recording environment was not controled, subjects used their own laptops and personal computers to do the recordings from home. Overall, there is a considerable amount of noise in the channel, due to bad microphones or wrong settings (e.g. too much gain); as well as background noise (music, traffic, fan, animal sounds and so on). 
+The second test set is a subset of the Listener Corpus, which contains only prompts with isolated words. The \emph{Listener Corpus} was compiled especially for this work, in order to be a reference corpus for developing Computer Assisted Pronunciation Training focused on Brazilian-accented English. The corpus was built through crowdsourcing and contains native-speakers of Brazilian Portuguese reading out loud words and phonetically-rich sentences in English, which were extracted according to the method defined in Mendon\c{c}a et al. \cite{Mendonca2014}. In total, 67 volunteers were recorded (7,208 prompts $\sim$7 hours). The recording environment was not controled, subjects used their own laptops and personal computers to do the recordings from home. Overall, there is a considerable amount of noise in the channel, due to bad microphones or wrong settings (e.g. too much gain); as well as background noise (music, traffic, fan, animal sounds and so on). 
 
 Table ~\ref{rec-listener-words} contains a summary of the recognition results for this test set.
 
 \small
 \setlength{\tabcolsep}{0.3em}
 \begin{table}[ht!]
-\caption{Recognition results for each phone in the Listener Corpus (Isolated-Words). Results are grouped by mispronunciation pattern; the values for True Positives (TP) and Type-I/Type-II errors are presented.}
+\caption{Recognition results for each phone in the Listener Corpus (Isolated-Words). Results are grouped by mispronunciation pattern; the values for True Positives (TP) and Type I (false positive), Type II (false negative) errors are presented.}
 \begin{tabular}{clcccc} \hline
 \textbf{\#} & \textbf{Category} & \textbf{Counts} & \textbf{TP} & \textbf{Type-I} & \textbf{Type-II} \\ \hline
 0 & Expected phone & 1144 & 0.90 & 0.06 & 0.04 \\ 
@@ -535,20 +556,20 @@ Table ~\ref{rec-listener-words} contains a summary of the recognition results fo
 \end{table}
 \normalsize
 
-As one may notice, the results for the Listener test set were much lower. Basically, just the recognition results for the expected phones were comparable to the ones reported for the Induced corpus. The expected phones achieved a true positive rate of 0.90. Similarly to the previous test set, the second best performance was found in pronunciation errors with general insertion (e.g. ``work'' [w ah r k s]), with 0.81. The results for true positives for all other mispronunciation patterns were below 0.62. The average true positive ratio, considering only the data with pronunciation errors, was 0.57. Two types of errors were never correctly recognized by the system, namely, general deletion (e.g. ``foot'' [f uh]) and deaspiration in plosives (e.g. ``tea'' [tt iy]). Other cases  phone replacemente, such as palatalization (e.g. ``city'' [s ih ch i]) or th-fronting (e.g. ``think'' [f ih ng k] were correctly recognized only in few cases, the true positives rate for these errors were 0.20 and 0.36, respectively.
+As one may notice, the results for the Listener test set were much lower. Basically, just the recognition results for the expected phones were comparable to the ones reported for the Induced corpus. The expected phones achieved a true positive rate of 0.90. Similarly to the previous test set, the second best performance was found in pronunciation errors with general insertion (e.g. ``work'' [w ah r k s]), with 0.81. The results for true positives for all other mispronunciation patterns were below 0.62. The average true positive ratio, considering only the data with pronunciation errors, was 0.57. Two types of errors were never correctly recognized by the system, namely, general deletion (e.g. ``foot'' [f uh]) and deaspiration in plosives (e.g. ``tea'' [tt iy]). Other cases of phone replacement, such as palatalization (e.g. ``city'' [s ih ch i]) or th-fronting (e.g. ``think'' [f ih ng k] were correctly recognized only in few cases, the true positives rate for these errors were 0.20 and 0.36, respectively.
 
 Our hypothesis is that such low performance is due to two factors: (i) different recording setup; and (ii) wrong transcriptions in the test set. In terms of quality, this test set is quite different from the audios that were used for training the acoustic model. The speech database used for estimating the acoustic model had clean audio, recorded in a controlled recording setup with high quality microphones. Due to the way that the Listener Corpus was compiled, the quality of the audio is quite different, there is both background and channel noise. Because of this mismatch, the acoustic models may not be able to generalize well and recognize the phones approprietaly in this test set. 
 
-As the corpus was transcribed one-way, there are several inconsistencies in the annotations, which inevitably led to losses in the final results. In addition to this, the corpus was transcribed in a phonetic-oriented fashion, in such a way that the transcription have, for instance, some uncommon coarticulation phenomena (e.g. ``king'' [k iy nh iy]), that are not part of the thirteen mispronunciation patterns which the system is able to recognize. 
+As the corpus was transcribed one-way \cite{Shulby2015}, there are inconsistencies in the annotations, which inevitably led to losses in the final results. In addition to this, the corpus was transcribed in a phonetic-oriented fashion, in such a way that the transcription have, for instance, some uncommon coarticulation phenomena (e.g. ``king'' [k iy nh iy]), that are not part of the thirteen mispronunciation patterns which the system is able to recognize. 
 
-\subsection*{\textbf{Test Set III: Listener Corpus (all)}}
+\subsection{Test Set III: Listener Corpus (all)}
 
 The last test set includes all types of prompts recorded for the Listener Corpus: isolated words, simple sentences and phonetically-rich sentences. Information about the corpus were already described in the previous subsection. The recognition results for this set are presented in Table ~\ref{rec-listener-all}.
 
 \small
 \setlength{\tabcolsep}{0.3em}
 \begin{table}[ht!]
-\caption{Recognition results for each phone in the Listener Corpus (all). Results are grouped by mispronunciation pattern; the values for True Positives (TP) and Type-I/Type-II errors are presented.}
+\caption{Recognition results for each phone in the Listener Corpus (all). Results are grouped by mispronunciation pattern; the values for True Positives (TP) and Type I (false positive), Type II (false negative) errors are presented.}
 \begin{tabular}{clcccc} \hline
 \textbf{\#} & \textbf{Category} & \textbf{Counts} & \textbf{TP} & \textbf{Type-I} & \textbf{Type-II} \\ \hline
 0 & Expected phone & 9245 & 0.76 & 0.17 & 0.07 \\
@@ -575,18 +596,17 @@ The last test set includes all types of prompts recorded for the Listener Corpus
 As Table ~\ref{rec-listener-all} shows, this test set had the worst performance among the three which were considered. The true positive rate was 0.63 on average. Considering just the mispronunciation patterns, i.e. without the results for expected phones, the true positive rate drops to 0.31. Such result is definitely unsuitable for developing Computer Assisted Pronunciation Training applications. What can be inferred from this result is that connected speech deeply affects the recognition results.
 
 %*****************************************
-\section*{Conclusions}
+\section{Conclusions}\label{conclusion}
 %*****************************************
 
 For speech recognition -- or, in fact, any supervised  machine learning task -- the best
 scenario for training a model is when you have a huge amount of data which is large and
 diverse enough so that it fully represents population. However, this is usually not the case. 
-It is not exaggerated to say that building the prototype of Listener was a ``shot in the dark''.
 The data was not readily available when the project started and all speech corpora were still to be compiled. 
 
 The prototype has achieved a very high accuracy in the Induced corpus, with a true positive rate of 0.90, meaning that each mispronunciation pattern that really occurred in the corpus were correctly identified 90\% of the time. This result also means that the Multipronunciation dictionary with hand-written rules was a reliable source of phonetic information for pronunciation assessment. Context free grammars based on words were successfully adapted for forced-alignment recognition, in order to list all pronunciation variants of a given word.
 
-However, the Induced is speaker-dependent and contains clean speech data. Considering the Listener Corpus, which has a considerable amount of the noise, the system performed much worse: the true positive rates obtained for both test sets from this corpus (0.57 and 0.31) are unseemly for developing real applications in automatic pronunciation assessment. 
+However, the Induced corpus is speaker-dependent and contains clean speech data. Considering the Listener Corpus, which has a considerable amount of the noise, the system performed much worse: the true positive rates obtained for both test sets from this corpus (0.57 and 0.31) are unseemly for developing real applications in automatic pronunciation assessment. 
 
 As a future work, it might be interesting to evaluate the prototype with data that is not as clean the Induced corpus and that is, also, not as noisy as the test sets from the Listener Corpus. For instance, a corpus recorded from mobile phones would fill both these criteria. It could also be interesting to enlarge the training set, in order to build more robust acoustic models.
 
@@ -598,7 +618,7 @@ As a future work, it might be interesting to evaluate the prototype with data th
 
 \begin{backmatter}
 
-\section*{Acknowledgements}
+\section{Acknowledgements}
   We would like to thank the Instituto de Telecomunica\c{c}\~oes in Coimbra for
   for the support with the corpora for training the acoustic models.
 
