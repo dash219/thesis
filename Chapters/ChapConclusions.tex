@@ -33,12 +33,10 @@ Due to the complexity of the task and the scarcity of resources \cite{Neto2011},
 \paragraph*{Automatic pronunciation assessment}
   \begin{enumerate}
     \setcounter{enumi}{6}
-    %\item Multipronunciation dictionaries with hand-written rules for generating variants are a reliable source of pronunciation information for pronunciation assessment.
-    %\item Acoustic models trained on phonetically-rich speech corpora are able to provide more accurate phone models than those trained on balanced corpora.
-    %\item Context free grammars can be adapted for forced-alignment recognition to list all pronunciation variants of a given word without hindering the performance of the \ac{ASR}.
-    %\item Combined acoustic models (trained over native corpora + interlingua data) have phone models which are arobust enough to perform recognition in all languages used for training.
-    %\item The additional pronunciation variants does not hurt the performance.
-    \item TBD
+    \item The multipronunciation dictionary with manually rules has shown to be a reliable source of phonetic information for pronunciation assessment.
+    \item Our hypothesis about the acoustic models could be verified as the performance of the prototype was severely affected by noise in the data.
+    \item Context-free grammars were successfully adapted to perform forced-alignment.
+    \item The additional pronunciation variants did not harm the performance, as expected.
   \end{enumerate}
 
 \section*{Limitations and Further Work}\label{sec:limitations-further}
@@ -56,15 +54,7 @@ might be interesting, in a future work, to investigate why the impact was rather
 The method we proposed was able to extract sentences with much more uniform triphones as the type/token ration confirms, however, since the method basically favours rare triphones in each iteration, some of the sentences that were extracted had very awkward reading or uncommon words. Considering that the method is useful especially for preparing prompts to build speech recognition corpora, this poses a problem: if the prompt is not understood, the voice donor might hesitate or read the sentence in a way that is not natural. In the future, it might be interesting to develop some sort of filter during each iteration of the algorithm, to remove these sentences with problems, while keeping the triphone balance. In addition to this, one of the main reasons for building the algorithm was to test whether phonetically-rich corpora would be more benefitial to phone recognition than phonetically-balanced corpora. Our hypothesis was that  since the phones are sampled more equally, acoustic models would be able to better estimate the phone properties, thus leading to improvements in tasks which demand robust phone models, such as phone recognition or forced-alignment. But due to time constraints this hypothesis could not be tested. If supported, this may be quite interesting for application which require very accurate phone models, such as \ac{CAPT} or speaker verification.
 
 \paragraph*{Automatic pronunciation assessment}
-TBD
-
-
-  %Multipronunciation dictionaries with hand-written rules for generating variants are a reliable source of pronunciation information for pronunciation assessment.
-  %Acoustic models trained on phonetically-rich speech corpora are able to provide more accurate phone models than those trained on balanced corpora.
-  %Context free grammars can be adapted for forced-alignment recognition to list all pronunciation variants of a given word without hindering the performance of the \ac{ASR}.
-  %Combined acoustic models (trained over native corpora + interlingua data) have phone models which are arobust enough to perform recognition in all languages used for training.
-  %The additional pronunciation variants does not hurt the performance.
-
+The prototype has achieved a very high accuracy in the Induced corpus, with a true positive rate of 0.90, meaning that each mispronunciation pattern that really occurred in the corpus were correctly identified 90\% of the time. However, the Induced corpus is speaker-dependent and contains clean speech data. While evaluating the Listener Corpus, which has a considerable amount of the noise, the system performed much worse: the true positive rates obtained for both test sets from this corpus (0.57 and 0.31) are unseemly for developing real applications in automatic pronunciation assessment. As a future work, it might be interesting to evaluate the prototype with data that is not as clean the Induced corpus and that is, also, not as noisy as the test sets from the Listener Corpus. For instance, a corpus recorded from mobile phones would fill both these criteria. It could also be interesting to enlarge the training set, in order to build more robust acoustic models.
 
 %*****************************************
 %*****************************************
