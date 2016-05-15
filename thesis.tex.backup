@@ -88,32 +88,39 @@
 \usepackage{vowel}
 \usepackage{bibentry}
 \usepackage{listings}
-\usepackage{hyperref}
 \let\tableheadline\textbf
+\usepackage{amsmath}
+\usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-\usepackage[acronym]{glossaries} % make a separate list of acronyms
-\usepackage{xparse}
+\usepackage{graphicx}
+\usepackage[xindy]{imakeidx}
+\usepackage{pdfpages}
+\makeindex
+\usepackage[acronym,toc,nonumberlist]{glossaries} % make a separate list of acronyms
 \makeglossaries
 
 \nobibliography*
 
 \newcommand{\myfloatalign}[1]{}
 \let\ipa\textipa
-\let\ac\gls
+\newcommand{\ac}[1]{\gls{#1}}
 \newcommand{\specialcell}[2][c]{%
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \newcommand{\pt}[1]{\emph{#1}}
 \newcommand{\eng}[1]{\emph{#1}}
-\DeclareDocumentCommand{\newdualentry}{ O{} O{} m m m m } {
-  \newglossaryentry{glo:#3}{name={#5},text={#5\glsadd{#3}},
-    description={#6},#1
-  }
-  \makeglossaries
-  \newacronym[see={[Glossary:]{glo:#3}},#2]{#3}{#4}{#5\glsadd{glo:#3}}
-}        
-        
-\input{FrontBackMatter/acronyms}
+\newcommand{\gloss}[1]{\textsc{#1}}
 
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblechapter[1]{%
+  \refstepcounter{chapter}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}}
+
+\input{FrontBackMatter/acronyms}
 % ************************ Thesis Information & Meta-data **********************
 % Thesis title and author information, refernce file for biblatex
 \input{FrontBackMatter/thesis-info}
@@ -154,25 +161,20 @@
 
 % *********************** Adding TOC and List of Figures ***********************
 
-
 \tableofcontents
 
 \listoffigures
 
 \listoftables
 
-\printglossary[type=\acronymtype]
+\printglossary[type=\acronymtype,title={List of acronyms},style=long]
 
 % ******************************** Main Matter *********************************
 \mainmatter
 
 \include{Chapters/ChapIntro}
 \include{Chapters/ChapFoundations}
-\include{Chapters/ChapAeiouado}
-\include{Chapters/ChapSpeller}
-\include{Chapters/ChapPhonRich}
-\include{Chapters/ChapPhoneAlignment}
-\include{Chapters/ChapListener}
+\include{Chapters/ChapArticles}
 \include{Chapters/ChapConclusions}
 
 
@@ -209,12 +211,11 @@
 
 \begin{appendices} % Using appendices environment for more functunality
 
-\include{Appendices/appendix1}
-
 \end{appendices}
 
+
 % *************************************** Index ********************************
-\printthesisindex % If index is present
-\printglossary
+%\printthesisindex % If index is present
+\printglossary[type=main,style=altlist]
 
 \end{document}

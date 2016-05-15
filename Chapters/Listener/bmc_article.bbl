@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -174,7 +174,8 @@ In: \bbtitle{ISCA Tutorial and Research Workshop (ITRW) on Adaptation Methods
 \bauthor{\bsnm{Silva}, \binits{T.C.}}:
 \bbtitle{Pron{\'u}ncia do Ingl{\^e}s Para Falantes do Portugu{\^e}s
   brasileiro}.
-\bpublisher{Contexto}, \blocation{???}
+\bpublisher{Contexto},
+\blocation{S\~ao Paulo, Brazil}
 (\byear{2015})
 \end{bbook}
 \endbibitem
@@ -288,6 +289,20 @@ In: \bbtitle{Eurospeech}
 \endbibitem
 
 %%% 20
+\bibitem{Mendonca2014b}
+\begin{bchapter}
+\bauthor{\bsnm{Mendon\c{c}a}, \binits{G.}},
+\bauthor{\bsnm{Alu\'isio}, \binits{S.}}:
+\bctitle{{Using a hybrid approach to build a pronunciation dictionary for
+  Brazilian Portuguese}}.
+In: \bbtitle{Proceedings of the 15th Annual Conference of the International
+  Speech Communication Association INTERSPEECH 2014},
+\bconflocation{Singapore}
+(\byear{2014})
+\end{bchapter}
+\endbibitem
+
+%%% 21
 \bibitem{Jurafsky2000}
 \begin{bbook}
 \bauthor{\bsnm{Jurafsky}, \binits{D.}},
@@ -301,7 +316,7 @@ In: \bbtitle{Eurospeech}
 \end{bbook}
 \endbibitem
 
-%%% 21
+%%% 22
 \bibitem{Srikanth2012}
 \begin{bchapter}
 \bauthor{\bsnm{Srikanth}, \binits{R.}},
@@ -315,7 +330,7 @@ p. \bfpage{61}
 \end{bchapter}
 \endbibitem
 
-%%% 22
+%%% 23
 \bibitem{Mendonca2014}
 \begin{botherref}
 \oauthor{\bsnm{Mendon\c{c}a}, \binits{G.}},
@@ -331,14 +346,15 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
 \end{botherref}
 \endbibitem
 
-%%% 23
+%%% 24
 \bibitem{Shulby2015}
 \begin{bbook}
 \bauthor{\bsnm{Shulby}, \binits{C.D.}}:
 \bbtitle{Iprompter: an Intelligent Pronunciation Tutor for Brazilian Students
   of Academic English (qualifying Examination Monograph)}.
-\bpublisher{Universidade de S\~ao Paulo}, \blocation{???}
-(\byear{2015})
+\bpublisher{Universidade de S\~ao Paulo},
+\blocation{S\~ao Carlos, Brazil}
+(\byear{September 2015})
 \end{bbook}
 \endbibitem
 
@@ -473,7 +489,7 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
   <aug>
     <au><snm>Silva</snm><fnm>TC</fnm></au>
   </aug>
-  <publisher>Contexto</publisher>
+  <publisher>S\~ao Paulo, Brazil: Contexto</publisher>
   <pubdate>2015</pubdate>
 </bibl>
 
@@ -584,6 +600,19 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
 </bibl>
 
 <bibl id="B20">
+  <title><p>{Using a hybrid approach to build a pronunciation dictionary for
+  Brazilian Portuguese}</p></title>
+  <aug>
+    <au><snm>Mendon\c{c}a</snm><fnm>G.</fnm></au>
+    <au><snm>Alu\'isio</snm><fnm>S.</fnm></au>
+  </aug>
+  <source>Proceedings of the 15th Annual Conference of the International Speech
+  Communication Association INTERSPEECH 2014</source>
+  <publisher>Singapore</publisher>
+  <pubdate>2014</pubdate>
+</bibl>
+
+<bibl id="B21">
   <title><p>Speech and language processing : an introduction to natural
   language processing computational linguistics, and speech
   recognition</p></title>
@@ -596,7 +625,7 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
   <pubdate>2000</pubdate>
 </bibl>
 
-<bibl id="B21">
+<bibl id="B22">
   <title><p>Automatic Pronunciation Evaluation And Mispronunciation Detection
   Using CMUSphinx</p></title>
   <aug>
@@ -608,7 +637,7 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
   <fpage>61</fpage>
 </bibl>
 
-<bibl id="B22">
+<bibl id="B23">
   <title><p>A Method for the Extraction of Phonetically-Rich Triphone
   Sentences</p></title>
   <aug>
@@ -626,14 +655,14 @@ Proceedings of ITS 2014 -- International Telecommunications Symposium
   <pubdate>2014</pubdate>
 </bibl>
 
-<bibl id="B23">
+<bibl id="B24">
   <title><p>Iprompter: an intelligent pronunciation tutor for Brazilian
   students of academic English (qualifying examination monograph)</p></title>
   <aug>
     <au><snm>Shulby</snm><fnm>CD</fnm></au>
   </aug>
-  <publisher>Universidade de S\~ao Paulo</publisher>
-  <pubdate>2015</pubdate>
+  <publisher>S\~ao Carlos, Brazil: Universidade de S\~ao Paulo</publisher>
+  <pubdate>September 2015</pubdate>
 </bibl>
 
 </refgrp>

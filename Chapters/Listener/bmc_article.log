@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.7.2)  3 FEB 2016 22:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.7.2)  4 FEB 2016 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,23 +517,23 @@ File: gfx/asr-architecture.pdf Graphic file (type pdf)
 Package pdftex.def Info: gfx/asr-architecture.pdf used on input line 314.
 (pdftex.def)             Requested size: 399.49928pt x 121.81058pt.
  [2]
-LaTeX Font Info:    Try loading font information for T3+cmss on input line 340.
+LaTeX Font Info:    Try loading font information for T3+cmss on input line 342.
 
  (/usr/share/texmf/tex/latex/tipa/t3cmss.fd
 File: t3cmss.fd 2001/12/31 TIPA font definitions
 )
+[3 <./gfx/asr-architecture.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 361.
-
-[3 <./gfx/asr-architecture.pdf>] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 473.
+(Font)              <8> on input line 363.
+ [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 475.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 473.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 475.
  [5] [6]
 (./bmc_article.bbl [7]) 
 AED: lastpage setting LastPage
@@ -546,13 +546,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4533 strings out of 493304
- 57708 string characters out of 6139872
- 136803 words of memory out of 5000000
- 7914 multiletter control sequences out of 15000+600000
+ 4537 strings out of 493304
+ 57779 string characters out of 6139872
+ 131819 words of memory out of 5000000
+ 7918 multiletter control sequences out of 15000+600000
  13878 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,13n,37p,1634b,394s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,37p,1634b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
@@ -574,7 +574,7 @@ e1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/fkr/tipa/tipa10.pfb></u
 sr/share/texmf/fonts/type1/fkr/tipa/tipass8.pfb></usr/share/texmf/fonts/type1/f
 kr/tipa/tipass9.pfb>
-Output written on bmc_article.pdf (8 pages, 370811 bytes).
+Output written on bmc_article.pdf (8 pages, 371682 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream
