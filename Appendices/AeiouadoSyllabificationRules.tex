@@ -1,7 +1,7 @@
 % ******************************* Thesis Appendix A ****************************
 \chapter{Aeiouad\^o: Syllabification Rules} 
 
-The syllabification rules developed for Aeiouad\^o are based on the premise that postvocalic sounds in Portuguese are limited to a very small set due to its parataxis. The parataxis of Portuguese allows for syllables with up to five phonemes $C_1C_2VC_3C_4$, as in ``transporte'' /traNs.p\ipa{O}R.te/, whereas $C_3$ can be /\ipa{l, N, R, s}/ and $C_4$ is always /\ipa{s}/. As in Portuguese the sound-letter relation is mostly transparent and rules for translineation are deeply influenced by phonological syllables, the algorithm analyses graphemes trying to define which are the prevocalic elements, i.e. the syllable onset. \autoref{pseudocode-syll-rules} contains the pseudocode with the rules\footnote{The code can be found in the followign github repository: \url{http://github.com/gustavoauma/aeiouado_g2p}}.
+The syllabification rules developed for Aeiouad\^o are based on the premise that postvocalic sounds in Portuguese are limited to a very small set due to its parataxis. The parataxis of Portuguese allows for syllables with up to five phonemes $C_1C_2VC_3C_4$, as in ``transporte'' /traNs.p\ipa{O}R.te/, whereas $C_3$ can be /\ipa{l, N, R, s}/ and $C_4$ is always /\ipa{s}/. As in Portuguese the sound-letter relation is mostly transparent and rules for translineation are deeply influenced by phonological syllables, the algorithm analyses graphemes trying to define which are the prevocalic elements, i.e. the syllable onset. \autoref{pseudocode-syll-rules} contains the pseudocode with the 10 cases that are taken into consideration\footnote{The code can be found in the followign github repository: \url{http://github.com/gustavoauma/aeiouado_g2p}}.
 
 
 \begin{figure}[!ht]
@@ -61,7 +61,14 @@ def get_hyphen_pos(word):
     if window1 has (consonants + consonants):
       hyphen_pos.append(i-1)
       continue
-    
+
+\end{verbatim}
+\end{figure}
+\clearpage
+
+\footnotesize
+\begin{verbatim}
+  
     # 5th Case: vowel without diacritic + vowel with diacritic
     # paraíso -> para{í}so -> par[aí]so -> par[a-í]so
     if window2 has (vowels_wo_diacritics + vowels_with_diacritics):
@@ -99,7 +106,6 @@ def get_hyphen_pos(word):
     if window3 has (all_vowels + high_vowels + [mn]$):
       hyphen_pos.append(i)
       continue
-    
     # abstraindo -> abstra{i}ndo -> abstr[aind]o -> abstr[a-ind]o 
     if window3 has (all_vowels + high_vowels + [mn] + consonants):
       hyphen_pos.append(i)
@@ -107,4 +113,3 @@ def get_hyphen_pos(word):
     
   return hyphen_pos
 \end{verbatim}
-\end{figure}
