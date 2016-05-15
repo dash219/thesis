@@ -1,0 +1,110 @@
+% ******************************* Thesis Appendix A ****************************
+\chapter{Aeiouad\^o: Syllabification Rules} 
+
+The syllabification rules developed for Aeiouad\^o are based on the premise that postvocalic sounds in Portuguese are limited to a very small set due to its parataxis. The parataxis of Portuguese allows for syllables with up to five phonemes $C_1C_2VC_3C_4$, as in ``transporte'' /traNs.p\ipa{O}R.te/, whereas $C_3$ can be /\ipa{l, N, R, s}/ and $C_4$ is always /\ipa{s}/. As in Portuguese the sound-letter relation is mostly transparent and rules for translineation are deeply influenced by phonological syllables, the algorithm analyses graphemes trying to define which are the prevocalic elements, i.e. the syllable onset. \autoref{pseudocode-syll-rules} contains the pseudocode with the rules\footnote{The code can be found in the followign github repository: \url{http://github.com/gustavoauma/aeiouado_g2p}}.
+
+
+\begin{figure}[!ht]
+  \caption{Syllabification Rules.}
+      \label{pseudocode-syll-rules}
+\footnotesize
+
+\begin{verbatim}
+
+word  # Input word.
+hyphen_pos = []  # Positions to append hyphens.
+
+# Regex with relevant contexts
+all_vowels = [aáàâãeéêiíoóôõuúü]
+vowels_wo_diacritics = [aãeioõuü]
+vowels_with_diacritics = [áàâéêíóôúãõ]
+low_vowels = [aáàâeéêoóô]  # No nasal.
+high_vowels = [iíuú]
+consonants = [bcçdfghjklmnpqrstvwxyz]
+plosives = [ptckbdgfv]
+digraphs = nh|lh|ch|qu|gu
+liquids = [lr]
+
+def get_hyphen_pos(word):
+
+  for i in word:
+  
+    # window1: Cases 1st-4th
+    window1 = <previous 2 and current char>
+    
+    # window2: Cases 5th-7th
+    window2 = <previous 1, current and next 1 chars>
+    
+    # window3: Cases 8th-10th
+    window3 = <previous 1, current and next 2 chars>
+    
+    # 1st Case: complex onsets
+    # cabrita -> cabr{i}ta -> ca[br]ita -> ca[-br]ita 
+    if window1 has (plosives + liquids):
+      hyphen_pos.append(i-2)]
+      continue
+    
+    # 2nd Case: Digraphs 'nh|lh|ch|qu|gu'
+    # linhagem -> linh{a}gem -> li[nh]agem -> li[-nh]agem  
+    if window1 has digraphs:
+      hyphen_pos.append(i-2)
+      continue
+      
+    # 3rd Case: Simple onset (after vowel)
+    # batata -> bat{a}ta -> b[at]ata -> b[a-t]ata
+    if window1 has (all_vowes + consonants):
+      hyphen_pos.append(i-1)
+      continue
+    
+    # 4th Case: Simple onset (after consonant)
+    # perspectiva -> persp{e}ctiva -> per[sp]ectiva -> per[s-p]ectiva
+    if window1 has (consonants + consonants):
+      hyphen_pos.append(i-1)
+      continue
+    
+    # 5th Case: vowel without diacritic + vowel with diacritic
+    # paraíso -> para{í}so -> par[aí]so -> par[a-í]so
+    if window2 has (vowels_wo_diacritics + vowels_with_diacritics):
+      hyphen_pos.append(i)
+      continue
+    
+    # 6th Case: low vowel + low vowel
+    # coador -> co{a}dor -> c[oa]dor -> c[o-a]dor
+    if window2 has (low_vowels + low_vowels):
+      hyphen_pos.append(i)
+      continue
+    
+    # 7th Case: high vowel + low vowel
+    # dicionario -> dici{o}nario -> dic[io]nario -> dic[i-o]nario 
+    if window2 has (high_vowels + low_vowels):
+      hyphen_pos.append(i)
+      continue
+    
+    # 8th Case: hyathus before 'nh'
+    # rainha -> ra{i}nha -> r[ainh]a -> r[a-inh]a
+    # Exception: words with 'gu|qu'
+    # pouquinho -> pouqu{i}nho -> pouq[uinh]o -> pouq[uinh]o
+    if window3 has (all_vowels + high_vowels + 'nh'):
+      hyphen_pos.append(i)
+      continue
+
+    # 9th Case: vowel + high vowel + liquid + (cons|#)
+    # abstrair -> abstra{i}r -> abstr[air#] -> abstr[a-ir#]
+    if window3 has (all_vowels + high_vowels + [rl] + consonants|#):
+      hyphen_pos.append(i)
+      continue
+    
+    # 10th Case: vowel + high vowel + [mn]$
+    # amendoim -> amendo{i}m ->  amend[oim$] ->  amend[oim$]    
+    if window3 has (all_vowels + high_vowels + [mn]$):
+      hyphen_pos.append(i)
+      continue
+    
+    # abstraindo -> abstra{i}ndo -> abstr[aind]o -> abstr[a-ind]o 
+    if window3 has (all_vowels + high_vowels + [mn] + consonants):
+      hyphen_pos.append(i)
+      continue
+    
+  return hyphen_pos
+\end{verbatim}
+\end{figure}
